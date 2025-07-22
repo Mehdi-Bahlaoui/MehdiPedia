@@ -1,5 +1,3 @@
-- git repo
-- fix profile image data
 - ADD image early life
 - finsh all other sections the same
 - Add Articles
