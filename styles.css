@@ -1,0 +1,719 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* font-size: 18px;
+  font-weight: normal;
+  text-decoration: none; */
+
+
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --color-1: #0f1016;
+  --text-color: #000000;
+  --blue: #3366cc;
+  --blue-light: #e6e6fa;
+  --blue-very-light: #f8f9fa;
+  --grey: #eaecf0;
+  --dark-grey: #72777d;
+  --links-color: #3056a9;
+}
+
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--white);
+
+  height: 70px;
+
+  margin-top: 40px;
+}
+
+.left-header {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  align-items: center;
+  background-color: inherit;
+  padding-left: 10px;
+  /* border-bottom: 1px solid #a2a9b1; */
+}
+
+.right-header {
+  display: flex;
+  gap: 10px;
+
+  justify-content: right;
+  align-items: center;
+  background-color: inherit;
+  /* padding: 10px 10px; */
+  /* border-bottom: 1px solid #a2a9b1; */
+}
+/* HEADER */
+
+/* RIGHT LINKS */
+.right-links {
+  margin-right: 3px;
+}
+
+.right-links a {
+  text-decoration: none;
+
+  font-family: sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875em; /* roughly 14px */
+  
+  color: var(--blue);
+  margin-left: 10px;
+}
+/* RIGHT LINKS */
+
+
+/* LOGO */
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.wikipedia-text .Encyclopedia-text {
+  display: block;
+  margin-left: 10px;
+}
+/* LOGO */
+
+
+/* Search Container */
+.search-container {
+  display: flex;
+  width: 500px;
+  border: 1px solid var(--dark-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.search-container input[type="text"] {
+  flex: 1;
+  padding: 8px 8px 8px 40px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: url('Images/search.svg') no-repeat 8px center;
+  background-size: 24px 24px;
+  background-color: var(--white);
+}
+
+.search-container button {
+  padding: 4px 8px;
+  margin-left: 4px;
+  border: none;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  border-left: 1px solid var(--dark-grey);
+}
+
+.search-container button:hover {
+  background-color: #e6e6e6;
+}
+
+/* Search Container */
+
+
+
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+body {
+  margin-top: -40px;
+}
+
+/* LEFT NAV */
+.left-nav {
+  height: 30px;
+  background-color: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links-container-left {
+  height: 400px;
+  width: 250px;
+  display: none;
+
+
+  background-color: var(--white);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
+}
+
+#sidebar-active-left:checked~.links-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: fixed;
+  top: 40px;
+  left: -100%;
+  z-index: 10;
+  top: 40px;
+  left: 40px;
+}
+
+.left-nav a {
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  padding: 20px 30px;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.left-nav .home-link {
+  margin-right: auto;
+}
+
+.open-sidebar-button-left {
+  padding: 15px;
+  display: block;
+}
+
+.left-nav svg {
+  fill: var(--text-color);
+  background-color: inherit;
+}
+
+#sidebar-active-left {
+  display: none;
+}
+
+/* Overlay Craziness for deactivation on outside click */
+#sidebar-active-left:checked~#overlay-left {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* LEFT NAV */
+
+
+/* RIGHT NAV */
+.right-nav {
+  height: 30px;
+  background-color: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links-container-right {
+  height: 70px;
+  width: 150px;
+  background-color: var(--white);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
+  display: none;
+
+}
+
+#sidebar-active-right:checked~.links-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: fixed;
+  top: 60px;
+  left: 1350px;
+  z-index: 10;
+}
+
+.right-nav a {
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  padding: 20px 30px;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.right-nav .home-link {
+  margin-right: auto;
+}
+
+.open-sidebar-button-right {
+  padding: 20px;
+  margin-top: 5px;
+  display: block;
+}
+
+.right-nav svg {
+  fill: var(--text-color);
+  background-color: inherit;
+}
+
+#sidebar-active-right {
+  display: none;
+}
+
+/* Overlay Craziness for deactivation on outside click */
+#sidebar-active-right:checked~#overlay-right {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* LEFT NAV */
+
+
+
+
+
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  /* gap: 10px; */
+  width: 95%;
+  margin: 100px auto 0 auto;
+}
+
+
+
+
+
+/*  TOCs */
+.sidebar {
+  margin-top: -20px;
+  /* background-color: #9a4141; */
+  flex: 0 0 200px;
+  
+  /* Fixed width sidebar */
+  /* Don't add position relative here - it would break sticky */
+}
+.toc {
+  padding: 10px;
+  width: 170px;
+  font-size: 0.9em;
+  position: sticky;
+  align-self: flex-start;
+  top: 40px;
+}
+
+.toc-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.toc-controls {
+  float: right;
+  font-size: 0.8em;
+}
+
+.toc-toggle {
+  background-color:#eaecf0 ;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  color: #202122;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toc-toggle:hover {
+  background-color: #f8f9fa;
+}
+
+
+.toc-controls a {
+  color: #0645ad;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.toc-controls a:hover {
+  text-decoration: underline;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-list li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.toc-list li.expandable::before {
+  content: url('icons/chevron_forward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
+  position: absolute;
+  left: -20px;
+  cursor: pointer;
+}
+
+.toc-list li.expanded::before {
+  content: url('icons/stat_minus_1_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
+}
+
+.toc-list li.collapsed .toc-sublist {
+  display: none;
+}
+
+.toc-list a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  text-decoration: underline;
+}
+
+.toc-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 20px;
+}
+
+.toc-sublist li {
+  margin: 3px 0;
+}
+
+.toc-number {
+  margin-right: 5px;
+}
+/* TOCs */
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  /* background: #9a4141; */
+
+  padding: 20px;
+  margin-top: -80px;
+}
+.name{
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: 2em;
+}
+
+
+.top-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-bottom: 1px solid #a2a9b1;
+}
+.top-header-secondary  {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  border-bottom: 1px solid #a2a9b1;
+
+}
+.top-header-secondary-left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.top-header-secondary-right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+.blue-text {
+  color: var(--blue);
+
+}
+
+
+
+
+.languages-button {
+
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: var(--blue);
+  background: url(https://upload.wikimedia.org/wikipedia/commons/e/e0/OOjs_UI_icon_language-ltr-progressive.svg) no-repeat left center;
+}
+
+.top-header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.icon-link img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  transition: box-shadow 0.2s;
+}
+
+.icon-link img:hover {
+  box-shadow: 0 0 4px #3366cc;
+  border-radius: 4px;
+}
+
+/* Main Content */
+
+/* MIDDLE */
+.middle {
+  display: flex;
+  flex-direction: row-reverse; /* Ensure horizontal layout */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: flex-start; /* Align items at the top */
+  gap: 10px; 
+  width: 100%; /* Ensure it takes full container width */
+}
+
+.long-content {
+  /* flex: 0.7; */
+  padding: 0 10px 10px 10px;
+  margin-top: 15px;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+.disambiguation {
+  margin-left: 30px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.image_container {
+  flex: 0.3; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 30px 10px 10px 10px;
+  border: 1px solid #000000;
+  background: var(--blue-very-light);
+  box-sizing: border-box; /* Ensure padding/border don't affect width */
+}
+
+.profile-image {
+  /* min-width: 50px; */
+  max-width: 300px;
+  height: auto;
+  margin: 30px 15px 15px 15px;
+}
+.image_caption_top_1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 10px;
+
+}
+.image_caption_top_2{
+  color: var(--links-color);
+}
+
+.links {
+  color: var(--links-color);
+  text-decoration: none;
+}
+.section_title {
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: 1.5em;
+
+  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 5px;
+}
+/* MIDDLE */
+
+
+
+.appearance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.appearance-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.appearance-form legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.appearance-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.appearance-form input[type="radio"] {
+  margin-right: 5px;
+}
+
+.wikipedia-source {
+  font-family: sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875em; /* roughly 14px */
+
+  color: #222;
+  margin: 8px 0 0 0;
+  padding-left: 2px;
+
+}
+
+.wikipedia-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 10px 10px 10px;
+  margin: 2px 0 0 0;
+  min-height: 40px;
+}
+
+.wikipedia-header-row .wikipedia-source {
+  
+  font-size: 0.95em;
+  color: #222;
+  /* font-family: 'Linux Libertine', Georgia, Times, serif; */
+  margin-right: 10px;
+  padding-left: 2px;
+}
+
+.wikipedia-header-row .top-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.wikipedia-header-row .icon-link img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  transition: box-shadow 0.2s;
+}
+
+.wikipedia-header-row .icon-link img:hover {
+  box-shadow: 0 0 4px #3366cc;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  header {
+    background-color: var(--grey);
+  }
+
+  .wikipedia-logo {
+    /* margin-left: 0; plutot right marg ham butt*/
+    display: none;
+  }
+
+  .encyclopedia-text {
+    display: none;
+  }
+
+  .search-container button {
+    display: none;
+  }
+
+  .search-container {
+    width: 300px;
+  }
+
+  .right-header {
+    display: none;
+  }
+
+
+  .middle {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto; /* Centers the element horizontally */
+  }
+
+
+
+  .image_container {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .long-content {
+    width: 100%;
+    padding: 0 10px 10px 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+  }
+
+
+  .search-container {
+    display: none;
+  }
+
+
+}

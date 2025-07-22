@@ -1,0 +1,8 @@
+- git repo
+- fix profile image data
+- ADD image early life
+- finsh all other sections the same
+- Add Articles
+- Toc links working
+- figure out what to do wth hide fro toc
+- figure out what to do wth hide with nav icons
