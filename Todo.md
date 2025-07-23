@@ -1,6 +1,6 @@
-- ADD image early life
 - finsh all other sections the same
 - Add Articles
-- Toc links working
-- figure out what to do wth hide fro toc
-- figure out what to do wth hide with nav icons
+- Add Voice and Signature
+- figure out what to do with hide for toc
+- figure out what to do with hide with nav icons
+- footer
