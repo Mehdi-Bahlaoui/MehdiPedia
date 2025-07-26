@@ -451,6 +451,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  /* font-size: 0.9em; */
+  font-weight: 400;
   
   border-bottom: 1px solid #a2a9b1;
 
@@ -458,23 +461,26 @@ body {
 .top-header-secondary-left {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 5px;
 }
 .top-header-secondary-right {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 12px;
 }
+
 .underline {
   text-decoration: underline;
   text-underline-offset: 8px;
 }
 .blue-text {
   color: var(--blue);
-
 }
-
+.tools {
+  display: flex;
+  gap: 2px;
+}
 
 
 

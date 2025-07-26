@@ -1,6 +1,15 @@
-- finsh all other sections the same
+- make section seperation logic in main content 
+ - footer
+ - VIwing part auto select on toc
+
+- finsh Philosophy
 - Add Articles
 - Add Voice and Signature
-- figure out what to do with hide for toc
-- figure out what to do with hide with nav icons
+- The 3 nav button
+ - dark mode
+  - SFX
+
+
 - footer
+
+- more links
