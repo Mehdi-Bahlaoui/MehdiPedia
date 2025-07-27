@@ -6,8 +6,8 @@
 - Add Articles
 - Add Voice and Signature
 - The 3 nav button
- - dark mode
-  - SFX
+- dark mode
+- SFX
 
 
 - footer

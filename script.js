@@ -1,5 +1,4 @@
-
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const expandableItems = document.querySelectorAll(".toc-list li.expandable");
 
     expandableItems.forEach(item => {
@@ -11,5 +10,146 @@
         item.classList.toggle("collapsed");
       });
     });
+
+    // Improved TOC highlighting logic
+    const sections = document.querySelectorAll(".main-content .section-row");
+    const tocLinks = document.querySelectorAll(".toc-list a");
+    
+    // Create a map of section IDs to their corresponding TOC links
+    const sectionToTocMap = new Map();
+    sections.forEach(section => {
+      const sectionId = section.id || section.querySelector('.section_title')?.id;
+      if (sectionId) {
+        const tocLink = document.querySelector(`.toc-list a[href="#${sectionId}"]`);
+        if (tocLink) {
+          sectionToTocMap.set(sectionId, tocLink);
+        }
+      }
+    });
+    
+    // Add the top section manually
+    const overviewSection = document.getElementById('overview-section');
+    if (overviewSection) {
+      const topLink = document.querySelector('.toc-list a[href="#top"]');
+      if (topLink) {
+        sectionToTocMap.set('overview-section', topLink);
+      }
+    }
+
+    let currentActiveSection = null;
+    let isScrolling = false;
+    let scrollTimer;
+
+    function updateActiveSection(newActiveSection) {
+      if (newActiveSection !== currentActiveSection) {
+        // Remove active class from all links
+        tocLinks.forEach(link => {
+          link.classList.remove("active-link");
+        });
+        
+        // Collapse all expandable items first
+        expandableItems.forEach(item => {
+          item.classList.remove("expanded");
+          item.classList.add("collapsed");
+        });
+        
+        // Add active class to the new active section's link
+        if (newActiveSection && sectionToTocMap.has(newActiveSection)) {
+          const activeLink = sectionToTocMap.get(newActiveSection);
+          activeLink.classList.add('active-link');
+          
+          // Check if the active link is inside a sublist (hidden under an expandable item)
+          const parentSublist = activeLink.closest('.toc-sublist');
+          if (parentSublist) {
+            // Find the parent expandable item and expand it
+            const parentExpandableItem = parentSublist.closest('li.expandable');
+            if (parentExpandableItem) {
+              parentExpandableItem.classList.add("expanded");
+              parentExpandableItem.classList.remove("collapsed");
+            }
+          }
+        }
+        
+        currentActiveSection = newActiveSection;
+      }
+    }
+
+    function determineActiveSection() {
+      const scrollTop = window.scrollY;
+      let activeSection = 'overview-section';
+      
+      // If we're near the top of the page, always show the first section
+      if (scrollTop < 100) {
+        return 'overview-section';
+      }
+      
+      // Find the section whose top is closest to the viewport center
+      let closestSection = null;
+      let closestDistance = Infinity;
+      
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const sectionId = section.id || section.querySelector('.section_title')?.id;
+        
+        if (sectionId) {
+          // Calculate distance from section top to a point 200px from viewport top
+          const distance = Math.abs(rect.top - 200);
+          
+          // If section is visible and closer than previous closest
+          if (rect.top <= 300 && rect.bottom >= 100 && distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = sectionId;
+          }
+        }
+      });
+      
+      return closestSection || activeSection;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      // Only process intersection changes if we're not actively scrolling
+      if (isScrolling) return;
+      
+      const newActiveSection = determineActiveSection();
+      updateActiveSection(newActiveSection);
+    }, {
+      root: null,
+      rootMargin: "-10% 0px -70% 0px",
+      threshold: [0, 0.25, 0.5, 0.75, 1.0]
+    });
+
+    // Observe all sections
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Handle scroll events with debouncing
+    window.addEventListener('scroll', () => {
+      isScrolling = true;
+      
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        isScrolling = false;
+        
+        // Update active section based on current scroll position
+        const newActiveSection = determineActiveSection();
+        updateActiveSection(newActiveSection);
+      }, 50); // Increased debounce time for smoother transitions
+    });
+
   });
+
+// Toggle TOC visibility function
+function toggleToc(button) {
+  const toc = button.closest('.toc');
+  const tocList = toc.querySelector('.toc-list');
+  
+  if (tocList.style.display === 'none') {
+    tocList.style.display = 'block';
+    button.textContent = 'hide';
+  } else {
+    tocList.style.display = 'none';
+    button.textContent = 'show';
+  }
+}
 
