@@ -968,8 +968,8 @@ body {
   .education {
     margin-top: -10px;
   }
-  .rap-carrer {
-    margin-top: -10px;
+  .section_row #rap-career-section {
+    margin-top: -500px;
   }
 
   .section-images {
