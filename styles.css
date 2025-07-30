@@ -948,6 +948,17 @@ body {
 }
 
 @media (max-width: 850px) {
+  /* .main-content {
+    padding: 10px;
+  } */
+   .disambiguation {
+    margin-left: 0;
+    font-size: 0.8em;
+
+  }
+  .wikipedia-header-row {
+    display: none;
+  }
   .languages-button {
     display: none;
   }
@@ -972,7 +983,7 @@ body {
   .sidebar {
     display: none;
   }
-  .top-header-secondary-right .blue-text {
+  .top-header-secondary-right {
     display: none;
   }
 
