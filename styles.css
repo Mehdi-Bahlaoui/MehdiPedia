@@ -662,7 +662,7 @@ body {
   margin-top: -150px;
 }
 .education {
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 .section-images {
@@ -675,7 +675,8 @@ body {
 
 .image_container {
   width: 300px;
-  margin: 0;
+  margin: 30px 20px 10px 20px;
+
   border: 1px solid #a2a9b1;
   background: var(--blue-very-light);
   box-sizing: border-box;
@@ -686,17 +687,17 @@ body {
 }
 
 
-.image_container {
+/* .image_container {
   flex: 0.3; 
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+
   justify-content: flex-start;
   margin: 30px 20px 10px 20px;
   border: 1px solid #a2a9b1;
   background: var(--blue-very-light);
-  box-sizing: border-box; /* Ensure padding/border don't affect width */
-}
+  box-sizing: border-box; 
+} */
 
 
 .image_caption_top_1 {
@@ -764,6 +765,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: -5px;
+
 } 
 
 .links {
@@ -931,7 +934,7 @@ body {
   .section-row {
     flex-direction: column;
     max-width: 350px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     gap: 0;
   }
 
@@ -950,6 +953,13 @@ body {
 @media (max-width: 850px) {
   .main-content {
     padding: 8px;
+  }
+  .image_container{
+    width: 325px;
+  }
+  .profile-image{
+    max-width: 270px;
+    height: auto;
   }
    .disambiguation {
     margin-left: 0;
@@ -1126,6 +1136,7 @@ body {
     flex-direction: column;
     gap: 8px 0;
   }
+
   
   .footer-logos {
     justify-content: center;
@@ -1134,5 +1145,59 @@ body {
   .category-links {
     text-align: center;
   }
+
+  #rap-career-section {
+    margin-top: -30px;
+  }
+}
+
+/* Faris styling and tooltip */
+.faris {
+  color: #276ccc; /* Dark purple color */
+  position: relative;
+  cursor: help;
+  font-weight: 500;
+}
+
+.faris::after {
+  content: "this person is not famous yet";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faris::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  border: 6px solid transparent;
+  border-top-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.faris:hover::after,
+.faris:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
 
