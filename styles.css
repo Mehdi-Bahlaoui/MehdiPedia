@@ -956,9 +956,9 @@ body {
     font-size: 0.8em;
 
   }
-  .wikipedia-header-row {
+  /* .wikipedia-header-row {
     display: none;
-  }
+  } */
   .languages-button {
     display: none;
   }
