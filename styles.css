@@ -948,9 +948,9 @@ body {
 }
 
 @media (max-width: 850px) {
-  /* .main-content {
-    padding: 10px;
-  } */
+  .main-content {
+    padding: 8px;
+  }
    .disambiguation {
     margin-left: 0;
     font-size: 0.8em;
