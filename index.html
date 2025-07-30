@@ -166,7 +166,19 @@
 
       <div class="top-header">
         <p class="name">Mehdi Bahlaoui</p>
-        <button class="languages-button"> 153 languages </button>
+        <div class="languages-dropdown">
+          <button class="languages-button" onclick="toggleLanguagesDropdown()"> 153 languages </button>
+          <div class="languages-dropdown-content" id="languagesDropdown">
+            <a href="#" onclick="playArabicVersion()">🔊 Arabic Summary</a>
+
+
+            <a href="#">中文</a>
+            <a href="#">日本語</a>
+
+            <hr>
+            <a href="#" class="view-all">View all 153 languages</a>
+          </div>
+        </div>
       </div>
 
       <div class="top-header-secondary">
@@ -222,27 +234,19 @@
               href="https://en.wikipedia.org/wiki/Robotics">robotics</a>, <a class="links"
               href="https://en.wikipedia.org/wiki/Embedded_system">embedded systems</a>, and <a class="links"
               href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>.<br>
-            He is currently pursuing a degree in <a class="links"
+            He is currently pursuing a <a class="links" href="https://en.wikipedia.org/wiki/Academic_degree">degree</a> in <a class="links"
               href="https://en.wikipedia.org/wiki/Electrical_engineering">electrical and electronics engineering</a> at
             the <a class="links"
               href="https://fr.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27arts_et_m%C3%A9tiers_de_Rabat">National
               School of Arts and Crafts (ENSAM)</a> in <a class="links"
               href="https://en.wikipedia.org/wiki/Rabat">Rabat</a>.<br><br>
-            At ENSAM, he became known not only for his academic performance but for his deeply kinetic learning
-            style—favoring physical experimentation over passive instruction, often sitting at the back of classrooms to
-            absorb and challenge ideas on his own terms.<br><br>
+            At <a class="links" href="https://fr.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27arts_et_m%C3%A9tiers_de_Rabat">ENSAM</a>, he became known not only for his <a class="links" href="https://en.wikipedia.org/wiki/Academic_achievement">academic performance</a> but for his deeply <a class="links" href="https://en.wikipedia.org/wiki/Kinesthetic_learning">kinetic learning style</a>—favoring <a class="links" href="https://en.wikipedia.org/wiki/Experiential_learning">physical experimentation</a> over <a class="links" href="https://en.wikipedia.org/wiki/Passive_learning">passive instruction</a>, often sitting at the back of classrooms to absorb and challenge ideas on his own terms.<br><br>
             In 2023, Mehdi became President of RobotiCore, ENSAM Rabat’s flagship robotics club. During his term, he
             revitalized its technical culture by leading workshops, developing competitive robots, and mentoring younger
             engineers. Under his leadership, the club helped reestablish the African Robotics Competition (CAR), a key
             event in the regional innovation calendar.<br><br>
-            A self-described "maker before a student," Mehdi prefers building systems over theorizing them. His personal
-            philosophy leans toward <a class="links"
-              href="https://en.wikipedia.org/wiki/First_principles">first-principles
-              thinking</a>, radical ownership,
-            and momentum-driven execution.<br><br>
-            With his combination of technical skill, public presence, and strategic ambition, Mehdi is positioning
-            himself not just as a builder, but as a future operator and architect of next-generation systems in robotics
-            and AI.
+            A self-described "<a class="links" href="https://en.wikipedia.org/wiki/Maker_culture">maker</a> before a <a class="links" href="https://en.wikipedia.org/wiki/Student">student</a>," Mehdi prefers building <a class="links" href="https://en.wikipedia.org/wiki/System">systems</a> over theorizing them. His personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy">philosophy</a> leans toward <a class="links" href="https://en.wikipedia.org/wiki/First_principles">first-principles thinking</a>, <a class="links" href="https://en.wikipedia.org/wiki/Extreme_ownership">radical ownership</a>, and <a class="links" href="https://en.wikipedia.org/wiki/Momentum">momentum</a>-driven <a class="links" href="https://en.wikipedia.org/wiki/Execution_(computing)">execution</a>.<br><br>
+            With his combination of <a class="links" href="https://en.wikipedia.org/wiki/Technical_skill">technical skill</a>, <a class="links" href="https://en.wikipedia.org/wiki/Public_speaking">public presence</a>, and <a class="links" href="https://en.wikipedia.org/wiki/Strategic_planning">strategic ambition</a>, Mehdi is positioning himself not just as a <a class="links" href="https://en.wikipedia.org/wiki/Builder_pattern">builder</a>, but as a future <a class="links" href="https://en.wikipedia.org/wiki/Business_operator">operator</a> and <a class="links" href="https://en.wikipedia.org/wiki/Software_architecture">architect</a> of <a class="links" href="https://en.wikipedia.org/wiki/Emerging_technologies">next-generation systems</a> in <a class="links" href="https://en.wikipedia.org/wiki/Robotics">robotics</a> and <a class="links" href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a>.
           </p>
         </div>
         <div class="section-images">
@@ -260,12 +264,7 @@
                 </div>
                 <p>April 13, 2003 (age 22)<br>Marrakesh, Morocco</p>
               </div>
-              <div class="section_profile">
-                <div>
-                  <p><b>Citizenship</b></p>
-                </div>
-                <p>Moroccan</p>
-              </div>
+
               <div class="section_profile">
                 <div>
                   <p><b>Political party</b></p>
@@ -280,15 +279,25 @@
               </div>
               <div class="section_profile">
                 <div>
-                  <p><b>Signature</b></p>
+                  <p><b>Spouses</b></p>
                 </div>
-                <p>&lt;Not yet set&gt;</p>
+                <p>Not enough records</p>
+              </div>              
+              <div class="section_profile signature">
+                <div>
+                  <p style="margin-top: 10px;"><b>Signature</b></p>
+                </div>
+                <img src="Images/signature.png" alt="Mehdi's signature" style = "width: 100px; height: auto;">
               </div>
-              <div class="section_profile">
+              <hr>
+              <div class="section_profile audio">
                 <div>
                   <p><b>Mehdi's voice</b></p>
                 </div>
-                <p>Not specified</p>
+                <audio controls style="width: 250px; height: 40px;">
+                  <source src="Images/Wikipedia.m4a" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
               </div>
               <br>
             </div>
@@ -298,24 +307,17 @@
 
       <!-- Early Life Section -->
       <div class="section-row">
-        <div class="section-text">
+        <div class="section-text early-life">
           <p class="section_title" id="early-life">Early Life</p>
           <p>
             Mehdi Bahlaoui was born on April 13, 2003, in <a class="links"
               href="https://en.wikipedia.org/wiki/Marrakesh">Marrakesh</a>, Morocco.<br>
-            He grew up in a family that valued education and hard work, which instilled in him a strong sense of
-            curiosity and a desire to learn from an early age.<br>
-            His parents encouraged him to explore various interests, including technology and engineering, which would
-            later shape his career path.<br><br>
-            Growing up, and like all children of his age, Mehdi fell in love with a game and played it nonstop. He knew
-            every corner of it. Eventually, he turned that obsession into a YouTube channel, just to see where it could
-            go.<br>
-            It grew faster than expected: over 600 loyal followers, 20,000+ views, and a small community that actually
-            listened.<br>
-            But he never saw himself as a gaming YouTuber long-term. He quit while it was still rising, because he got
-            bored eventually.<br>
-            Through it, he learned how to edit, how to talk to an audience, how to build and hold attention. Skills that
-            would later feed into his music, storytelling, and everything else that followed.
+            He grew up in a family that valued <a class="links" href="https://en.wikipedia.org/wiki/Education">education</a> and <a class="links" href="https://en.wikipedia.org/wiki/Work_ethic">hard work</a>, which instilled in him a strong sense of <a class="links" href="https://en.wikipedia.org/wiki/Curiosity">curiosity</a> and a desire to learn from an early age.<br>
+            His parents encouraged him to explore various interests, including <a class="links" href="https://en.wikipedia.org/wiki/Technology">technology</a> and <a class="links" href="https://en.wikipedia.org/wiki/Engineering">engineering</a>, which would later shape his <a class="links" href="https://en.wikipedia.org/wiki/Career">career path</a>.<br><br>
+            Growing up, and like all children of his age, Mehdi fell in love with a <a class="links" href="https://en.wikipedia.org/wiki/Video_game">game</a> and played it nonstop. He knew every corner of it. Eventually, he turned that obsession into a <a class="links" href="https://en.wikipedia.org/wiki/YouTube">YouTube channel</a>, just to see where it could go.<br>
+            It grew faster than expected: over 600 loyal <a class="links" href="https://en.wikipedia.org/wiki/Follower">followers</a>, 20,000+ <a class="links" href="https://en.wikipedia.org/wiki/View_(computer_science)">views</a>, and a small <a class="links" href="https://en.wikipedia.org/wiki/Virtual_community">community</a> that actually listened.<br>
+            But he never saw himself as a <a class="links" href="https://en.wikipedia.org/wiki/Gaming_YouTuber">gaming YouTuber</a> long-term. He quit while it was still rising, because he got bored eventually.<br>
+            Through it, he learned how to <a class="links" href="https://en.wikipedia.org/wiki/Video_editing">edit</a>, how to talk to an <a class="links" href="https://en.wikipedia.org/wiki/Audience">audience</a>, how to build and hold <a class="links" href="https://en.wikipedia.org/wiki/Attention">attention</a>. Skills that would later feed into his <a class="links" href="https://en.wikipedia.org/wiki/Music">music</a>, <a class="links" href="https://en.wikipedia.org/wiki/Storytelling">storytelling</a>, and everything else that followed.
           </p>
         </div>
         <div class="section-images">
@@ -323,16 +325,16 @@
             <img class="profile-image" src="Images/childhood.jpg" alt="Young Mehdi">
             <div
               style="display:flex;justify-content: center; align-items: center; margin: 0px 15px; text-align: center;">
-              <p>Mehdi and his best friend Kahoua <br> in primary school<br> ~2014, Louizia, Morocco</p>
+              <p>Mehdi and his best friend Kahoua <br> in primary school</p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Education Section -->
-      <div class="section-row">
-        <div class="section-text">
-          <p class="section_title" id="education">Education</p>
+      <div class="section-row"id="education">
+        <div class="section-text education">
+          <p class="section_title" >Education</p>
           <p>
             It is of interest to the public to note that Mehdi has never had a *rattrapage*. A clean record, if you ask
             him. Impeccable. Almost mythical.<br>
@@ -356,76 +358,77 @@
       </div>
 
       <!-- Rap Career Section -->
-      <div class="section-row">
+      <div class="section-row" id="rap-career-section">
         <div class="section-text">
           <p class="section_title" id="rap-career">Rap Career</p>
+      
           <p>
-            Even before highschool, Mehdi was a music junkie.<br>
-            He wanted to replicate the tracks he heard while playing his favorite game, Geometry Dash. He started making
-            simple beats with a program called LMMS, then leveled up to FL Studio.<br>
-            In high school, he sampled friends' audios, rapped for fun, and dropped cringy verses about girls..
-            yikes.<br>
-            But the turning point came when he met his producer friend Faris.<br>
+            Even before <a class="links" href="https://en.wikipedia.org/wiki/High_school">highschool</a>, Mehdi was a <a
+              class="links" href="https://en.wikipedia.org/wiki/Music">music</a> junkie.<br>
+            He wanted to replicate the tracks he heard while playing his favorite game, <a class="links"
+              href="https://en.wikipedia.org/wiki/Geometry_Dash">Geometry Dash</a>. He started making simple <a class="links"
+              href="https://en.wikipedia.org/wiki/Beat_(music)">beats</a> with a program called <a class="links"
+              href="https://en.wikipedia.org/wiki/LMMS">LMMS</a>, then leveled up to <a class="links"
+              href="https://en.wikipedia.org/wiki/FL_Studio">FL Studio</a>.<br>
+            In high school, he <a class="links" href="https://en.wikipedia.org/wiki/Sampling_(music)">sampled</a> friends'
+            audios, <a class="links" href="https://en.wikipedia.org/wiki/Rapping">rapped</a> for fun, and dropped cringy
+            verses about girls.. yikes.<br>
+            But the turning point came when he met his <a class="links"
+              href="https://en.wikipedia.org/wiki/Record_producer">producer</a> friend Faris.<br>
             Faris shared the same raw passion for music, and for the first time, Mehdi felt like he had found someone
-            equally talented. Their connection wasn’t soft—it was competitive. Mehdi invited Faris into his world
-            through countless diss tracks, challenging him, pushing him.<br><br>
-            In college, Mehdi used his tracks to playfully diss the ADE, not out of hate, but for entertainement.<br>
-            His lyrics appeared to cut through the surface and exposed the tension between students and the system.<br>
-            Almost all of his songs came from an accidental beat, thrown together without intention but executed with
-            instinct.<br>
-            They came raw, fast, and honest. People listened because it felt real, and because they maybe had nothing to
-            do at that time.
-          </p>
+            equally talented. Their connection wasn’t soft—it was competitive. 
         </div>
-        <div class="section-images">
+        <div class="section-images" style="margin-top: 15px;">
           <div class="image_container">
             <img class="profile-image" src="Images/cooking.jpg" alt="Rapper Mehdi">
-            <div
-              style="display:flex;justify-content: center; align-items: center; margin: 0px 15px; text-align: center;">
+            <div style="display:flex;justify-content: center; align-items: center; margin: 5px 15px 5px 15px; text-align: center;">
               <p>Mehdi at the Music and Art Club cooking up his next song</p>
             </div>
           </div>
-          <div class="image_container">
-            <video class="profile-image" src="Images/lmms.mp4" controls></video>
-            <div
-              style="display:flex;justify-content: center; align-items: center; margin: 0px 15px; text-align: center;">
-              <p>Mehdi early experimentation with LLMS Program</p>
-            </div>
-          </div>
         </div>
+      </div>
+
+      <div class="section-row">
+        <div class="section-text">
+          <p>
+            Mehdi invited Faris into his world
+            Faris shared the same raw passion for music, and for the first time, Mehdi felt like he had found someone equally
+            talented. Their connection wasn't soft—it was competitive. Mehdi invited Faris into his world through countless <a
+              class="links" href="https://en.wikipedia.org/wiki/Diss_track">diss tracks</a>, challenging him, pushing
+            him.<br><br>
+            In college, Mehdi used his tracks to playfully diss the <a class="links"
+              href="https://en.wikipedia.org/wiki/Administration">ADE</a>, not out of hate, but for <a class="links"
+              href="https://en.wikipedia.org/wiki/Entertainment">entertainement</a>.<br>
+            His <a class="links" href="https://en.wikipedia.org/wiki/Lyrics">lyrics</a> appeared to cut through the surface
+            and exposed the tension between <a class="links" href="https://en.wikipedia.org/wiki/Student">students</a> and the
+            <a class="links" href="https://en.wikipedia.org/wiki/Educational_system">system</a>.<br>
+            Almost all of his songs came from an accidental <a class="links"
+              href="https://en.wikipedia.org/wiki/Beat_(music)">beat</a>, thrown together without intention but executed with
+            <a class="links" href="https://en.wikipedia.org/wiki/Instinct">instinct</a>.<br>
+            They came raw, fast, and honest. People listened because it felt real, and because they maybe had nothing to do at
+            that time.
+          
+          </p>
+        </div>
+
       </div>
 
       <!-- Philosophy Endeavour Section -->
       <div class="section-row">
         <div class="section-text">
           <p class="section_title" id="philosophy-endevour">Philosophy Endeavour</p>
-          <p>
-            Mehdi’s approach to philosophy isn’t wrapped in long-winded quotes or dusty dogmas—it’s tactical.<br>
-            He doesn’t chase meaning for the sake of sounding smart; he studies it like a weapon. Life throws its usual
-            games: subjective grading, unpredictable authority, and people who say a lot but mean little.<br>
-            Mehdi doesn’t flinch. He listens, nods, and files it away. Not everything deserves a reaction.<br>
-            Some things just deserve to be written down, maybe turned into a line, or a joke, or a cold paragraph in a
-            notebook that hits harder than a debate.<br><br>
-            The failed logic, the contradictions, the little ironies of daily systems built by people who never
-            questioned themselves. That is what he writes about.<br>
-            His philosophy is quiet but deliberate: speak less, observe more, act only when the move can't be ignored.
-            The world talks too much already. Mehdi just turns its noise into notes.
-          </p>
+            <p>
+            Mehdi watches how people talk, how they act, and what doesn’t match. He doesn’t speak much about it, but he writes when something feels real, or strange enough to keep, or simply worth remembering.
+            <br> And through his continuous game, one question perpetually stays in his mind,
+            <br> While he constantly defines separation between his self and the other, the real problem comes up to define one's self and it's a real problem when you ask yourself “Who am I?”…
+            <br><i>"Lmouchkil lha9i9i Houa fach katsewel rassek chkoun ana, fa chkoun li ghadi ijaweb?.. mouchkila"</i>
+            — Mohammed Ait Archine
+            </p>
         </div>
         <div class="section-images">
           <!-- No image for this section, but you can add one if needed -->
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -473,55 +476,18 @@
 <footer class="wiki-footer">
   <div class="footer-content">
     
-    <!-- Categories Section -->
-    <div class="footer-section">
-      <h3>Categories:</h3>
-      <div class="category-links">
-        <a href="#">Living people</a> | 
-        <a href="#">2003 births</a> | 
-        <a href="#">Moroccan engineers</a> | 
-        <a href="#">Electrical engineers</a> | 
-        <a href="#">Robotics engineers</a> | 
-        <a href="#">People from Marrakesh</a> | 
-        <a href="#">ENSAM Rabat alumni</a> | 
-        <a href="#">Moroccan rappers</a> | 
-        <a href="#">21st-century Moroccan people</a>
-      </div>
-    </div>
 
-    <!-- Footer Links -->
-    <div class="footer-links">
-      <div class="footer-links-row">
-        <div class="footer-group">
-          <ul>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">About Wikipedia</a></li>
-            <li><a href="#">Disclaimers</a></li>
-            <li><a href="#">Contact Wikipedia</a></li>
-            <li><a href="#">Code of Conduct</a></li>
-            <li><a href="#">Developers</a></li>
-            <li><a href="#">Statistics</a></li>
-            <li><a href="#">Cookie statement</a></li>
-          </ul>
-        </div>
-        <div class="footer-group">
-          <ul>
-            <li><a href="#">Mobile view</a></li>
-            <li><a href="#">Desktop</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
       <div class="footer-logos">
         <a href="#" class="footer-logo-link">
-          <img src="https://wikimediafoundation.org/wp-content/uploads/2023/05/Wikimedia-logo_black.svg" 
+          <img src="https://en.wikipedia.org/w/resources/assets/poweredby_mediawiki.svg" 
                alt="Wikimedia Foundation" width="88" height="31">
         </a>
         <a href="#" class="footer-logo-link">
-          <img src="https://www.mediawiki.org/static/images/footer/poweredby_mediawiki_88x31.png" 
+          <img src="https://en.wikipedia.org/static/images/footer/wikimedia-button.svg" 
                alt="Powered by MediaWiki" width="88" height="31">
         </a>
       </div>
@@ -534,10 +500,26 @@
           Text is available under the <a href="#">Creative Commons Attribution-ShareAlike License 4.0</a>;
           additional terms may apply. By using this site, you agree to the 
           <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>. 
-          Wikipedia® is a registered trademark of the <a href="#">Wikimedia Foundation, Inc.</a>, 
+          <br>Wikipedia® is a registered trademark of the <a href="#">Wikimedia Foundation, Inc.</a>, 
           a non-profit organization.
         </p>
       </div>
+      <!-- Categories Section -->
+    <div class="footer-section">
+      <div class="category-links">
+        <a href="#">Living people</a> |
+        <a href="#">2003 births</a> |
+        <a href="#">Moroccan engineers</a> |
+        <a href="#">Electrical engineers</a> |
+        <a href="#">Robotics engineers</a> |
+        <a href="#">People from Marrakesh</a> |
+        <a href="#">ENSAM Rabat alumni</a> |
+        <a href="#">Moroccan rappers</a> |
+        <a href="#">21st-century Moroccan people</a>
+      </div>
+
+
+    </div>
     </div>
   </div>
 </footer>

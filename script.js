@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Theme switching functionality
+    const colorRadios = document.querySelectorAll('input[name="color"]');
+    
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Set the correct radio button based on saved theme
+    const themeRadio = document.querySelector(`input[name="color"][value="${savedTheme}"]`);
+    if (themeRadio) {
+        themeRadio.checked = true;
+    }
+    
+    // Add event listeners to theme radio buttons
+    colorRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.checked) {
+                const theme = this.value;
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            }
+        });
+    });
+
     const expandableItems = document.querySelectorAll(".toc-list li.expandable");
 
     expandableItems.forEach(item => {
@@ -151,5 +175,32 @@ function toggleToc(button) {
     tocList.style.display = 'none';
     button.textContent = 'show';
   }
+}
+
+// Languages dropdown functionality
+function toggleLanguagesDropdown() {
+  const dropdown = document.querySelector('.languages-dropdown');
+  dropdown.classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const dropdown = document.querySelector('.languages-dropdown');
+  if (!dropdown.contains(event.target)) {
+    dropdown.classList.remove('show');
+  }
+});
+
+// Play Arabic version audio
+function playArabicVersion() {
+  // Create audio element and play the Arabic version
+  const audio = new Audio('sfx/dajajatan.mp3');
+  audio.play().catch(error => {
+    console.log('Audio playback failed:', error);
+    alert('Sorry, the Arabic version audio could not be played.');
+  });
+  
+  // Close the dropdown after selection
+  document.querySelector('.languages-dropdown').classList.remove('show');
 }
 
