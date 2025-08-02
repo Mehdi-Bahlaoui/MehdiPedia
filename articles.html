@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mehdi Bahlaoui - Articles - Wikipedia</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
+  <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
+
+  <script src="script.js" defer></script>
+</head>
+
+<header id="top">
+  <div class="left-header">
+    <nav class="left-nav">
+      <label for="sidebar-active-left" class="open-sidebar-button-left">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <label id="overlay-left" for="sidebar-active-left"></label>
+
+      <div class="links-container-left">
+        <a class="home-link" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+
+    <div class="logo-area">
+      <a class="logo-link" href="index.html">
+        <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia"
+          width="50" height="50">
+        <span class="logo-text">
+          <img class="wikipedia-text"
+            src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg" alt="Wikipedia"
+            width="140">
+          <img class="encyclopedia-text"
+            src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg"
+            alt="The Free Encyclopedia">
+        </span>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" placeholder="Search Wikipedia">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <div class="right-header">
+    <div class="right-links">
+      <a href="">Donate</a>
+      <a href="">Create Account</a>
+      <a href="">Log in</a>
+    </div>
+
+    <nav>
+      <label for="sidebar-active-right" class="open-sidebar-button-right">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+          <path
+            d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+        </svg>
+      </label>
+      <label id="overlay-right" for="sidebar-active-right"></label>
+
+      <div class="links-container-right">
+        <a href="random1.html">Random 1</a>
+        <a href="random2.html">Random 2</a>
+        <a href="random3.html">Random 3</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <div class="page-container">
+
+    <!-- LEFT TOC -->
+    <div class="sidebar">
+      <div class="toc">
+        <div class="toc-title">
+          Contents
+          <span class="toc-controls">
+            <button class="toc-toggle" onclick="toggleToc(this)">hide</button>
+          </span>
+        </div>
+        <ul class="toc-list">
+          <li><a href="#top">(Top)</a></li>
+          <li><a href="#technical-papers">Technical Papers</a></li>
+          <li><a href="#blog-posts">Blog Posts</a></li>
+          <li><a href="#research-notes">Research Notes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <div class="top-header">
+        <p class="name">Mehdi Bahlaoui</p>
+        <div class="languages-dropdown">
+          <button class="languages-button" onclick="toggleLanguagesDropdown()"> 153 languages </button>
+          <div class="languages-dropdown-content" id="languagesDropdown">
+            <a href="#" onclick="playArabicVersion()">🔊 Arabic Summary</a>
+            <a href="#">中文</a>
+            <a href="#">日本語</a>
+            <hr>
+            <a href="#" class="view-all">View all 153 languages</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-header-secondary">
+        <div class="top-header-secondary-left">
+          <p class="blue-text"><a href="index.html" style="text-decoration: none; color: inherit;">Biography</a></p>
+          <p class="underline"><u>Articles</u></p>
+          <p class="blue-text">Music</p>
+        </div>
+
+        <div class="top-header-secondary-right">
+          <p class="underline">Read</p>
+          <p class="blue-text">View source</p>
+          <p class="blue-text">View history</p>
+          <div class="tools">
+            <p>Tools</p>
+            <img src="icons/down.svg" alt="Icon" width="24" height="24">
+          </div>
+        </div>
+      </div>
+
+      <div class="wikipedia-header-row">
+        <span class="wikipedia-source">From Wikipedia, the free encyclopedia</span>
+        <span class="top-header-icons" style="margin-left:auto;">
+          <a href="#" class="icon-link">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Extended-protection-shackle.svg/40px-Extended-protection-shackle.svg.png"
+              alt="Protection Icon">
+          </a>
+          <a href="#" class="icon-link">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/40px-Symbol_support_vote.svg.png"
+              alt="Support Icon">
+          </a>
+        </span>
+      </div>
+
+      <!-- Articles Overview Section -->
+      <div class="section-row merged-section">
+        <div class="section-text">
+          <i>
+            <p class="disambiguation">This page contains a comprehensive list of articles, papers, and written works by <a class="links" href="index.html">Mehdi Bahlaoui</a>.</p>
+          </i>
+          <p>
+            <b>Mehdi Bahlaoui's Articles and Publications</b> represent his thoughts, research, and insights across various fields including <a class="links" href="https://en.wikipedia.org/wiki/Robotics">robotics</a>, <a class="links" href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>, <a class="links" href="https://en.wikipedia.org/wiki/Philosophy">philosophy</a>, and <a class="links" href="https://en.wikipedia.org/wiki/Engineering">engineering</a>.<br><br>
+            His writing style combines <a class="links" href="https://en.wikipedia.org/wiki/Technical_writing">technical precision</a> with <a class="links" href="https://en.wikipedia.org/wiki/Storytelling">narrative storytelling</a>, making complex concepts accessible to both technical and general audiences.
+          </p>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Technical Papers Section -->
+      <div class="section-row" id="technical-papers">
+        <div class="section-text">
+          <p class="section_title">Technical Papers</p>
+          <p>
+            Research papers and technical documentation showcasing Mehdi's work in <a class="links" href="https://en.wikipedia.org/wiki/Embedded_system">embedded systems</a> and <a class="links" href="https://en.wikipedia.org/wiki/Robotics">robotics</a>.
+          </p>
+          
+          <ul style="margin-left: 20px;">
+            <li><a class="links" href="#">"Optimization of Motor Control Systems for Competitive Robotics" (2024)</a></li>
+            <li><a class="links" href="#">"Sensor Fusion Techniques for Autonomous Navigation" (2023)</a></li>
+            <li><a class="links" href="#">"Low-Power Design Considerations for IoT Applications" (2023)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Blog Posts Section -->
+      <div class="section-row" id="blog-posts">
+        <div class="section-text">
+          <p class="section_title">Blog Posts</p>
+          <p>
+            Personal reflections and insights on technology, education, and life as an engineering student.
+          </p>
+          
+          <ul style="margin-left: 20px;">
+            <li><a class="links" href="#">"Why I Quit YouTube at 600 Subscribers" (2024)</a></li>
+            <li><a class="links" href="#">"The Myth of the Perfect Academic Record" (2024)</a></li>
+            <li><a class="links" href="#">"From Beats to Bots: My Journey Through Different Passions" (2023)</a></li>
+            <li><a class="links" href="#">"Lessons from Leading a Robotics Club" (2023)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Research Notes Section -->
+      <div class="section-row" id="research-notes">
+        <div class="section-text">
+          <p class="section_title">Research Notes</p>
+          <p>
+            Ongoing research and experimental work, documenting the process of discovery and innovation.
+          </p>
+          
+          <ul style="margin-left: 20px;">
+            <li><a class="links" href="#">"Exploring Neuromorphic Computing Applications" (In Progress)</a></li>
+            <li><a class="links" href="#">"Philosophy of Technology: Notes and Observations" (Ongoing)</a></li>
+            <li><a class="links" href="#">"Building the Next Generation of Robotics Education" (Draft)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+
+    <!-- RIGHT TOC -->
+    <div class="sidebar">
+      <div class="toc">
+        <div class="toc-title">
+          Appearance
+          <span class="toc-controls">
+            <button class="toc-toggle" onclick="toggleToc(this)">hide</button>
+          </span>
+        </div>
+
+        <form class="appearance-form">
+          <fieldset>
+            <legend>Text</legend>
+            <label><input type="radio" name="text-size" value="small"> Small</label>
+            <label><input type="radio" name="text-size" value="standard" checked> Standard</label>
+            <label><input type="radio" name="text-size" value="large"> Large</label>
+          </fieldset>
+          <fieldset>
+            <legend>Width</legend>
+            <label><input type="radio" name="width" value="standard" checked> Standard</label>
+            <label><input type="radio" name="width" value="wide"> Wide</label>
+          </fieldset>
+          <fieldset>
+            <legend>Color (beta)</legend>
+            <label><input type="radio" name="color" value="automatic"> Automatic</label>
+            <label><input type="radio" name="color" value="light" checked> Light</label>
+            <label><input type="radio" name="color" value="dark"> Dark</label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<footer class="wiki-footer">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-logos">
+        <a href="#" class="footer-logo-link">
+          <img src="https://en.wikipedia.org/w/resources/assets/poweredby_mediawiki.svg" 
+               alt="Wikimedia Foundation" width="88" height="31">
+        </a>
+        <a href="#" class="footer-logo-link">
+          <img src="https://en.wikipedia.org/static/images/footer/wikimedia-button.svg" 
+               alt="Powered by MediaWiki" width="88" height="31">
+        </a>
+      </div>
+      
+      <div class="footer-text">
+        <p>This page was last edited on 2 August 2025, at 20:30 (GMT+1).</p>
+        <p>
+          This website is a personal project and is not affiliated with or endorsed by Wikipedia or the Wikimedia Foundation.
+          Wikipedia® is a registered trademark of the <a href="#">Wikimedia Foundation, Inc.</a>, a non-profit organization.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <div class="category-links">
+          <a href="#">Articles</a> |
+          <a href="#">Research</a> |
+          <a href="#">Technical Writing</a> |
+          <a href="#">Blog Posts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
