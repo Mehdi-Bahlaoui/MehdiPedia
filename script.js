@@ -52,11 +52,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     // Add the top section manually
-    const overviewSection = document.getElementById('overview-section');
+    const overviewSection = document.getElementById('overview-early-life-section');
     if (overviewSection) {
       const topLink = document.querySelector('.toc-list a[href="#top"]');
       if (topLink) {
-        sectionToTocMap.set('overview-section', topLink);
+        sectionToTocMap.set('overview-early-life-section', topLink);
+      }
+    }
+
+    // Add early life section manually (section title inside merged section)
+    const earlyLifeTitle = document.getElementById('early-life');
+    if (earlyLifeTitle) {
+      const earlyLifeLink = document.querySelector('.toc-list a[href="#early-life"]');
+      if (earlyLifeLink) {
+        // Map the early life title to its TOC link, but we'll need to handle this specially
+        sectionToTocMap.set('early-life', earlyLifeLink);
+      }
+    }
+
+    // Add rap career section manually (section ID doesn't match TOC link)
+    const rapCareerSection = document.getElementById('rap-career-section');
+    if (rapCareerSection) {
+      const rapCareerLink = document.querySelector('.toc-list a[href="#rap-career"]');
+      if (rapCareerLink) {
+        sectionToTocMap.set('rap-career-section', rapCareerLink);
       }
     }
 
@@ -100,11 +119,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function determineActiveSection() {
       const scrollTop = window.scrollY;
-      let activeSection = 'overview-section';
+      let activeSection = 'overview-early-life-section';
       
       // If we're near the top of the page, always show the first section
       if (scrollTop < 100) {
-        return 'overview-section';
+        return 'overview-early-life-section';
+      }
+      
+      // Check if we're in the early life portion of the merged section
+      const earlyLifeTitle = document.getElementById('early-life');
+      if (earlyLifeTitle) {
+        const earlyLifeRect = earlyLifeTitle.getBoundingClientRect();
+        // If the early life title is in the viewport area (with some tolerance)
+        if (earlyLifeRect.top <= 300 && earlyLifeRect.bottom >= -50) {
+          return 'early-life';
+        }
       }
       
       // Find the section whose top is closest to the viewport center

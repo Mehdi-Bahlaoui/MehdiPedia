@@ -438,6 +438,12 @@ body {
 
 .toc-list a.active-link {
   font-weight: bold;
+  color: #000000 !important;
+}
+
+/* Dark mode active link */
+[data-theme="dark"] .toc-list a.active-link {
+  color: #ffffff !important;
 }
 
 
