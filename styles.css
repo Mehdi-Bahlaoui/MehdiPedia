@@ -1,12 +1,22 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* font-size: 18px;
-  font-weight: normal;
-  text-decoration: none; */
-
   margin: 0;
   padding: 0;
 }
+
+.font-philo {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1em;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
 
 html {
   background-color: var(--background-color);
@@ -140,7 +150,7 @@ header {
   padding: 8px 8px 8px 40px;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 0.875em; /* roughly 14px */
   background: url('Images/search.svg') no-repeat 8px center;
   background-size: 24px 24px;
   background-color: var(--background-color);
@@ -154,7 +164,7 @@ header {
   background-color: var(--hover-background);
   font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875em; /* roughly 14px */
   border-left: 1px solid var(--dark-grey);
   color: var(--text-color);
 }
@@ -725,7 +735,7 @@ body {
   flex: 1 1 0;
   padding: 0 10px 10px 10px;
   font-size: 1.1em;
-  line-height: 1.6em;
+  line-height: 1.5em;
 }
 /* Remove old early-life margin since it's now merged */
 .education {
@@ -742,7 +752,7 @@ body {
 
 .image_container {
   width: 300px;
-  margin: 30px 20px 10px 20px;
+  margin: 30px 20px 10px 0px;
 
   border: 1px solid #a2a9b1;
   background: var(--blue-very-light);
@@ -781,7 +791,7 @@ body {
   justify-content: center;
 }
 .profile-image {
-  max-width: 285px;
+  max-width: 270px;
   /* width: 285px; */
   height: auto;
   margin: 15px 15px 0px 15px;
@@ -849,15 +859,13 @@ body {
 }
 
 /* MIDDLE */
-
-
 .appearance-form {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .appearance-form fieldset {
@@ -1001,15 +1009,15 @@ body {
   .section-row {
     flex-direction: column;
     max-width: 350px;
-    margin: 0 auto 20px auto;
-    gap: 0;
+    /* margin: 0 auto 20px auto; */
+    /* gap: 0; */
   }
 
   .merged-section {
     flex-direction: column;
     max-width: 350px;
-    margin: 0 auto 20px auto;
-    gap: 10px;
+    /* margin: 0 auto 20px auto;
+    gap: 10px; */
   }
 
   .merged-text {
