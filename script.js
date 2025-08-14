@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     header.addEventListener('click', function(e) {
       // Only toggle if clicking directly on the section-header element itself or section_title
       // This prevents false triggers from child elements or scrolling
-      if (e.target === header || e.target.classList.contains('section_title')) {
+      if (e.target === header || e.target.classList.contains('section_title') || e.target.classList.contains('section-toggle')) {
         const sectionId = header.getAttribute('data-section');
         toggleSection(sectionId);
       }
@@ -281,24 +281,28 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Handle window resize to reset mobile functionality
+let resizeTimer;
 window.addEventListener('resize', function() {
-  const sectionContents = document.querySelectorAll('.section-content');
-  const toggles = document.querySelectorAll('.section-toggle');
-  
-  if (window.innerWidth > 850) {
-    // Desktop: ensure all sections are expanded and toggles are hidden
-    sectionContents.forEach(content => {
-      content.classList.add('expanded');
-    });
-  } else {
-    // Mobile: collapse all sections and show right arrow icons
-    sectionContents.forEach(content => {
-      content.classList.remove('expanded');
-    });
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    const sectionContents = document.querySelectorAll('.section-content');
+    const toggles = document.querySelectorAll('.section-toggle');
     
-    toggles.forEach(toggle => {
-      toggle.classList.remove('expanded');
-    });
-  }
+    if (window.innerWidth > 850) {
+      // Desktop: ensure all sections are expanded and toggles are hidden
+      sectionContents.forEach(content => {
+        content.classList.add('expanded');
+      });
+    } else {
+      // Mobile: collapse all sections and show right arrow icons
+      sectionContents.forEach(content => {
+        content.classList.remove('expanded');
+      });
+      
+      toggles.forEach(toggle => {
+        toggle.classList.remove('expanded');
+      });
+    }
+  }, 250); // Debounce delay to prevent triggering during fast scrolling
 });
 
