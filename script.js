@@ -233,3 +233,56 @@ function playArabicVersion() {
   document.querySelector('.languages-dropdown').classList.remove('show');
 }
 
+// Mobile section toggle functionality
+function toggleSection(sectionId) {
+  // Only function on mobile screens
+  if (window.innerWidth > 850) return;
+  
+  const content = document.getElementById(sectionId + '-content');
+  const toggle = document.querySelector(`#${sectionId}-section .section-toggle`);
+  
+  if (content && toggle) {
+    content.classList.toggle('expanded');
+    toggle.classList.toggle('expanded');
+  }
+}
+
+// Initialize mobile sections as collapsed on load
+document.addEventListener('DOMContentLoaded', function() {
+  // Only apply on mobile screens
+  if (window.innerWidth <= 850) {
+    const sectionContents = document.querySelectorAll('.section-content');
+    const toggles = document.querySelectorAll('.section-toggle');
+    
+    sectionContents.forEach(content => {
+      content.classList.remove('expanded');
+    });
+    
+    toggles.forEach(toggle => {
+      toggle.classList.remove('expanded');
+    });
+  }
+});
+
+// Handle window resize to reset mobile functionality
+window.addEventListener('resize', function() {
+  const sectionContents = document.querySelectorAll('.section-content');
+  const toggles = document.querySelectorAll('.section-toggle');
+  
+  if (window.innerWidth > 850) {
+    // Desktop: ensure all sections are expanded and toggles are hidden
+    sectionContents.forEach(content => {
+      content.classList.add('expanded');
+    });
+  } else {
+    // Mobile: collapse all sections and show right arrow icons
+    sectionContents.forEach(content => {
+      content.classList.remove('expanded');
+    });
+    
+    toggles.forEach(toggle => {
+      toggle.classList.remove('expanded');
+    });
+  }
+});
+

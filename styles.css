@@ -738,9 +738,9 @@ body {
   line-height: 1.5em;
 }
 /* Remove old early-life margin since it's now merged */
-.education {
+/* .education {
   margin-top: -20px;
-}
+} */
 
 .section-images {
   flex: 0 0 320px;
@@ -854,8 +854,6 @@ body {
   font-family: 'Linux Libertine', Georgia, Times, serif;
   font-size: 1.5em;
   color: var(--text-color);
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 5px;
 }
 
 /* MIDDLE */
@@ -1239,6 +1237,98 @@ body {
 
   #rap-career-section {
     margin-top: -30px;
+  }
+}
+
+/* Mobile collapsible sections */
+.collapsible-section {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 850px) {
+  .collapsible-section {
+    margin-bottom: 25px;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+  user-select: none;
+  
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 5px;
+}
+
+.section-header .section_title {
+  margin-bottom: 0;
+}
+
+.section-header:hover {
+  background-color: var(--hover-background);
+}
+
+.section-toggle {
+  width: 26px;
+  height: 26px;
+  background-image: url('icons/right.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.section-toggle.expanded {
+  background-image: url('icons/down.svg');
+}
+
+.section-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.section-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.section-content.expanded {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+/* Desktop: sections always expanded, no toggle visible */
+@media (min-width: 851px) {
+  .section-header {
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .section-toggle {
+    display: none;
+  }
+  
+  .section-content {
+    max-height: unset !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+}
+
+/* Mobile: sections collapsible, closed by default */
+@media (max-width: 850px) {
+  .section-content {
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .section-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    padding-top: 10px;
   }
 }
 
