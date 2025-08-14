@@ -253,18 +253,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   sectionHeaders.forEach(header => {
     header.addEventListener('click', function(e) {
-      // Only toggle if clicking on the section title or toggle button
-      // Don't toggle if clicking on links or other interactive elements
-      if (e.target.tagName.toLowerCase() === 'a' || 
-          e.target.closest('a') || 
-          e.target.closest('.section-content')) {
-        return;
-      }
-      
-      // Only toggle if clicking on the title or toggle button
-      if (e.target.classList.contains('section_title') || 
-          e.target.classList.contains('section-toggle') ||
-          e.target === header) {
+      // Only toggle if clicking directly on the section-header element itself or section_title
+      // This prevents false triggers from child elements or scrolling
+      if (e.target === header || e.target.classList.contains('section_title')) {
         const sectionId = header.getAttribute('data-section');
         toggleSection(sectionId);
       }
