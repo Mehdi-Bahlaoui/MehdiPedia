@@ -247,6 +247,31 @@ function toggleSection(sectionId) {
   }
 }
 
+// Add event listeners for section headers
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionHeaders = document.querySelectorAll('.section-header[data-section]');
+  
+  sectionHeaders.forEach(header => {
+    header.addEventListener('click', function(e) {
+      // Only toggle if clicking on the section title or toggle button
+      // Don't toggle if clicking on links or other interactive elements
+      if (e.target.tagName.toLowerCase() === 'a' || 
+          e.target.closest('a') || 
+          e.target.closest('.section-content')) {
+        return;
+      }
+      
+      // Only toggle if clicking on the title or toggle button
+      if (e.target.classList.contains('section_title') || 
+          e.target.classList.contains('section-toggle') ||
+          e.target === header) {
+        const sectionId = header.getAttribute('data-section');
+        toggleSection(sectionId);
+      }
+    });
+  });
+});
+
 // Initialize mobile sections as collapsed on load
 document.addEventListener('DOMContentLoaded', function() {
   // Only apply on mobile screens
