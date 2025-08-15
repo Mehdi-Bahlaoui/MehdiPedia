@@ -117,27 +117,27 @@ function toggleSection(sectionId) {
 }
 
 // Handle window resize to reset mobile functionality
-let resizeTimer;
-window.addEventListener('resize', function() {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    const sectionContents = document.querySelectorAll('.section-content');
-    const toggles = document.querySelectorAll('.section-toggle');
+// let resizeTimer;
+// window.addEventListener('resize', function() {
+//   clearTimeout(resizeTimer);
+//   resizeTimer = setTimeout(() => {
+//     const sectionContents = document.querySelectorAll('.section-content');
+//     const toggles = document.querySelectorAll('.section-toggle');
     
-    if (window.innerWidth > 850) {
-      // Desktop: ensure all sections are expanded
-      sectionContents.forEach(content => {
-        content.classList.add('expanded');
-      });
-    } else {
-      // Mobile: collapse all sections
-      sectionContents.forEach(content => {
-        content.classList.remove('expanded');
-      });
+//     if (window.innerWidth > 850) {
+//       // Desktop: ensure all sections are expanded
+//       sectionContents.forEach(content => {
+//         content.classList.add('expanded');
+//       });
+//     } else {
+//       // Mobile: collapse all sections
+//       sectionContents.forEach(content => {
+//         content.classList.remove('expanded');
+//       });
       
-      toggles.forEach(toggle => {
-        toggle.classList.remove('expanded');
-      });
-    }
-  }, 250);
-});
+//       toggles.forEach(toggle => {
+//         toggle.classList.remove('expanded');
+//       });
+//     }
+//   }, 250);
+// });
