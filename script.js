@@ -36,29 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
             toggle.classList.remove('expanded');
         });
     }
+});
 
-    // Handle section clicks for mobile toggling
-    document.addEventListener('click', function(e) {
-        // Only work on mobile
-        if (window.innerWidth > 850) return;
+// Handle section clicks for mobile toggling - MOVED OUTSIDE DOMContentLoaded for persistence
+document.addEventListener('click', function(e) {
+    // Only work on mobile
+    if (window.innerWidth > 850) return;
+    
+    // Check if click is on a section header, title, or toggle button
+    const sectionHeader = e.target.closest('.section-header');
+    const sectionTitle = e.target.closest('.section_title');
+    const sectionToggle = e.target.closest('.section-toggle');
+    
+    if (sectionHeader || sectionTitle || sectionToggle) {
+        e.preventDefault();
+        e.stopPropagation();
         
-        // Check if click is on a section header, title, or toggle button
-        const sectionHeader = e.target.closest('.section-header');
-        const sectionTitle = e.target.closest('.section_title');
-        const sectionToggle = e.target.closest('.section-toggle');
-        
-        if (sectionHeader || sectionTitle || sectionToggle) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Find the collapsible section
-            const section = e.target.closest('.collapsible-section');
-            if (section) {
-                const sectionId = section.id.replace('-section', '');
-                toggleSection(sectionId);
-            }
+        // Find the collapsible section
+        const section = e.target.closest('.collapsible-section');
+        if (section) {
+            const sectionId = section.id.replace('-section', '');
+            toggleSection(sectionId);
         }
-    });
+    }
 });
 
 // Toggle TOC visibility function
@@ -115,29 +115,3 @@ function toggleSection(sectionId) {
     toggle.classList.toggle('expanded');
   }
 }
-
-// Handle window resize to reset mobile functionality
-// let resizeTimer;
-// window.addEventListener('resize', function() {
-//   clearTimeout(resizeTimer);
-//   resizeTimer = setTimeout(() => {
-//     const sectionContents = document.querySelectorAll('.section-content');
-//     const toggles = document.querySelectorAll('.section-toggle');
-    
-//     if (window.innerWidth > 850) {
-//       // Desktop: ensure all sections are expanded
-//       sectionContents.forEach(content => {
-//         content.classList.add('expanded');
-//       });
-//     } else {
-//       // Mobile: collapse all sections
-//       sectionContents.forEach(content => {
-//         content.classList.remove('expanded');
-//       });
-      
-//       toggles.forEach(toggle => {
-//         toggle.classList.remove('expanded');
-//       });
-//     }
-//   }, 250);
-// });
