@@ -23,174 +23,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const expandableItems = document.querySelectorAll(".toc-list li.expandable");
-
-    expandableItems.forEach(item => {
-      item.addEventListener("click", function (e) {
-        // Prevent click from navigating if <a> is inside
-        if (e.target.tagName.toLowerCase() === "a") return;
-
-        item.classList.toggle("expanded");
-        item.classList.toggle("collapsed");
-      });
-    });
-
-    // Improved TOC highlighting logic
-    const sections = document.querySelectorAll(".main-content .section-row");
-    const tocLinks = document.querySelectorAll(".toc-list a");
-    
-    // Create a map of section IDs to their corresponding TOC links
-    const sectionToTocMap = new Map();
-    sections.forEach(section => {
-      const sectionId = section.id || section.querySelector('.section_title')?.id;
-      if (sectionId) {
-        const tocLink = document.querySelector(`.toc-list a[href="#${sectionId}"]`);
-        if (tocLink) {
-          sectionToTocMap.set(sectionId, tocLink);
-        }
-      }
-    });
-    
-    // Add the top section manually
-    const overviewSection = document.getElementById('overview-early-life-section');
-    if (overviewSection) {
-      const topLink = document.querySelector('.toc-list a[href="#top"]');
-      if (topLink) {
-        sectionToTocMap.set('overview-early-life-section', topLink);
-      }
-    }
-
-    // Add early life section manually (section title inside merged section)
-    const earlyLifeTitle = document.getElementById('early-life');
-    if (earlyLifeTitle) {
-      const earlyLifeLink = document.querySelector('.toc-list a[href="#early-life"]');
-      if (earlyLifeLink) {
-        // Map the early life title to its TOC link, but we'll need to handle this specially
-        sectionToTocMap.set('early-life', earlyLifeLink);
-      }
-    }
-
-    // Add rap career section manually (section ID doesn't match TOC link)
-    const rapCareerSection = document.getElementById('rap-career-section');
-    if (rapCareerSection) {
-      const rapCareerLink = document.querySelector('.toc-list a[href="#rap-career"]');
-      if (rapCareerLink) {
-        sectionToTocMap.set('rap-career-section', rapCareerLink);
-      }
-    }
-
-    let currentActiveSection = null;
-    let isScrolling = false;
-    let scrollTimer;
-
-    function updateActiveSection(newActiveSection) {
-      if (newActiveSection !== currentActiveSection) {
-        // Remove active class from all links
-        tocLinks.forEach(link => {
-          link.classList.remove("active-link");
+    // Initialize mobile sections as collapsed on load
+    if (window.innerWidth <= 850) {
+        const sectionContents = document.querySelectorAll('.section-content');
+        const toggles = document.querySelectorAll('.section-toggle');
+        
+        sectionContents.forEach(content => {
+            content.classList.remove('expanded');
         });
         
-        // Collapse all expandable items first
-        expandableItems.forEach(item => {
-          item.classList.remove("expanded");
-          item.classList.add("collapsed");
+        toggles.forEach(toggle => {
+            toggle.classList.remove('expanded');
         });
+    }
+
+    // Handle section clicks for mobile toggling
+    document.addEventListener('click', function(e) {
+        // Only work on mobile
+        if (window.innerWidth > 850) return;
         
-        // Add active class to the new active section's link
-        if (newActiveSection && sectionToTocMap.has(newActiveSection)) {
-          const activeLink = sectionToTocMap.get(newActiveSection);
-          activeLink.classList.add('active-link');
-          
-          // Check if the active link is inside a sublist (hidden under an expandable item)
-          const parentSublist = activeLink.closest('.toc-sublist');
-          if (parentSublist) {
-            // Find the parent expandable item and expand it
-            const parentExpandableItem = parentSublist.closest('li.expandable');
-            if (parentExpandableItem) {
-              parentExpandableItem.classList.add("expanded");
-              parentExpandableItem.classList.remove("collapsed");
+        // Check if click is on a section header, title, or toggle button
+        const sectionHeader = e.target.closest('.section-header');
+        const sectionTitle = e.target.closest('.section_title');
+        const sectionToggle = e.target.closest('.section-toggle');
+        
+        if (sectionHeader || sectionTitle || sectionToggle) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Find the collapsible section
+            const section = e.target.closest('.collapsible-section');
+            if (section) {
+                const sectionId = section.id.replace('-section', '');
+                toggleSection(sectionId);
             }
-          }
         }
-        
-        currentActiveSection = newActiveSection;
-      }
-    }
-
-    function determineActiveSection() {
-      const scrollTop = window.scrollY;
-      let activeSection = 'overview-early-life-section';
-      
-      // If we're near the top of the page, always show the first section
-      if (scrollTop < 100) {
-        return 'overview-early-life-section';
-      }
-      
-      // Check if we're in the early life portion of the merged section
-      const earlyLifeTitle = document.getElementById('early-life');
-      if (earlyLifeTitle) {
-        const earlyLifeRect = earlyLifeTitle.getBoundingClientRect();
-        // If the early life title is in the viewport area (with some tolerance)
-        if (earlyLifeRect.top <= 300 && earlyLifeRect.bottom >= -50) {
-          return 'early-life';
-        }
-      }
-      
-      // Find the section whose top is closest to the viewport center
-      let closestSection = null;
-      let closestDistance = Infinity;
-      
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        const sectionId = section.id || section.querySelector('.section_title')?.id;
-        
-        if (sectionId) {
-          // Calculate distance from section top to a point 200px from viewport top
-          const distance = Math.abs(rect.top - 200);
-          
-          // If section is visible and closer than previous closest
-          if (rect.top <= 300 && rect.bottom >= 100 && distance < closestDistance) {
-            closestDistance = distance;
-            closestSection = sectionId;
-          }
-        }
-      });
-      
-      return closestSection || activeSection;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      // Only process intersection changes if we're not actively scrolling
-      if (isScrolling) return;
-      
-      const newActiveSection = determineActiveSection();
-      updateActiveSection(newActiveSection);
-    }, {
-      root: null,
-      rootMargin: "-10% 0px -70% 0px",
-      threshold: [0, 0.25, 0.5, 0.75, 1.0]
     });
-
-    // Observe all sections
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-
-    // Handle scroll events with debouncing
-    window.addEventListener('scroll', () => {
-      isScrolling = true;
-      
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(() => {
-        isScrolling = false;
-        
-        // Update active section based on current scroll position
-        const newActiveSection = determineActiveSection();
-        updateActiveSection(newActiveSection);
-      }, 50); // Increased debounce time for smoother transitions
-    });
-
-  });
+});
 
 // Toggle TOC visibility function
 function toggleToc(button) {
@@ -247,99 +116,6 @@ function toggleSection(sectionId) {
   }
 }
 
-// FIX: Track touch/mouse interactions to prevent false toggles
-let touchStartY = 0;
-let touchStartX = 0;
-let touchStartTime = 0;
-let isValidClick = true;
-
-// Add event listeners for section headers with improved mobile handling
-document.addEventListener('DOMContentLoaded', function() {
-  const sectionHeaders = document.querySelectorAll('.section-header[data-section]');
-  
-  sectionHeaders.forEach(header => {
-    // Track touch start for mobile
-    header.addEventListener('touchstart', function(e) {
-      touchStartY = e.touches[0].clientY;
-      touchStartX = e.touches[0].clientX;
-      touchStartTime = Date.now();
-      isValidClick = true;
-    }, { passive: true });
-    
-    // Track touch move to detect scrolling
-    header.addEventListener('touchmove', function(e) {
-      const touchMoveY = e.touches[0].clientY;
-      const touchMoveX = e.touches[0].clientX;
-      const deltaY = Math.abs(touchMoveY - touchStartY);
-      const deltaX = Math.abs(touchMoveX - touchStartX);
-      
-      // If user moved finger more than 10px, it's likely a scroll, not a tap
-      if (deltaY > 10 || deltaX > 10) {
-        isValidClick = false;
-      }
-    }, { passive: true });
-    
-    // Handle the actual click/tap
-    header.addEventListener('click', function(e) {
-      // Prevent toggle if:
-      // 1. It's not a valid click (was a scroll gesture)
-      // 2. Click originated from within section-content (bubbled up)
-      // 3. Too much time passed (>500ms) between touchstart and click
-      
-      const clickTime = Date.now();
-      const timeDiff = clickTime - touchStartTime;
-      
-      // Check if click originated from section-content
-      const fromContent = e.target.closest('.section-content');
-      
-      // Only toggle if:
-      // - It's a valid click (not a scroll)
-      // - Click is on header elements (not content)
-      // - Time between touch and click is reasonable (<500ms)
-      // - Or it's a non-touch device (timeDiff will be large)
-      if (isValidClick && !fromContent && (timeDiff < 500 || timeDiff > 1000)) {
-        // Only toggle if clicking on the header, title, or toggle button
-        if (e.target === header || 
-            e.target.classList.contains('section_title') || 
-            e.target.classList.contains('section-toggle')) {
-          const sectionId = header.getAttribute('data-section');
-          toggleSection(sectionId);
-        }
-      }
-      
-      // Reset for next interaction
-      isValidClick = true;
-      touchStartTime = 0;
-    });
-  });
-  
-  // Prevent click events from section content from bubbling up
-  const sectionContents = document.querySelectorAll('.section-content');
-  sectionContents.forEach(content => {
-    content.addEventListener('click', function(e) {
-      // Stop propagation to prevent triggering parent header's click
-      e.stopPropagation();
-    });
-  });
-});
-
-// Initialize mobile sections as collapsed on load
-document.addEventListener('DOMContentLoaded', function() {
-  // Only apply on mobile screens
-  if (window.innerWidth <= 850) {
-    const sectionContents = document.querySelectorAll('.section-content');
-    const toggles = document.querySelectorAll('.section-toggle');
-    
-    sectionContents.forEach(content => {
-      content.classList.remove('expanded');
-    });
-    
-    toggles.forEach(toggle => {
-      toggle.classList.remove('expanded');
-    });
-  }
-});
-
 // Handle window resize to reset mobile functionality
 let resizeTimer;
 window.addEventListener('resize', function() {
@@ -349,12 +125,12 @@ window.addEventListener('resize', function() {
     const toggles = document.querySelectorAll('.section-toggle');
     
     if (window.innerWidth > 850) {
-      // Desktop: ensure all sections are expanded and toggles are hidden
+      // Desktop: ensure all sections are expanded
       sectionContents.forEach(content => {
         content.classList.add('expanded');
       });
     } else {
-      // Mobile: collapse all sections and show right arrow icons
+      // Mobile: collapse all sections
       sectionContents.forEach(content => {
         content.classList.remove('expanded');
       });
@@ -363,5 +139,5 @@ window.addEventListener('resize', function() {
         toggle.classList.remove('expanded');
       });
     }
-  }, 250); // Debounce delay to prevent triggering during fast scrolling
+  }, 250);
 });
