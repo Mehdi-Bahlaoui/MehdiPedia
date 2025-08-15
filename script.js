@@ -247,18 +247,78 @@ function toggleSection(sectionId) {
   }
 }
 
-// Add event listeners for section headers
+// FIX: Track touch/mouse interactions to prevent false toggles
+let touchStartY = 0;
+let touchStartX = 0;
+let touchStartTime = 0;
+let isValidClick = true;
+
+// Add event listeners for section headers with improved mobile handling
 document.addEventListener('DOMContentLoaded', function() {
   const sectionHeaders = document.querySelectorAll('.section-header[data-section]');
   
   sectionHeaders.forEach(header => {
-    header.addEventListener('click', function(e) {
-      // Only toggle if clicking directly on the section-header element itself or section_title
-      // This prevents false triggers from child elements or scrolling
-      if (e.target === header || e.target.classList.contains('section_title') || e.target.classList.contains('section-toggle')) {
-        const sectionId = header.getAttribute('data-section');
-        toggleSection(sectionId);
+    // Track touch start for mobile
+    header.addEventListener('touchstart', function(e) {
+      touchStartY = e.touches[0].clientY;
+      touchStartX = e.touches[0].clientX;
+      touchStartTime = Date.now();
+      isValidClick = true;
+    }, { passive: true });
+    
+    // Track touch move to detect scrolling
+    header.addEventListener('touchmove', function(e) {
+      const touchMoveY = e.touches[0].clientY;
+      const touchMoveX = e.touches[0].clientX;
+      const deltaY = Math.abs(touchMoveY - touchStartY);
+      const deltaX = Math.abs(touchMoveX - touchStartX);
+      
+      // If user moved finger more than 10px, it's likely a scroll, not a tap
+      if (deltaY > 10 || deltaX > 10) {
+        isValidClick = false;
       }
+    }, { passive: true });
+    
+    // Handle the actual click/tap
+    header.addEventListener('click', function(e) {
+      // Prevent toggle if:
+      // 1. It's not a valid click (was a scroll gesture)
+      // 2. Click originated from within section-content (bubbled up)
+      // 3. Too much time passed (>500ms) between touchstart and click
+      
+      const clickTime = Date.now();
+      const timeDiff = clickTime - touchStartTime;
+      
+      // Check if click originated from section-content
+      const fromContent = e.target.closest('.section-content');
+      
+      // Only toggle if:
+      // - It's a valid click (not a scroll)
+      // - Click is on header elements (not content)
+      // - Time between touch and click is reasonable (<500ms)
+      // - Or it's a non-touch device (timeDiff will be large)
+      if (isValidClick && !fromContent && (timeDiff < 500 || timeDiff > 1000)) {
+        // Only toggle if clicking on the header, title, or toggle button
+        if (e.target === header || 
+            e.target.classList.contains('section_title') || 
+            e.target.classList.contains('section-toggle')) {
+          const sectionId = header.getAttribute('data-section');
+          toggleSection(sectionId);
+        }
+      }
+      
+      // Reset for next interaction
+      isValidClick = true;
+      touchStartTime = 0;
+    });
+  });
+  
+  // Prevent click events from section content from bubbling up
+  const sectionContents = document.querySelectorAll('.section-content');
+  sectionContents.forEach(content => {
+    content.addEventListener('click', function(e) {
+      // Stop propagation to prevent triggering parent header's click
+      e.stopPropagation();
     });
   });
 });
@@ -305,4 +365,3 @@ window.addEventListener('resize', function() {
     }
   }, 250); // Debounce delay to prevent triggering during fast scrolling
 });
-
