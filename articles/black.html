@@ -3,7 +3,7 @@
 
 <head>
   <title>Mehdi Bahlaoui - Articles - Wikipedia</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
   <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
-  <script src="script.js" defer></script>
+  <script src="../script.js" defer></script>
 </head>
 
 <header id="top">
@@ -73,12 +73,8 @@
       </label>
       <label id="overlay-right" for="sidebar-active-right"></label>
 
-      <!-- <div class="links-container-right">
-        <a href="random1.html">Random 1</a>
-        <a href="random2.html">Random 2</a>
-        <a href="random3.html">Random 3</a>
-      </div> -->
-
+      <div class="links-container-right">
+      </div>
     </nav>
   </div>
 </header>
@@ -97,9 +93,9 @@
         </div>
         <ul class="toc-list">
           <li><a href="#top">(Top)</a></li>
-          <li><a href="#blog-posts">Blog Posts</a></li>
           <li><a href="#technical-papers">Technical Papers</a></li>
-
+          <li><a href="#blog-posts">Blog Posts</a></li>
+          <li><a href="#research-notes">Research Notes</a></li>
         </ul>
       </div>
     </div>
@@ -123,8 +119,8 @@
 
       <div class="top-header-secondary">
         <div class="top-header-secondary-left">
-          <p class="blue-text"><a href="index.html" style="text-decoration: none; color: inherit;">Biography</a></p>
-          <p class="underline"><u>Articles</u></p>
+          <p class="blue-text"><a href="../index.html" style="text-decoration: none; color: inherit;">Biography</a></p>
+          <p class="underline"><a href="../articles.html">Articles</a></p>
           <p class="blue-text">Music</p>
         </div>
 
@@ -134,12 +130,14 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="../icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
       </div>
 
-      <div class="wikipedia-header-row">
+      <br>
+
+      <!-- <div class="wikipedia-header-row">
         <span class="wikipedia-source">From Wikipedia, the free encyclopedia</span>
         <span class="top-header-icons" style="margin-left:auto;">
           <a href="#" class="icon-link">
@@ -153,68 +151,22 @@
               alt="Support Icon">
           </a>
         </span>
-      </div>
+      </div> -->
 
-      <!-- Articles Overview Section -->
-      <div class="section-row merged-section">
+
+      <div class="section-row">
         <div class="section-text">
-          <i>
-            <p class="disambiguation">This page contains a comprehensive list of articles, papers, and written works by
-              <a class="links" href="index.html">Mehdi Bahlaoui</a>.</p>
-          </i>
+          <p class="section_title">Why I am actually black</p>
+          <br>
           <p>
-            <b>Mehdi Bahlaoui's Articles and Publications</b> represent his thoughts, research, or insights across
-            various fields
-            <br> (Including but not limited to: <a class="links" href="https://en.wikipedia.org/wiki/Robotics">robotics</a>, <a
-              class="links" href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>, <a
-              class="links" href="https://en.wikipedia.org/wiki/Philosophy">philosophy</a>, and <a class="links"
-              href="https://en.wikipedia.org/wiki/Engineering">engineering</a>.)
-
+            Before you call the police, let me finish the blog post first.
+            <br> -Mehdi Bahlaoui
+            <!-- <br> Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
+            <br> My experiences have shaped my understanding of what it means to be black in today's society. -->
           </p>
         </div>
       </div>
 
-      <br>
-
-
-
-      <!-- Blog Posts Section -->
-      <div class="section-row" id="blog-posts">
-        <div class="section-text">
-          <p class="section_title">Blog Posts</p>
-          <p>
-            Personal reflections and insights on technology, education, and life as an engineering student.
-          </p>
-
-          <ul style="margin-left: 20px;">
-            <li><a class="links" href="articles/black.html">"Why I'm Actually Black" (August, 2025)</a></li>
-            <li><a class="links" href="articles/job.html">"Should you really do what you love as your job?" (2023)</a></li>
-
-          </ul>
-        </div>
-      </div>
-
-      <br>
-
-      <!-- Technical Papers Section -->
-      <div class="section-row" id="technical-papers">
-        <div class="section-text">
-          <p class="section_title">Technical Papers</p>
-          <p>
-            Research papers and technical documentation showcasing Mehdi's work in <a class="links"
-              href="https://en.wikipedia.org/wiki/Embedded_system">embedded systems</a> and <a class="links"
-              href="https://en.wikipedia.org/wiki/Robotics">robotics</a>.
-          </p>
-
-          <ul style="margin-left: 20px;">
-            <li><a class="links" href="#">"Optimization of Motor Control Systems for Competitive
-                Robotics" (2024)</a></li>
-
-          </ul>
-        </div>
-      </div>
-
-      <br>
 
 
 
@@ -260,29 +212,27 @@
     <div class="footer-bottom">
       <div class="footer-logos">
         <a href="#" class="footer-logo-link">
-          <img src="https://en.wikipedia.org/w/resources/assets/poweredby_mediawiki.svg" alt="Wikimedia Foundation"
-            width="88" height="31">
+          <img src="https://en.wikipedia.org/w/resources/assets/poweredby_mediawiki.svg" 
+               alt="Wikimedia Foundation" width="88" height="31">
         </a>
         <a href="#" class="footer-logo-link">
-          <img src="https://en.wikipedia.org/static/images/footer/wikimedia-button.svg" alt="Powered by MediaWiki"
-            width="88" height="31">
+          <img src="https://en.wikipedia.org/static/images/footer/wikimedia-button.svg" 
+               alt="Powered by MediaWiki" width="88" height="31">
         </a>
       </div>
-
+      
       <div class="footer-text">
         <p>This page was last edited on 2 August 2025, at 20:30 (GMT+1).</p>
         <p>
-          This website is a personal project and is not affiliated with or endorsed by Wikipedia or the Wikimedia
-          Foundation.
-          Wikipedia® is a registered trademark of the <a href="#">Wikimedia Foundation, Inc.</a>, a non-profit
-          organization.
+          This website is a personal project and is not affiliated with or endorsed by Wikipedia or the Wikimedia Foundation.
+          Wikipedia® is a registered trademark of the <a href="#">Wikimedia Foundation, Inc.</a>, a non-profit organization.
         </p>
       </div>
 
       <div class="footer-section">
         <div class="category-links">
           <a href="#">Articles</a> |
-          <a href="#">stop looking here</a> |
+          <a href="#">Research</a> |
           <a href="#">Technical Writing</a> |
           <a href="#">Blog Posts</a>
         </div>
