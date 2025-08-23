@@ -833,6 +833,15 @@ body {
   
   /* gap: 60px; */
 }
+.signature{
+  margin-top: 10px;
+  margin-bottom: -0px;
+}
+.signature img{
+    margin-top: -6px;
+}
+
+
 .section_profile > div:first-child {
   width: 120px; /* Fixed width of 200px */
 }
