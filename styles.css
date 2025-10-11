@@ -112,6 +112,7 @@ header {
   
   color: var(--blue);
   margin-left: 10px;
+
 }
 /* RIGHT LINKS */
 
@@ -825,10 +826,11 @@ body {
   margin-bottom: 10px;
 }
 .section_profile {
-  margin: 0px 0px 15px 10px;
+  margin: 0px 10px 15px 10px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  
   
   
   /* gap: 60px; */
@@ -843,7 +845,7 @@ body {
 
 
 .section_profile > div:first-child {
-  width: 120px; /* Fixed width of 200px */
+  width: 120px; 
 }
 .audio {
   display: flex;
