@@ -1,0 +1,144 @@
+// Central article database
+const articlesData = {
+  'job': {
+    title: 'Should you really do what you love as your job?',
+    date: '2 August 2025',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `
+          Let's say you make your passion a job.<br>
+          In terms of complexity, your job will either be easy, normal or hard.<br>
+          if it's easy, you'll end up doing little of your passion - which will make you feel unfulfilled (you can't further indulge in your passion because psychologically it will feel like work - you won't like it)
+          if it's hard, your passion gets crushed because you just have to meet deadlines and reach expectations,
+          leading you to cut investment on experimentation and playful discoveries.<br>
+          if it's normal, your passion will become your job, you will feel great when you do, but trying to make work
+          easier or more paying (harder) will result in the outcomes stated above.<br>
+          So that's why it's bad to make your passion your work, because you'll redefine it and you will now HAVE to
+          do it -instead of doing it when you feel like it.. -there is no denying that.<br><br>
+        `
+      },
+      {
+        id: 'solution',
+        title: 'My Solution',
+        content: `
+          Chase something close to your passion as your job.<br><br>
+          What will you gain?<br>
+          <strong>A. Work Advantage</strong><br>
+          By pursuing something that complements your passion, not only will you expand your knowledge (by studying
+          something different), but you'll also gain a massive edge by incorporating elements of your passion into
+          your work.<br>
+          This can make you stand out as an employee, earn raises, and even get you into niche
+          opportunities.<br>
+          (For example, if you're a biology student with a passion for computer science, you'll be equipped to conduct
+          cutting-edge research on topics like cancer, where computer science plays a major role.)<br><br>
+          <strong>B. You Keep Your Passion a Passion</strong><br>
+          Keeping your passion separate from your main job allows you to maintain your freedom and perfect your craft
+          on your terms. It could even become a side gig!<br>
+          You'll have the choice of whether to use it in your work or not, which is liberating.<br>
+          (For example, if you're angry today and don't feel like drawing, that's fine—you're not a painter by profession, so there's
+          no pressure!)
+
+          <br><br>
+          In conclusion, what I am saying is this: don't be a rapper, be an audio engineer that does rap, don't be a gardener, be an
+          environmental engineer that enjoys gardening.<br><br>
+        `
+      }
+    ]
+  },
+  
+  'npc': {
+    title: `A different way to live life: An <a class="links" href="https://en.wikipedia.org/wiki/Non-player_character">NPC</a> Approach`,
+    date: '8 October 2025',
+    sections: [
+      {
+        id: '',
+        title: '',
+        content: `
+        I was talking to a special individual, a different specimen, someone you might know, and we brought up life (as in living) as a topic.<br>
+        He had a conviction (ofc he would, and you would know later why) and to it I listened carefully.<br>
+        I heard and let him speak freely, not because he might know more than me, although he could (and maybe does), but because every time he talked it felt true and new, or at least true -and always spoken with openness & personality, a sort of strong vulnerability that you wouldn't be able to exploit -which is amazing.<br>
+        He spoke so elegantly every time, I love it, maybe because I see part of me in him but that's besides the story here<br>
+        All in all, There is something attractive to his demeanor that I can't yet tell what it is.<br><br>
+        
+        Anyway, so I listened, and his Idea was the following: "The best way to live life is to let go. Live your life with less worry, do not stress much, live like an NPC"
+        (The point of this writing will be to discuss this exact idea, and try an evaluate it from different perspectives.<br>
+        To word it differently, the question we are trying to answer is the following: Should you give life (as we live it in society) 70% of your being or something high like 90-95%? Basically, should you go all in or not so much?)<br><br>
+        
+        So, As soon as I heard this idea, my mental wandering stopped. I did not agree with the said idea, but it moved something in me.<br><br>
+        I felt where it came from, and the perfectly acceptable struggle behind it.
+        A rule of thumb I have with myself is to never react immediately so I kept on listening -fighting with myself, avoiding thoughts that might make it clash with my beliefs or core principles.<br><br>
+        
+        Of course, as you know, all our lives, we have been told to fight for our dreams or at least try and look up to them and make proactive steps towards them.<br>
+        But the idea proposed by the fine gentleman here was indirectly telling me, and you the reader, that we were all wrong, and perhaps, wasted a great deal of our time.<br>
+        Before I could keep thinking more about this ordeal, he added: "You know, I follow this principle now and I would like to let you know, that I attend all classes now" We laughed together (He never attended classes before)<br>
+        ".. I even come back home, eat what my mom prepared for me, do my homework with the desk lamp and sleep early like the good boy I am" (We laughed more)<br><br>
+        
+        
+        Let me remind you that this individual is a truly gifted human being, someone who's smart and cultured, so when he said those words I knew it meant something serious, and that's why you're reading this right now.<br><br>
+        We finished talking and parted our ways.
+        After our interaction I kept thinking: Could this be caused by some trauma of his? Is it because he failed once (or multiple times) and saw no results? Is it because he already has/knows what brings him joy so there is nothing to chase after anymore? So many questions that we will never have the answer to, so I think it's only fair to tackle this ideology of his in the most subjective way possible:<br><br>
+        
+        I propose below an analysis from 3 different perspectives:<br><br>
+        
+        1. Deen (Islamic perspective):<br>
+        In Islam, you’re not called to give every ounce of yourself to the dunya. The Quran and hadith remind us the dunya is temporary, a bridge, not the destination.<br>
+        The Prophet himself balanced: he worked, he led, he fought, he strategized, but he also prayed, reflected, and detached.<br>
+        More over, in Islam there is a concept of rizq (sustenance) which is crucial in this debate: God says in the Quran that provision is written, though it requires lawful effort.<br>
+        What you grind for with 90–95% intensity won’t necessarily yield more than the 70% effort guy that’s disciplined and consistent, because outcomes ultimately lie with Allah.<br>
+        Islam urges excellence (ihsan) in action, but paired with tawakkul (trust).<br>
+        That means: give strong effort, but don’t worship effort itself.<br>
+        Obsessing with society’s game at 95% risks forgetting the hereafter, your family, your heart and the work itself at the end.<br>
+        We conclude then that the deen’s balance is closer to the 70% effort ratio.<br><br>
+        
+        2. Sociology:<br>
+        Sociology tells us society doesn’t reward sheer effort proportionally.<br>
+        Success, recognition, and opportunities are strongly mediated by networks, timing, and institutional structures.<br>
+        The “strength of weak ties” (Granovetter’s classic finding) shows that acquaintances, not your closest friends, often provide the breakthroughs (jobs, collaborations, introductions).<br>
+        This means pouring 95% of your mental bandwidth into grinding may actually blind you to the social currents that carry opportunity.<br>
+        Sociologists also point out structural inequalities: two people can give 95%, and one gets lifted by connections, while the other is stuck.<br>
+        if you're a workaholic like I am, you could look at it like that person doesn't deserve the outcome - but what I remind you and myself, is that life is unfair, and it is better to play by the rules of the game (If you want to win).<br>
+        So from a sociological view, over-investing is often wasted effort unless it is paired with exposure and social navigation.<br>
+        This again suggests 70% steady effort plus a margin for connection and adaptation is smarter than full immersion.<br><br>
+        
+        3. Statistics and life experience:<br>
+        Hard data on careers and productivity shows diminishing returns after a certain threshold of effort.<br>
+        As a start productivity rises until about 40–50 hours per week, after which output per hour drops sharply.<br>
+        People who consistently work 70–80 hours don’t achieve twice as much as 40-hour workers; often they achieve less because of burnout and errors.<br>
+        Career statistics show a massive role for luck and circumstance: Mauboussin and others estimate luck explains 30–50% of variance in competitive domains once baseline competence is reached. In other words: past 70% effort, the gains are less about how hard you push and more about randomness (people and timing).<br><br>
+
+        In conclusion, giving life 90–95% of your being sounds noble, but both faith and facts suggest it’s a trap.<br>
+        In deen, provision is written, and you’re commanded to strive without obsession. Sociology shows the world doesn’t pay out linearly: you can push yourself to the limit, but opportunities are more often delivered by people, networks, and social systems than by pure sweat.<br>
+        Experience and statistics confirm the same pattern: output and career results follow diminishing returns, with exhaustion, mistakes.<br><br>
+        
+        With that being said, I think can now say that maybe, just maybe, it is worth living like an NPC.<br>
+        And Allah knows best,<br><br>
+        
+        -Mehdi Bahlaoui<br></br>
+        `      }
+    ]
+  },
+
+
+
+
+
+  
+  'black': {
+    title: "Why I'm Actually Black",
+    date: '15 August 2025',
+    sections: [
+        {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
+            <br> My experiences have shaped my understanding of what it means to be black in today's society.`
+        },
+    ]
+  }
+
+
+
+
+};
