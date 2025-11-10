@@ -14,8 +14,9 @@
   <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
- 
-  <script src="../script.js" defer></script>
+  <!-- Load articles data -->
+  <script src="articles/js/articles-data.js"></script>
+  <script src="script.js" defer></script>
 
 </head>
 
@@ -74,12 +75,6 @@
         </svg>
       </label>
       <label id="overlay-right" for="sidebar-active-right"></label>
-
-      <!-- <div class="links-container-right">
-        <a href="random1.html">Random 1</a>
-        <a href="random2.html">Random 2</a>
-        <a href="random3.html">Random 3</a>
-      </div> -->
 
     </nav>
   </div>
@@ -175,8 +170,6 @@
 
       <br>
 
-
-
       <!-- Blog Posts Section -->
       <div class="section-row" id="blog-posts">
         <div class="section-text">
@@ -185,13 +178,9 @@
             Personal reflections and insights on technology, education, and life as an engineering student.
           </p>
 
-          <ul style="margin-left: 20px;">
-           
-            <li><a class="links" href="articles/template.html#job">"Should you really do what you love as your job?" (2023)</a></li>
-            <li><a class="links" href="articles/template.html#npc">"A different way to live life: An NPC Approach" (October, 2024)</a></li>
-
-
-
+          <!-- This list will be automatically populated -->
+          <ul id="articlesList" style="margin-left: 20px;">
+            <li><em>Loading articles...</em></li>
           </ul>
         </div>
       </div>
@@ -210,8 +199,6 @@
       </div>
 
       <br>
-
-
 
     </div>
 
@@ -247,6 +234,60 @@
       </div>
     </div>
   </div>
+
+  <!-- Inline script to populate articles list -->
+  <script>
+    function populateArticlesList() {
+      const listElement = document.getElementById('articlesList');
+      
+      // Check if articlesData exists
+      if (typeof articlesData === 'undefined') {
+        listElement.innerHTML = '<li><em>Error: Could not load articles data</em></li>';
+        return;
+      }
+      
+      // Clear the loading message
+      listElement.innerHTML = '';
+      
+      // Generate list items for each article
+      Object.keys(articlesData).forEach(articleId => {
+        const article = articlesData[articleId];
+        const li = document.createElement('li');
+        
+        // Create the link
+        const link = document.createElement('a');
+        link.className = 'links';
+        link.href = `articles/template.html#${articleId}`;
+        
+        // Strip HTML tags from title for display
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = article.title;
+        const cleanTitle = tempDiv.textContent || tempDiv.innerText;
+        
+        link.textContent = `"${cleanTitle}"`;
+        
+        // Add date if available
+        if (article.date) {
+          link.textContent += ` (${article.date})`;
+        }
+        
+        li.appendChild(link);
+        listElement.appendChild(li);
+      });
+      
+      // If no articles found
+      if (Object.keys(articlesData).length === 0) {
+        listElement.innerHTML = '<li><em>No articles available</em></li>';
+      }
+    }
+    
+    // Run when page loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', populateArticlesList);
+    } else {
+      populateArticlesList();
+    }
+  </script>
 
 </body>
 

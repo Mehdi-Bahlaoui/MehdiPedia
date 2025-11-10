@@ -115,8 +115,8 @@ const articlesData = {
         With that being said, I think can now say that maybe, just maybe, it is worth living like an NPC.<br>
         And Allah knows best,<br><br>
         
-        -Mehdi Bahlaoui<br></br>
-        `      }
+        -Mehdi Bahlaoui<br></br>`      
+      }
     ]
   },
 
@@ -127,16 +127,54 @@ const articlesData = {
   
   'black': {
     title: "Why I'm Actually Black",
-    date: '15 August 2025',
+    date: '10 November 2025',
     sections: [
         {
         id: 'introduction',
         title: 'Introduction',
         content: `Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
-            <br> My experiences have shaped my understanding of what it means to be black in today's society.`
+            <br> My experiences have shaped my understanding of what it means to be black in today's society.
+            ...
+            Okay that's AI not me hhh
+
+            <br><br><br><br><br><br>
+
+            but seriously, let me tell you something <br>
+            As i was growing older, I started to notice some patterns.<br>
+            First from this: One day, as you might now, I decided to grow out my hair, I wanted to look like Dicaprio (yes), but also because I was seeing some
+            of my freinds balding so it felt like I had to grow my hair because it could be the last time I could, so I did.
+            Months went by, and my hair grew longer and longer, until one day, I looked in the mirror and said maan this hair only keeps going up, what is happening?
+            It turned out my hair was growing in an afro style, and I was like okay this is new, I never expected this.
+            I looked like MJ, I never wanted to look like him, MJ was not my inspiration, but here I was.. hehe
+
+            <br><br>
+            Then something else happened, I started to notice that I really like afro music, (I am really not making this up),
+            I love those beats, the energy, the vibes, I felt connected to it, I started listening to more and more afro music,
+            It gave me hapiness I did not get from other types of music.. and then I began to understand something; how every person have tastes that they might not
+            be responsible for (i am not saying like afro music is bad, you get the point g), like I never chose to like afro music, it just happened, and I felt good about it.
+            <br><br>
+            The least i can say now is that I am really happy with who I am, and I embrace my blackness fully.
+            <br><br>
+            So yeah, that's why I am actually black hehe.
+
+
+            
+            `,
+        
+          image: {
+            url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Jackson_5_1974_%28Michael%29.jpg/250px-Jackson_5_1974_%28Michael%29.jpg',
+            alt: 'DMJ with an Afro',
+            position: 'right',  // Options: 'left', 'right', 'center', 'full'
+            width: '400px'       // Optional: custom width
+          }
         },
+
     ]
-  }
+  },
+
+
+
+
 
 
 

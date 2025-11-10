@@ -1,4 +1,4 @@
-// Optimized Article Loader - Hash-based routing
+// Optimized Article Loader - Hash-based routing with image support
 // Works with a SINGLE template file for ALL articles
 
 function loadArticle() {
@@ -61,12 +61,81 @@ function updatePageMetadata(article) {
   metaDesc.content = article.description || article.title;
 }
 
+function renderImage(imageData) {
+  if (!imageData || !imageData.url) return '';
+  
+  const position = imageData.position || 'center';
+  const width = imageData.width || 'auto';
+  const alt = imageData.alt || 'Article image';
+  const caption = imageData.caption || '';
+  
+  let imageClass = 'article-image';
+  let containerClass = 'image-container';
+  let imageStyle = '';
+  
+  // Handle different positions
+  switch(position) {
+    case 'left':
+      containerClass += ' image-left';
+      imageStyle = width !== 'auto' ? `max-width: ${width};` : 'max-width: 400px;';
+      break;
+    case 'right':
+      containerClass += ' image-right';
+      imageStyle = width !== 'auto' ? `max-width: ${width};` : 'max-width: 400px;';
+      break;
+    case 'full':
+      containerClass += ' image-full';
+      imageStyle = 'width: 100%;';
+      break;
+    case 'center':
+    default:
+      containerClass += ' image-center';
+      imageStyle = width !== 'auto' ? `max-width: ${width};` : 'max-width: 600px;';
+  }
+  
+  return `
+    <div class="${containerClass}">
+      <img src="${imageData.url}" 
+           alt="${alt}" 
+           class="${imageClass}"
+           style="${imageStyle}"
+           loading="lazy">
+      ${caption ? `<p class="image-caption">${caption}</p>` : ''}
+    </div>
+  `;
+}
+
+function renderImages(section) {
+  let imagesHTML = '';
+  
+  // Handle single image
+  if (section.image) {
+    imagesHTML = renderImage(section.image);
+  }
+  
+  // Handle multiple images
+  if (section.images && Array.isArray(section.images)) {
+    const multiImageContainer = section.images.length > 1 ? 
+      '<div class="multi-image-container">' : '';
+    const multiImageClose = section.images.length > 1 ? '</div>' : '';
+    
+    imagesHTML = multiImageContainer + 
+                 section.images.map(img => renderImage(img)).join('') + 
+                 multiImageClose;
+  }
+  
+  return imagesHTML;
+}
+
 function renderArticle(article) {
   const contentContainer = document.getElementById('articleContent');
   if (!contentContainer) {
     console.error('Article content container not found');
     return;
   }
+  
+  // Add image styles if not already present
+  injectImageStyles();
   
   // Build article HTML
   let contentHTML = `
@@ -81,12 +150,15 @@ function renderArticle(article) {
   // Add each section
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach(section => {
+      const imagesHTML = renderImages(section);
+      
       contentHTML += `
         <div class="section-row" id="${section.id}">
           <div class="section-text">
             ${section.title && section.title !== 'Introduction' 
               ? `<p class="section_title">${section.title}</p><br>` 
               : ''}
+            ${imagesHTML}
             <p>${section.content}</p>
           </div>
         </div>
@@ -98,6 +170,111 @@ function renderArticle(article) {
   
   // Scroll to top when new article loads
   window.scrollTo(0, 0);
+}
+
+function injectImageStyles() {
+  // Check if styles already injected
+  if (document.getElementById('article-image-styles')) return;
+  
+  const styleSheet = document.createElement('style');
+  styleSheet.id = 'article-image-styles';
+  styleSheet.textContent = `
+    .image-container {
+      margin: 20px 0;
+    }
+    
+    .image-center {
+      text-align: center;
+    }
+    
+    .image-center img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .image-left {
+      float: left;
+      margin: 0 20px 20px 0;
+      max-width: 45%;
+    }
+    
+    .image-left img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .image-right {
+      float: right;
+      margin: 0 0 20px 20px;
+      max-width: 45%;
+    }
+    
+    .image-right img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .image-full {
+      clear: both;
+      margin: 30px 0;
+    }
+    
+    .image-full img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .article-image {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .image-caption {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+    }
+    
+    .multi-image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .multi-image-container .image-container {
+      flex: 1;
+      min-width: 250px;
+      max-width: 45%;
+    }
+    
+    /* Clear floats after sections */
+    .section-row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    @media (max-width: 768px) {
+      .image-left,
+      .image-right {
+        float: none;
+        max-width: 100%;
+        margin: 20px 0;
+      }
+      
+      .multi-image-container .image-container {
+        max-width: 100%;
+      }
+    }
+  `;
+  
+  document.head.appendChild(styleSheet);
 }
 
 function generateTOC(article) {
