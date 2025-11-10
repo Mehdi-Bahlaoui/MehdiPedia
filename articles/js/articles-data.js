@@ -151,11 +151,10 @@ const articlesData = {
             Then something else happened, I started to notice that I really like afro music, (I am really not making this up),
             I love those beats, the energy, the vibes, I felt connected to it, I started listening to more and more afro music,
             It gave me hapiness I did not get from other types of music.. and then I began to understand something; how every person have tastes that they might not
-            be responsible for (i am not saying like afro music is bad, you get the point g), like I never chose to like afro music, it just happened, and I felt good about it.
+            be responsible for (i am not saying afro music is bad, you get the point), ..I never chose to like afro music, it just happened, and I felt good about it.
             <br><br>
-            The least i can say now is that I am really happy with who I am, and I embrace my blackness fully.
-            <br><br>
-            So yeah, that's why I am actually black hehe.
+            Then, I started to notice something else, I was getting more and more interested in black culture (no I just kidding with this on)
+            But yeah, that's why I am actually black hehe.
 
 
             
