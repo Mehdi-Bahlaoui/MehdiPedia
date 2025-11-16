@@ -40,25 +40,27 @@ html {
   --hover-background: #f8f9fa;
   --shadow-color: rgba(0, 0, 0, 0.15);
   --outer-background: #ffffff;
+  --svg-filter: none;
 }
 
 /* Dark mode variables */
 [data-theme="dark"] {
-  --white: #1a1a1a;
+  --white: #101418;
   --color-1: #e8e6e3;
   --text-color: #e8e6e3;
   --blue: #6c9bd1;
-  --blue-light: #2a2a2a;
-  --blue-very-light: #2a2a2a;
+  --blue-light: #202122;
+  --blue-very-light: #202122;
   --grey: #404040;
   --dark-grey: #8a8a8a;
   --links-color: #6c9bd1;
-  --background-color: #1a1a1a;
-  --card-background: #2a2a2a;
+  --background-color: #101418;
+  --card-background: #202122;
   --border-color: #404040;
   --hover-background: #333333;
   --shadow-color: rgba(0, 0, 0, 0.5);
   --outer-background: #ffffff;
+  --svg-filter: invert(1) hue-rotate(180deg) brightness(0.9);
 }
 
 
@@ -99,7 +101,7 @@ header {
 
 /* RIGHT LINKS */
 .right-links {
-  margin-right: 3px;
+  margin-right: 30px;
 }
 
 .right-links a {
@@ -129,9 +131,12 @@ header {
   text-decoration: none;
 }
 
-.wikipedia-text .Encyclopedia-text {
+.wikipedia-text,
+.encyclopedia-text {
   display: block;
   margin-left: 10px;
+  filter: var(--svg-filter);
+  transition: filter 0.3s ease;
 }
 /* LOGO */
 
@@ -252,18 +257,6 @@ body {
   box-shadow: -5px 0 5px var(--shadow-color);
 }
 
-#sidebar-active-left:checked~.links-container-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  position: fixed;
-  top: 40px;
-  left: -100%;
-  z-index: 10;
-  top: 40px;
-  left: 40px;
-}
 
 .left-nav a {
   box-sizing: border-box;
@@ -325,16 +318,7 @@ body {
 
 }
 
-#sidebar-active-right:checked~.links-container-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 
-  position: fixed;
-  top: 60px;
-  left: 1350px;
-  z-index: 10;
-}
 
 .right-nav a {
   box-sizing: border-box;
@@ -947,7 +931,6 @@ body {
   font-style: normal;
   font-size: 0.875em; /* roughly 14px */
 
-  color: #222;
   margin: 8px 0 0 0;
   padding-left: 2px;
 
@@ -965,7 +948,7 @@ body {
 .wikipedia-header-row .wikipedia-source {
   
   font-size: 0.95em;
-  color: #222;
+  color: inherit;
   /* font-family: 'Linux Libertine', Georgia, Times, serif; */
   margin-right: 10px;
   padding-left: 2px;
