@@ -19,7 +19,9 @@
 
 
 html {
-  background-color: var(--background-color);
+  background-color: var(--background-color); 
+  /* filter: var(--svg-filter); */
+
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -737,7 +739,7 @@ body {
 
 .image_container {
   width: 300px;
-  margin: 30px 20px 10px 0px;
+  margin: 20px 20px 0px 0px;
 
   border: 1px solid #a2a9b1;
   background: var(--blue-very-light);
@@ -746,6 +748,15 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.text_of_image_container {
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 15px 5px 15px;
+  text-align: center;
 }
 
 
@@ -1097,12 +1108,15 @@ body {
   font-size: 0.875em;
   line-height: 1.6;
   color: var(--text-color);
+
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  filter: var(--svg-filter);
+
 }
 
 .footer-section {

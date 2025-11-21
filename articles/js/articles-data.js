@@ -150,11 +150,11 @@ const articlesData = {
             <br><br>
             Then something else happened, I started to notice that I really like afro music, (I am really not making this up),
             I love those beats, the energy, the vibes, I felt connected to it, I started listening to more and more afro music,
-            It gave me hapiness I did not get from other types of music.. and then I began to understand something; how every person have tastes that they might not
-            be responsible for (i am not saying afro music is bad, you get the point), ..I never chose to like afro music, it just happened, and I felt good about it.
+            It gave me hapiness I did not get from other types of music.. and then I began to understand something; That every person have tastes that they might not
+            be responsible for (I'm not saying afro music is bad, you get the point), what I'm saying is that I never chose to like afro music, it just happened.
             <br><br>
-            Then, I started to notice something else, I was getting more and more interested in black culture (no I just kidding with this on)
-            But yeah, that's why I am actually black hehe.
+            Then, I started to notice something else, I was getting more and more interested in black culture (no I'm just kidding with this one)
+            But yeah, that's why I am actually black..
 
 
             
@@ -163,6 +163,7 @@ const articlesData = {
           image: {
             url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Jackson_5_1974_%28Michael%29.jpg/250px-Jackson_5_1974_%28Michael%29.jpg',
             alt: 'DMJ with an Afro',
+            caption: 'Michael Jackson rocking an afro in 1974',
             position: 'right',  // Options: 'left', 'right', 'center', 'full'
             width: '400px'       // Optional: custom width
           }
