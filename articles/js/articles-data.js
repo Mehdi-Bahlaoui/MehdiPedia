@@ -172,7 +172,34 @@ const articlesData = {
     ]
   },
 
+  'ego': {
+    title: 'There is a fine line between lowering your ego and respecting yourself',
+    date: '23 November 2025',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `
+          The title of this article you are reading is a creation of mine.<br>
+          <i>There is a fine line between lowering your ego and respecting yourself</i>.<br>
+          I came up with it while reading the book <a class="links" href="https://en.wikipedia.org/wiki/Ego_Is_the_Enemy">Ego is the Enemy</a> by Ryan Holiday.<br>
+          The book is a great read, I recommend it to anyone who wants to learn more about the ego and how it can affect our lives.<br>
+          <br>
 
+          But what's funny is that I came up with this title only after the prologue, even before the introduction.<br>
+          But I did not write it down, I just thought about it and kept reading.<br>
+          I thought it was a good title, until I found myself the next day with two similar situations.<br>
+          both requiring me to lower my ego, but one of them was a situation where I had to respect myself.<br>
+          <br>
+          So I thought to myself, <i>damn, that's pretty deep, I need to continue reading the book and further develop this idea</i><br>
+          And what you are reading right now, is the result of my thoughts and reflections on this topic, mainly supported by ideas from the book.<br>
+
+          ...To be continued
+
+        `
+      }
+    ]
+  }
 
 
 

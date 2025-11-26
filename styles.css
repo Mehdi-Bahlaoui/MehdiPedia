@@ -830,6 +830,7 @@ body {
   
   /* gap: 60px; */
 }
+
 .signature{
   margin-top: 10px;
   margin-bottom: -0px;
@@ -838,6 +839,9 @@ body {
     margin-top: -6px;
 }
 
+.CV{
+  margin-bottom: 5px;
+}
 
 .section_profile > div:first-child {
   width: 120px; 
