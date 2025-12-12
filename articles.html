@@ -156,13 +156,14 @@
       <div class="section-row merged-section">
         <div class="section-text">
           <i>
-            <p class="disambiguation">This page contains a comprehensive list of articles, book analyses, and written works by
-              <a class="links" href="index.html">Mehdi Bahlaoui</a>.</p>
+            <p class="disambiguation">This page contains a comprehensive list of articles, book analyses, and written
+              works by
+              <a class="links" href="index.html">Mehdi Bahlaoui</a>.
+            </p>
           </i>
           <p>
-            <b>Mehdi Bahlaoui's Publications</b> represent his thoughts, research, or insights across
-            various fields
-            <br> (Including but not limited to: robotics, artificial intelligence, philosophy, and engineering.)
+            <b>Mehdi Bahlaoui's written works</b> represent his thoughts, research, or insights
+            <br> (Including but not limited to: robotics, psychology, AI, philosophy, and engineering.)
 
           </p>
         </div>
@@ -187,16 +188,6 @@
 
       <br>
 
-      <!-- Book Review Section -->
-      <div class="section-row" id="book-reviews">
-        <div class="section-text">
-          <p class="section_title">Book Reviews</p>
-          <p>
-            Critical analyses and reviews of notable books in various fields.
-            Coming very soon!!
-          </p>
-        </div>
-      </div>
 
       <br>
 
@@ -239,48 +230,48 @@
   <script>
     function populateArticlesList() {
       const listElement = document.getElementById('articlesList');
-      
+
       // Check if articlesData exists
       if (typeof articlesData === 'undefined') {
         listElement.innerHTML = '<li><em>Error: Could not load articles data</em></li>';
         return;
       }
-      
+
       // Clear the loading message
       listElement.innerHTML = '';
-      
+
       // Generate list items for each article
       Object.keys(articlesData).forEach(articleId => {
         const article = articlesData[articleId];
         const li = document.createElement('li');
-        
+
         // Create the link
         const link = document.createElement('a');
         link.className = 'links';
         link.href = `articles/template.html#${articleId}`;
-        
+
         // Strip HTML tags from title for display
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = article.title;
         const cleanTitle = tempDiv.textContent || tempDiv.innerText;
-        
+
         link.textContent = `"${cleanTitle}"`;
-        
+
         // Add date if available
         if (article.date) {
           link.textContent += ` (${article.date})`;
         }
-        
+
         li.appendChild(link);
         listElement.appendChild(li);
       });
-      
+
       // If no articles found
       if (Object.keys(articlesData).length === 0) {
         listElement.innerHTML = '<li><em>No articles available</em></li>';
       }
     }
-    
+
     // Run when page loads
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', populateArticlesList);

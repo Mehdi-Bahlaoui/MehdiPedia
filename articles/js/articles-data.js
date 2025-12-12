@@ -47,7 +47,7 @@ const articlesData = {
       }
     ]
   },
-  
+
   'npc': {
     title: `A different way to live life: An <a class="links" href="https://en.wikipedia.org/wiki/Non-player_character">NPC</a> Approach`,
     date: '8 October 2025',
@@ -115,7 +115,7 @@ const articlesData = {
         With that being said, I think can now say that maybe, just maybe, it is worth living like an NPC.<br>
         And Allah knows best,<br><br>
         
-        -Mehdi Bahlaoui<br></br>`      
+        -Mehdi Bahlaoui<br></br>`
       }
     ]
   },
@@ -124,12 +124,12 @@ const articlesData = {
 
 
 
-  
+
   'black': {
     title: "Why I'm Actually Black",
     date: '10 November 2025',
     sections: [
-        {
+      {
         id: 'introduction',
         title: 'Introduction',
         content: `Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
@@ -159,15 +159,15 @@ const articlesData = {
 
             
             `,
-        
-          image: {
-            url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Jackson_5_1974_%28Michael%29.jpg/250px-Jackson_5_1974_%28Michael%29.jpg',
-            alt: 'DMJ with an Afro',
-            caption: 'Michael Jackson rocking an afro in 1974',
-            position: 'right',  // Options: 'left', 'right', 'center', 'full'
-            width: '400px'       // Optional: custom width
-          }
-        },
+
+        image: {
+          url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Jackson_5_1974_%28Michael%29.jpg/250px-Jackson_5_1974_%28Michael%29.jpg',
+          alt: 'DMJ with an Afro',
+          caption: 'Michael Jackson rocking an afro in 1974',
+          position: 'right',  // Options: 'left', 'right', 'center', 'full'
+          width: '400px'       // Optional: custom width
+        }
+      },
 
     ]
   },
@@ -195,6 +195,50 @@ const articlesData = {
           And what you are reading right now, is the result of my thoughts and reflections on this topic, mainly supported by ideas from the book.<br>
 
           ...To be continued
+
+        `
+      }
+    ]
+  },
+
+  'coffee': {
+    title: "I'm not addicted to coffee, YOU ARE",
+    date: '12 December 2025',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `
+<i>I like it, but I don't think I am addicted to it </i> ---said every addict ever haha<br>
+
+But let me tell me about a crazy feeling tied to drinking black coffee<br><br>
+
+Sometimes a well prepared cup of coffe brings me great amount of joy<br>
+and by the way, I drink coffee only for the taste aspect of it<br><br>
+
+My mom used to always prepare it for me and my brother before going to school<br>
+I used to always drink it, nowa days i still do, and I think that this routine is what made it not affect me much when I grew up<br>
+I am able to drink it before bed, i kid you not sometimes it makes me sleepy haha
+maybe that's what chronic tiredness is, but I don't think so hh
+I think I'm just built different
+<i>tzadina 9ba7, matlebnach l9owa ou dakchi hh</i><br><br>
+
+But yeah back to the feeling, <br>
+sometimes in the morning when I drink black coffee (ofc after having a meal) <br>
+I get this feeling of being alive, with a shot of adrenaline, like I'm invincible, like I can do anything <br><br>
+
+What I'm describing is the <b>trigeminal nerve hit</b>. <br>
+
+That nerve is wired all through your face and mouth, and it doesn’t just sense “taste”, it picks up chemical irritation, temperature, and pressure.<br>
+Bitter acids in coffee act as irritants, and if your mouth is dry first thing in the morning, the compounds have direct contact with raw nerve endings.<br>
+The first sip can fire them hard enough that it feels like an electric zap.<br><br>
+
+It feels good because your brain translates that sudden nerve activation as a kind of stimulation reward —same reason some people enjoy hrissa sting, or tooth paste's minty blast.<br><br>
+
+Um so I guess I'm not addicted to coffee, but I'm addicted to the feeling it gives me<br><br>
+and that makes me addicted to coffee, but I'm not addicted, YOU ARE<br><br>
+YES YOU,<br><br>
+Goodb ye<br><br>
 
         `
       }
