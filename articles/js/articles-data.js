@@ -209,38 +209,63 @@ const articlesData = {
         id: 'introduction',
         title: 'Introduction',
         content: `
-<i>I like it, but I don't think I am addicted to it </i> ---said every addict ever haha<br>
+          <i>I like it, but I don't think I am addicted to it </i> ---said every addict ever haha<br>
 
-But let me tell me about a crazy feeling tied to drinking black coffee<br><br>
+          But let me tell me about a crazy feeling tied to drinking black coffee<br><br>
 
-Sometimes a well prepared cup of coffe brings me great amount of joy<br>
-and by the way, I drink coffee only for the taste aspect of it<br><br>
+          Sometimes a well prepared cup of coffe brings me great amount of joy<br>
+          and by the way, I drink coffee only for the taste aspect of it<br><br>
 
-My mom used to always prepare it for me and my brother before going to school<br>
-I used to always drink it, nowa days i still do, and I think that this routine is what made it not affect me much when I grew up<br>
-I am able to drink it before bed, i kid you not sometimes it makes me sleepy haha
-maybe that's what chronic tiredness is, but I don't think so hh
-I think I'm just built different
-<i>tzadina 9ba7, matlebnach l9owa ou dakchi hh</i><br><br>
+          My mom used to always prepare it for me and my brother before going to school<br>
+          I used to always drink it, nowa days i still do, and I think that this routine is what made it not affect me much when I grew up<br>
+          I am able to drink it before bed, i kid you not sometimes it makes me sleepy haha
+          maybe that's what chronic tiredness is, but I don't think so hh
+          I think I'm just built different
+          <i>tzadina 9ba7, matlebnach l9owa ou dakchi hh</i><br><br>
 
-But yeah back to the feeling, <br>
-sometimes in the morning when I drink black coffee (ofc after having a meal) <br>
-I get this feeling of being alive, with a shot of adrenaline, like I'm invincible, like I can do anything <br><br>
+          But yeah back to the feeling, <br>
+          sometimes in the morning when I drink black coffee (ofc after having a meal) <br>
+          I get this feeling of being alive, with a shot of adrenaline, like I'm invincible, like I can do anything <br><br>
 
-What I'm describing is the <b>trigeminal nerve hit</b>. <br>
+          Besides all this, there is the <b>trigeminal nerve hit</b>. <br>
 
-That nerve is wired all through your face and mouth, and it doesn’t just sense “taste”, it picks up chemical irritation, temperature, and pressure.<br>
-Bitter acids in coffee act as irritants, and if your mouth is dry first thing in the morning, the compounds have direct contact with raw nerve endings.<br>
-The first sip can fire them hard enough that it feels like an electric zap.<br><br>
+          This nerve is wired all through our face and mouth, it picks up chemical irritation, temperature, and pressure.<br>
+          Bitter acids in coffee act as irritants, and if your mouth is dry first thing in the morning, the compounds have direct contact with raw nerve endings.<br>
+          The first sip can fire them hard enough that it feels like an electric zap.<br><br>
 
-It feels good because your brain translates that sudden nerve activation as a kind of stimulation reward —same reason some people enjoy hrissa sting, or tooth paste's minty blast.<br><br>
+          It feels good because your brain translates that sudden nerve activation as a kind of stimulation reward<br><br>
 
-Um so I guess I'm not addicted to coffee, but I'm addicted to the feeling it gives me<br><br>
-and that makes me addicted to coffee, but I'm not addicted, YOU ARE<br><br>
-YES YOU,<br><br>
-Goodb ye<br><br>
+          Um so I guess I'm not addicted to coffee, but I'm addicted to the feeling it gives me<br><br>
+          and that makes me addicted to coffee, but I'm not addicted, YOU ARE<br><br>
+          YES YOU,<br><br>
+          Goodb ye<br><br>
 
         `
+      }
+    ]
+  },
+
+  'dream': {
+    title: "What relationship is there between your sleeping self and you?",
+    date: '19 December 2025',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `
+          Yesterday I had a dream,
+          I was doing my own thing yk (I don't remeber frankly) but then, inside the dream I saw a button, a UI button to be exact,<br>
+          in the middle of this button were written the words "Wake Up Gracefully",<br>
+          so I clicked on it, and then I woke up.<br><br>
+
+          and I hate it to break it to you guys, but I actually woke up gracefully, no sudden movements, no stress, nothing.<br><br>
+          In fact I felt great.. like dropped from the ceiling into a couch of feathers<br><br>
+          alhamdolilah<br><br>
+
+          Moral of the story:<br>
+          umm ... <br>
+          always look for the button that says "Wake Up Gracefully" in your dreams, you might warmly thank yourself for it immediately after :)<br><br>
+          `
       }
     ]
   }
