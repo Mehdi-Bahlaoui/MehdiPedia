@@ -2,7 +2,7 @@
 const articlesData = {
   'job': {
     title: 'Should you really do what you love as your job?',
-    date: '2 August 2025',
+    date: '2/8/2025',
     sections: [
       {
         id: 'introduction',
@@ -50,7 +50,7 @@ const articlesData = {
 
   'npc': {
     title: `A different way to live life: An <a class="links" href="https://en.wikipedia.org/wiki/Non-player_character">NPC</a> Approach`,
-    date: '8 October 2025',
+    date: '8/8/2025',
     sections: [
       {
         id: '',
@@ -127,7 +127,7 @@ const articlesData = {
 
   'black': {
     title: "Why I'm Actually Black",
-    date: '10 November 2025',
+    date: '10/11/2025',
     sections: [
       {
         id: 'introduction',
@@ -174,7 +174,7 @@ const articlesData = {
 
   'ego': {
     title: 'There is a fine line between lowering your ego and respecting yourself',
-    date: '23 November 2025',
+    date: '23/11/2025',
     sections: [
       {
         id: 'introduction',
@@ -203,7 +203,7 @@ const articlesData = {
 
   'coffee': {
     title: "I'm not addicted to coffee, YOU ARE",
-    date: '12 December 2025',
+    date: '12/12/2025',
     sections: [
       {
         id: 'introduction',
@@ -247,7 +247,7 @@ const articlesData = {
 
   'dream': {
     title: "What relationship is there between your sleeping self and you?",
-    date: '19 December 2025',
+    date: '19/12/2025',
     sections: [
       {
         id: 'introduction',

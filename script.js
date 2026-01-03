@@ -47,6 +47,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Width switching functionality
+  const widthRadios = document.querySelectorAll('input[name="width"]');
+
+  // Load saved width or default to standard
+  const savedWidth = localStorage.getItem('width') || 'standard';
+  document.documentElement.setAttribute('data-width', savedWidth);
+
+  // Set the correct radio button based on saved width
+  const widthRadio = document.querySelector(`input[name="width"][value="${savedWidth}"]`);
+  if (widthRadio) {
+    widthRadio.checked = true;
+  }
+
+  // Add event listeners to width radio buttons
+  widthRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      if (this.checked) {
+        const width = this.value;
+        document.documentElement.setAttribute('data-width', width);
+        localStorage.setItem('width', width);
+      }
+    });
+  });
+
   // Initialize mobile sections as collapsed on load
   if (window.innerWidth <= 850) {
     const sectionContents = document.querySelectorAll('.section-content');

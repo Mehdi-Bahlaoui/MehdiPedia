@@ -162,8 +162,8 @@
             </p>
           </i>
           <p>
-            <b>Mehdi Bahlaoui's written works</b> represent his thoughts, research, or insights
-            <br> (Including but not limited to: robotics, psychology, AI, philosophy, and engineering.)
+            <b>Mehdi Bahlaoui's written works</b> represent his thoughts, research, or insights.
+            <br> (Including but not limited to: technology, psychology, philosophy, and engineering.)
 
           </p>
         </div>
@@ -175,14 +175,13 @@
       <div class="section-row" id="blog-posts">
         <div class="section-text">
           <p class="section_title">Blog Posts</p>
-          <p>
-            Personal reflections and insights on technology, education, and life as an engineering student.
-          </p>
+
 
           <!-- This list will be automatically populated -->
-          <ul id="articlesList" style="margin-left: 20px;">
+          <ul id="articlesList" style="margin-left: 30px;margin-top: 10px;">
             <li><em>Loading articles...</em></li>
           </ul>
+
         </div>
       </div>
 
@@ -218,8 +217,8 @@
           <fieldset>
             <legend>Color (beta)</legend>
             <label><input type="radio" name="color" value="automatic"> Automatic</label>
-            <label><input type="radio" name="color" value="light" checked> Light</label>
-            <label><input type="radio" name="color" value="dark"> Dark</label>
+            <label><input type="radio" name="color" value="light"> Light</label>
+            <label><input type="radio" name="color" value="dark" checked> Dark</label>
           </fieldset>
         </form>
       </div>
@@ -255,11 +254,11 @@
         tempDiv.innerHTML = article.title;
         const cleanTitle = tempDiv.textContent || tempDiv.innerText;
 
-        link.textContent = `"${cleanTitle}"`;
+        link.textContent = `${cleanTitle}`;
 
         // Add date if available
         if (article.date) {
-          link.textContent += ` (${article.date})`;
+          link.textContent += ` — (${article.date})`;
         }
 
         li.appendChild(link);
