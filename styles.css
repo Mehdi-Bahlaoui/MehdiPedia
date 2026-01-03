@@ -517,6 +517,7 @@ body {
 
 .toc-list li.expandable::before {
   content: url('icons/right.svg');
+  filter: var(--svg-filter);
   position: absolute;
   left: -25px;
   top: -3px;
@@ -525,6 +526,8 @@ body {
 
 .toc-list li.expanded::before {
   content: url('icons/down.svg');
+  filter: var(--svg-filter);
+
 }
 
 .toc-list li:not(.expanded) .toc-sublist {
