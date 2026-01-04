@@ -1361,6 +1361,7 @@ body {
   width: 26px;
   height: 26px;
   background-image: url('icons/right.svg');
+  filter: var(--svg-filter);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1369,6 +1370,8 @@ body {
 
 .section-toggle.expanded {
   background-image: url('icons/down.svg');
+  filter: var(--svg-filter);
+
 }
 
 .section-content {
