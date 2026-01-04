@@ -268,6 +268,28 @@ const articlesData = {
           `
       }
     ]
+  },
+
+  'Listening': {
+    title: "People can't listen anymore",
+    date: '05/01/2026',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: `
+          Most people don't know how to properly listen,<br>
+          it feels like they have a build up of things they want to share.<br>
+          Once they find a nice enough person that agrees to put up with their vomit, they start to let it out.<br><br>
+
+          It's sad because it means they don't have a person to share their thoughts with.<br>
+          Surely, I must have been like that someday<br>
+          But I geniuinely think that I'm not that talkative, and this helps besides the fact that It's ugly to keep interrupting people all the time.<br><br>
+
+          Please listen more, even leave a bit of silence sometimes,<br>
+          It will make people appreciate you more, and it will bring you more peace of mind, to not talk all the time.`
+      }
+    ]
   }
 
 
