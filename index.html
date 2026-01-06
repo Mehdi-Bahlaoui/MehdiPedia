@@ -27,10 +27,9 @@
 
 </head>
 
-
+<body>
 
 <header id="top">
-
 
   <div class="left-header">
 
@@ -88,15 +87,7 @@
 
 
 
-
-
 </header>
-
-
-
-
-
-<body>
 
   <div class="page-container">
 
@@ -106,7 +97,7 @@
         <div class="toc-title">
           Contents
           <span class="toc-controls">
-            <button class="toc-toggle" onclick="toggleToc(this)">hide</button>
+            <button class="toc-toggle" onclick="toggleToc(this)" aria-label="Toggle table of contents">hide</button>
           </span>
         </div>
         <ul class="toc-list">
@@ -153,9 +144,8 @@
 
         <div class="top-header-secondary-left">
           <p class="underline"><u>Biography</u></p>
-          <p class="blue-text"><a href="articles.html" style="text-decoration: none; color: inherit;">Written-Works</a>
-          </p>
-          <p class="blue-text">Music</p>
+          <p class="blue-text"><a href="articles.html">Written-Works</a></p>
+          <p class="blue-text"><a href="#" onclick="showMusicPaywall(event)">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -548,13 +538,24 @@
                 he writes when something feels real, or strange enough to keep, or simply worth remembering.
                 <br> And through his continuous game, one question perpetually stays in his mind, while he constantly
                 defines separation between his self and others.
+              </p>
+              <br>
 
-                <br></br>
               <div class="font-philo">
-                Lmouchkil lha9i9i Houa fach katsewel rassek chkoun ana, fa chkoun li ghadi ijaweb..?
+                Lmouchkil lha9i9i houa fach katsewel rassek chkoun ana, fa chkoun li ghadi ijaweb..?
                 —Mohamed Ait Archine
               </div>
+              <br> 
+
+              <p>
+                His observations and reflections are documented in his <a class="links" href="articles.html">written works</a>,
+                where he explores ideas about passion, identity, discipline, and the patterns that shape human behavior.<br>
+                The articles serve as an extension of his philosophical inquiries, structured thoughts on questions that don't
+                have easy answers.
               </p>
+
+
+
             </div>
             <!-- <div class="section-images">
               <img src="Images/Ait Archine.jpeg" alt="Mohamed Ait Archine">
@@ -575,7 +576,7 @@
         <div class="toc-title">
           Appearance
           <span class="toc-controls">
-            <button class="toc-toggle" onclick="toggleToc(this)">hide</button>
+            <button class="toc-toggle" onclick="toggleToc(this)" aria-label="Toggle table of contents">hide</button>
           </span>
         </div>
 
@@ -611,6 +612,28 @@
     </div>
   </div>
 
+  <!-- Music Paywall Modal -->
+  <div id="musicPaywallModal" class="music-modal">
+    <div class="music-modal-content">
+      <span class="music-modal-close" onclick="closeMusicPaywall()">&times;</span>
+      <h2>🎵 Premium Content Detected</h2>
+      <p id="musicModalText">Access to Mehdi's exclusive music collection requires payment.</p>
+      <div class="music-modal-buttons">
+        <button class="music-paywall-btn" id="musicBtn1" onclick="handleMusicPaywall(1)">
+          Pay $1,000,000 💸
+        </button>
+        <button class="music-paywall-btn" id="musicBtn2" onclick="handleMusicPaywall(2)" style="display:none;">
+          Pay $500,000 (50% OFF!) 🔥
+        </button>
+        <button class="music-paywall-btn" id="musicBtn3" onclick="handleMusicPaywall(3)" style="display:none;">
+          Pay $100,000 (90% OFF!!) ⚡
+        </button>
+        <button class="music-paywall-btn music-final-btn" id="musicBtn4" onclick="handleMusicPaywall(4)" style="display:none;">
+          Actually just let me in 😅
+        </button>
+      </div>
+    </div>
+  </div>
 
 </body>
 

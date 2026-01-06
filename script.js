@@ -163,3 +163,61 @@ function toggleSection(sectionId) {
     toggle.classList.toggle('expanded');
   }
 }
+
+// Music Paywall Modal Functions
+function showMusicPaywall(event) {
+  event.preventDefault();
+  const modal = document.getElementById('musicPaywallModal');
+  modal.style.display = 'flex';
+  // Reset to stage 1
+  resetMusicPaywall();
+}
+
+function closeMusicPaywall() {
+  const modal = document.getElementById('musicPaywallModal');
+  modal.style.display = 'none';
+  resetMusicPaywall();
+}
+
+function resetMusicPaywall() {
+  document.getElementById('musicModalText').textContent =
+    "Access to Mehdi's exclusive music collection requires payment.";
+  document.getElementById('musicBtn1').style.display = 'inline-block';
+  document.getElementById('musicBtn2').style.display = 'none';
+  document.getElementById('musicBtn3').style.display = 'none';
+  document.getElementById('musicBtn4').style.display = 'none';
+}
+
+function handleMusicPaywall(stage) {
+  const modalText = document.getElementById('musicModalText');
+  const btn1 = document.getElementById('musicBtn1');
+  const btn2 = document.getElementById('musicBtn2');
+  const btn3 = document.getElementById('musicBtn3');
+  const btn4 = document.getElementById('musicBtn4');
+
+  if (stage === 1) {
+    modalText.textContent = "Okay okay, maybe that's too much. How about a discount?";
+    btn1.style.display = 'none';
+    btn2.style.display = 'inline-block';
+  } else if (stage === 2) {
+    modalText.textContent = "Still too expensive? Fine, final offer!";
+    btn2.style.display = 'none';
+    btn3.style.display = 'inline-block';
+  } else if (stage === 3) {
+    modalText.textContent = "You know what... just come in. But tell your friends about this site!";
+    btn3.style.display = 'none';
+    btn4.style.display = 'inline-block';
+  } else if (stage === 4) {
+    // Actually redirect or show music content
+    alert('Music section coming soon! 🎵\n\nMehdi is still working on uploading his tracks. Check back later!');
+    closeMusicPaywall();
+  }
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('musicPaywallModal');
+  if (event.target === modal) {
+    closeMusicPaywall();
+  }
+});
