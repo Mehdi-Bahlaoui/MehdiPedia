@@ -22,6 +22,11 @@
 
 </head>
 
+<!-- ========== SHARED HEADER START ========== -->
+<!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
+<!-- Last updated: 2026-01-07 -->
+<!-- Variation: template.html - Logo links to ../index.html (relative path), full left nav, active right nav with container -->
+
 <header id="top">
   <div class="left-header">
     <nav class="left-nav">
@@ -30,6 +35,7 @@
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
+      <!-- VARIATION: articles.html and template.html include overlay and links container; index.html omits these -->
       <label id="overlay-left" for="sidebar-active-left"></label>
 
       <div class="links-container-left">
@@ -42,6 +48,7 @@
     </nav>
 
     <div class="logo-area">
+      <!-- VARIATION: Logo href - index.html has NO href, articles.html has href="index.html", template.html should have href="../index.html" -->
       <a class="logo-link" href="index.html">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia"
           width="50" height="50">
@@ -69,6 +76,7 @@
       <a href="">Log in</a>
     </div>
 
+    <!-- VARIATION: Right nav - index.html has this commented out, articles.html and template.html have it active -->
     <nav>
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -83,6 +91,8 @@
     </nav>
   </div>
 </header>
+
+<!-- ========== SHARED HEADER END ========== -->
 
 <body>
   <div class="page-container">
@@ -123,7 +133,7 @@
         <div class="top-header-secondary-left">
           <p class="blue-text"><a href="../index.html" style="text-decoration: none; color: inherit;">Biography</a></p>
           <p class="underline"><a href="../articles.html" style="text-decoration: none; color: inherit;">Written-Works</a></p>
-          <p class="blue-text">Music</p>
+          <p class="blue-text"><a href="#" onclick="showMusicPaywall(event)">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -179,7 +189,35 @@
     </div>
   </div>
 
+  <!-- Music Paywall Modal -->
+  <div id="musicPaywallModal" class="music-modal">
+    <div class="music-modal-content">
+      <span class="music-modal-close" onclick="closeMusicPaywall()">&times;</span>
+      <h2>🎵 Premium Content Detected</h2>
+      <p id="musicModalText">Access to Mehdi's exclusive music collection requires payment.</p>
+      <div class="music-modal-buttons">
+        <button class="music-paywall-btn" id="musicBtn1" onclick="handleMusicPaywall(1)">
+          Pay $1,000,000 💸
+        </button>
+        <button class="music-paywall-btn" id="musicBtn2" onclick="handleMusicPaywall(2)" style="display:none;">
+          Pay $500,000 (50% OFF!) 🔥
+        </button>
+        <button class="music-paywall-btn" id="musicBtn3" onclick="handleMusicPaywall(3)" style="display:none;">
+          Pay $100,000 (90% OFF!!) ⚡
+        </button>
+        <button class="music-paywall-btn music-final-btn" id="musicBtn4" onclick="handleMusicPaywall(4)" style="display:none;">
+          Actually just let me in 😅
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+<!-- ========== SHARED FOOTER START ========== -->
+<!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
+<!-- Last updated: 2026-01-07 -->
+<!-- Variation: Content differences (last edited date, disclaimer text) -->
 
 <footer class="wiki-footer">
   <div class="footer-content">
@@ -204,18 +242,10 @@
         </p>
       </div>
 
-      <!-- <div class="footer-section">
-        <div class="category-links">
-          <a href="#">Articles</a> |
-          <a href="#">Research</a> |
-          <a href="#">Technical Writing</a> |
-          <a href="#">Blog Posts</a>
-        </div>
-      </div> -->
-
-
     </div>
   </div>
 </footer>
+
+<!-- ========== SHARED FOOTER END ========== -->
 
 </html>

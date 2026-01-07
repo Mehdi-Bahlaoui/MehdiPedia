@@ -29,6 +29,11 @@
 
 <body>
 
+<!-- ========== SHARED HEADER START ========== -->
+<!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
+<!-- Last updated: 2026-01-07 -->
+<!-- Variation: index.html - Logo has no href, simplified left nav, right nav commented out -->
+
 <header id="top">
 
   <div class="left-header">
@@ -39,10 +44,12 @@
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
+      <!-- VARIATION: index.html omits overlay-left and links-container-left (articles.html and template.html include them) -->
     </nav>
 
 
     <div class="logo-area">
+      <!-- VARIATION: Logo href - index.html has NO href, articles.html has href="index.html", template.html has href="../index.html" -->
       <a class="logo-link">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia"
           width="50" height="50">
@@ -74,7 +81,7 @@
 
     </div>
 
-
+    <!-- VARIATION: Right nav - index.html has this commented out, articles.html and template.html have it active -->
     <!-- <nav class="right-nav">
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -88,6 +95,8 @@
 
 
 </header>
+
+<!-- ========== SHARED HEADER END ========== -->
 
   <div class="page-container">
 
@@ -637,6 +646,11 @@
 
 </body>
 
+<!-- ========== SHARED FOOTER START ========== -->
+<!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
+<!-- Last updated: 2026-01-07 -->
+<!-- Variation: Content differences (last edited date, disclaimer text) -->
+
 <footer class="wiki-footer">
   <div class="footer-content">
 
@@ -676,22 +690,9 @@
         </p>
       </div>
 
-      <!-- Categories Section -->
-      <!-- <div class="footer-section">
-        <div class="category-links">
-          <a href="#">HEY!</a> |
-          <a href="#">Thank you</a> |
-          <a href="#">for reading</a> |
-          <a href="#">Until the end</a> |
-          <a href="#">&lt;3</a> |
-          <a href="#">hope you enjoyed</a> |
-          <a href="#">:)</a> |
-          <a href="#">stay</a> |
-          <a href="#">tuned for updates</a>
-        </div>
-      </div> -->
-
 
     </div>
   </div>
 </footer>
+
+<!-- ========== SHARED FOOTER END ========== -->
