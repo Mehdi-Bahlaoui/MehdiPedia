@@ -1015,9 +1015,6 @@ body {
 }
 
 
-
-
-
 .wikipedia-source {
   font-family: sans-serif, "Helvetica Neue", Helvetica, Arial;
   font-weight: 400;
@@ -1602,6 +1599,10 @@ body {
   .music-paywall-btn {
     padding: 12px 20px;
     font-size: 1em;
+  }
+
+  header {
+    height: 54.8px;
   }
 }
 
