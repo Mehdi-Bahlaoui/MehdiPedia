@@ -2,7 +2,7 @@
 // Works with a SINGLE template file for ALL articles
 
 function loadArticle() {
-  // Get article ID from URL hash (e.g., article.html#passion-job)
+  // Get article ID from URL hash (e.g., template#passion-job)
   let articleId = window.location.hash.substring(1); // Remove the '#'
   
   // Fallback to query parameter if no hash
@@ -344,7 +344,7 @@ function showError(message) {
       <div class="section-text">
         <p class="section_title">Error</p>
         <p>${message}</p>
-        <p><a href="article.html">View all articles</a></p>
+        <p><a href="../articles">View all articles</a></p>
       </div>
     </div>
   `;
