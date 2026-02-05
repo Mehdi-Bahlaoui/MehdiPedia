@@ -1,8 +1,12 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
-      "Bash(start index.html)"
-    ]
+      "Bash(start index.html)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "Bash(ls -lah \"C:\\\\Users\\\\midou\\\\Desktop\\\\Files\\\\Projects\\\\Website\\\\music\\\\js\"\" && ls -lah \"C:UsersmidouDesktopFilesProjectsWebsitemusiccss\"\")"
+    ],
+    "defaultMode": "acceptEdits"
   }
 }

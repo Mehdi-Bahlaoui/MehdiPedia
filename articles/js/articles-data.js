@@ -293,7 +293,7 @@ const articlesData = {
   },
 
   'Letter_to_my_self': {
-    title: "A Letter to my self",
+    title: "A Letter to myself",
     date: '12/01/2026',
     sections: [
       {
@@ -312,26 +312,31 @@ const articlesData = {
       },
       {
         id: 'Energy',
-        title: '1) You have limited time, but most importantly limited energy:<br>',
+        title: '1) You have limited time, but most importantly limited energy<br>',
         content: `
           For that reason, you must not just do something because it needs to be done.<br>
           There are plenty of things that need to be done, but you must prioritize those that align with your goals and what's really important.<br>
-          Don't waste your energy on things that don't matter. Order food, delegate bullshit and block time wasters<br><br>
+          Don't waste your energy on things that don't matter.<br>
+          Order food if you have to, delegate what you don't wanna do and block time wasters<br><br>
+          
+          In that same sense, don't plan your day based on time, but rather based on energy.<br>
+          DO that thing until you're done, rest, do that other thing until you're done again.<br>
+          I believe that's how meaningful work gets done.<br><br>
         `
       },
       {
         id: 'Scenery',
-        title: "2) Change the scenery often and guilt-free it's worth it:<br>",
+        title: "2) Change the scenery often and guilt-free<br>",
         content: `
-          Habibi, you are not a machine, you need the change of scenery to reset your brain and body.<br>
+          You are not a machine, you need the change of scenery to reset your brain and body.<br>
           It might cost a bit of money to sit in that caffee, or go to that other caffe, but it's worth it.<br>
           Who cares about a couple of bucks if money is generative, <br>
-          your work is not easily recoverable, plus it's more valubale<br><br>
+          your work is not easily recoverable, plus it's more valuable<br><br>
         `
       },
       {
-        id: 'Scenery',
-        title: "3) Work is easier when your spiritual life is in check:<br>",
+        id: 'Spirituality',
+        title: "3) Work is easier when your spiritual life is in check<br>",
         content: `
           Make sure you do your prayers in time,<br>
           There is no better work block than the one that comes after a salat that's well done and whose dua is sincerely made.<br><br>

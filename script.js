@@ -209,7 +209,7 @@ function handleMusicPaywall(stage) {
     btn4.style.display = 'inline-block';
   } else if (stage === 4) {
     // Actually redirect or show music content
-    alert('Music section coming soon! 🎵\n\nMehdi is still working on uploading his tracks. Check back later!');
+    alert('Music section coming soon! \n\nWe are actively working on uploading his tracks. Check back later!');
     closeMusicPaywall();
   }
 }
