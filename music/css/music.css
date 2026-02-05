@@ -492,6 +492,12 @@
     padding-bottom: 20px;
   }
 
+  .disambiguation {
+    /* hidden on mobile */
+    display: none;
+
+  }
+
   /* Lyrics on mobile */
   .lyrics-container {
     grid-column: 1;
