@@ -1186,6 +1186,58 @@ body {
 
 }
 
+/* Blog Card Listing */
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.blog-card {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.blog-card:hover {
+  background-color: rgba(51, 102, 204, 0.06);
+}
+
+[data-theme="dark"] .blog-card:hover {
+  background-color: rgba(108, 155, 209, 0.1);
+}
+
+.blog-card:last-child {
+  border-bottom: none;
+}
+
+.blog-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-weight: normal;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+.blog-card time {
+  font-size: 0.85rem;
+  color: var(--dark-grey);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
 /* FOOTER STYLES */
 .wiki-footer {
   background-color: var(--blue-very-light);
@@ -1356,6 +1408,7 @@ body {
 }
 
 .section-header .section_title {
+  text-decoration: underline;
   margin-bottom: 0;
 }
 

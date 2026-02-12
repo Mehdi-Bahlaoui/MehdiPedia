@@ -3,7 +3,7 @@
 
 <head>
   <title>Mehdi Bahlaoui - Articles - Wikipedia</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -15,15 +15,15 @@
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
   <!-- Load articles data -->
-  <script src="articles/js/articles-data.js"></script>
-  <script src="script.js" defer></script>
+  <script src="js/articles-data.js"></script>
+  <script src="../script.js" defer></script>
 
 </head>
 
 <!-- ========== SHARED HEADER START ========== -->
 <!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
 <!-- Last updated: 2026-01-07 -->
-<!-- Variation: articles.html - Logo links to index.html, full left nav with overlay, active right nav -->
+<!-- Variation: articles/articles.html - Logo links to ../, full left nav with overlay, active right nav -->
 
 <header id="top">
   <div class="left-header">
@@ -46,8 +46,8 @@
     </nav>
 
     <div class="logo-area">
-      <!-- VARIATION: Logo href - index.html has NO href, articles.html has href="/", template.html has href="../" -->
-      <a class="logo-link" href="/">
+      <!-- VARIATION: Logo href - index.html has NO href, articles/articles.html has href="../", template.html has href="../" -->
+      <a class="logo-link" href="../">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia"
           width="50" height="50">
         <span class="logo-text">
@@ -130,9 +130,9 @@
 
       <div class="top-header-secondary">
         <div class="top-header-secondary-left">
-          <p class="blue-text"><a href="/" style="text-decoration: none; color: inherit;">Biography</a></p>
+          <p class="blue-text"><a href="../" style="text-decoration: none; color: inherit;">Biography</a></p>
           <p class="underline"><u>Written-Works</u></p>
-          <p class="blue-text"><a href="music/music.html" style="text-decoration: none; color: inherit;">Music</a></p>
+          <p class="blue-text"><a href="../music/music.html" style="text-decoration: none; color: inherit;">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -141,7 +141,7 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="../icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
           <i>
             <p class="disambiguation">This page contains a comprehensive list of articles, book analyses, and written
               works by
-              <a class="links" href="/">Mehdi Bahlaoui</a>.
+              <a class="links" href="../">Mehdi Bahlaoui</a>.
             </p>
           </i>
           <p>
@@ -179,18 +179,16 @@
         </div>
       </div>
 
-      <br>
-
       <!-- Blog Posts Section -->
       <div class="section-row" id="blog-posts">
         <div class="section-text">
-          <p class="section_title">Blog Posts</p>
+          <!-- <p class="section_title">Blog Posts</p> -->
 
 
           <!-- This list will be automatically populated -->
-          <ul id="articlesList" style="margin-left: 30px;margin-top: 10px;">
-            <li><em>Loading articles...</em></li>
-          </ul>
+          <div id="articlesList" class="blog-list">
+            <p><em>Loading articles...</em></p>
+          </div>
 
         </div>
       </div>
@@ -242,42 +240,52 @@
 
       // Check if articlesData exists
       if (typeof articlesData === 'undefined') {
-        listElement.innerHTML = '<li><em>Error: Could not load articles data</em></li>';
+        listElement.innerHTML = '<p><em>Error: Could not load articles data</em></p>';
         return;
       }
 
       // Clear the loading message
       listElement.innerHTML = '';
 
-      // Generate list items for each article
+      // Format date string (e.g. "2/8/2025" → "February 8, 2025")
+      function formatDate(dateStr) {
+        const parts = dateStr.split('/');
+        const date = new Date(parts[2], parts[0] - 1, parts[1]);
+        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+
+      // Generate blog cards for each article
       Object.keys(articlesData).forEach(articleId => {
         const article = articlesData[articleId];
-        const li = document.createElement('li');
 
-        // Create the link
-        const link = document.createElement('a');
-        link.className = 'links';
-        link.href = `articles/template#${articleId}`;
+        const card = document.createElement('article');
+        card.className = 'blog-card';
 
-        // Strip HTML tags from title for display
+        // Strip HTML tags from title
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = article.title;
         const cleanTitle = tempDiv.textContent || tempDiv.innerText;
 
-        link.textContent = `${cleanTitle}`;
+        const h2 = document.createElement('h2');
+        const link = document.createElement('a');
+        link.href = `template.html#${articleId}`;
+        link.textContent = cleanTitle;
+        h2.appendChild(link);
+        card.appendChild(h2);
 
         // Add date if available
         if (article.date) {
-          link.textContent += ` — (${article.date})`;
+          const time = document.createElement('time');
+          time.textContent = formatDate(article.date);
+          card.appendChild(time);
         }
 
-        li.appendChild(link);
-        listElement.appendChild(li);
+        listElement.appendChild(card);
       });
 
       // If no articles found
       if (Object.keys(articlesData).length === 0) {
-        listElement.innerHTML = '<li><em>No articles available</em></li>';
+        listElement.innerHTML = '<p><em>No articles available</em></p>';
       }
     }
 
@@ -288,29 +296,6 @@
       populateArticlesList();
     }
   </script>
-
-  <!-- Music Paywall Modal -->
-  <div id="musicPaywallModal" class="music-modal">
-    <div class="music-modal-content">
-      <span class="music-modal-close" onclick="closeMusicPaywall()">&times;</span>
-      <h2>Premium Content Detected</h2>
-      <p id="musicModalText">Access to Mehdi's exclusive music collection requires payment.</p>
-      <div class="music-modal-buttons">
-        <button class="music-paywall-btn" id="musicBtn1" onclick="handleMusicPaywall(1)">
-          Pay $1,000,000 
-        </button>
-        <button class="music-paywall-btn" id="musicBtn2" onclick="handleMusicPaywall(2)" style="display:none;">
-          Pay $500,000 (50% OFF!) 
-        </button>
-        <button class="music-paywall-btn" id="musicBtn3" onclick="handleMusicPaywall(3)" style="display:none;">
-          Pay $100,000 (90% OFF!!) 
-        </button>
-        <button class="music-paywall-btn music-final-btn" id="musicBtn4" onclick="handleMusicPaywall(4)" style="display:none;">
-          Actually just let me in 😅
-        </button>
-      </div>
-    </div>
-  </div>
 
 </body>
 

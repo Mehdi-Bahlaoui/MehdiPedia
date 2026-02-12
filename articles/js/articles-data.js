@@ -351,11 +351,51 @@ const articlesData = {
       }
       
     ]
+  },
+
+  'My_eyes_are_out_of_focus' : {
+    title: "My eyes are out of focus",
+    date: '12/02/2026',
+    sections: [
+      {
+        id: 'introduction',
+        title: '',
+        content: `
+This is the first time this happened to me, my eyes are loosing focus,<br>
+I got so inspired that I've been stuck like this for about 30 minutes<br>
+You know the feeling of stopping for a second, looking into the horizon while your vision looses focus as you process what you had in mind <br>
+-that feeling<br><br>
+
+I still feel it as I write this, my vision is in and out of blurriness but I can manage<br><br>
+
+WOW, just wow. I love life. more than life, I love the fact that the possibilities are endless and that you have the opportunity to chose your path.<br>
+WHat started this is this Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.<br><br>
+
+I resonate with it a lot, because just recently I did something that previous me would of felt immensly grateful for, immensely proud, past me would tear up.. maybe<br>
+Because of how beautiful this version of myself just is.<br>
+I am growing fast, faster than the time where I was stuck in school<br><br>
+
+it's almost like I've ascended but let's not get too philosophical<br><br>`
+        
+      },
+      {
+        id: 'Conclusion',
+        title: '',
+        content: `
+I just want to say, that I've grown a lot in just this small period, before starting my internship even alhamdolilah<br><br>
+
+-and to you the reader, and please trust me on this, that pretty much nothing is impossible and that things get better and it's up to you to believe first and work towards it second<br><br>
+
+You will face criticism, directly and indirectly, but that just tells you that you're doing something right<br>
+people will cast their anxieties on you, that's all it is<br>
+(yes my eyes are still out of focus) <br><br>
+
+love~<br>
+    
+    `
+      }
+    ]
   }
-
-
-
-
 
 
 };
