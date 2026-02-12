@@ -497,6 +497,18 @@
     display: none;
 
   }
+  
+  .controls-right{
+    display: none;
+  }
+
+  /* .music-controls-bar {
+    display: flex;
+    flex-direction: column; */
+    /* how to force not wrap */
+    /* flex-wrap:nowrap; */
+    /* not working yet */
+  /* } */
 
   /* Lyrics on mobile */
   .lyrics-container {

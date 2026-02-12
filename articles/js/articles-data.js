@@ -369,7 +369,7 @@ You know the feeling of stopping for a second, looking into the horizon while yo
 I still feel it as I write this, my vision is in and out of blurriness but I can manage<br><br>
 
 WOW, just wow. I love life. more than life, I love the fact that the possibilities are endless and that you have the opportunity to chose your path.<br>
-WHat started this is this Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.<br><br>
+WHat started this is <a class="links" href="https://www.youtube.com/watch?v=BLl3xREFEsY">this</a> Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.<br><br>
 
 I resonate with it a lot, because just recently I did something that previous me would of felt immensly grateful for, immensely proud, past me would tear up.. maybe<br>
 Because of how beautiful this version of myself just is.<br>
