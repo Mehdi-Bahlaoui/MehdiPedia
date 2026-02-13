@@ -172,9 +172,8 @@
             </p>
           </i>
           <p>
-            <b>Mehdi Bahlaoui's written works</b> represent his thoughts, research, or insights.
-            <br> (Including but not limited to: technology, psychology, philosophy, and engineering.)
-
+            <b>Mehdi Bahlaoui's</b> written works represent his thoughts, research, and insights.<br>
+            Of which expressed here, are solely his and do not reflect the views, policies or positions of any organization.
           </p>
         </div>
       </div>
@@ -250,12 +249,12 @@
       // Format date string (e.g. "2/8/2025" → "February 8, 2025")
       function formatDate(dateStr) {
         const parts = dateStr.split('/');
-        const date = new Date(parts[2], parts[0] - 1, parts[1]);
+        const date = new Date(parts[2], parts[1] - 1, parts[0]);
         return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
       }
 
-      // Generate blog cards for each article
-      Object.keys(articlesData).forEach(articleId => {
+      // Generate blog cards for each article in reverse order
+      Object.keys(articlesData).reverse().forEach(articleId => {
         const article = articlesData[articleId];
 
         const card = document.createElement('article');

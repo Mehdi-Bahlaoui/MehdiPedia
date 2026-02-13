@@ -312,7 +312,7 @@ function showArticleList() {
         <br>
         <ul style="list-style: none; padding: 0;">
   `;
-  
+
   Object.keys(articlesData).forEach(id => {
     const article = articlesData[id];
     listHTML += `
