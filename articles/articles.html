@@ -279,6 +279,10 @@
           card.appendChild(time);
         }
 
+        card.addEventListener('click', () => {
+          window.location.href = `template.html#${articleId}`;
+        });
+
         listElement.appendChild(card);
       });
 
