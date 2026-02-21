@@ -395,7 +395,52 @@ love~<br>
     `
       }
     ]
-  }
+  },
 
+
+  
+
+
+
+
+
+'no_wtsp': {
+  title: 'I uninstalled WhatsApp',
+  date: '21/02/2026',
+  sections: [
+    {
+      id: 'introduction',
+      title: '',
+      content: `
+
+      Yup, I uninstalled whatsApp, I wanted to do it for the longest time, and now is perfect opportunity<br>
+      As I just started my intenship, my coordinator and colleagues all use Ms Teams which I prefer<br>
+      and second just after finishing my university courses, so no urgent message to worry about<br><br>
+
+      Allaaah, feel like a weight have been lifted<br><br>
+
+      Now I don't have to deal with all that bullshit stories and all that, got me fed up fr fr<br><br>
+      
+      The main reason I removed it is because I keep checking it for dopamine hits and I don't want that anymore, I want to be in control of my dopamine, not the other way around<br><br>
+      
+      I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp, you have to reply to people .. some people get mad when you don't..<br><br>
+      
+      Other than I really don't have time to chat to people, I will just call like the alpha male I am hh, but no seriously I'm that busy, not busy by choice but by principle.. I have better things to do<br>
+      If you'd like to reach out please call, I will enjoy it and respect it more than a message,<br>
+      Or if you don't wanna call, just send me an email, I will reply to it as soon as I can :)<br><br>
+      
+      
+      
+`
+    },
+    {
+      id: 'conclusion',
+      title: '',
+      content: `
+      muchlove <3
+      `
+    }
+  ]
+},
 
 };
