@@ -437,7 +437,7 @@ love~<br>
       id: 'conclusion',
       title: '',
       content: `
-      Moral of the story: Set your own rules, for once - You Only Live Once
+      Moral of the story: Set your own rules, for once - You Only Live Once<br><br>
       
       À méditer :)
       `
