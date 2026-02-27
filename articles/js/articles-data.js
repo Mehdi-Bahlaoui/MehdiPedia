@@ -340,20 +340,20 @@ const articlesData = {
         content: `
           Make sure you do your prayers in time,<br>
           There is no better work block than the one that comes after a salat that's well done and whose dua is sincerely made.<br><br>
-          ` 
+          `
       },
       {
         id: 'Conclusion',
         title: "",
         content: `
           All the best!   
-          ` 
+          `
       }
-      
+
     ]
   },
 
-  'My_eyes_are_out_of_focus' : {
+  'My_eyes_are_out_of_focus': {
     title: "My eyes are out of focus",
     date: '12/02/2026',
     sections: [
@@ -376,7 +376,7 @@ Because of how beautiful this version of myself just is.<br>
 I am growing fast, faster than the time where I was stuck in school<br><br>
 
 it's almost like I've ascended but let's not get too philosophical<br><br>`
-        
+
       },
       {
         id: 'Conclusion',
@@ -398,20 +398,20 @@ love~<br>
   },
 
 
-  
 
 
 
 
 
-'no_wtsp': {
-  title: 'I uninstalled WhatsApp',
-  date: '21/02/2026',
-  sections: [
-    {
-      id: 'introduction',
-      title: '',
-      content: `
+
+  'no_wtsp': {
+    title: 'I uninstalled WhatsApp',
+    date: '21/02/2026',
+    sections: [
+      {
+        id: 'introduction',
+        title: '',
+        content: `
 
       Yup, I uninstalled whatsApp, I wanted to do it for the longest time, and now is perfect opportunity<br>
       As I just started my intenship, my coordinator and colleagues all use Ms Teams which I prefer<br>
@@ -432,38 +432,38 @@ love~<br>
       
       
 `
-    },
-    {
-      id: 'conclusion',
-      title: '',
-      content: `
+      },
+      {
+        id: 'conclusion',
+        title: '',
+        content: `
       Moral of the story: Set your own rules, for once - You Only Live Once<br><br>
       
       À méditer :)
       `
-    }
-  ]
-},
+      }
+    ]
+  },
 
 
 
 
-'pdf-test': {
-  title: 'Raw written notes (Soon)',
-  date: '26/02/2026',
-  sections: [
-    {
-      id: 'introduction',
-      title: '',
-      content: 
-      ``,
-      pdf: {
-  url: "js/notes.pdf",
-  height: "800px"
-}
-    }
+  'pdf-test': {
+    title: 'Raw written notes (Soon)',
+    date: '26/02/2026',
+    sections: [
+      {
+        id: 'introduction',
+        title: '',
+        content:
+          ``,
+        pdf: {
+          url: "js/notes.pdf",
+          height: "800px"
+        }
+      }
 
-  ]
-},
+    ]
+  },
 
 };

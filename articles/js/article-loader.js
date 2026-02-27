@@ -286,25 +286,38 @@ function injectStyles() {
     }
 
     .pdf-container {
-      margin: 30px 0;
+      margin: -20px 0;
       width: 100%;
       min-height: 200px;
     }
 
-    .pdf-container iframe {
-      border-radius: 8px;
-      // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
     .pdf-canvas {
-      width: 80%;
+      width: 90%;
       height: auto;
       display: block;
-      margin: 0 auto 0 auto;
+      margin: 0 auto 0 -5px;
       padding: 0;
 
       filter: var(--svg-filter);
-      // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    [data-theme="dark"] .pdf-canvas {
+      filter: invert(1) brightness(0.91);
+      mix-blend-mode: lighten;
+    }
+
+    /* Apply the dark mode filter to the PDF canvas whenever the system is in dark mode
+       (which is when Chrome's force-dark algorithm applies by default) */
+    @media (prefers-color-scheme: dark) {
+      .pdf-canvas {
+        filter: invert(1) brightness(0.91);
+        mix-blend-mode: lighten;
+      }
+      /* But if the user forcibly selects "light" theme on the site, undo it! */
+      html[data-theme="light"] .pdf-canvas {
+        filter: none;
+        mix-blend-mode: normal;
+      }
     }
 
     .section-row::after {
