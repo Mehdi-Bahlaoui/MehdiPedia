@@ -302,6 +302,7 @@ function injectStyles() {
       display: block;
       margin: 0 auto 0 auto;
       padding: 0;
+      filter: var(--svg-filter);
       // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
