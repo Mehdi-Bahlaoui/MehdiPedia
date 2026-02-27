@@ -1,80 +1,71 @@
-// Optimized Article Loader - Hash-based routing with image support
+// Optimized Article Loader - Hash-based routing with image + PDF support
 // Works with a SINGLE template file for ALL articles
 
 function loadArticle() {
-  // Get article ID from URL hash (e.g., template#passion-job)
-  let articleId = window.location.hash.substring(1); // Remove the '#'
-  
-  // Fallback to query parameter if no hash
+  let articleId = window.location.hash.substring(1);
+
   if (!articleId) {
     const urlParams = new URLSearchParams(window.location.search);
     articleId = urlParams.get('id') || urlParams.get('article');
   }
-  
-  // Default article if none specified
+
   if (!articleId) {
     showArticleList();
     return;
   }
-  
-  // Check if articlesData exists
+
   if (typeof articlesData === 'undefined') {
     console.error('articlesData not found. Make sure articles-data.js is loaded.');
     showError('Error loading articles database.');
     return;
   }
-  
+
   const article = articlesData[articleId];
-  
+
   if (!article) {
     showError(`Article "${articleId}" not found.`);
     return;
   }
-  
-  // Update page metadata
+
   updatePageMetadata(article);
-  
-  // Render article content
   renderArticle(article);
-  
-  // Generate table of contents
   generateTOC(article);
 }
 
 function updatePageMetadata(article) {
-  // Update page title
   document.title = `${article.title} - Mehdi Bahlaoui`;
-  
-  // Update last edited date
+
   const lastEditedSpan = document.getElementById('lastEdited');
   if (lastEditedSpan && article.date) {
     lastEditedSpan.textContent = article.date;
   }
-  
-  // Update meta description (good for SEO)
+
   let metaDesc = document.querySelector('meta[name="description"]');
   if (!metaDesc) {
     metaDesc = document.createElement('meta');
     metaDesc.name = 'description';
     document.head.appendChild(metaDesc);
   }
+
   metaDesc.content = article.description || article.title;
 }
 
+/* =========================
+   IMAGE RENDERING
+========================= */
+
 function renderImage(imageData) {
   if (!imageData || !imageData.url) return '';
-  
+
   const position = imageData.position || 'center';
   const width = imageData.width || 'auto';
   const alt = imageData.alt || 'Article image';
   const caption = imageData.caption || '';
-  
-  let imageClass = 'article-image';
+
   let containerClass = 'image-container';
   let imageStyle = '';
-  
-  // Handle different positions
-  switch(position) {
+
+  switch (position) {
     case 'left':
       containerClass += ' image-left';
       imageStyle = width !== 'auto' ? `max-width: ${width};` : 'max-width: 400px;';
@@ -87,17 +78,16 @@ function renderImage(imageData) {
       containerClass += ' image-full';
       imageStyle = 'width: 100%;';
       break;
-    case 'center':
     default:
       containerClass += ' image-center';
       imageStyle = width !== 'auto' ? `max-width: ${width};` : 'max-width: 600px;';
   }
-  
+
   return `
     <div class="${containerClass}">
       <img src="${imageData.url}" 
            alt="${alt}" 
-           class="${imageClass}"
+           class="article-image"
            style="${imageStyle}"
            loading="lazy">
       ${caption ? `<p class="image-caption">${caption}</p>` : ''}
@@ -105,26 +95,103 @@ function renderImage(imageData) {
   `;
 }
 
-function renderImages(section) {
-  let imagesHTML = '';
-  
-  // Handle single image
+/* =========================
+   PDF RENDERING
+========================= */
+
+
+function renderPDF(pdfData) {
+  if (!pdfData || !pdfData.url) return '';
+
+  const containerId = 'pdf-render-' + Math.random().toString(36).substring(7);
+
+  // Wait for container to be in the DOM and have a computed width
+  function waitForContainer(callback, attempts) {
+    attempts = attempts || 0;
+    const container = document.getElementById(containerId);
+    if (container && container.clientWidth > 0) {
+      callback(container);
+    } else if (attempts < 50) {
+      requestAnimationFrame(() => waitForContainer(callback, attempts + 1));
+    }
+  }
+
+  waitForContainer(function (container) {
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    pdfjsLib.getDocument(pdfData.url).promise.then(pdf => {
+
+      const containerWidth = container.clientWidth;
+
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        pdf.getPage(pageNum).then(page => {
+          // Get natural PDF page size at scale 1
+          const unscaledViewport = page.getViewport({ scale: 1 });
+
+          // Fit page to container width
+          const fitScale = (containerWidth) / unscaledViewport.width;
+
+          const qualityMultiplier = 2; // your high quality factor
+
+          const finalScale = fitScale * qualityMultiplier;
+
+          const viewport = page.getViewport({ scale: finalScale });
+
+          const outputScale = Math.min(window.devicePixelRatio || 1, 2);
+
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+
+          // High-resolution internal pixels
+          canvas.width = Math.floor(viewport.width * outputScale);
+          canvas.height = Math.floor(viewport.height * outputScale);
+
+          canvas.classList.add('pdf-canvas');
+
+          container.appendChild(canvas);
+
+          const transform = outputScale !== 1
+            ? [outputScale, 0, 0, outputScale, 0, 0]
+            : null;
+
+          page.render({
+            canvasContext: context,
+            transform: transform,
+            viewport: viewport
+          });
+
+        });
+
+      }
+    });
+  });
+
+  return `<div id="${containerId}" class="pdf-container"></div>`;
+}
+
+
+/* =========================
+   MEDIA RENDERING (Images + PDF)
+========================= */
+
+function renderMedia(section) {
+  let mediaHTML = '';
+
   if (section.image) {
-    imagesHTML = renderImage(section.image);
+    mediaHTML += renderImage(section.image);
   }
-  
-  // Handle multiple images
+
   if (section.images && Array.isArray(section.images)) {
-    const multiImageContainer = section.images.length > 1 ? 
-      '<div class="multi-image-container">' : '';
-    const multiImageClose = section.images.length > 1 ? '</div>' : '';
-    
-    imagesHTML = multiImageContainer + 
-                 section.images.map(img => renderImage(img)).join('') + 
-                 multiImageClose;
+    mediaHTML += section.images.map(img => renderImage(img)).join('');
   }
-  
-  return imagesHTML;
+
+  if (section.pdf) {
+    mediaHTML += renderPDF(section.pdf);
+  }
+
+  return mediaHTML;
 }
 
 function renderArticle(article) {
@@ -133,11 +200,9 @@ function renderArticle(article) {
     console.error('Article content container not found');
     return;
   }
-  
-  // Add image styles if not already present
-  injectImageStyles();
-  
-  // Build article HTML
+
+  injectStyles();
+
   let contentHTML = `
     <div class="section-row">
       <div class="section-text">
@@ -146,91 +211,72 @@ function renderArticle(article) {
       </div>
     </div>
   `;
-  
-  // Add each section
+
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach(section => {
-      const imagesHTML = renderImages(section);
-      
+      const mediaHTML = renderMedia(section);
+
       contentHTML += `
         <div class="section-row" id="${section.id}">
           <div class="section-text">
-            ${section.title && section.title !== 'Introduction' 
-              ? `<p class="section_title">${section.title}</p><br>` 
-              : ''}
-            ${imagesHTML}
+            ${section.title && section.title !== 'Introduction'
+          ? `<p class="section_title">${section.title}</p><br>`
+          : ''}
+            ${mediaHTML}
             <p>${section.content}</p>
           </div>
         </div>
       `;
     });
   }
-  
+
   contentContainer.innerHTML = contentHTML;
-  
-  // Scroll to top when new article loads
   window.scrollTo(0, 0);
 }
 
-function injectImageStyles() {
-  // Check if styles already injected
-  if (document.getElementById('article-image-styles')) return;
-  
+/* =========================
+   STYLES
+========================= */
+
+function injectStyles() {
+  if (document.getElementById('article-media-styles')) return;
+
   const styleSheet = document.createElement('style');
-  styleSheet.id = 'article-image-styles';
+  styleSheet.id = 'article-media-styles';
   styleSheet.textContent = `
     .image-container {
       margin: 20px 0;
     }
-    
-    .image-center {
-      text-align: center;
-    }
-    
+
     .image-center img {
       display: block;
       margin: 0 auto;
       max-width: 100%;
       height: auto;
     }
-    
+
     .image-left {
       float: left;
       margin: 0 20px 20px 0;
       max-width: 45%;
     }
-    
-    .image-left img {
-      width: 100%;
-      height: auto;
-    }
-    
+
     .image-right {
       float: right;
       margin: 0 0 20px 20px;
       max-width: 45%;
     }
-    
-    .image-right img {
-      width: 100%;
-      height: auto;
-    }
-    
-    .image-full {
-      clear: both;
-      margin: 30px 0;
-    }
-    
+
     .image-full img {
       width: 100%;
       height: auto;
     }
-    
+
     .article-image {
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    
+
     .image-caption {
       margin-top: 8px;
       font-size: 0.9em;
@@ -238,51 +284,73 @@ function injectImageStyles() {
       font-style: italic;
       text-align: center;
     }
-    
-    .multi-image-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin: 20px 0;
+
+    .pdf-container {
+      margin: 30px 0;
+      width: 100%;
+      min-height: 200px;
     }
-    
-    .multi-image-container .image-container {
-      flex: 1;
-      min-width: 250px;
-      max-width: 45%;
+
+    .pdf-container iframe {
+      border-radius: 8px;
+      // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    
-    /* Clear floats after sections */
+
+    .pdf-canvas {
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto 0 auto;
+      padding: 0;
+      // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
     .section-row::after {
       content: "";
       display: table;
       clear: both;
     }
-    
+
+    @media (max-width: 1200px) {
+      .pdf-container {
+        margin: 0;
+        width: 100%;
+        overflow: hidden; /* Prevents the page from expanding horizontally */
+      }
+      .pdf-canvas {
+        width: 110%;
+        max-width: none;
+        margin: 0 0 0 -5%; /* Trims 5% of white space on both sides */
+      }
+    }
+
     @media (max-width: 768px) {
+      .pdf-canvas {
+        width: 110%;
+        margin: 0 -5% 0 -5%; /* Trims 10% on mobile to make text even larger */
+      }
       .image-left,
       .image-right {
         float: none;
         max-width: 100%;
-        margin: 20px 0;
-      }
-      
-      .multi-image-container .image-container {
-        max-width: 100%;
+        margin: 0px 0;
       }
     }
   `;
-  
+
   document.head.appendChild(styleSheet);
 }
+
+/* =========================
+   TOC + NAVIGATION
+========================= */
 
 function generateTOC(article) {
   const tocList = document.getElementById('tocList');
   if (!tocList) return;
-  
+
   let tocHTML = '<li><a href="#top">(Top)</a></li>';
-  
+
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach(section => {
       if (section.title && section.id) {
@@ -290,7 +358,7 @@ function generateTOC(article) {
       }
     });
   }
-  
+
   tocList.innerHTML = tocHTML;
 }
 
@@ -304,7 +372,7 @@ function scrollToSection(sectionId) {
 function showArticleList() {
   const contentContainer = document.getElementById('articleContent');
   if (!contentContainer || typeof articlesData === 'undefined') return;
-  
+
   let listHTML = `
     <div class="section-row">
       <div class="section-text">
@@ -325,20 +393,20 @@ function showArticleList() {
       </li>
     `;
   });
-  
+
   listHTML += `
         </ul>
       </div>
     </div>
   `;
-  
+
   contentContainer.innerHTML = listHTML;
 }
 
 function showError(message) {
   const contentContainer = document.getElementById('articleContent');
   if (!contentContainer) return;
-  
+
   contentContainer.innerHTML = `
     <div class="section-row">
       <div class="section-text">
@@ -350,10 +418,12 @@ function showError(message) {
   `;
 }
 
-// Listen for hash changes (when user clicks article links)
+/* =========================
+   EVENT LISTENERS
+========================= */
+
 window.addEventListener('hashchange', loadArticle);
 
-// Load article on page load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadArticle);
 } else {

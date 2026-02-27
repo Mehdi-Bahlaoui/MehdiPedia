@@ -6,7 +6,10 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebSearch",
       "Bash(ls -lah \"C:\\\\Users\\\\midou\\\\Desktop\\\\Files\\\\Projects\\\\Website\\\\music\\\\js\"\" && ls -lah \"C:UsersmidouDesktopFilesProjectsWebsitemusiccss\"\")",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(google-chrome:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)"
     ],
     "defaultMode": "acceptEdits"
   }
