@@ -444,4 +444,51 @@ love~<br>
     ]
   },
 
+
+
+
+'5AM': {
+  title: 'My 5am Journey - a 30 day challenge',
+  date: '28/02/2026',
+  sections: [
+    {
+      id: 'introduction',
+      title: '',
+      content: 
+      `
+      This is the best the best gift I could give myself on my birthday, and probably will be my best acheivement, aswell as the best decision of my file.<br>
+      I am not over-romanticizing this- I don't think so<br>
+      This is just how I genuinely feel about it<br><br>
+
+      Anyway, I set some rules for myself, of course, in order to achieve this correctly<br><br>
+
+      Rules:<br>
+      - Wake up at 5am every day<br>
+      - Wake up no matter what<br>
+      - Coffee only allowed between 5am and 9am<br>
+      - Dinner at 9pm<br>
+      - Sleep at 10pm<br><br><br>
+      
+      
+
+
+
+      `
+    },
+    {
+      id: 'Day 1',
+      title: 'Day 1 - 28/02',
+      content: 
+      `
+      I slept for 2 hours today, horay.<br><br>
+      As I woke up it felt great, but I believe i did not hit deep sleep because I still have short term memory from what happened before I went to sleep hh.<br><br>
+
+      Falling back to sleep was soo sweet but folding would mean cancelling this whole challenge so I woke up determined, ate an energy bar, half an apple and made coffee.<br><br>
+      If you're wondering how I feel now (it's 5:40am) then let me tell you: I'm good.. The coffee just kicked in.<br><br>
+
+      `
+    }
+  ]
+},
+
 };
