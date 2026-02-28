@@ -439,6 +439,9 @@ love~<br>
       Moral of the story: Set your own rules, for once - You Only Live Once<br><br>
       
       À méditer :)
+
+
+      
       `
       }
     ]
@@ -466,8 +469,8 @@ love~<br>
       - Wake up at 5am every day<br>
       - Wake up no matter what<br>
       - Coffee only allowed between 5am and 9am<br>
-      - Dinner at 9pm<br>
-      - Sleep at 10pm<br><br><br>
+      - Sleep at 10pm<br>
+      - Document everyday here<br><br><br>
       
       
 
