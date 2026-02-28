@@ -430,7 +430,6 @@ love~<br>
       Or if you don't wanna call, just send me an email, I will reply to it as soon as I can :)<br><br>
       
       
-      
 `
       },
       {
@@ -442,27 +441,6 @@ love~<br>
       À méditer :)
       `
       }
-    ]
-  },
-
-
-
-
-  'pdf-test': {
-    title: 'Raw written notes (Soon)',
-    date: '26/02/2026',
-    sections: [
-      {
-        id: 'introduction',
-        title: '',
-        content:
-          ``,
-        pdf: {
-          url: "js/notes.pdf",
-          height: "800px"
-        }
-      }
-
     ]
   },
 
