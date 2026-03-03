@@ -459,8 +459,9 @@ love~<br>
       title: '',
       content: 
       `
-      This is the best the best gift I could give myself on my birthday, and probably will be my best acheivement, aswell as the best decision of my file.<br>
-      I am not over-romanticizing this- I don't think so<br>
+      This is the best the best gift I could give myself on my birthday, and probably will be my best acheivement, aswell as the best decision of my file if acheived.<br>
+      Because it will provide me with precious time to work on myself, and to do the things I want to do, and to do them in the best way possible.<br><br>
+      I hope I'm not over-romanticizing this-<br>
       This is just how I genuinely feel about it<br><br>
 
       Anyway, I set some rules for myself, of course, in order to achieve this correctly<br><br>
@@ -468,9 +469,11 @@ love~<br>
       Rules:<br>
       - Wake up at 5am every day<br>
       - Wake up no matter what<br>
-      - Coffee only allowed between 5am and 9am<br>
-      - Sleep at 10pm<br>
       - Document everyday here<br><br><br>
+
+
+
+      I won't stop this challenge until I acheive 30 consecutive days of waking up at 5am, no matter what, and I will document every day here, so that I can look back at it and see how I evolved, and also to share my experience with you guys, maybe it will inspire you to do the same or something similar :)<br><br>
       
       
 
@@ -490,7 +493,50 @@ love~<br>
       If you're wondering how I feel now (it's 5:40am) then let me tell you: I'm good.. The coffee just kicked in.<br><br>
 
       `
-    }
+    },
+      {
+      id: 'Day 2',
+      title: 'Day 2 - 01/03',
+      content: 
+      `
+      Yesterday, I struggled a lot, so much, i almost fell asleep about 6 times, and kept fighting with myself to stay awake because a nap would disturbed my cycle I thought..<br>
+      Before maghrib at around 4:30pm my brain shut down, and I was received some unfortunate news that forced me to do some work a t night, I slept defeated but still at around 10pm<br>
+      I woke at 5am, I was so tired I could not get out of bed, I just laid there for 2 hours more.. I had to
+
+      I just lost the challenge on the second day, but I will not give up, I will try again tomorrow, and the day after that, and the day after that.. until I succeed<br><br>
+      `
+    },
+      {
+      id: 'Day 3',
+      title: 'Day 3 - 02/03',
+      content:
+      `
+      so I slept well from yesterday, but you know what happend just as I wanted to sleep at 10pm? I got a call from an old friend that I just had to answer, and I had to meet with him, it has bigger than this (and maybe that's a problem), I ended up meeeting with him and I satyed up until around 12PM, did some minor work until about 2AM, and then I went to sleep.
+
+      To be completely honest, I am not sure the 10pm rule is really working, specially becuase of dinner being fixed at 9pm by the cafeteria.. it wouldn be wise also to not eat dinner.
+      So this might not work but I am not giving up.
+
+      So today I decided to stay up until 5am, ended up 6am. i do not recommend it, you kinda get pissed of at the birds for making noise, it's like they rage-bating you hahah
+      eugh, this is hard.
+      
+      
+      I think the best think I can do is to first have a fixed schedule. then and only then see if I can do the 5am one.. I don't know
+      `
+    },
+      {
+      id: 'Day 4',
+      title: 'Day 4 - 03/03',
+      content:
+      `
+      I woke up at around 10:30pm, woken up by the cleaner lady. they looove to wake you up :)))<br><br>
+      so I kinda think that this is not what I want to experience.. anymore<br><br>
+      I might consider not eating dinner, maybe storing the food in the fidge, or OR cooking at home......
+    
+      `
+    },
+
+
+
   ]
 },
 
