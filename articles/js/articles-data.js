@@ -534,6 +534,24 @@ love~<br>
     
       `
     },
+          {
+      id: 'Day 5',
+      title: 'Day 5 - 04/03',
+      content:
+      `
+      Change of plans, before clearly explaining the plan, let me tell you about what I think is best right now<br><br>
+      I am not making excuses, but this won't work simply for the fact that it's ramadan, and the fact that dinner is fixed at 9pm<br><br>
+      
+      I started this challenge with the intention of what? Having more time to work on myself, and to do the things I want to do, and to do them in the best way possible.<br><br>
+      I beleive I can acheive that, but for now, not with waking up at 5am..-I will try once again, when ramadan ends, to make it at 5am<br><br>
+      
+      The thing is, I just realized today that my internship tasks are expandable, this means i could be working on them for 10 hours and I would still find things to learn and tasks to do better<br>
+      And this is the problem, this was the problem that I tried to solve by waking up at 5am, but I think the solution is not to wake up at 5am, but rather to set a fixed time window for work.<br><br>
+      
+      So I chose today inchaAllah god willingly to block the time from my waking point until about Asr (~4PM) for my personal projects, Work until sleep<br>
+      ... I will try this see how it goes inchaAllah<br><br> 
+      `
+    }
 
 
 
