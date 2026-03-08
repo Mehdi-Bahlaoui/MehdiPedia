@@ -196,6 +196,57 @@ const articlesData = {
 
           ...To be continued
 
+          <u>UPDATE: 8/3/2026</u><br><br>
+
+          This book is great, I could talk about all the great ideas in it but it would better if you read it yourself<br>.
+          Here I will simply talk about some of the Ideas that resonated with me:<br><br>
+          <br>
+
+
+        `},{
+
+        id: 'How_to_be_Great',
+        title: 'How to be Great',
+        content: `
+          I used to always ask myself, and some poor friends of mine: "Hey, how can I be great?"<br>
+          For the longest time I mourned the fact that I did not have a clear answer to this question<br>
+          I thought honestly that I had to work on my manliness, because they always say that in podcast <i>Fuck Podcasts</i> <br><br>
+          
+          But the real answer is not that.<br><br>
+
+          I believe I found the answer to this question in this book.<br><br>
+
+          Download the book <a class="links" href="https://thereadershub.org/wp-content/uploads/2020/07/Ryan_Holiday_Ego_is_the_Enenmyz-lib.org_.pdf">here</a>: and read page 71 and 72.<br><br>
+          
+
+          See if you can find it by yourself before I spoil you.<br><br>
+
+          The answer is in this: "To do, not be"<br><br>
+
+          Put it simply: You have a higher chance succeeding by doing, compared to be becoming.<br>
+          Simpler, realer, more tangible, mesurable.<br><br>
+          
+          And you come to understand that the later one "becoming" can only come from the prior one..<br><br>
+
+          It is indeed in being that we become!<br><br>
+          
+          A great leader is first great because he is a leader.<br><br>
+
+          This is not to say that the problem with me was action, no, not that<br>
+          But rather this was a tricky equation for me to solve, it is only by solving for y do we get x, and mathematical brain could not get that.<br>
+          ANd I bet you and I wouldn't either except by looking at knowledge from old wise people whom shared their wisdom.<br><br>
+          
+          It is only by doing great things that we become great, and making being great a goal will simply block us from doing great things.. WHy? EGOO!! hhh kikhle3 yak<br><br>
+
+          But yeah that's the problem, because that way you'll be fueling your ego, and that is like digging your grave. <br><br>
+
+          It's honestly deeper than what I just wrote but that's the just of it, I hope it resonates with you.<br><br>
+
+          LOve you <3<br><br>
+          
+          
+          
+
         `
       }
     ]
@@ -534,7 +585,7 @@ love~<br>
     
       `
     },
-          {
+      {
       id: 'Day 5',
       title: 'Day 5 - 04/03',
       content:
@@ -550,6 +601,35 @@ love~<br>
       
       So I chose today inchaAllah god willingly to block the time from my waking point until about Asr (~4PM) for my personal projects, Work until sleep<br>
       ... I will try this see how it goes inchaAllah<br><br> 
+      `
+    },
+          {
+      id: 'Day 6, 7 and 8',
+      title: 'Day 6, 7 and 8',
+      content:
+      `
+      So I did not write anything for these days because of various reasons, but mainly because I had to lock-in for my internship meeting<br>
+      I tried to find a solution and actually tried several things:<br>
+      I tried dividing the day, personnal projects from waking up until 4pm (asr prayer), further will be for work but the day starts losing, yiu feel like you already lost when you wake up late<br>
+      The previous idea to cook is also not doable, takes too much energy and time, plus I would have to do a back-and-forth to Marjan..nah<br>
+      In a seperate note, as an effort to help me stay on the right track, I deleted all social media apps from my phone also the browser, the algorithm has gotten too strong haha<br>
+      I also blocked youtube and others on my laptop, and right now I only give myself spotify podcasts and a book to read for entertainement.<br>
+      Some ask me why I'm torturing myself like this, but I think it's the opposite, I do this for me, not for a particular reason or to prove something, or to get to a standard, I really kinda feel like no social media is what I want to feel (at least for now, hopefully always)<br><br>
+
+      But yeah anyway, about the main project, I found the solution, it's to simply to sleep at 10pm right after dinner, it gives me about 7 hours of sleep, I dunno why I complicated it haha<br><br>
+
+      `
+    },
+              {
+      id: 'Day 9',
+      title: 'Day 9 - 08/03',
+      content:
+      `
+      Today I woke up at 5AM,<br>
+      my day is amazing,<br>
+      worked for about 7 hours at the moment of writing this, and I feel great except a small dip I had felt at 11:45AM.<br><br>
+      
+      My day couldn't have started better than this and I'm grateful.<br><br><br>
       `
     }
 
