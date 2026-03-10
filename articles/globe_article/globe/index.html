@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dot Globe</title>
+
+    <!-- trunk build directives -->
+    <link data-trunk rel="rust" data-wasm-opt="4" />
+    <link data-trunk rel="copy-dir" href="assets" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      /* Background text layer */
+      #background-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow-y: auto;
+        background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 50%, #bcccdc 100%);
+        padding: 60px 80px;
+        color: #243b53;
+      }
+
+      #background-content h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+        color: #102a43;
+      }
+
+      #background-content h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: 32px;
+        margin-bottom: 12px;
+        color: #334e68;
+      }
+
+      #background-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 16px;
+        max-width: 720px;
+      }
+
+      #background-content ul {
+        margin-left: 24px;
+        margin-bottom: 16px;
+      }
+
+      #background-content li {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 6px;
+      }
+
+      .highlight-box {
+        background: rgba(255, 255, 255, 0.6);
+        border-left: 4px solid #3b82f6;
+        padding: 16px 20px;
+        margin: 24px 0;
+        border-radius: 0 8px 8px 0;
+        max-width: 720px;
+      }
+
+      /* Bevy auto-creates a <canvas> on <body> — layer it above the text */
+      canvas {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: transparent !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Layer 1: Background HTML content -->
+    <div id="background-content">
+      <h1>Transparent WebGL Canvas Demo</h1>
+      <p>
+        This text sits <strong>behind</strong> the 3D globe. If you can read this
+        through the empty space around the globe, the WebGL canvas transparency is
+        working correctly — just like a PNG with an alpha channel.
+      </p>
+
+      <div class="highlight-box">
+        The globe's dark sphere and glowing dots should remain fully opaque,
+        while the canvas background is completely see-through.
+      </div>
+
+      <h2>How It Works</h2>
+      <ul>
+        <li>Bevy's <code>ClearColor</code> is set to fully transparent RGBA (0, 0, 0, 0)</li>
+        <li>The WebGL2 context preserves its alpha channel</li>
+        <li>CSS layers the canvas above this text using <code>z-index</code></li>
+        <li>The canvas container has <code>pointer-events: none</code> so clicks pass through</li>
+      </ul>
+
+      <h2>Features</h2>
+      <p>
+        The globe renders 32,000 land dots using a Fibonacci sphere distribution,
+        filtered against a land mask texture. Animated arcs pulse between highlighted
+        cities (Paris, New York, Tokyo). The camera auto-rotates and supports
+        click-and-drag orbit control.
+      </p>
+
+      <h2>Lorem Ipsum Filler</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <p>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+        Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
+        est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
+      </p>
+      <p>
+        Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus
+        vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+        ullamcorper, ligula ut dictum pharetra, nisi nunc fringilla magna,
+        in commodo elit erat nec turpis. Ut pharetra augue nec augue.
+      </p>
+
+      <h2>More Content</h2>
+      <p>
+        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+        doming id quod mazim placerat facer possim assum. Typi non habent
+        claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+      </p>
+      <p>
+        Investigationes demonstraverunt lectores legere me lius quod ii legunt
+        saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+        consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc
+        putamus parum claram, anteposuerit litterarum formas humanitatis per
+        seacula quarta decima et quinta decima.
+      </p>
+    </div>
+
+    <!-- Bevy will auto-append its <canvas> to <body> -->
+
+  </body>
+</html>

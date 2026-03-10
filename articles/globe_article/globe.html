@@ -145,9 +145,9 @@
         </div>
 
         <div class="top-header-secondary-right">
-          <p class="underline">Read</p>
+          <!-- <p class="underline">Read</p>
           <p class="blue-text">View source</p>
-          <p class="blue-text">View history</p>
+          <p class="blue-text">View history</p> -->
           <div class="tools">
             <p>Tools</p>
             <img src="../../icons/down.svg" alt="Icon" width="24" height="24">
@@ -163,14 +163,14 @@
         <div class="globe-text">
           <p class="globe-title"><b>Interactive Globe</b></p>
           <p class="globe-description">
-            Cool Globe isn't it? It was made using Bevy, a Rust game engine,
-            and compiled to WebAssembly to run in the browser.
+            Cool Globe isn't it? It was made using Bevy, a Rust game engine,<br>
+            and compiled to WebAssembly to run in the browser.<br>
             <br><br>
-            You can click and drag to rotate the globe.
+            You can click and drag to rotate the globe. Seriously, try it!<br>
             <br><br>
-            This was a failed project unfortunately as I lost motivation to finish
-            a very big project that I had planned to build on top of this globe,
-            but I still wanted to share it as I think it's pretty cool on its own!
+            This was a failed project unfortunately as I lost motivation to finish<br>
+            a very big project that I had planned to build on top of this globe,<br>
+            but I still wanted to share it as I think it's pretty cool on its own!<br>
             <br><br>
             Peace
           </p>
@@ -192,8 +192,8 @@
         });
         observer.observe(document.body, { childList: true });
 
-        import init from './globe/Mehdi_Network_Project-132d3483b07e5c92.js';
-        await init({ module_or_path: './globe/Mehdi_Network_Project-132d3483b07e5c92_bg.wasm' });
+        import init from './globe/704496ede9d7912d.js';
+        await init({ module_or_path: './globe/704496ede9d7912d.wasm' });
 
         // Fallback in case observer missed it
         const canvas = document.body.querySelector(':scope > canvas');
