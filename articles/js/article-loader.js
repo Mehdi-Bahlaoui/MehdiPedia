@@ -406,7 +406,7 @@ function showError(message) {
       <div class="section-text">
         <p class="section_title">Error</p>
         <p>${message}</p>
-        <p><a href="../articles">View all articles</a></p>
+        <p><a href="../articles/articles.html">View all articles</a></p>
       </div>
     </div>
   `;
