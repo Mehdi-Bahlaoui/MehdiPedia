@@ -620,7 +620,7 @@ love~<br>
 
       `
     },
-              {
+    {
       id: 'Day 9',
       title: 'Day 9 - 08/03',
       content:
@@ -631,11 +631,36 @@ love~<br>
       
       My day couldn't have started better than this and I'm grateful.<br><br><br>
       `
+    },
+    {
+      id: 'Day 10',
+      title: 'Day 10 - 09/03',
+      content:
+      `You lose some and...<br><br><br>
+      `
+    },
+    {
+      id: 'Day 11',
+      title: 'Day 11 - 10/03',
+      content:
+      `You win some!<br>
+      Woke up at 5AM, great work in the morning, 10/10, would do it again
+      `
     }
-
 
 
   ]
 },
+
+
+
+
+
+
+'globe': {
+  title: 'Look at the globe, and tell me what you see',
+  date: '10/03/2026',
+  redirect: 'globe_article/globe.html'
+}
 
 };

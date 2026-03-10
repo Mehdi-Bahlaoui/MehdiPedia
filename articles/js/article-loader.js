@@ -27,6 +27,12 @@ function loadArticle() {
     return;
   }
 
+  // Standalone page redirect — for articles with their own HTML file
+  if (article.redirect) {
+    window.location.replace(article.redirect);
+    return;
+  }
+
   updatePageMetadata(article);
   renderArticle(article);
   generateTOC(article);
