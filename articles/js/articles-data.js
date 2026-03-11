@@ -644,9 +644,23 @@ love~<br>
       title: 'Day 11 - 10/03',
       content:
       `You win some!<br>
-      Woke up at 5AM, great work in the morning, 10/10, would do it again
+      Woke up at 5AM, great work in the morning, 10/10, would do it again<br><br><br>
       `
-    }
+    },
+    {
+      id: 'Day 12',
+      title: 'Day 12 - 11/03',
+      content:
+      `And you win Again!<br>
+      Woke up todya tired ngl, I could explain it for two reasons maybe, first I got woken up by a call around 12:45 ughh what the hell brother? haha<br>
+      I guess I am never forgetting not to put my phone in <a class="links" href="https://en.wikipedia.org/wiki/Do_not_disturb">DnD</a> mode again<br>
+      Second i slept with ligth clothes and the weather is getting colder, I should have put a second pair of pants, and some socks HHH<br>
+      But yeah other than the fact it was hard sleeping early for today and waking up, it's going pretty good and I better start working before my intership meeting at 11AM<br>
+      Byyy
+
+      <br><br><br>
+      `
+    }    
 
 
   ]
@@ -658,7 +672,7 @@ love~<br>
 
 
 'globe': {
-  title: 'Look at the globe, and tell me what you see',
+  title: "It's not a globe, It's Web-Assembly",
   date: '10/03/2026',
   redirect: 'globe_article/globe.html'
 }
