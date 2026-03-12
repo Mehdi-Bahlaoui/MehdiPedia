@@ -40,6 +40,11 @@ body > canvas {
   height: 100% !important;
   background: transparent !important;
   pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 /* Mobile: globe on top, text below */
@@ -55,7 +60,7 @@ body > canvas {
     top: 0;
     right: 0;
     width: 100%;
-    height: 400px;
+    height: 100vw;
     overflow: visible;
   }
 
