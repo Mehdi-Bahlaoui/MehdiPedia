@@ -211,6 +211,20 @@ Follow the same sync workflow but pay attention to content-specific differences.
 - Use a diff tool to compare headers if unsure what changed
 - When in doubt, check the variation matrix above
 
+### Globe Article
+
+The interactive globe article lives in `articles/globe_article/` with its own HTML, CSS, and JS files:
+- `globe.html` — Page structure, loads `globe.js` as a module
+- `globe.css` — Layout and slide-in animation styles
+- `globe.js` — Extracted module that initializes the Bevy/WASM globe, patches touch input, and triggers the slide-in animation
+- `globe/` — Compiled Bevy/Rust WASM binary and JS glue
+
+**Slide-in animation (desktop only):** The globe starts off-screen (`translateX(120%)`) and slides in via CSS transitions triggered by JS adding `globe-ready` then `globe-settled` classes to `.globe-layout`. The text width shrinks to make room. Mobile (≤850px) skips the animation entirely.
+
+**WASM prefetch:** `index.html` includes a `<link rel="prefetch">` for the WASM binary so it downloads at low priority while users browse the homepage.
+
+**Overflow handling:** `.page-container` uses `overflow-x: clip` (in `globe.css`) to prevent horizontal scrollbar from the off-screen globe without affecting vertical positioning. The globe container has `z-index: 10` to render above the sidebar/TOC.
+
 ## Important Conventions
 
 - **No build tools**: Direct file editing, no transpilation or bundling

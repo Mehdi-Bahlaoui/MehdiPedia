@@ -660,10 +660,48 @@ love~<br>
 
       <br><br><br>
       `
-    }    
+    },
+    {
+      id: 'Day 13',
+      title: 'Day 13 - 12/03',
+      content: `And you win some more!..
+      How great is that! I believe that's a personal best haha I hope i maintain it.<br>
+      I tried my best to carry on and I almost felt like it started being my identity which I like,<br>
+      but no one should try to keep with their identity do they?<br>
+      But I failed te sleep for today for different reasons, but mainly because I was invited to an iftar party<br>
+      which threw me off both mentally and stomachly (I ate a lot and couldn't wind down to sleep)... long story short,<br>
+      it wasn't great, tho my day in the morning was very productive I must say<br><br>
+      `
+    },
+    {
+      id: 'Day 14',
+      title: 'Day 14 - 13/03',
+      content: `The day started very late, as per the mistake of yesterday, I really did nothing productive and it<br>
+      seemed like I no longer know how to get things done if I don't wake up at 5AM which is funny<br>
+
+      `
+    },
+    {
+      id: 'Day 15',
+      title: 'Day 15 - 14/03',
+      content: `But you bounce back, and win again!<br>
+      Reminds me of great passage of the book Ego is the enemey by Ryan Holiday, and I'm paraphrasing, but it goes<br>
+      something like: just because you acheived something doesn't mean you can do it again with the same level of<br>
+      success
+
+
+      We need to remeber what go us here, and the kind of dedication and we work we put in.
+      It's now half way through the challenge, I hope, i really do that I take it from here and maintain it until the end, if done, then I consider it a success... (to be continued)
+      `}
+
 
 
   ]
+},
+'globe': {
+  title: "It's not a globe, It's Web-Assembly",
+  date: '10/03/2026',
+  redirect: 'globe_article/globe.html'
 },
 
 
@@ -671,10 +709,66 @@ love~<br>
 
 
 
-'globe': {
-  title: "It's not a globe, It's Web-Assembly",
-  date: '10/03/2026',
-  redirect: 'globe_article/globe.html'
-}
+
+
+
+
+
+'builder_solver': {
+  title: 'I\'m a builder, not a solver',
+  date: '14/03/2026',
+  sections: [
+    {
+      id: '',
+      title: '',
+      content: 
+      `
+So I'm a builder, not a solver.<br><br>
+I just realised this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.<br><br>
+
+I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Altough I like it when I do solve problems!) but when shit gets real, I start questionning everything. YOu could maybe give me the same task but one asks for a clear working prototype, something easily mesurable, moving, real. and that would motivate me immensly.<br>
+I beilieve this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.<br><br>
+
+But besides Robotics, it's not just movement but the actual perceived usefulness of the task/project at hand.<br><br>
+
+Basically speaking it needs to do something to serve a purpose. SO basically I'll only study the algorithm if i'm going to use it, and I'm only going to implement it it's actually going to be used :)<br><br>
+
+      `
+    }
+  ]
+},
+
+
+
+
+
+'SWE': {
+  title: 'SWE in the age of AI',
+  date: '14/03/2026',
+  sections: [
+    {
+      id: '',
+      title: '',
+      content: 
+      `
+Nowadays, and I am living it to the fullest these last few days, It is not importanat anymore to master a language like the old time of stackoverflow.<br>
+You could move with the speed of light with some of the coding tools availbale nowadays, and only your guilt is what's going to stop you from doing it.<br><br>
+
+I believe this is not a good thing but this means that architectural and design skills are more important than ever, by design I mean knowing how to structure your code, how to make it scalable, how to make it maintainable, and how to make it efficient.<br><br>
+
+AI still struggles with that, i looks very intelligent but it is not, it is just a very good pattern recognizer, bla bla you heard that a million times, but the point is that if you don't know if what the AI gave you is good or not, you might end up with a very bad code, and that is not what you want, and performance significantly worse that syntax quality hhh.
+<br>
+So to be a good engineer now you need three things:<br><br>
+
+1) to know the basic of the language you're using,<br>
+2) to know how to use the tools available to you,<br>
+and 3) to know the best design patterns and architectures for the problem you're trying to solve, and finally to be able to evaluate the code you get from the AI and make sure it's good and efficient..<br>
+
+in a significantly faster way than if you were to write it yourself, otherwise what's the point of using the AI in the first place :) <br><br>
+
+      `
+    }
+  ]
+},
 
 };
