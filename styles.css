@@ -790,6 +790,11 @@ body {
   /* Images come second (right side) */
 }
 
+.section-text p,
+.globe-text p {
+  white-space: pre-line;
+}
+
 .section-text {
   flex: 1 1 0;
   padding: 0 10px 10px 10px;
@@ -892,9 +897,9 @@ body {
 
 /* Remove old .long-content, use .section-text instead */
 .disambiguation {
+  display: block;
   margin-left: 30px;
   font-size: 0.9em;
-  margin-bottom: 10px;
 }
 
 .section_profile {
@@ -1103,6 +1108,7 @@ body {
     box-sizing: border-box;
     padding: 0;
   }
+
 
   #articleContent .section-row {
     max-width: 100%;

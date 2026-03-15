@@ -7,24 +7,14 @@ current_date = datetime.now().strftime("%d/%m/%Y")
 
 data = """
 'ID': {
-  title: 'TITLE',
+  title: 'ID-LONG',
   date: 'DATE',
   sections: [
     {
-      id: 'introduction',
+      id: '',
       title: '',
       content: 
       `
-PLACEHOLDER-1
-
-      `
-    },
-    {
-      id: 'conclusion',
-      title: '',
-      content: 
-      `
-PLACEHOLDER-2
 
       `
     }
