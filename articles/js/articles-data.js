@@ -751,21 +751,24 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
       title: '',
       content: 
       `
-Nowadays, and I am living it to the fullest these last few days, It is not importanat anymore to master a language like the old time of stackoverflow.<br>
-You could move with the speed of light with some of the coding tools availbale nowadays, and only your guilt is what's going to stop you from doing it.<br><br>
+Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stack overflow.<br>
+Back then, you had to know how to write code, you had to know how to write it well, and you had to know how to debug it<br> 
+NOw you can move with the speed of light with some of the coding tools available, and only your guilt is what's going to stop you from doing it.<br><br>
 
 I believe this is not a good thing but this means that architectural and design skills are more important than ever, by design I mean knowing how to structure your code, how to make it scalable, how to make it maintainable, and how to make it efficient.<br><br>
 
-AI still struggles with that, i looks very intelligent but it is not, it is just a very good pattern recognizer, bla bla you heard that a million times, but the point is that if you don't know if what the AI gave you is good or not, you might end up with a very bad code, and that is not what you want, and performance significantly worse that syntax quality hhh.
+AI still struggles with that, it looks very intelligent but it is not, it is, as cheesy as it sounds, just a very good pattern recognizer, bla bla you heard that a million times,<br>
+ but the point is that if you don't know if what the AI gave you is good or not, you might end up with a less than desirable result, with performance significantly worse that syntax quality hhh.
 <br>
-So to be a good engineer now you need three things:<br><br>
+So to be a good SWE, at the age of AI, I believe you need three things:<br><br>
 
 1) to know the basic of the language you're using,<br>
-2) to know how to use the tools available to you,<br>
-and 3) to know the best design patterns and architectures for the problem you're trying to solve, and finally to be able to evaluate the code you get from the AI and make sure it's good and efficient..<br>
+2) to know the best design patterns and architectures for the problem you're trying to solve,2) to know how to use the tools available to you,<br>
+and finally 3) to be able to evaluate the code you get from the AI and make sure it's good and efficient..<br><br>
 
-in a significantly faster way than if you were to write it yourself, otherwise what's the point of using the AI in the first place :) <br><br>
+This is transformational, and wether you like it or not, you need to adapt to it, so stop learning syntax and start learning design patterns and architectures.<br><br>
 
+All the best!!
       `
     }
   ]
