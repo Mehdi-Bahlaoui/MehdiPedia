@@ -898,9 +898,6 @@ All the best!!
       title: '',
       content: 
       `
-Different people deal with failure differently,
-but I'm here to open your mind a bit more, please take from me this
-
 I was listening to a podcast with guest Mark Rober, speaking about how he sees failure.
 For him it's a rite of passage, like a video game, you have to fail to finally get it.
 He sees it as a necessary step to success, that you need to fail a lot to succeed,
