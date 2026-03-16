@@ -542,42 +542,34 @@ love~
         title: '',
         content: `
 
-      Yup, I uninstalled whatsApp, I wanted to do it for the longest time, and now is perfect opportunity
-      As I just started my intenship, my coordinator and colleagues all use Ms Teams which I prefer
+      Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
+      
+      Though I wanted to uninstall it for the longest time, and now is perfect opportunity
+      As I just started my internship, my coordinator and colleagues all use MS Teams which I prefer
       and second just after finishing my university courses, so no urgent message to worry about
 
-
-      Allaaah, feel like a weight have been lifted
-
-
-      Now I don't have to deal with all that bullshit stories and all that, got me fed up fr fr
-
+      Now I don't have to deal with all that bullshit stories and all that, got me fed up
       
-      The main reason I removed it is because I keep checking it for dopamine hits and I don't want that anymore, I want to be in control of my dopamine, not the other way around
+      The main reason I removed it is because I keep checking it for dopamine hits and I don't want that anymore,
+      I want to be in control of my dopamine, not the other way around
 
-      
-      I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp, you have to reply to people .. some people get mad when you don't..
+      I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp;
+      you have to reply to people .. some people get mad when you don't..
 
+      Other than I really don't have time to chat to people, I will just dial  normally like the alpha male I am hh,
+      but no seriously I'm that busy, not busy by choice but by principle..
+      I have better things to do
       
-      Other than I really don't have time to chat to people, I will just call like the alpha male I am hh, but no seriously I'm that busy, not busy by choice but by principle.. I have better things to do
-      If you'd like to reach out please call, I will enjoy it and respect it more than a message,
-      Or if you don't wanna call, just send me an email, I will reply to it as soon as I can :)
-
-      
-      
+      If you happen to read this while it's still going, and you'd like to reach out please call,
+      I will enjoy it and respect it more than a message,
+      Or if you don't wanna call, just send me an email, I will reply to it as soon as I can :)      
 `
       },
       {
         id: 'conclusion',
         title: '',
         content: `
-      Moral of the story: Set your own rules, for once - You Only Live Once
-
-      
-      À méditer :)
-
-
-      
+      Moral of the story: Set your own rules, for once
       `
       }
     ]
@@ -890,7 +882,7 @@ All the best!!
 
 
 'failure': {
-  title: 'Failure',
+  title: 'Let\'s Talk About Failure',
   date: '15/03/2026',
   sections: [
     {
