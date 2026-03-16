@@ -899,7 +899,7 @@ All the best!!
       content: 
       `
 I was listening to a podcast with guest Mark Rober, speaking about how he sees failure.
-For him it's a rite of passage, like a video game, you have to fail to finally get it.
+For him it's a rite of passage, kinda like in a video game; you have to fail to finally get it.
 He sees it as a necessary step to success, that you need to fail a lot to succeed,
 He brings up that in Nasa in particular, they have a saying that goes "Fail early, fail often, fail forward",
 and I thought to myself, hey we had it hard a school because once you fail, there isn't much room for correction.
