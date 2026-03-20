@@ -19,12 +19,12 @@
 
 .article-badge--new {
   color: #28a745;
-  text-shadow: 0 0 6px rgba(40, 167, 69, 0.3);
+  text-shadow: 0 0 6px rgba(40, 167, 69, 0.2);
 }
 
 .article-badge--updated {
   color: #3366cc;
-  text-shadow: 0 0 6px rgba(51, 102, 204, 0.3);
+  text-shadow: 0 0 6px rgba(51, 102, 204, 0.2);
 }
 
 
