@@ -202,6 +202,7 @@ My experiences have shaped my understanding of what it means to be black in toda
   'ego': {
     title: 'There is a fine line between lowering your ego and respecting yourself',
     date: '23/11/2025',
+    status: 'UPDATED !',
     sections: [
       {
         id: 'introduction',
@@ -224,15 +225,9 @@ My experiences have shaped my understanding of what it means to be black in toda
           ...To be continued
 
           <u>UPDATE: 8/3/2026</u>
+          This book is great, I could talk about all the great ideas in it but it would better if you read it yourself.
 
-
-          This book is great, I could talk about all the great ideas in it but it would better if you read it yourself
-.
           Here I will simply talk about some of the Ideas that resonated with me:
-
-          
-
-
         `},{
 
         id: 'How_to_be_Great',
@@ -242,55 +237,35 @@ My experiences have shaped my understanding of what it means to be black in toda
           For the longest time I mourned the fact that I did not have a clear answer to this question
           I thought honestly that I had to work on my manliness, because they always say that in podcast <i>Fuck Podcasts</i> 
 
-          
           But the real answer is not that.
-
 
           I believe I found the answer to this question in this book.
 
-
-          Download the book <a class="links" href="https://thereadershub.org/wp-content/uploads/2020/07/Ryan_Holiday_Ego_is_the_Enenmyz-lib.org_.pdf">here</a>: and read page 71 and 72.
-
-          
+          Download the book <a class="links" href="https://thereadershub.org/wp-content/uploads/2020/07/Ryan_Holiday_Ego_is_the_Enenmyz-lib.org_.pdf">here</a>: and read page 71 and 72.          
 
           See if you can find it by yourself before I spoil you.
 
-
           The answer is in this: "To do, not be"
-
 
           Put it simply: You have a higher chance succeeding by doing, compared to be becoming.
           Simpler, realer, more tangible, mesurable.
-
           
           And you come to understand that the later one "becoming" can only come from the prior one..
 
-
           It is indeed in being that we become!
-
           
           A great leader is first great because he is a leader.
-
 
           This is not to say that the problem with me was action, no, not that
           But rather this was a tricky equation for me to solve, it is only by solving for y do we get x, and mathematical brain could not get that.
           ANd I bet you and I wouldn't either except by looking at knowledge from old wise people whom shared their wisdom.
-
           
           It is only by doing great things that we become great, and making being great a goal will simply block us from doing great things.. WHy? EGOO!! hhh kikhle3 yak
 
-
           But yeah that's the problem, because that way you'll be fueling your ego, and that is like digging your grave. 
-
 
           It's honestly deeper than what I just wrote but that's the just of it, I hope it resonates with you.
 
-
-          LOve you <3
-
-          
-          
-          
 
         `
       }
@@ -581,6 +556,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
+  status: 'UPDATED !',
   sections: [
     {
       id: 'introduction',
@@ -791,7 +767,45 @@ love~
       `For some reason I didn't feel like staying awake, so I didn't and went back to bed after waking up at 5AM
       NOt sure how rationnal or irrationaal this was, i just felt like it, but anyway I pray I bounce back tomorrow, although I just went on a quick visit to see my mom    
       `
-    }
+    },
+      {
+      id: 'Day 17 & 18',
+      title: 'Day 17 & 18 - 17/03',
+      content:
+      `It is impossible to push yourself when the setting is not adequate, although I tried my best, I just gave in for those todays, because it was going to be a struggle and have negatives outweighing positives not to spend time with family and be bitter about no being able to go to bed earlier.
+      It was going to be both stupid and impossible, so I chose to be rationnal.
+      `},
+      {
+      id: 'Day 18 & 19',
+      title: 'Day 18 & 19 - 19/03',
+      content:
+      `Returning back, and trying to go back to the routine, I found it very hard and actually failed twice, the might before this one and this one. but like the book Ego is the enemy says, when you fail, are you going to make it worse or are you deal with it?
+      I choose to deal with it with th best that I had, but subhana'Allah it's not the same waking at 9AM than waking at 5AM, it's like a different world.
+      Although I failed I have a good feeling about tomorrow for some reason, I just know I 'm going to kill it
+      LETSSSGOOOOOOOOOOOOOOOOO   
+      `},
+      {
+      id: 'Day 19',
+      title: 'Day 19 - 20/03',
+      content:
+      `What did I tell you!
+      I woke up at 5AM, so far I am having a blast (okay not some much but I enjoy it)
+      Yesterday as I was falling asleep I set some new rules for myself.
+
+      Today Is first day of EID so no more excuse about anything, I just have to do it, and I will do it GOD willingly
+      <b>THe ultimate Rules:</b>
+       1) Dinner at ~8PM
+       2) No Laptop use permitted after dinner
+       3) Wake-ip at 5AM <u>sharp</u>
+
+       Every rule here addresses a specific problem I faced in these past days,
+       First one is to make sure I have enough time to sleep, second one is to make sure I don't get too excited by my laptop (there is so much to do on the internet)
+       and it is worth mentionning while laptop use is not, I still allow myself to use my phone tho it cannot access social media, or a web browser even, but I can use it to listen to music, podcasts, and read books. (just finished Ego is the enemy btww!)
+       
+       The final and third one, to wake up at 5AM sharp, is because SUbhanallah it's not the same as to wake up even at 5:30AM, you feel behind still, and you feel like you lost the day already, this is a psychological thing, but it is real, and I want to be in the best mental state possible to start my day.
+
+      `}
+
 
 
 
@@ -816,6 +830,7 @@ love~
 'builder_solver': {
   title: "I'm a builder, not a solver",
   date: '14/03/2026',
+  status: 'NEW !!',
   sections: [
     {
       id: '',
@@ -841,9 +856,11 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
 
 
 
+
 'SWE': {
   title: 'SWE in the age of AI',
   date: '14/03/2026',
+    status: 'NEW !!',
   sections: [
     {
       id: '',
@@ -884,6 +901,8 @@ All the best!!
 'failure': {
   title: 'Let\'s Talk About Failure',
   date: '15/03/2026',
+    status: 'NEW !!',
+
   sections: [
     {
       id: 'introduction',

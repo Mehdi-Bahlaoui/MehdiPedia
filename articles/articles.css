@@ -1,0 +1,48 @@
+/* Article listing page overrides */
+
+.blog-card-meta {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.blog-card-meta time {
+  margin-left: 0;
+}
+
+.article-badge {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.article-badge--new {
+  color: #28a745;
+  text-shadow: 0 0 6px rgba(40, 167, 69, 0.3);
+}
+
+.article-badge--updated {
+  color: #3366cc;
+  text-shadow: 0 0 6px rgba(51, 102, 204, 0.3);
+}
+
+
+@media (max-width: 1200px) {
+  .section-row,
+  .merged-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  #intro {
+    padding: 10px;
+  }
+
+  .blog-card-meta {
+    gap: 0px;
+  }
+
+
+}

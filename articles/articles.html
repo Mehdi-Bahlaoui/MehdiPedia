@@ -4,6 +4,7 @@
 <head>
   <title>Mehdi Bahlaoui - Articles - Wikipedia</title>
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="articles.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -177,7 +178,7 @@
 
       <!-- Articles Overview Section -->
       <div class="section-row merged-section">
-        <div class="section-text">
+        <div class="section-text" id="intro">
           <i>
             <!-- <span class="disambiguation">This page contains a comprehensive list of articles, book analyses, and written works by <a class="links" href="../">Mehdi Bahlaoui</a>.</span> -->
           </i>
@@ -282,12 +283,31 @@ Of which expressed here, are solely his and do not reflect the views, policies o
         h2.appendChild(link);
         card.appendChild(h2);
 
-        // Add date if available
+        // Right-aligned meta container (badge + date)
+        const meta = document.createElement('div');
+        meta.className = 'blog-card-meta';
+
+        if (article.status) {
+          const badge = document.createElement('span');
+          badge.className = `article-badge article-badge--${article.status.toLowerCase()}`;
+          badge.textContent = article.status;
+          meta.appendChild(badge);
+        }
+
         if (article.date) {
+          if (article.status) {
+            // Add some spacing if both badge and date are present
+            const spacer = document.createElement('span');
+            spacer.style.display = 'inline-block';
+            spacer.style.width = '1.2em';
+            meta.appendChild(spacer);
+          }
           const time = document.createElement('time');
           time.textContent = formatDate(article.date);
-          card.appendChild(time);
+          meta.appendChild(time);
         }
+
+        card.appendChild(meta);
 
         card.addEventListener('click', () => {
           window.location.href = `template.html#${articleId}`;
