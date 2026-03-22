@@ -830,7 +830,7 @@ love~
 'builder_solver': {
   title: "I'm a builder, not a solver",
   date: '14/03/2026',
-  status: 'NEW !!',
+  status: '',
   sections: [
     {
       id: '',
@@ -842,7 +842,7 @@ So I'm a builder, not a solver.
 I just realised this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
 
 I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Altough I like it when I do solve problems!) but when shit gets real, I start questionning everything. YOu could maybe give me the same task but one asks for a clear working prototype, something easily mesurable, moving, real. and that would motivate me immensly.
-I beilieve this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.
+I believe this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.
 
 But besides Robotics, it's not just movement but the actual perceived usefulness of the task/project at hand.
 
@@ -860,7 +860,7 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
 'SWE': {
   title: 'SWE in the age of AI',
   date: '14/03/2026',
-    status: 'NEW !!',
+    status: '',
   sections: [
     {
       id: '',
@@ -901,7 +901,7 @@ All the best!!
 'failure': {
   title: 'Let\'s Talk About Failure',
   date: '15/03/2026',
-    status: 'NEW !!',
+    status: 'UPDATED !',
 
   sections: [
     {
@@ -915,10 +915,10 @@ He sees it as a necessary step to success, that you need to fail a lot to succee
 He brings up that in Nasa in particular, they have a saying that goes "Fail early, fail often, fail forward",
 and I thought to myself, hey we had it hard a school because once you fail, there isn't much room for correction.
 
-In fact, if you fail your Baccalaureate, you failed, that' it
+In fact, if you fail your Baccalaureate, you failed, that's it
 I used to think there was no second chance, that If I failed, and that society, including family, wouldn't deal
 with it well (They wouldn't)
-Most studious students catch them selves before this could ever happen,
+Most studious students catch themselves before this could ever happen,
 but what if i took you 1 or 2 year to understand that you're making wrong decisions
 Because that could happen, and, I beilve if there was no ego or emotions tied to all of this, this would be fine,
 and that, looking forward perhaps a decade in the future, you would find yourself maybe far ahead than your peers
@@ -954,7 +954,6 @@ of hardship and ease, pain and comfort, suffering and peace to occur among peopl
 
 This is a <i>tafsir</i> of the verse 142 in Surah Ali 'Imran:
 "If you receive a wound, they have received a similar wound. And such days we rotate among the people."  
-
 
       `
     }
