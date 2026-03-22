@@ -937,13 +937,24 @@ Because, maybe it's just luck, and/or <i>a9dar</i> for when will you finally und
 I resonate with this idea a lot.
 
 And what you can take for it you, the reader, is that what sepeartes you from the success you want,
-and paralleley others,
+and parallelly others,
 
-is <b> how scary are your dreams</b>,
+is <b> how scary are your dreams ?</b>
 
 because now, <i> I hope</i>,
 
 you understand and aggree that success is inevitable, incha-Allah. :)
+
+
+<b> Update: 22/03/2026 </b>
+
+"In this mortal world, the customary practice of Allah Almighty is to cause the days
+of hardship and ease, pain and comfort, suffering and peace to occur among people by turns."
+- Maariful Quran, by Mufti Muhammad Shafi (r.a)
+
+This is a <i>tafsir</i> of the verse 142 in Surah Ali 'Imran:
+"If you receive a wound, they have received a similar wound. And such days we rotate among the people."  
+
 
       `
     }
