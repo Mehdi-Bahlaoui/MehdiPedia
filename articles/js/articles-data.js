@@ -85,7 +85,6 @@ const articlesData = {
         ".. I even come back home, eat what my mom prepared for me, do my homework with the desk lamp and sleep early like the good boy I am" (We laughed more)
 
         
-        
         Let me remind you that this individual is a truly gifted human being, someone who's smart and cultured, so when he said those words I knew it meant something serious, and that's why you're reading this right now.
 
         We finished talking and parted our ways.
@@ -202,7 +201,7 @@ My experiences have shaped my understanding of what it means to be black in toda
   'ego': {
     title: 'There is a fine line between lowering your ego and respecting yourself',
     date: '23/11/2025',
-    status: 'UPDATED !',
+    status: '',
     sections: [
       {
         id: 'introduction',
@@ -519,11 +518,11 @@ love~
 
       Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
       
-      Though I wanted to uninstall it for the longest time, and now is perfect opportunity
+      I wanted to uninstall it for the longest time, and now is perfect opportunity;
       As I just started my internship, my coordinator and colleagues all use MS Teams which I prefer
       and second just after finishing my university courses, so no urgent message to worry about
 
-      Now I don't have to deal with all that bullshit stories and all that, got me fed up
+      Now I don't have to deal with all that bullshit stories and all that, it got me fed up
       
       The main reason I removed it is because I keep checking it for dopamine hits and I don't want that anymore,
       I want to be in control of my dopamine, not the other way around
@@ -531,13 +530,13 @@ love~
       I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp;
       you have to reply to people .. some people get mad when you don't..
 
-      Other than I really don't have time to chat to people, I will just dial  normally like the alpha male I am hh,
-      but no seriously I'm that busy, not busy by choice but by principle..
+      Other than that, I really don't have time to chat to people, I will just dial normally like the alpha male I am hh,
+      but no seriously, I'm that busy, not busy by choice but by principle..
       I have better things to do
       
       If you happen to read this while it's still going, and you'd like to reach out please call,
       I will enjoy it and respect it more than a message,
-      Or if you don't wanna call, just send me an email, I will reply to it as soon as I can :)      
+      Or if you don't want to call, just send an email, I will reply to it as soon as I can :)      
 `
       },
       {
@@ -556,7 +555,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
-  status: 'UPDATED !',
+  status: '',
   sections: [
     {
       id: 'introduction',
@@ -804,7 +803,35 @@ love~
        
        The final and third one, to wake up at 5AM sharp, is because SUbhanallah it's not the same as to wake up even at 5:30AM, you feel behind still, and you feel like you lost the day already, this is a psychological thing, but it is real, and I want to be in the best mental state possible to start my day.
 
-      `}
+      `},
+      {
+      id: 'break',
+      title: 'Day 20 -> Day 42: 04/04',
+      content:
+      `So I took a break unwillingly, I had to do go travel almost every week, between family-place, Rabat flat, and internship.
+       I had to prepare, work, meet some people, do some chores. ALL things that did not leave room for something as strict as waking up at 5AM
+
+       But I am 100% in fault, and I think I know exactly why.
+
+       For a challenge like this, or any meaningful undeavour, especially when trying to make it stick for the first time, one needs to dedicate a lot more effort.
+       This is obvious, and that's why I do not bring myself down because of it.
+
+       This being said, I believe I now found that startegy that's going to fit:
+       - Dinner at 7pm-7:30pm
+       - (Immediately after) Brush teeth + Maghrib prayer
+       - Sleep as soon as I enter Room (~8pm-8:30pm)
+       - Wake up at 5am
+
+       Two key things:
+        1) Bring Tooth-brush along w/me when going for dinner
+        2) Pray Maghrib outside 
+
+        This will leave me with no excuse to not to sleep, as soon as I get to my Room.
+        Lah iwefe9 incha'Allah !
+      
+      
+      `
+      }
 
 
 
@@ -901,7 +928,7 @@ All the best!!
 'failure': {
   title: 'Let\'s Talk About Failure',
   date: '15/03/2026',
-    status: 'UPDATED !',
+    status: '',
 
   sections: [
     {

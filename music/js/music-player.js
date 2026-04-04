@@ -120,6 +120,7 @@ function renderLyrics(song) {
     let html = '';
 
     song.lyrics.forEach(line => {
+    if (!line.text || !line.text.trim()) return;
     const hasAnnotation = line.annotations && line.annotations.length > 0;
 
     html += `
@@ -264,6 +265,10 @@ function updateAlbumArt(song) {
 // SECTION 3: Audio Playback + Sync Engine
 // ============================================
 
+// How many lyric lines before the saved position to resume from on reload.
+// Set to 0 to resume from the exact saved time.
+const RESTORE_LINES_BACK = 2;
+
 function initializeAudioPlayer(song) {
   const audioPlayer = document.getElementById('audioPlayer');
   const playPauseBtn = document.getElementById('playPauseBtn');
@@ -289,9 +294,25 @@ function initializeAudioPlayer(song) {
   audioPlayer.src = song.audioUrl;
   console.log('Audio source set to:', audioPlayer.src);
 
-  // Update duration when metadata loads
+  // Update duration when metadata loads; restore saved position on reload
   audioPlayer.addEventListener('loadedmetadata', () => {
     timeTotal.textContent = formatTime(audioPlayer.duration);
+    const savedTime = parseFloat(sessionStorage.getItem(`music_time_${song.id}`));
+    if (!isNaN(savedTime) && savedTime > 0) {
+      let restoreTime = savedTime;
+      if (RESTORE_LINES_BACK > 0 && currentLyricsArray.length > 0) {
+        let activeIndex = 0;
+        for (let i = 0; i < currentLyricsArray.length; i++) {
+          if (currentLyricsArray[i].startTime <= savedTime) activeIndex = i;
+          else break;
+        }
+        restoreTime = currentLyricsArray[Math.max(0, activeIndex - RESTORE_LINES_BACK)].startTime;
+      }
+      audioPlayer.currentTime = restoreTime;
+      audioPlayer.play().then(() => {
+        playPauseBtn.textContent = '⏸';
+      }).catch(() => {});
+    }
   });
 
   // init progress bar and volume
@@ -310,6 +331,9 @@ function initializeAudioPlayer(song) {
 
     // Highlight current lyric line
     highlightActiveLine(currentTime);
+
+    // Persist position so reload resumes from here
+    sessionStorage.setItem(`music_time_${song.id}`, currentTime);
   });
 
   // Play/Pause button - update icon IMMEDIATELY for better UX
@@ -453,14 +477,12 @@ function highlightActiveLine(currentTime) {
 
   let activeLine = null;
 
-  // Find the lyric line that should be active
-  for (let i = 0; i < currentLyricsArray.length; i++) {
-    const line = currentLyricsArray[i];
-    const endTime = (i + 1 < currentLyricsArray.length)
-      ? currentLyricsArray[i + 1].startTime
-      : (currentSong.duration || Infinity);
-    if (currentTime >= line.startTime && currentTime < endTime) {
-      activeLine = line;
+  // Find the last line whose startTime <= currentTime.
+  // No endTime window needed — gaps naturally produce no highlight
+  // since their element isn't in the DOM.
+  for (let i = currentLyricsArray.length - 1; i >= 0; i--) {
+    if (currentLyricsArray[i].startTime <= currentTime) {
+      activeLine = currentLyricsArray[i];
       break;
     }
   }

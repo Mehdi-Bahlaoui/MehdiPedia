@@ -17,13 +17,15 @@ const musicData = {
     // startTime is computed automatically: previous line's start + previous line's dur
     // Change one dur and everything after it shifts accordingly
     lyrics: [
-      { id: 'line-1',  dur: 9,    text: '[Intro]', annotations: [] },
+      { id: 'line-1',  dur: 9,    text: '', annotations: [] },
       { id: 'line-2',  dur: 1.5,  text: '(Okay, shee~', annotations: [] },
       { id: 'line-3',  dur: 2.3,    text: 'Survivors', annotations: ['ann-1'] },
       { id: 'line-4',  dur: 2.5,  text: 'Clueless by the Zillions', annotations: [] },
       { id: 'line-5',  dur: 1.75,    text: 'They all act like in diapers', annotations: [] },
       { id: 'line-6',  dur: 1,    text: 'They show you smiles', annotations: [] },
-      { id: 'line-7',  dur: 3.75,  text: 'but would switch for an affiliate', annotations: [] },
+      { id: 'line-7',  dur: 3.25,  text: 'but would switch for an affiliate', annotations: [] },
+            { id: 'line-7-1',  dur: 0.5,  text: '', annotations: [] },
+
       { id: 'line-8',  dur: 1.5,  text: 'Survivors', annotations: [] },
       { id: 'line-9',  dur: 3,  text: 'Would fake death with vermillion', annotations: [] },
       { id: 'line-10', dur: 2,  text: 'Really got saved this time', annotations: [] },
@@ -58,10 +60,86 @@ const musicData = {
       { id: 'line-39', dur: 1.8,    text: 'When I went to Marrakech to film', annotations: [] },
       { id: 'line-40', dur: 1,  text: 'she was furious', annotations: [] },
       { id: 'line-41', dur: 1.75,  text: "Let's see if she'll mention me now", annotations: [] },
-      { id: 'line-42', dur: 3,  text: 'with no fear in her', annotations: [] },
+      { id: 'line-42', dur: 1.5,  text: 'with no fear in her', annotations: [] },
+            { id: 'line-42-1', dur: 1.5,  text: '', annotations: [] },
+
       { id: 'line-43', dur: 2.5,  text: 'with no fear in her~', annotations: [] },
-      { id: 'line-44', dur: 3.65,  text: "She's not serious~", annotations: [] },
-      { id: 'line-45', dur: 1.5,  text: 'Oh', annotations: [] },
+      { id: 'line-44', dur: 3.65,  text: "She's not serious~ (Oh) ", annotations: [] },
+ 
+      { id: 'line-45', dur: 10.9,     text: "Lmouchkil l7a9i9i dyal l'2insania, dyal bnadem, houa fach kisewel chkoun ana?", annotations: [] },
+      { id: 'line-45-1', dur: 3,     text: "fach chkoun ghadi ijaweb?", annotations: [] },
+
+      { id: 'line-46', dur: 1.6,     text: "This time, it's all about me", annotations: [] },
+      { id: 'line-47', dur: 0.2, text: "(mouchkila)", annotations: []},
+      { id: 'line-48', dur: 0.6,     text: 'You can wait,', annotations: [] },
+
+      { id: 'line-48-2', dur: 0.8,     text: 'you are next-time', annotations: [] },
+
+
+      { id: 'line-49', dur: 1,   text: "don't wanna be seen,", annotations: [] },
+      { id: 'line-50', dur: 0.8,     text: "with a homie", annotations: [] },
+            { id: 'line-50-1', dur: 1,     text: "who's a waste man", annotations: [] },
+
+      { id: 'line-51', dur: 2.8,  text: "I'm cleaning up the scene with the fakes and the yes-man", annotations: [] },
+      { id: 'line-52', dur: 2.5,   text: "it don't matter the time or the place, man", annotations: [] },
+
+      { id: 'line-53', dur: 3,     text: 'This time, I get up one knew in the morning just to pray five', annotations: [] },
+      { id: 'line-54', dur: 2.5,   text: 'Ait Archine is a @#$%& you can count on', annotations: [] },
+      { id: 'line-55', dur: 2.75,  text: 'Shout-out to the delegates last year for the best time', annotations: [] },
+      { id: 'line-56', dur: 2,     text: 'even tho lmadrassa is a mess,', annotations: [] },
+      { id: 'line-57', dur: 0.5,     text: 'sooo', annotations: [] },
+
+      { id: 'line-58', dur: 2.8,     text: "Clashe the ADE 'bout 3 times! they seem dead right?", annotations: [] },
+      { id: 'line-59', dur: 2.7,  text: 'Now they all up in my free time, for a headstart', annotations: [] },
+      { id: 'line-60', dur: 2.7,     text: "Can't put the blame on the whole team, when there is none", annotations: [] },
+      { id: 'line-61', dur: 2.5,   text: "No longer in their position, I mean that's life", annotations: [] },
+
+      { id: 'line-62', dur: 2.9,     text: "Clashe the ADE 'bout 3 times! they seem dead right?", annotations: [] },
+      { id: 'line-63', dur: 1.3,     text: '(OH noo), @#$%&', annotations: [] },
+      { id: 'line-65', dur: 1.3,     text: '(Oh noo)', annotations: [] },
+      { id: 'line-66', dur: 0.8,     text: '(Oh noo)', annotations: [] },
+      { id: 'line-67', dur: 1.25,  text: 'yeah (nah nah)', annotations: [] },
+
+      { id: 'line-69', dur: 1.5,     text: 'like 3 times just to act right!', annotations: [] },
+            { id: 'line-69-1', dur: 0.6,     text: '@#$%&', annotations: [] },
+
+      { id: 'line-70', dur: 2,     text: '3 times just to doo sum...', annotations: [] },
+
+      { id: 'line-71', dur: 0.35,  text: 'yeah', annotations: [] },
+      { id: 'line-72', dur: 1.85,   text: 'I\'ve been feeling down, can you doo sum?', annotations: [] },
+      { id: 'line-73', dur: 0.85,   text: '(3 times! yeah )', annotations: [] },
+      { id: 'line-74', dur: 1,  text: "When I'm not around", annotations: [] },
+      { id: 'line-75', dur: 0.85,   text: 'and you doo sum', annotations: [] },
+      { id: 'line-76', dur: 0.9,   text: '(3 times! yeah )', annotations: [] },
+
+      { id: 'line-77', dur: 1.35,  text: 'Never wanna get back', annotations: [] },
+      { id: 'line-78', dur: 1.35,  text: 'this wil be a set-back', annotations: [] },
+      { id: 'line-79', dur: 2,   text: 'And if you wanna get back I just moove on', annotations: [] },
+
+      { id: 'line-80', dur: 2.5,   text: 'Do you wanna add the 4th time, just to ..', annotations: [] },
+      { id: 'line-81', dur: 3,     text: "Do you wanna add the 4th time you won't wake up anymoore!", annotations: [] },
+      { id: 'line-82', dur: 2.35,   text: 'Do you wanna add the 4th time, just to ..', annotations: [] },
+
+      { id: 'line-83', dur: 1.3,   text: "I don't think so tho,", annotations: [] },
+      { id: 'line-84', dur: 2,     text: 'so I will spare your liife!', annotations: [] },
+
+      { id: 'gap-1', dur: 0.8, text: '', annotations: [] },
+
+      { id: 'line-85', dur: 3.5,     text: '(De7ekni khoun gal lia ADE is bullshit hhhh)', annotations: [] },
+      { id: 'line-85-1', dur: 3,     text: '(wtff hhhh)', annotations: [] },
+
+      { id: 'line-86', dur: 2.5,   text: 'Layhdik a sa7bi rak men lADE!', annotations: [] },
+            { id: 'line-86-2', dur: 1.5,   text: 'shit!', annotations: [] },
+      { id: 'gap-2', dur: 6, text: '', annotations: [] },
+
+      { id: 'line-87', dur: 2,     text: 'Wa lADE fi9o m3ana', annotations: [] },
+      { id: 'line-88', dur: 2,  text: 'waaaa makainch De7ek', annotations: [] },
+      { id: 'line-89', dur: 2,     text: '9te3 laydir lkhir', annotations: [] },
+            { id: 'line-90', dur: 1,     text: '', annotations: [] },
+
+
+
+
     ],
 
     // Sample annotations - examples showing different styles
