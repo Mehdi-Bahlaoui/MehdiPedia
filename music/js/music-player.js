@@ -135,6 +135,24 @@ function renderLyrics(song) {
 
     lyricsContainer.innerHTML = html;
 
+    // Initial slot machine state: first 3 rendered lyrics visible, first one centered
+    requestAnimationFrame(() => {
+      const initPos = ['active', 'next1', 'next2', 'next3'];
+      const renderedLines = song.lyrics.filter(l => document.getElementById(l.id));
+      renderedLines.forEach((line, i) => {
+        const el = document.getElementById(line.id);
+        if (i < 4) el.setAttribute('data-lyric-pos', initPos[i]);
+      });
+
+      const firstEl = renderedLines[0] && document.getElementById(renderedLines[0].id);
+      if (firstEl) {
+        const containerHeight = lyricsContainer.clientHeight;
+        const lineHeight = firstEl.offsetHeight;
+        const targetScroll = firstEl.offsetTop - containerHeight / 2 + lineHeight / 2;
+        lyricsContainer.scrollTo({ top: Math.max(0, targetScroll), behavior: 'instant' });
+      }
+    });
+
     // Add click handlers for seeking + annotation scroll
     document.querySelectorAll('.lyric-line').forEach(lineEl => {
 
@@ -475,45 +493,63 @@ function initializeAudioPlayer(song) {
 function highlightActiveLine(currentTime) {
   if (!currentLyricsArray || currentLyricsArray.length === 0) return;
 
-  let activeLine = null;
+  // Only work with lines that are actually rendered in the DOM (empty-text lines are skipped)
+  const renderedLines = currentLyricsArray.filter(line => document.getElementById(line.id));
+  if (renderedLines.length === 0) return;
 
-  // Find the last line whose startTime <= currentTime.
-  // No endTime window needed — gaps naturally produce no highlight
-  // since their element isn't in the DOM.
-  for (let i = currentLyricsArray.length - 1; i >= 0; i--) {
-    if (currentLyricsArray[i].startTime <= currentTime) {
-      activeLine = currentLyricsArray[i];
+  // Find the last rendered line whose startTime <= currentTime
+  let activeIndex = -1;
+  for (let i = renderedLines.length - 1; i >= 0; i--) {
+    if (renderedLines[i].startTime <= currentTime) {
+      activeIndex = i;
       break;
     }
   }
 
-  // Remove previous highlight
+  // Remove previous highlight class
   document.querySelectorAll('.lyric-line.active-line').forEach(el => {
     el.classList.remove('active-line');
   });
 
-  // Add highlight to current line
-  if (activeLine) {
-    const lineElement = document.getElementById(activeLine.id);
-    if (lineElement) {
-      lineElement.classList.add('active-line');
+  // Before first lyric: show first 4 rendered lines, none highlighted
+  if (activeIndex === -1) {
+    const initPos = ['active', 'next1', 'next2', 'next3'];
+    renderedLines.forEach((line, i) => {
+      const el = document.getElementById(line.id);
+      if (i < 4) el.setAttribute('data-lyric-pos', initPos[i]);
+      else el.removeAttribute('data-lyric-pos');
+    });
+    return;
+  }
 
-      // Auto-scroll WITHIN lyrics container only (not the page)
-      const lyricsContainer = document.getElementById('lyricsContainer');
-      if (lyricsContainer) {
-        clearTimeout(lineElement.dataset.scrollTimeout);
-        lineElement.dataset.scrollTimeout = setTimeout(() => {
-          // Fixed offset from top of container (keeps active line visible with context above)
-          const SCROLL_TOP_OFFSET = 400;
-          const lineOffsetInContainer = lineElement.offsetTop;
-          const targetScroll = lineOffsetInContainer - SCROLL_TOP_OFFSET;
+  // Assign slot machine positions based on rendered-line index distance
+  const posMap = { '-2': 'prev2', '-1': 'prev1', '0': 'active', '1': 'next1', '2': 'next2', '3': 'next3' };
+  renderedLines.forEach((line, i) => {
+    const el = document.getElementById(line.id);
+    if (!el) return;
+    const pos = posMap[String(i - activeIndex)];
+    if (pos) el.setAttribute('data-lyric-pos', pos);
+    else el.removeAttribute('data-lyric-pos');
+  });
 
-          lyricsContainer.scrollTo({
-            top: Math.max(0, targetScroll),
-            behavior: 'smooth'
-          });
-        }, 50);
-      }
+  // Highlight + center-scroll active line
+  const lineElement = document.getElementById(renderedLines[activeIndex].id);
+  if (lineElement) {
+    lineElement.classList.add('active-line');
+
+    const lyricsContainer = document.getElementById('lyricsContainer');
+    if (lyricsContainer) {
+      clearTimeout(lineElement.dataset.scrollTimeout);
+      lineElement.dataset.scrollTimeout = setTimeout(() => {
+        const containerHeight = lyricsContainer.clientHeight;
+        const lineHeight = lineElement.offsetHeight;
+        const targetScroll = lineElement.offsetTop - containerHeight / 2 + lineHeight / 2;
+
+        lyricsContainer.scrollTo({
+          top: Math.max(0, targetScroll),
+          behavior: 'smooth'
+        });
+      }, 50);
     }
   }
 }
@@ -526,39 +562,6 @@ function formatTime(seconds) {
   return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-// ============================================
-// SECTION 4: Control Bar Footer Snapping
-// ============================================
-
-function initControlBarSnapping() {
-  const controlBar = document.getElementById('musicControlsBar');
-  const footer = document.querySelector('footer');
-
-  if (!controlBar || !footer) return;
-
-  function updateControlBarPosition() {
-    const footerRect = footer.getBoundingClientRect();
-    const controlBarHeight = controlBar.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    // Check if footer is visible in viewport
-    if (footerRect.top < windowHeight) {
-      // Footer is visible - snap control bar above it
-      const bottomOffset = windowHeight - footerRect.top;
-      controlBar.style.bottom = `${bottomOffset}px`;
-    } else {
-      // Footer not visible - stick to bottom of viewport
-      controlBar.style.bottom = '0';
-    }
-  }
-
-  // Update on scroll and resize
-  window.addEventListener('scroll', updateControlBarPosition, { passive: true });
-  window.addEventListener('resize', updateControlBarPosition, { passive: true });
-
-  // Initial position
-  updateControlBarPosition();
-}
 
 // ============================================
 // Event Listeners & Initialization
@@ -571,12 +574,7 @@ window.addEventListener('hashchange', loadSong);
 // 1. If DOM is still loading, wait for DOMContentLoaded
 // 2. If DOM is already loaded (common with defer), call immediately
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    loadSong();
-    initControlBarSnapping();
-  });
+  document.addEventListener('DOMContentLoaded', loadSong);
 } else {
-  // DOM is already loaded (this script loaded with defer)
   loadSong();
-  initControlBarSnapping();
 }
