@@ -555,7 +555,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
-  status: '',
+  status: 'Updated !!',
   sections: [
     {
       id: 'introduction',
@@ -831,7 +831,31 @@ love~
       
       
       `
-      }
+      },
+            {
+      id: 'day 43',
+      title: '05/04',
+      content:
+      `Long story short, I woke up at 5AM, but I could not get my self going, I went back to bed at around 6:30AM
+      For several reasons, not worth mentionning (like left the window open and the cold woke me up + moskitos (I kid you not) + food still not digested)
+      I am not counting this, better luck next time
+      `
+      },
+            {
+      id: 'Day 44',
+      title: '06/04',
+      content:
+      `Today started a bit hard but I woke up at 5am. Here we go again, great morning I feel very energized alhamdolilah
+      I swear it's a special energy you get when you get up before sunrise.
+      I am trying something new, I will try 6AM for sometime. I beleive this will give much much more energy and kick start my day just rigth
+
+      Let's goooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+      
+      
+      `
+      },
+
+
 
 
 
@@ -894,27 +918,25 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
       title: '',
       content: 
       `
-Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stack overflow.
-Back then, you had to know how to write code, you had to know how to write it well, and you had to know how to debug it
-NOw you can move with the speed of light with some of the coding tools available, and only your guilt is what's going to stop you from doing it.
+Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stackoverflow.
+Back then, you HAD to know how to write code, you HAD to know how to write it well, and you HAD to know how to debug it.
+Now you can move at the speed of light with some of the coding tools available, and only your guilt is what's going to stop you from doing it.
 
 
 I believe this is not a good thing but this means that architectural and design skills are more important than ever, by design I mean knowing how to structure your code, how to make it scalable, how to make it maintainable, and how to make it efficient.
 
 
-AI still struggles with that, it looks very intelligent but it is not, it is, as cheesy as it sounds, just a very good pattern recognizer, bla bla you heard that a million times,
- but the point is that if you don't know if what the AI gave you is good or not, you might end up with a less than desirable result, with performance significantly worse that syntax quality hhh.
+AI still struggles with that, it looks very intelligent but it is not, it is, as cheesy as it sounds, just a very good pattern recognizer
+The point is that if you don't know if what the AI gave you is good or not, you might end up with a less than desirable result, with performance significantly worse than syntax quality hhh.
 
 So to be a good SWE, at the age of AI, I believe you need three things:
 
-
-1) to know the basics of the language you're using, and only the basics (because ai will help you)
+1) to know the basics of the language you're using, and only the basics (because AI will help you)
 2) to know the best design patterns and architectures for the problem you're trying to solve
 and finally 3) to be able to evaluate the code you get from the AI and make sure it's good and efficient..
 
-
-This is transformational, and whether you like it or not, you need to adapt to it, so stop learning syntax and start learning design patterns and architectures.
-
+This is transformational, and whether you like it or not, you will need to adapt to it,
+so stop learning syntax and start learning design patterns and architectures.
 
 All the best!!
       `
@@ -979,7 +1001,7 @@ you understand and aggree that success is inevitable, incha-Allah. :)
 of hardship and ease, pain and comfort, suffering and peace to occur among people by turns."
 - Maariful Quran, by Mufti Muhammad Shafi (r.a)
 
-This is a <i>tafsir</i> of the verse 142 in Surah Ali 'Imran:
+The above is a <i>tafsir</i> of the verse 140 in Surah Ali 'Imran:
 "If you receive a wound, they have received a similar wound. And such days we rotate among the people."  
 
       `
