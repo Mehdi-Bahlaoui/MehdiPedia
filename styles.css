@@ -793,6 +793,7 @@ body {
 .section-text p,
 .globe-text p {
   white-space: pre-line;
+  overflow-wrap: break-word;
 }
 
 .section-text {
@@ -1493,7 +1494,7 @@ body {
   }
 
   .section-content.expanded {
-    max-height: 2000px;
+    max-height: 6000px;
     opacity: 1;
     padding-top: 10px;
   }

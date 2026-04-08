@@ -555,7 +555,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
-  status: 'Updated !!',
+  status: '',
   sections: [
     {
       id: 'introduction',
@@ -849,11 +849,12 @@ love~
       I swear it's a special energy you get when you get up before sunrise.
       I am trying something new, I will try 6AM for sometime. I beleive this will give much much more energy and kick start my day just rigth
 
-      Let's goooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+      Let's gooooooooooooooooooooooooooooooo
       
       
       `
       },
+
 
 
 
