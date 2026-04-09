@@ -1214,13 +1214,26 @@ body {
 
 .blog-card {
   display: flex;
-  align-items: baseline;
-  gap: 16px;
-  padding: 10px 6px;
+  flex-direction: column;
+  padding: 8px 6px;
   cursor: pointer;
   border-bottom: 1px solid var(--border-color);
   border-radius: 4px;
   transition: background-color 0.2s ease;
+}
+
+.blog-card-top {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.blog-card-preview {
+  display: block;
+  margin-left: 8px;
+  font-size: 0.82rem;
+  opacity: 0.48;
+  line-height: 1.4;
 }
 
 .blog-card:hover {

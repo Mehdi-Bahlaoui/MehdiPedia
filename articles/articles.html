@@ -276,12 +276,15 @@ Of which expressed here, are solely his and do not reflect the views, policies o
         tempDiv.innerHTML = article.title;
         const cleanTitle = tempDiv.textContent || tempDiv.innerText;
 
+        const cardTop = document.createElement('div');
+        cardTop.className = 'blog-card-top';
+
         const h2 = document.createElement('h2');
         const link = document.createElement('a');
         link.href = `template.html#${articleId}`;
         link.textContent = cleanTitle;
         h2.appendChild(link);
-        card.appendChild(h2);
+        cardTop.appendChild(h2);
 
         // Right-aligned meta container (badge + date)
         const meta = document.createElement('div');
@@ -307,7 +310,21 @@ Of which expressed here, are solely his and do not reflect the views, policies o
           meta.appendChild(time);
         }
 
-        card.appendChild(meta);
+        cardTop.appendChild(meta);
+        card.appendChild(cardTop);
+
+        // Preview: inline inside h2, flows naturally with title
+        const firstContent = article.sections && article.sections[0] && article.sections[0].content;
+        if (firstContent) {
+          const stripped = firstContent.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+          if (stripped) {
+            const preview = document.createElement('span');
+            preview.className = 'blog-card-preview';
+            preview.textContent = stripped.length > 120 ? stripped.slice(0, 120) + '…' : stripped;
+            h2.appendChild(document.createElement('br'));
+            h2.appendChild(preview);
+          }
+        }
 
         card.addEventListener('click', () => {
           window.location.href = `template.html#${articleId}`;

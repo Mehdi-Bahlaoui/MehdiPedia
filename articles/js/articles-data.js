@@ -7,8 +7,8 @@ const articlesData = {
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          Let's say you make your passion a job.
+        content: 
+          `Let's say you make your passion a job.
           In terms of complexity, your job will either be easy, normal or hard.
           if it's easy, you'll end up doing little of your passion - which will make you feel unfulfilled (you can't further indulge in your passion because psychologically it will feel like work - you won't like it)
           if it's hard, your passion gets crushed because you just have to meet deadlines and reach expectations,
@@ -23,8 +23,8 @@ const articlesData = {
       {
         id: 'solution',
         title: 'My Solution',
-        content: `
-          Chase something close to your passion as your job.
+        content: 
+          `Chase something close to your passion as your job.
 
           What will you gain?
           <strong>A. Work Advantage</strong>
@@ -60,8 +60,8 @@ const articlesData = {
       {
         id: '',
         title: '',
-        content: `
-        I was talking to a special individual, a different specimen, someone you might know, and we brought up life (as in living) as a topic.
+        content: 
+        `I was talking to a special individual, a different specimen, someone you might know, and we brought up life (as in living) as a topic.
         He had a conviction (ofc he would, and you would know later why) and to it I listened carefully.
         I heard and let him speak freely, not because he might know more than me, although he could (and maybe does), but because every time he talked it felt true and new, or at least true -and always spoken with openness & personality, a sort of strong vulnerability that you wouldn't be able to exploit -which is amazing.
         He spoke so elegantly every time, I love it, maybe because I see part of me in him but that's besides the story here
@@ -130,9 +130,6 @@ const articlesData = {
         
         With that being said, I think can now say that maybe, just maybe, it is worth living like an NPC.
         And Allah knows best,
-
-        
-        -Mehdi Bahlaoui
 `
       }
     ]
@@ -150,7 +147,8 @@ const articlesData = {
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
+        content: 
+          `Growing up in a multicultural environment, I have always been aware of the complexities surrounding race and identity.
             
 My experiences have shaped my understanding of what it means to be black in today's society.
             ...
@@ -206,8 +204,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          The title of this article you are reading is a creation of mine.
+        content: 
+          `The title of this article you are reading is a creation of mine.
           <i>There is a fine line between lowering your ego and respecting yourself</i>.
           I came up with it while reading the book <a class="links" href="https://en.wikipedia.org/wiki/Ego_Is_the_Enemy">Ego is the Enemy</a> by Ryan Holiday.
           The book is a great read, I recommend it to anyone who wants to learn more about the ego and how it can affect our lives.
@@ -231,8 +229,8 @@ My experiences have shaped my understanding of what it means to be black in toda
 
         id: 'How_to_be_Great',
         title: 'How to be Great',
-        content: `
-          I used to always ask myself, and some poor friends of mine: "Hey, how can I be great?"
+        content: 
+          `I used to always ask myself, and some poor friends of mine: "Hey, how can I be great?"
           For the longest time I mourned the fact that I did not have a clear answer to this question
           I thought honestly that I had to work on my manliness, because they always say that in podcast <i>Fuck Podcasts</i> 
 
@@ -278,8 +276,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          <i>I like it, but I don't think I am addicted to it </i> ---said every addict ever haha
+        content: 
+          `<i>I like it, but I don't think I am addicted to it </i> ---said every addict ever haha
 
           But let me tell me about a crazy feeling tied to drinking black coffee
 
@@ -332,8 +330,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          Yesterday I had a dream,
+        content: 
+          `Yesterday I had a dream,
           I was doing my own thing yk (I don't remeber frankly) but then, inside the dream I saw a button, a UI button to be exact,
           in the middle of this button were written the words "Wake Up Gracefully",
           so I clicked on it, and then I woke up.
@@ -362,8 +360,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          Most people don't know how to properly listen,
+        content: 
+          `Most people don't know how to properly listen,
           it feels like they have a build up of things they want to share.
           Once they find a nice enough person that agrees to put up with their vomit, they start to let it out.
 
@@ -386,25 +384,22 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: 'Introduction',
-        content: `
+        content: 
 
-          Dear Me,
-
+          `Dear Me,
 
           I know you because I am you (duhh)
           Nonetheless, I need to remind you of some things that you might forget, along your way.
 
-          
           In your endless search for optimized productivity. 
           Remember that:
-
           `
       },
       {
         id: 'Energy',
         title: '1) You have limited time, but most importantly limited energy',
-        content: `
-          For that reason, you must not just do something because it needs to be done.
+        content: 
+          `For that reason, you must not just do something because it needs to be done.
           There are plenty of things that need to be done, but you must prioritize those that align with your goals and what's really important.
           Don't waste your energy on things that don't matter.
           Order food if you have to, delegate what you don't wanna do and block time wasters
@@ -419,8 +414,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'Scenery',
         title: "2) Change the scenery often and guilt-free",
-        content: `
-          You are not a machine, you need the change of scenery to reset your brain and body.
+        content: 
+          `You are not a machine, you need the change of scenery to reset your brain and body.
           It might cost a bit of money to sit in that caffee, or go to that other caffe, but it's worth it.
           Who cares about a couple of bucks if money is generative, 
           your work is not easily recoverable, plus it's more valuable
@@ -430,8 +425,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'Spirituality',
         title: "3) Work is easier when your spiritual life is in check",
-        content: `
-          Make sure you do your prayers in time,
+        content: 
+          `Make sure you do your prayers in time,
           There is no better work block than the one that comes after a salat that's well done and whose dua is sincerely made.
 
           `
@@ -439,8 +434,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'Conclusion',
         title: "",
-        content: `
-          All the best!   
+        content: 
+          `All the best!   
           `
       }
 
@@ -454,8 +449,8 @@ My experiences have shaped my understanding of what it means to be black in toda
       {
         id: 'introduction',
         title: '',
-        content: `
-This is the first time this happened to me, my eyes are loosing focus,
+        content: 
+`This is the first time this happened to me, my eyes are loosing focus,
 I got so inspired that I've been stuck like this for about 30 minutes
 You know the feeling of stopping for a second, looking into the horizon while your vision looses focus as you process what you had in mind 
 -that feeling
@@ -481,8 +476,8 @@ it's almost like I've ascended but let's not get too philosophical
       {
         id: 'Conclusion',
         title: '',
-        content: `
-I just want to say, that I've grown a lot in just this small period, before starting my internship even alhamdolilah
+        content: 
+`I just want to say, that I've grown a lot in just this small period, before starting my internship even alhamdolilah
 
 
 -and to you the reader, and please trust me on this, that pretty much nothing is impossible and that things get better and it's up to you to believe first and work towards it second
@@ -514,17 +509,18 @@ love~
       {
         id: 'introduction',
         title: '',
-        content: `
+        content: 
 
-      Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
+      `Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
       
-      I wanted to uninstall it for the longest time, and now is perfect opportunity;
-      As I just started my internship, my coordinator and colleagues all use MS Teams which I prefer
+      I wanted to uninstall it for the longest time
+      and now is the perfect opportunity;
+      I just started my internship; everyone uses Teams which I prefer
       and second just after finishing my university courses, so no urgent message to worry about
 
-      Now I don't have to deal with all that bullshit stories and all that, it got me fed up
+      Now I don't have to deal with all the bullshit stories people do for attention, it got me fed up
       
-      The main reason I removed it is because I keep checking it for dopamine hits and I don't want that anymore,
+      I removed it also because I keep checking it for dopamine hits and I don't want that anymore,
       I want to be in control of my dopamine, not the other way around
 
       I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp;
@@ -560,9 +556,8 @@ love~
     {
       id: 'introduction',
       title: '',
-      content: 
-      `
-      This is the best the best gift I could give myself on my birthday, and probably will be my best acheivement, aswell as the best decision of my file if acheived.
+      content:  
+      `This is the best the best gift I could give myself on my upcoming birthday, and probably will be my best acheivement, aswell as the best decision of my file if acheived.
       Because it will provide me with precious time to work on myself, and to do the things I want to do, and to do them in the best way possible.
 
       I hope I'm not over-romanticizing this-
@@ -584,8 +579,8 @@ love~
       id: 'Day 1',
       title: 'Day 1 - 28/02',
       content: 
-      `
-      I slept for 2 hours today, horay.
+      
+      `I slept for 2 hours today, horay.
 
       As I woke up it felt great, but I believe i did not hit deep sleep because I still have short term memory from what happened before I went to sleep hh.
 
@@ -601,8 +596,8 @@ love~
       id: 'Day 2',
       title: 'Day 2 - 01/03',
       content: 
-      `
-      Yesterday, I struggled a lot, so much, i almost fell asleep about 6 times, and kept fighting with myself to stay awake because a nap would disturbed my cycle I thought..
+      
+      `Yesterday, I struggled a lot, so much, i almost fell asleep about 6 times, and kept fighting with myself to stay awake because a nap would disturbed my cycle I thought..
       Before maghrib at around 4:30pm my brain shut down, and I was received some unfortunate news that forced me to do some work a t night, I slept defeated but still at around 10pm
       I woke at 5am, I was so tired I could not get out of bed, I just laid there for 2 hours more.. I had to
 
@@ -614,8 +609,8 @@ love~
       id: 'Day 3',
       title: 'Day 3 - 02/03',
       content:
-      `
-      so I slept well from yesterday, but you know what happend just as I wanted to sleep at 10pm? I got a call from an old friend that I just had to answer, and I had to meet with him, it has bigger than this (and maybe that's a problem), I ended up meeeting with him and I satyed up until around 12PM, did some minor work until about 2AM, and then I went to sleep.
+      
+      `so I slept well from yesterday, but you know what happend just as I wanted to sleep at 10pm? I got a call from an old friend that I just had to answer, and I had to meet with him, it has bigger than this (and maybe that's a problem), I ended up meeeting with him and I satyed up until around 12PM, did some minor work until about 2AM, and then I went to sleep.
 
       To be completely honest, I am not sure the 10pm rule is really working, specially becuase of dinner being fixed at 9pm by the cafeteria.. it wouldn be wise also to not eat dinner.
       So this might not work but I am not giving up.
@@ -631,8 +626,8 @@ love~
       id: 'Day 4',
       title: 'Day 4 - 03/03',
       content:
-      `
-      I woke up at around 10:30pm, woken up by the cleaner lady. they looove to wake you up :)))
+      
+      `I woke up at around 10:30pm, woken up by the cleaner lady. they looove to wake you up :)))
 
       so I kinda think that this is not what I want to experience.. anymore
 
@@ -644,8 +639,8 @@ love~
       id: 'Day 5',
       title: 'Day 5 - 04/03',
       content:
-      `
-      Change of plans, before clearly explaining the plan, let me tell you about what I think is best right now
+      
+      `Change of plans, before clearly explaining the plan, let me tell you about what I think is best right now
 
       I am not making excuses, but this won't work simply for the fact that it's ramadan, and the fact that dinner is fixed at 9pm
 
@@ -668,8 +663,8 @@ love~
       id: 'Day 6, 7 and 8',
       title: 'Day 6, 7 and 8',
       content:
-      `
-      So I did not write anything for these days because of various reasons, but mainly because I had to lock-in for my internship meeting
+      
+      `So I did not write anything for these days because of various reasons, but mainly because I had to lock-in for my internship meeting
       I tried to find a solution and actually tried several things:
       I tried dividing the day, personnal projects from waking up until 4pm (asr prayer), further will be for work but the day starts losing, yiu feel like you already lost when you wake up late
       The previous idea to cook is also not doable, takes too much energy and time, plus I would have to do a back-and-forth to Marjan..nah
@@ -836,7 +831,7 @@ love~
       id: 'day 43',
       title: '05/04',
       content:
-      `Long story short, I woke up at 5AM, but I could not get my self going, I went back to bed at around 6:30AM
+      `Long story short, I woke up at 5AM, but I could not get myself going, I went back to bed at around 6:30AM
       For several reasons, not worth mentionning (like left the window open and the cold woke me up + moskitos (I kid you not) + food still not digested)
       I am not counting this, better luck next time
       `
@@ -888,10 +883,8 @@ love~
       id: '',
       title: '',
       content: 
-      `
-So I'm a builder, not a solver.
-
-I just realised this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
+      
+`I just realised this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
 
 I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Altough I like it when I do solve problems!) but when shit gets real, I start questionning everything. YOu could maybe give me the same task but one asks for a clear working prototype, something easily mesurable, moving, real. and that would motivate me immensly.
 I believe this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.
@@ -918,8 +911,8 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
       id: '',
       title: '',
       content: 
-      `
-Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stackoverflow.
+      
+`Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stackoverflow.
 Back then, you HAD to know how to write code, you HAD to know how to write it well, and you HAD to know how to debug it.
 Now you can move at the speed of light with some of the coding tools available, and only your guilt is what's going to stop you from doing it.
 
@@ -958,8 +951,7 @@ All the best!!
       id: 'introduction',
       title: '',
       content: 
-      `
-I was listening to a podcast with guest Mark Rober, speaking about how he sees failure.
+`I was listening to a podcast with guest Mark Rober, speaking about how he sees failure.
 For him it's a rite of passage, kinda like in a video game; you have to fail to finally get it.
 He sees it as a necessary step to success, that you need to fail a lot to succeed,
 He brings up that in Nasa in particular, they have a saying that goes "Fail early, fail often, fail forward",
