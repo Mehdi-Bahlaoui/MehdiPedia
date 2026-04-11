@@ -1,4 +1,80 @@
+// TOC scroll spy — highlights the active section and auto-expands/collapses expandable items
+function initTocScrollSpy() {
+  // Target only the left (contents) TOC, not the Appearance sidebar
+  const leftToc = document.querySelector('.sidebar .toc-list');
+  if (!leftToc) return;
+  const tocLinks = leftToc.querySelectorAll('a[href^="#"]');
+  if (!tocLinks.length) return;
+
+  // Build ordered list of section IDs that actually exist in the DOM
+  const sectionIds = Array.from(tocLinks)
+    .map(link => link.getAttribute('href').slice(1))
+    .filter(id => document.getElementById(id));
+
+  const setActive = (activeId) => {
+    // Clear all active states
+    tocLinks.forEach(link => {
+      link.classList.remove('active-link');
+      link.closest('li')?.classList.remove('active-toc-li');
+    });
+    // Collapse all expandable items
+    leftToc.querySelectorAll('li.expandable').forEach(li => {
+      li.classList.remove('expanded');
+    });
+
+    if (!activeId) return;
+
+    const activeLink = leftToc.querySelector(`a[href="#${CSS.escape(activeId)}"]`);
+    if (!activeLink) return;
+
+    activeLink.classList.add('active-link');
+    const activeLi = activeLink.closest('li');
+    if (activeLi) activeLi.classList.add('active-toc-li');
+
+    // If inside a sublist, expand the parent expandable li too
+    const sublist = activeLink.closest('.toc-sublist');
+    if (sublist) {
+      const parentLi = sublist.closest('li.expandable');
+      if (parentLi) parentLi.classList.add('expanded');
+    }
+
+    // If the active li itself is expandable, expand it
+    if (activeLi?.classList.contains('expandable')) {
+      activeLi.classList.add('expanded');
+    }
+  };
+
+  const getActiveId = () => {
+    // Find the last section whose top is at or above the upper quarter of the viewport
+    const threshold = window.innerHeight * 0.25;
+    let activeId = sectionIds[0]; // default to first
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= threshold) {
+        activeId = id;
+      }
+    }
+    return activeId;
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        setActive(getActiveId());
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  setActive(getActiveId()); // run once on load
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  initTocScrollSpy();
   // Theme switching functionality
   const colorRadios = document.querySelectorAll('input[name="color"]');
 

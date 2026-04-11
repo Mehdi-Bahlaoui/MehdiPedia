@@ -551,7 +551,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
-  status: '',
+  status: 'UPDATED !!',
   sections: [
     {
       id: 'introduction',
@@ -849,6 +849,23 @@ love~
       
       `
       },
+      {
+        id: 'Day 49 (Final)',
+        title: 'Day 49 (Final) - 11/04',
+        content:
+        `It's time to give up.
+        I failed this challenge -for now
+        I officially declare it ended
+
+        I will try again in the future, perhaps take inspiration from all the insights through the journey here, but for now, 
+        It's done.
+        I am deciding to focus on a more natural sleep-wake time 12am 8am, and to focus on the quality and getting consistent 8 hours.
+        
+        Hopefully someday I will be able to crack it,
+        the best decision right now is to give up to move on to come back sooner than later, inshaAllah.
+        Thank you for following me through it.
+        `
+      }
 
 
 
@@ -912,7 +929,7 @@ Basically speaking it needs to do something to serve a purpose. SO basically I'l
       title: '',
       content: 
       
-`Nowadays, and I feel like it is not as important as it used to be to master a language like the old time of stackoverflow.
+`Nowadays, it has become not as important as it used to be to master a language like the old time of stackoverflow.
 Back then, you HAD to know how to write code, you HAD to know how to write it well, and you HAD to know how to debug it.
 Now you can move at the speed of light with some of the coding tools available, and only your guilt is what's going to stop you from doing it.
 
@@ -948,7 +965,7 @@ All the best!!
 
   sections: [
     {
-      id: 'introduction',
+      id: '',
       title: '',
       content: 
 `I was listening to a podcast with guest Mark Rober, speaking about how he sees failure.
@@ -1001,5 +1018,50 @@ The above is a <i>tafsir</i> of the verse 140 in Surah Ali 'Imran:
     }
   ]
 },
+
+
+'banned': {
+  id: 'banned',
+  title: 'I just banned Youtube and LinkedIn',
+  date: '11/04/2026',
+  status: 'NEW !',
+  sections: [
+    {
+      id: '',
+      title: '',  
+  content:
+    `"You have tiktok brain" -Pewdiepie
+
+  The videos on Youtube have become so bad it's not even funny.
+The algorithm is so strong that it can make you watch videos that you don't even like (I'm being serious)
+I had been catching myself sometimes just watching something really not interesting.
+Why would I do that if it would cause myself to get stimulated to the point I can no longer do work properly?
+
+And the algorithm just keeps on getting stronger and stronger, If they don't catch you with clickbait they'll catch you with explicit content,
+that you might think is fine and normal but that stimulates far to much for my liking.
+As corny as it sounds again, it's like a drug, and I don't want to be addicted to it.
+
+And what's worse is that you don't even gain from it,
+atleast cocaine gives you some sort of hapiness
+with social media you just get some laughs out, but you lose more that you gain, infact whenever you switch back and forth from work and social media, you take from your finite pool of willpower.
+
+So I had to quit.
+The problem I had faced previously that prevent this is the amount of educational content on there.
+The solution for that is to just download the video if you really have to. But honestly, I argue that better content is almost always out there in text format.
+
+Now about linkedin, well it is slowly becoming the new Youtube, the content is getting worse and worse, and the algortihm is getting stronger aswell.
+I don't blame the companies, they need to keep me and you in their platform to make money.
+
+You have tiktok brain and it's probably hurting you ability to chase your dreams.
+
+If that doesn't motivate you to quit, then I don't know what will.
+    `}
+
+  ]
+}
+
+
+
+
 
 };
