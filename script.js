@@ -1,3 +1,25 @@
+function noticeCloser() {
+  const banner = document.getElementById("WikiArabia2026_banner");
+  const closeBtn = document.getElementById("cnotice-close-btn");
+  const storageKey = "LinkedInHibernated";
+
+  if (!banner || !closeBtn) return;
+
+  // if (localStorage.getItem(storageKey) === "1") {
+  //   banner.style.display = "none";
+  //   return;
+  // }
+
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    banner.style.display = "none";
+    localStorage.setItem(storageKey, "1");
+  });
+}
+
+
+
 // TOC scroll spy — highlights the active section and auto-expands/collapses expandable items
 function initTocScrollSpy() {
   // Target only the left (contents) TOC, not the Appearance sidebar
@@ -75,6 +97,7 @@ function initTocScrollSpy() {
 
 document.addEventListener("DOMContentLoaded", function () {
   initTocScrollSpy();
+  noticeCloser();
   // Theme switching functionality
   const colorRadios = document.querySelectorAll('input[name="color"]');
 
