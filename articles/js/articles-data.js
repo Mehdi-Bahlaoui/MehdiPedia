@@ -551,7 +551,7 @@ love~
 '5AM': {
   title: 'My 5am Journey - a 30 day challenge',
   date: '28/02/2026',
-  status: 'UPDATED !!',
+  status: '',
   sections: [
     {
       id: 'introduction',
@@ -1024,7 +1024,7 @@ The above is a <i>tafsir</i> of the verse 140 in Surah Ali 'Imran:
   id: 'banned',
   title: 'I just banned Youtube and LinkedIn',
   date: '11/04/2026',
-  status: 'NEW !',
+  status: '',
   sections: [
     {
       id: '',
