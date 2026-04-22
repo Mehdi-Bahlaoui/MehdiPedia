@@ -1058,7 +1058,49 @@ If that doesn't motivate you to quit, then I don't know what will.
     `}
 
   ]
+},
+'dissapointed': {
+  id: 'dissapointed',
+  title: 'I\'m dissapointed in Spotify',
+  date: '22/04/2026',
+  status: 'NEW !!',
+  sections: [
+    {
+      id: '',
+      title: '',  
+  content:
+    `I am trying to get away from social media as much as possible as you might have guessed by now.
+    More aggressively from the shorts/reels and tiktok-like videos.
+
+    Couple of days ago, to my dismay, I find out (though I had seen it before but haven't payed attention) that Spotify had their own short-form content, that sometimes gets recommended to you.
+    
+    I, for my curious nature, clicked on one of those videos, and I was surprised to find out that they allowed "clips re-uploads": content originally uploaded in other platforms, reuploaded to their.
+    There numerous Youtube re-uploads from channels claiming the content to be podcasts...
+    
+    Let me tell you, that I was not ready for this.
+    My phone had only Wikipedia and Spotify among a short list of Apps.
+    But now that the greedy and dopamine seeking version of myself knew about this, It was like a drug addict finding out about a new drug and I got hooked again on the algorithm, the devilish algorithm, scratch that, the Devil himself.
+    
+    After two days of falling into pleasure, I decided to take action.
+
+    I'm official on Deezer now hh.
+    Much better, less noise, less bullshit.
+    Just music as it should be.
+    Haven't checked if they also have podcasts but I am sure there are no shorts.
+    and If they decide to add them, I will switch agian.
+
+    Disappointed in Spotify but you can't blame them.
+
+    you can't blame them.. I guess
+    
+    `}
+
+  ]
 }
+
+
+
+
 
 
 
