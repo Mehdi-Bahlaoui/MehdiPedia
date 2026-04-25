@@ -241,6 +241,8 @@ header {
 
 /* RIGHT LINKS */
 .right-links {
+  display: flex;
+  align-items: center;
   margin-right: 30px;
 }
 
@@ -256,6 +258,42 @@ header {
   color: var(--blue);
   margin-left: 10px;
 
+}
+
+.right-links .donate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: var(--blue);
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.right-links .donate-button:hover {
+  background-color: rgba(0, 24, 73, 0.027);
+}
+
+.right-links .donate-button:active {
+  background-color: rgba(0, 24, 73, 0.082);
+}
+
+.right-links .donate-button .donate-heart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-links .donate-button .donate-heart svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 /* RIGHT LINKS */
@@ -1023,6 +1061,12 @@ body {
 
 .section_profile>div:first-child {
   width: 120px;
+}
+
+.section_profile > :last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .audio {

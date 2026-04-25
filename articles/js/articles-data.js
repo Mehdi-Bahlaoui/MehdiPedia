@@ -1059,11 +1059,13 @@ If that doesn't motivate you to quit, then I don't know what will.
 
   ]
 },
+
+
 'dissapointed': {
   id: 'dissapointed',
   title: 'I\'m dissapointed in Spotify',
   date: '22/04/2026',
-  status: 'NEW !!',
+  status: '',
   sections: [
     {
       id: '',
@@ -1093,6 +1095,47 @@ If that doesn't motivate you to quit, then I don't know what will.
 
     you can't blame them.. I guess
     
+    `}
+
+  ]
+},
+
+
+'no_one_has_the_answer': {
+  id: 'no_one_has_the_answer',
+  title: 'No one has the answer',
+  date: '22/04/2026',
+  status: 'NEW !!',
+  sections: [
+    {
+      id: '',
+      title: '',  
+  content:
+    `
+    No one has the answer you are looking for.
+
+    We tend to want to look everywhere on the internet, for the our problems,
+    "hey google how to wake up at 5AM?"
+    "hey google how to be productive?"
+    "hey google how to be happy?"
+    "hey google what does it mean to be great?"
+
+    Even chatgpt, actually chatgpt more than google nowadays
+
+    I claim no one has the answer to these anymore (I believe perhaps in the early days of the internet, you probably could've found some gems because there wasn't as much information, and people were not motivated by gain at the early days, just geniunly good people looking to help)
+    
+    Now? Too much information! and Too much information kills information :(
+
+    At this point, it looks like you can fix problems by yourself, by elimination process, faster than watching 1 miliion videos or reading countless articles.
+
+    I've tried numurous times to learn something or find the answer to such questions, and today I come to the conclusion that quality has drowned in quantity.
+    
+    SO reading OG books has never been more important, books published before making a book was motivated by having a bestseller. the real OG books are the one to look for, and to acquire in paper format.
+    Because tiktok is a sexy temptation when using a phone
+    
+    All the best brother!!
+    or sistaahh ouhh (are sisters reading this hhh)
+
     `}
 
   ]
