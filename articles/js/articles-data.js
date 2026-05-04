@@ -1134,12 +1134,62 @@ If that doesn't motivate you to quit, then I don't know what will.
     Because tiktok is a sexy temptation when using a phone
     
     All the best brother!!
-    or sistaahh ouhh (are sisters reading this hhh)
+    or sistaahh ouhh (are sisters reading this hhh?)
 
     `}
 
   ]
-}
+},
+
+'think_of_all_the_people_that_believe_in_you': {
+  id: 'think_of_all_the_people_that_believe_in_you',
+  title: 'If you don\'t believe in yourself, then who will?',
+  date: '22/04/2026',
+  status: 'NEW !!',
+  sections: [
+    {
+      id: '',
+      title: '',  
+  content:
+  ` Stop for a second, and think of all of the people that believe in you.
+    That friend who's not that bright but believes in you, that really smart friend who still believes in you, and you don't know why because he could accomplish so much more than you, though it looks like, for some reason, he believes in you more than he does himself.
+    Maybe that family member you really cherish and are really close with.
+    Maybe that teacher or your partner..
+    
+    Why do all these people believe in you?
+    Is it because they have to? or is it out of kindness? a nice thing to do?
+    
+    Really dig deep in this.
+
+    You will hopefully and most likely come to the conclusion that they believe in you simply because they do.
+    Meaning they probably see something in you that you don't see in yourself.
+
+    Should that motivate you to push even harder? Absolutely!
+
+    It is, I claim, the most accurate tool you possess to measure your potential.
+
+    Not that I claim your value or worth should be, or is tied to, how people perceive you.
+    But what I am trying to say is that in this world, the only judging force is humans.
+    If the most precious and important thing in this universe, which is the human, thinks you are great -then you probably are.
+    
+    All you need to do is to channel this energy to believe in yourself in return.
+    
+    Because what's left is to prove to yourself that you can do it, and I claim, it is perhaps necessary, before you can expand, and show more people, to finally navigate a rather complicated world where people tend to not believe in you immediately (as they should! they cannot read your mind or look into the future!)
+    
+    Basically, if you don't see it in yourself, expect no more than a few to do.
+    
+    That being said, let YOU start with yourself, first.
+    
+    Thankfully, some people will beleive in you before you do yourself <3 (and to those we will be immensely grateful),
+    but <b>most will not</b>, most will only trust you to the extent YOU do.
+
+    So do your job :)
+
+    All the best in that!
+    `}]
+  
+  
+  }
 
 
 
