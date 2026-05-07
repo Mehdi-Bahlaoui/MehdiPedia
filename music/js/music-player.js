@@ -336,7 +336,13 @@ function initializeAudioPlayer(song) {
   // init progress bar and volume
   progressBarFilled.style.width = `0%`;
   audioPlayer.currentTime = 0;
-  audioPlayer.volume = volumeSlider.value / 100;
+  const isMobile = window.matchMedia('(max-width: 850px)').matches;
+  if (isMobile) {
+    audioPlayer.volume = 1;
+    volumeSlider.value = 100;
+  } else {
+    audioPlayer.volume = volumeSlider.value / 100;
+  }
 
   // SYNC ENGINE: Listen to playback time updates (~4 times/second)
   audioPlayer.addEventListener('timeupdate', () => {
@@ -425,6 +431,12 @@ function initializeAudioPlayer(song) {
 
   // Volume control
   volumeSlider.addEventListener('input', (e) => {
+    if (window.matchMedia('(max-width: 850px)').matches) {
+      e.target.value = 100;
+      audioPlayer.volume = 1;
+      volumeBtn.textContent = '🔊';
+      return;
+    }
     const volume = e.target.value / 100;
     audioPlayer.volume = volume;
 

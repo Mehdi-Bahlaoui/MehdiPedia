@@ -1191,25 +1191,27 @@ If that doesn't motivate you to quit, then I don't know what will.
   
   },
 
-  'UM6P': {
-    id: 'um6p',
-    title: 'My UM6P Experience',
-    date: '06/05/2026',
-    status: 'NEW !!',
-    sections: [
-      {
-        id: '',
-        title: '',  
-        content:
-`
+//   'UM6P': {
+//     id: 'um6p',
+//     title: 'My UM6P Experience',
+//     date: '06/05/2026',
+//     status: 'NEW !!',
+//     sections: [
+//       {
+//         id: '',
+//         title: '',  
+//         content:
+// `
         
         
         
         
         
-`
+// `
 
-      }]
+//       }]
+
+//     },
 
 
 

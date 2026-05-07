@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const theme = this.value;
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+        if (typeof window.updateGiscusTheme === 'function') {
+          window.updateGiscusTheme();
+        }
       }
     });
   });

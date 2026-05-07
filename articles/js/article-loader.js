@@ -36,7 +36,98 @@ function loadArticle() {
   updatePageMetadata(article);
   renderArticle(article);
   generateTOC(article);
+  loadGiscus(articleId, article.title);
 }
+
+/* =========================
+   GISCUS COMMENTS
+========================= */
+
+function getGiscusTheme() {
+  const theme = document.documentElement.getAttribute('data-theme') || 'light';
+  return theme === 'dark' ? 'dark_dimmed' : 'light';
+}
+
+function loadGiscus(articleId, articleTitle) {
+  const contentContainer = document.getElementById('articleContent');
+  if (!contentContainer) return;
+
+  // Remove any existing giscus container so we can re-init per article
+  const existing = document.getElementById('giscus-container');
+  if (existing) existing.remove();
+
+  const divider = document.createElement('div');
+  divider.className = 'giscus-divider';
+  contentContainer.appendChild(divider);
+
+  const wrapper = document.createElement('div');
+  wrapper.id = 'giscus-container';
+  contentContainer.appendChild(wrapper);
+
+  if (!document.getElementById('giscus-frame-style')) {
+    const giscusStyle = document.createElement('style');
+    giscusStyle.id = 'giscus-frame-style';
+    giscusStyle.textContent = `
+      .giscus, .giscus-frame {
+        width: 100%;
+      }
+      .giscus-frame {
+        min-height: 360px;
+      }
+      .giscus-divider {
+        height: 1px;
+        margin: 48px 0 0;
+        border: 0;
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          var(--border-color, #c8ccd1) 20%,
+          var(--border-color, #c8ccd1) 80%,
+          transparent 100%
+        );
+      }
+      #giscus-container {
+        margin: 24px 0 20px;
+      }
+      @media (min-width: 851px) {
+        #giscus-container {
+          margin: 24px 0 0;
+        }
+      }
+    `;
+    document.head.appendChild(giscusStyle);
+  }
+
+  const script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
+  script.async = true;
+  script.crossOrigin = 'anonymous';
+  script.setAttribute('data-repo', 'Mehdi-Bahlaoui/MehdiPedia');
+  script.setAttribute('data-repo-id', 'R_kgDOPQ12eA');
+  script.setAttribute('data-category', 'Announcements');
+  script.setAttribute('data-category-id', 'DIC_kwDOPQ12eM4C8htD');
+  script.setAttribute('data-mapping', 'specific');
+  script.setAttribute('data-term', `article:${articleId}`);
+  script.setAttribute('data-strict', '1');
+  script.setAttribute('data-reactions-enabled', '0');
+  script.setAttribute('data-emit-metadata', '0');
+  script.setAttribute('data-input-position', 'bottom');
+  script.setAttribute('data-theme', getGiscusTheme());
+  script.setAttribute('data-lang', 'en');
+  script.setAttribute('data-loading', 'lazy');
+
+  wrapper.appendChild(script);
+}
+
+// Allow theme switcher to update the giscus iframe live
+window.updateGiscusTheme = function () {
+  const frame = document.querySelector('iframe.giscus-frame');
+  if (!frame) return;
+  frame.contentWindow.postMessage(
+    { giscus: { setConfig: { theme: getGiscusTheme() } } },
+    'https://giscus.app'
+  );
+};
 
 function updatePageMetadata(article) {
   document.title = `${article.title} - Mehdi Bahlaoui`;

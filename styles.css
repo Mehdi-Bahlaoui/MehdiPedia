@@ -1284,6 +1284,19 @@ body {
 }
 
 @media (max-width: 850px) {
+  /* Sticky footer: keep .wiki-footer pinned to the viewport bottom on short pages */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .page-container {
+    flex: 1 0 auto;
+  }
+  .wiki-footer {
+    flex-shrink: 0;
+  }
+
   .main-content {
     padding: 8px;
   }
