@@ -1104,8 +1104,8 @@ If that doesn't motivate you to quit, then I don't know what will.
 'no_one_has_the_answer': {
   id: 'no_one_has_the_answer',
   title: 'No one has the answer',
-  date: '22/04/2026',
-  status: 'NEW !!',
+  date: '28/04/2026',
+  status: '',
   sections: [
     {
       id: '',
@@ -1144,8 +1144,8 @@ If that doesn't motivate you to quit, then I don't know what will.
 'think_of_all_the_people_that_believe_in_you': {
   id: 'think_of_all_the_people_that_believe_in_you',
   title: 'If you don\'t believe in yourself, then who will?',
-  date: '22/04/2026',
-  status: 'NEW !!',
+  date: '05/05/2026',
+  status: '',
   sections: [
     {
       id: '',
@@ -1189,7 +1189,29 @@ If that doesn't motivate you to quit, then I don't know what will.
     `}]
   
   
-  }
+  },
+
+  'UM6P': {
+    id: 'um6p',
+    title: 'My UM6P Experience',
+    date: '06/05/2026',
+    status: 'NEW !!',
+    sections: [
+      {
+        id: '',
+        title: '',  
+        content:
+`
+        
+        
+        
+        
+        
+`
+
+      }]
+
+
 
 
 

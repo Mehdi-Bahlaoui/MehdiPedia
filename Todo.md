@@ -15,5 +15,3 @@ About headstart also, I would love to say, in the place where we studied we also
 
 
 - [ ]: Article with possibility of users commenting!! yes let's do that (first fix gitignore)
-
-- [ ]: Life is not fair Arrticle hhh
