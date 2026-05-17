@@ -1191,27 +1191,144 @@ If that doesn't motivate you to quit, then I don't know what will.
   
   },
 
-//   'UM6P': {
-//     id: 'um6p',
-//     title: 'My UM6P Experience',
-//     date: '06/05/2026',
-//     status: 'NEW !!',
-//     sections: [
-//       {
-//         id: '',
-//         title: '',  
-//         content:
-// `
-        
-        
-        
-        
-        
-// `
+  'UM6P': {
+    id: 'um6p',
+    title: 'UM6P in 2026',
+    date: '06/05/2026',
+    status: 'NEW !!',
+    sections: [
+      {
+        id: 'Introduction',
+        title: 'Introduction',  
+        content:
+`At the time of writing this, I have spent exactly 3 months here.
+I just want to share some of my thoughts about this place. This is mostly a positive post.
 
-//       }]
+For those who don't know, UM6P stands for "Université Mohammed VI Polytechnique", it is a university not just in Morocco, but with campuses in France, Canada and also the US.
 
-//     },
+For my PFE, I had the chance to intern here at the benguerir Campus, the first ever campus of the university.
+More specically, I am doing my internship at the "College of Computing" which is the computer science department of the university.
+And I am working at the intersection of AI, Networking, and Embedded Systems, which is very exciting to say the least ;)
+
+`
+
+  },
+    {
+      id: 'The Campus & Nature',
+      title: 'Campus & Nature',
+      image: {
+        url: '../Images/um6p/p.jpg',
+        alt: 'butterfly',
+        caption: 'Orange butterfly on purple sea lavenders',
+        position: 'right',  // Options: 'left', 'right', 'center', 'full'
+        width: '400px'       // Optional: custom width
+      },
+      content:
+      `The nature makes you feel great peace. Especially in the morning, when it's calm and no one is around. 
+      Sometimes you might see butterflies or birds at the place near Marjan inside campus.
+      
+      Your first similar sight-seeing has a special effect on you; if you already like it here you start to think this is heaven - you quickly get used to it hh, though it's still pretty cool!
+      
+      A somewhat funny realization: It looks like there is as much cleaning staff as there are students.
+      When you think of it, it starts to make sense. As an unefficient algorithm would associate one cleaning person to every individual to be able to cover the whole of the potentially dirtied path of that 1 person.
+      Though I am sure there isn't a 1-1 mapping, that would be insane and unrealistic and funny.
+      Though just to show you, to be able to maintain the beauty of the place, and to be able to enjoy it, you need to have a lot of cleaning staff, and they do a great job at that.
+      
+      `
+    },
+    {
+      id: 'The Night',
+      title: 'The Night',
+      images: [{
+        url: '../Images/um6p/n1.jpg',
+        alt: 'Me',
+        caption: 'The main concourse connecting the two `Pergolas` of the campus. Right and left are the different departements',
+        position: 'center',  
+        width: '800px'       
+      },
+      // {
+      //   url: '../Images/um6p/n2.jpg',
+      //   alt: '',
+      //   caption: '',
+      //   position: 'center',  
+      //   width: '800px'       
+      // }
+    ],
+
+      content:
+      `The night is mesmerizing,
+      In my first days here, I used to go to stay up until 1-2AM to enjoy calm and undistracted work at night.
+      I didn't know it at the time, but I used to use a monitor that was not meant to be used by anyone other than the owner.
+      I loved it because it was massive lol.
+      I did not get told by the owner nor the students/phds there. It was some guy who probably and understandably is his job; to make sure the place is not populated by students/interns/phDs not supposed to be here.
+      I enjoyed it until that day.
+      Now I have an even bigger mionitor, just for myslef. Thanks to the previous one that showed how useful it can be when working with code. (You see how I made this positive?)
+      
+      `
+
+    },
+    {
+      id: 'Coffee & Gifts',
+      title: 'Coffee & Gifts',
+      image: {
+        url: '../Images/um6p/gift.jpg',
+        alt: 'Me',
+        caption: '',
+        position: 'center',  // Options: 'left', 'right', 'center', 'full'
+        width: '800px'       // Optional: custom width
+      },
+      content:
+      `I go to a coffee shop here that is preety classy, and the coffee is pretty good.
+      One time as you see, they offered me a free sweet alongside my daily espresso, how nice!
+      The place is at the heart of the School of Hospitality and Business Mangement, called SHBM for short.
+      
+      They practice what they teach at that coffee shop, infact the waiters are most of time students of the school! and they do a great job.
+
+      To set the atmossphere for you, they play jazz music, and everyone there wears a suit.
+      As funny as it sounds yes hahaha
+      Though people look pretty good in suits so it is not that bad hh.
+
+      `
+
+    },
+
+    {
+      id: 'People & Activities',
+      title: 'People & Activities',
+      image: {
+        url: '../Images/um6p/me.jpg',
+        alt: 'Me',
+        caption: 'sitting near the butterflies and taking in the sun',
+        position: 'right',  // Options: 'left', 'right', 'center', 'full'
+        width: '400px'       // Optional: custom width
+      },
+      content:
+      `Well that's the end of the article,
+      Some final words about how I find the people here, and the activities.
+      You can find some intersting and diverse people here, from different backgrounds, there are alot of event and opportunities to meet new people and to learn new perspectives. How do the students here see the world? What do they think about the future? What are their dreams? Where do they intern lol?
+      
+      A lot of activities like I said depending on your comfort level.
+      Some quiet ones and some more social ones, You can definitely find something that suits you.
+      
+      Also the library!!!
+      
+      I'm ashamed to say I haven't been to the library properly yet, but it look like I will melt upon seeing all the self-help and personal development books there.
+      `
+    }
+
+
+
+
+
+
+    
+    
+    
+    
+    ]
+
+
+    },
 
 
 
