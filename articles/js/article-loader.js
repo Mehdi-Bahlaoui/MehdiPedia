@@ -426,6 +426,11 @@ function injectStyles() {
         max-width: 100%;
         margin: 0px 0;
       }
+      /* Override inline max-width set in renderImage so wide images never overflow on mobile */
+      .article-image {
+        max-width: 100% !important;
+        height: auto;
+      }
     }
   `;
 
