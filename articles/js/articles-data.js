@@ -1194,7 +1194,7 @@ If that doesn't motivate you to quit, then I don't know what will.
   'UM6P': {
     id: 'um6p',
     title: 'UM6P in 2026',
-    date: '06/05/2026',
+    date: '17/05/2026',
     status: 'NEW !!',
     sections: [
       {
