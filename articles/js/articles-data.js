@@ -1195,7 +1195,7 @@ If that doesn't motivate you to quit, then I don't know what will.
     id: 'um6p',
     title: 'UM6P in 2026',
     date: '17/05/2026',
-    status: 'NEW !!',
+    status: '',
     sections: [
       {
         id: 'Introduction',
@@ -1328,7 +1328,67 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     ]
 
 
+
+
     },
+
+
+    'why_close_the_library': {
+      title: 'Sorry, the library is closed',
+      date: '17/05/2026',
+      status: 'NEW !!',
+      sections: [
+        {
+          id: '',
+          title: '',
+
+          content:
+          `For those who read as a hobby, when is the last time you remember you did?
+          
+            Opopop- let me guess, it's probably either on a <b>weekend</b> or a <b> week day but after 6pm</b>.
+          
+          Why then are libraries closed at those times?
+          
+          
+          Why are they closed when people are most likely to read?
+
+
+          If an educationnal institution is really made for the students, then it should be open when the students are most likely to use it.
+          I know it's not only made for students, but for the community as well, and that includes the teacher and the staff.
+
+          If you wanna call yourself an institution that serves the students, the library should be open when the students are most likely to use it/need it.
+          And that is not during the day when they have classes.
+
+          Even worse, some schools close their working areas on the weekends.. Do they expect the students to work from their beds?
+          
+          This is sadder when you realise that we sometimes just do because they did (we copy).
+
+          Let's do things for their sake, the educational institution hasn't changed in forever and that says something about how we do things.
+          Collectively, we are slaves of the past, and individually, slaves of the system.
+
+          Free your thinking.
+
+          Leaders of the future are us, the students of now.
+          Only if we agree to be life-long learners.
+          `
+
+          
+        },
+
+        {
+          id: '',
+          title: '',
+          image: {
+            url: '../Images/thinking.jpeg',
+            alt: 'thinking',
+            caption: 'Thinking about this problem',
+            position: 'full',  // Options: 'left', 'right', 'center', 'full'
+          }, 
+          content: ``
+        }
+
+      ]
+    }
 
 
   
