@@ -275,8 +275,11 @@ Of which expressed here, are solely his and do not reflect the views, policies o
       Object.keys(articlesData).reverse().forEach(articleId => {
         const article = articlesData[articleId];
 
+        // Articles flagged "coming soon" are previews only and not yet clickable
+        const isComingSoon = article.status && /coming\s*soon/i.test(article.status);
+
         const card = document.createElement('article');
-        card.className = 'blog-card';
+        card.className = isComingSoon ? 'blog-card blog-card--coming-soon' : 'blog-card';
 
         // Strip HTML tags from title
         const tempDiv = document.createElement('div');
@@ -287,10 +290,15 @@ Of which expressed here, are solely his and do not reflect the views, policies o
         cardTop.className = 'blog-card-top';
 
         const h2 = document.createElement('h2');
-        const link = document.createElement('a');
-        link.href = `template.html#${articleId}`;
-        link.textContent = cleanTitle;
-        h2.appendChild(link);
+        if (isComingSoon) {
+          // Plain title, no link
+          h2.appendChild(document.createTextNode(cleanTitle));
+        } else {
+          const link = document.createElement('a');
+          link.href = `template.html#${articleId}`;
+          link.textContent = cleanTitle;
+          h2.appendChild(link);
+        }
         cardTop.appendChild(h2);
 
         // Right-aligned meta container (badge + date)
@@ -333,9 +341,11 @@ Of which expressed here, are solely his and do not reflect the views, policies o
           }
         }
 
-        card.addEventListener('click', () => {
-          window.location.href = `template.html#${articleId}`;
-        });
+        if (!isComingSoon) {
+          card.addEventListener('click', () => {
+            window.location.href = `template.html#${articleId}`;
+          });
+        }
 
         listElement.appendChild(card);
       });

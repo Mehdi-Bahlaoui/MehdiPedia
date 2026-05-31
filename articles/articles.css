@@ -27,6 +27,21 @@
   text-shadow: 0 0 6px rgba(51, 102, 204, 0.2);
 }
 
+.article-badge--coming {
+  color: #8e44ad;
+  text-shadow: 0 0 6px rgba(142, 68, 173, 0.2);
+}
+
+/* Coming-soon articles are previews only — not yet clickable */
+.blog-card--coming-soon {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.blog-card--coming-soon h2 {
+  color: var(--text-color);
+}
+
 
 @media (max-width: 1200px) {
   .section-row,

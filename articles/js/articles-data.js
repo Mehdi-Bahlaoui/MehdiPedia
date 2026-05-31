@@ -1335,7 +1335,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
     'why_close_the_library': {
       title: 'Sorry, the library is closed',
-      date: '17/05/2026',
+      date: '30/05/2026',
       status: 'NEW !!',
       sections: [
         {
@@ -1388,7 +1388,121 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
         }
 
       ]
-    }
+    },
+
+
+
+          'Enterpreurship':
+          {
+            title: '<b>Entrepreneurship: A different perspective</b>',
+            date: '31/05/2026',
+            status: 'NEW !!',
+            sections: [
+              {
+                id: 'intro',
+                title: 'Introduction',
+                content: 
+                `Young and passionate people like you think of enterpreunership as a way to make it big | make a lot of money | protect their freedom.
+
+                <b>Nice!</b>
+                
+                What if none of these reasons motivate you anymore or enough?
+
+                You just can't seem to get that push anymore, or you perhaps never got it from those motives.
+                
+                If that's the case, then you might want to look at this.
+
+                Below I propose a reason you might have never heard of, to become an entrepreneur:
+                
+
+
+                `
+              },
+
+
+
+              {
+              id : 'piss_off_big_companies',
+              title: '<b>You\'re young and have nothing to lose, Big companies do.</b>',
+              content: 
+
+              `  Would you resonate with the goal to piss of big companies?
+
+                  To be a menace to them. hhh menlekher atkoun mrid haha.
+
+                  They already win a lot of money, what if you came and disturbed a whole market, and made all those poor companies think it all over.
+                  You'll be the sole reason a bunch of people will join that online meeting, to discuss how they could be safe from your actions.
+                  You'll make a bunch of companies' business models outdated.
+                  
+                  When you launched, you caused such a headache.
+                  
+                  Though you have nothing to lose so you are ruthless, bold,
+                  They have to do something about you if they do not want to lose their market share.
+                  You are a threat to them, but you're just foing it for fun!
+
+                  Morally, this stands because you'll simply create a better product.
+                  It's combining pettiness and impact hh. 
+
+
+                  But Mehdi.. Why do this?
+                  - It's much more fun! add a second reason, some of us are motivated by the human impact. xD
+
+                  Perhaps a sense of importance is what will motivate you and me the most? What do you think? 
+                  
+                  You'll be that CEO that talks shit for fun, and that is extreamly exciting to me.
+
+
+                  And since you have nothing to lose, you can take risks, and infact you'll have I claim.
+                  The risks should not threaten your current situation/position though.
+                  The risks I am talking about is with your time, image, and maybe money.
+                  (This is why this is mainly for the young)
+
+                  You can be innovative, you can be disruptive, you can be different, and you have to.
+                  Invent a light hearted conflict, never hurt someone or do what is morally bad.
+
+                  Here I am suggesting to be a menace, in a good way.
+                  A smirk face is what defines the vibe of this.
+                  
+                  
+                  `
+
+              },
+              {
+                id: 'conclusion',
+                title: '<b>Conclusion</b>',
+                content: 
+                `Basically your goal is to piss of any big company, if they take it serious, go out there and make a better product just for fun.
+                  Fuck around and find out ahahah
+                  
+                  When shit gets serious you can always sell your company, and repeat the process.`
+              }
+                 
+
+
+          ]
+},
+    'club_president?'
+      : {
+        title: 'What does it take to be a club president?',
+        date: '31/05/2026',
+        status: 'Coming soon!!',
+        sections: [
+          {
+            id: 'intro',
+            title: 'Introduction',
+            content: 
+            `I have been the president of the Robotics Club at ENSAM for 1 year. during the 2023-2024 period.
+            I was in my second year of pre-engineering.
+            I learned a lot, and I am grateful for the experience
+            WIth this artice I hopE to share some of the insights to students who are interested in taking on such a role, or who are just curious about it. :)
+            
+            
+            
+            
+          
+            `}]
+          },
+            
 
 
   
