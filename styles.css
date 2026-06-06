@@ -1715,6 +1715,38 @@ body {
   visibility: visible;
 }
 
+/* GIF-on-hover term (Tenor-style inline reveal) */
+.gif-term {
+  position: relative;
+  cursor: context-menu;
+  text-decoration: underline dotted;
+  text-decoration-color: rgba(39, 108, 204, 0.8); /* blue dotted line */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2.7px; /* thicker dots */
+}
+
+.gif-term .gif-pop {
+  position: absolute;
+  bottom: calc(100% + 8px); /* float above the word with a small gap */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  max-width: 70vw; /* stay inside the column on small screens */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1000;
+  pointer-events: none; /* never interferes with the text */
+}
+
+.gif-term:hover .gif-pop {
+  opacity: 1;
+  visibility: visible;
+}
+
 .music-final-btn {
   border-color: #28a745;
   color: #28a745;

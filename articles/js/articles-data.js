@@ -1336,7 +1336,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     'why_close_the_library': {
       title: 'Sorry, the library is closed',
       date: '30/05/2026',
-      status: 'NEW !!',
+      status: '',
       sections: [
         {
           id: '',
@@ -1396,7 +1396,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           {
             title: '<b>Entrepreneurship: A different perspective</b>',
             date: '31/05/2026',
-            status: 'NEW !!',
+            status: ' ',
             sections: [
               {
                 id: 'intro',
@@ -1484,7 +1484,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     'club_president?'
       : {
         title: 'What does it take to be a club president?',
-        date: '31/05/2026',
+        date: '01/06/2026',
         status: 'Coming soon!!',
         sections: [
           {
@@ -1494,7 +1494,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             `I have been the president of the Robotics Club at ENSAM for 1 year. during the 2023-2024 period.
             I was in my second year of pre-engineering.
             I learned a lot, and I am grateful for the experience
-            WIth this artice I hopE to share some of the insights to students who are interested in taking on such a role, or who are just curious about it. :)
+            With this artice I hopE to share some of the insights to students who are interested in taking on such a role, or who are just curious about it. :)
             
             
             
@@ -1503,7 +1503,65 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             `}]
           },
             
+'bad_days': {
+  title: 'How to get through the bad days without losing your mind',
+  date: '06/06/2026',
+  status: 'NEW !!',
+  sections: [
+    {
+      id: 'intro',
+      title: '',
+      content: 
+      ` You're having a bad day.. for some fucking reason,
 
+      You're pissed.
+      Just the night before you couldn't sleep with excitement AND NOW?
+      You're weak and groggy, internally negotiating permission to feel happy.
+      Your mind replies back with negative stuff, you don't know why.
+      You slept well though.. why do I feel like this you ask yourself.. no clue.
+      
+      You're still pissed at your situation, this makes things worse.
+      Your mind was not feeling good apparently and now that you've acknowledged it, you've solidified the misery.
+      
+      You try to think it out, find a logical reason for why you should be happy or reason that it doesn't make sense that just 8 hours ago you felt great...
+      
+      It doesn't work out, you can't seem to get over it.
+      
+      <span class="gif-term">Your mood has always been out of your control yet you still try to control it.<img class="gif-pop" src="https://media.tenor.com/Bom1VPMuY-IAAAAM/obama-confused.gif" alt="" loading="lazy"></span>
+
+      `},
+      {
+
+        id: 'solution',
+        title: 'So what should you do?',
+        content:
+
+
+      `
+      I propose the following startegy:
+      
+      <span class="font-philo" style="font-size: 22px" <b>Fake it 'till you make it.</b> </span>
+
+      I think there is no way around this problem than to fake it.
+      You can't and shouldn't try to reason it through, you'll just burn yourself out.
+
+      Especially right after waking up, I think there are better things to waste your willpower at.
+
+      For this, I suggest to already consider yourself happy and ready to tackle the day.
+      Some say action comes before motivation, I don't know if that's true but it works.
+      So let's pretend to have it all figured out, after all, the goal is not to have it all figured out, but to have it lived it out.
+
+      `},
+      {
+        id: 'conclusion',
+        title: 'So just do it.',
+        content:
+       `You're not a fraud, you're just deciding to get through it.
+      And that is much more impressive imo. 
+
+
+      `}]
+    },
 
   
 
