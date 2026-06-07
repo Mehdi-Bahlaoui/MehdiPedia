@@ -1540,7 +1540,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       `
       I propose the following startegy:
       
-      <span class="font-philo" style="font-size: 22px" <b>Fake it 'till you make it.</b> </span>
+      <span class="font-philo" style="font-size: 22px" <b>Fake it 'till you feel it.</b> </span>
 
       I think there is no way around this problem than to fake it.
       You can't and shouldn't try to reason it through, you'll just burn yourself out.
