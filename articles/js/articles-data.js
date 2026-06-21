@@ -901,7 +901,7 @@ love~
       title: '',
       content: 
       
-`I just realised this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
+`I just realized this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
 
 I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Altough I like it when I do solve problems!) but when shit gets real, I start questionning everything. YOu could maybe give me the same task but one asks for a clear working prototype, something easily mesurable, moving, real. and that would motivate me immensly.
 I believe this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.
@@ -1361,7 +1361,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
           Even worse, some schools close their working areas on the weekends.. Do they expect the students to work from their beds?
           
-          This is sadder when you realise that we sometimes just do because they did (we copy).
+          This is sadder when you realize that we sometimes just do because they did (we copy).
 
           Let's do things for their sake, the educational institution hasn't changed in forever and that says something about how we do things.
           Collectively, we are slaves of the past, and individually, slaves of the system.
@@ -1481,32 +1481,12 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
           ]
 },
-    'club_president?'
-      : {
-        title: 'What does it take to be a club president?',
-        date: '01/06/2026',
-        status: 'Coming soon!!',
-        sections: [
-          {
-            id: 'intro',
-            title: 'Introduction',
-            content: 
-            `I have been the president of the Robotics Club at ENSAM for 1 year. during the 2023-2024 period.
-            I was in my second year of pre-engineering.
-            I learned a lot, and I am grateful for the experience
-            With this artice I hopE to share some of the insights to students who are interested in taking on such a role, or who are just curious about it. :)
-            
-            
-            
-            
-          
-            `}]
-          },
+
             
 'bad_days': {
   title: 'How to get through the bad days without losing your mind',
   date: '06/06/2026',
-  status: 'NEW !!',
+  status: '',
   sections: [
     {
       id: 'intro',
@@ -1563,7 +1543,170 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       `}]
     },
 
-  
+    'club_president?'
+      : {
+        title: 'What does it take to be a club president?',
+        date: '01/06/2026',
+        status: 'New !!',
+        sections: [
+          {
+            id: 'intro',
+            title: 'Introduction',
+          
+          image: {
+            url: '../../Images/roboticore/bach.jpg',
+            alt: '',
+            caption: 'The Robotics Club at ENSAM Rabat, the place where I spent a lot of my time and for which I\'m very grateful.',
+            position: 'center',  // Options: 'left', 'right', 'center', 'full'
+            width: '800px'       // Optional: custom width
+          },
+            content: 
+            `I was the president of RobotiCore for just a little over 1 year, during the 2023-2024 period.
+            I have been a member of it prior to that for 2 years.
+
+            At the time of writing this article, I have a little over 2 years of reflection on my presidency and I hope by sharing my experiences, I can give students (or future presidents) a glimpse of what it is like to lead one of the best (if not the best) and largest club at ENSAM Rabat.
+            
+            `
+          },
+                      
+            {
+            id: 'good',
+            title: 'The Good',
+            image: {
+              url: '../../Images/roboticore/atelier.jpg',
+              alt: '',
+              caption: '2:54 AM. No one is around (except from Prof. Oubrek), surrounded by machines and tools, enjoying the endless possibility of what I can create this evening',
+              position: 'right',  // Options: 'left', 'right', 'center', 'full'
+            },
+            content: 
+            `Usually, we become president because we want to.
+            What could you gain from it?
+             
+            Some people do it for recognition and respect from peers, or from the school in general.
+            Some do it for a new reason to be proud of themselves.
+
+            It could be for the sake of the club, to make it better, to make it more known, to make it more impactful.
+            
+            Some prefer the exposure it provides: talk to students you wouldn't normally interact with, meet experts or mentors, and learn from them.
+
+            It could stem from wanting to lead a group.
+
+            Or just a way to fill your time with something meaningful.
+
+            It is a great way to integrate yourself into the technical community worldwide, and to have access to your club's hardware and software.
+            
+            A way to be able to attend events and conferences and participate in competitions
+
+            Some do it for fame but that is not worth it.
+            
+            And some do it to leave a legacy, to be responsible for something and be remembered for acheiving it.
+
+            Whatever your reason is, cherish it, but not too much, as your obligation is to the club, not to yourself, and you should be able to sacrifice your own wants and desires for the sake of the club, and that is what makes a good president.
+
+            If you cannot do that, then you should not be a president.
+
+            `},
+
+            {
+            id: 'bad',
+            title: 'The Bad',
+            image: {
+              url: '../../Images/roboticore/old-place.jpg',
+              alt: '',
+              caption: 'Kicked out of our dedicated space to a temporary one, forced to move all our stuff with short notice, no one is available to help, this is when you, as president, step up and do the work without complaining because this time if you don\'t do it, no one will',
+              position: 'center',  // Options: 'left', 'right', 'center', 'full'
+              width: '800px'       // Optional: custom width
+            },  
+            content: 
+            `
+            Apart from the fact that most of the resposibilty is on you, you realize first, that as president, you suddenly have no time to indulge deep in the technical stuff, you have to be more of a manager, and that is probably not what you signed up for.
+
+            Administratively, you have to deal and pay thought to a lot of people.
+            This, by itself, is not bad. But very quickly takes a bad turn when inevitably you realize, that some people are very unpleasant, inconsiderate and mean.
+            You will have to consistently trade your mood for the club's sake. This can be tiring.
+            
+            With fame comes jealousy, and with jealousy comes drama.
+            Drama is a part of the job and will be a big part.
+            It will come at you from all sides.
+
+            The school will not give you the respect you deserve, and will not make your life easier, in fact, they will make it harder.
+            You will realize that the school is not your friend, and that they will not support you unless they see a clear benefit for them.
+            You will realize that your events could be 10x better simply if the school wasn't so difficult to deal with.
+            You will have to deal with a lot of bureaucracy, and bureaucracy kills creativity.
+            
+            Your student association will not be your friend neither.
+            You thought they were there to help you.. you are right, but they might (and will) loose themselves also.
+            and they'll end up against you.
+            After all, they say, you are a part us, not the way around, so we need to control you.
+            Not to say, if you shine too much, they won't like it..
+
+            And, you won't always be the good guy neither.
+            Stress and pressure will make you do things you don't want to do, and that is also part of the game.
+            You will misbehave, you're not perfect. You need to regularly take time to reflect on your actions.
+            You will find yourself in lose-lose situations, and you will dissapoint some people maybe even yourself sometimes.
+            You might unintentionally hurt some people, and that is also a part of the game.
+                        
+            Not everyone is mature enough to deal with healthy competiton.
+            Some people will fight it with harsh words, some will literally fight you lol.
+            
+            It's a whole new world of social interactions, and you need to be ready for it!
+            
+
+            `},
+            {
+            id: 'ugly',
+            title: 'The Ugly',
+            content: 
+            `The ugliest trait is to be a control freak, with your interraction with other club leaders/presidents, you will see that, and probably be repulsed by it.
+
+            In your negotiations, you will deal with people that do not look at the big picture, and that only care about their own interests, and that is also very ugly.
+
+            Worse, people that do not meet halfway.. this is ugly on top of dumb.
+            If you study just a little psychology, you will understand that a compromise goes a long way.
+            
+            A compromise is not a sign of weakness, but a sign of intelligence and maturity.
+            Usually it is a win-win for both parties, worst case, a win for you in the long run.
+
+            Some people will never apologize and you will learn to deal with it.
+            
+            Some will treat you as a friend only when they need you.
+
+            Some people will team-up against you, and that is weak + ugly.
+
+            Some of your friends will turn to your enemies, and you could never have imagined that.
+            
+            `},
+
+                        {
+            id: 'conclusion',
+            title: 'Conclusion',
+            content: 
+            `To wrap up,
+            Being a club president will open your eyes to a whole new world of social interactions.
+
+            You will begin to understand that everything is a transaction and that most people are driven by their own interests.
+
+            You will understand that you need to be strong and courageous because you will most definetly face bullies and haters.
+
+            You need to not let this affect your grades at school, after all if you get expelled, you won't be able to do anything for the club, and you won't be able to do anything for yourself either.
+
+            You need to control your ego, every interraction is filled with ego. Next time that you are in an important interraction, try to monitor how you feel.
+            You will be surprised by how your emotions are all over the place, and how they affect your decisions in real time.
+
+            Always have the club's best interest in mind, because you are its president: it's your job.
+            Always remember that you will be gaining from this experience far more than what you could ever give the club back, so always be grateful and giving.
+
+            You have on your shoulder a club's legacy, you need to protect it and that is your number one goal.
+
+            Finally, live by the truth, and only do what is right -not easy, for an easy way out is a cowards' move.
+
+            `},
+
+          
+          
+          
+          ]
+          },
 
 
 
