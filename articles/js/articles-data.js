@@ -1546,7 +1546,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     'club_president?'
       : {
         title: 'What does it take to be a club president?',
-        date: '01/06/2026',
+        date: '21/06/2026',
         status: 'New !!',
         sections: [
           {
