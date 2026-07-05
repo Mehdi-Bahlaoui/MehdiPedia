@@ -1327,11 +1327,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     
     ]
 
-
-
-
     },
-
 
     'why_close_the_library': {
       title: 'Sorry, the library is closed',
