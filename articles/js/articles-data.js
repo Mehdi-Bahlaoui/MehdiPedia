@@ -1336,7 +1336,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     'why_close_the_library': {
       title: 'Sorry, the library is closed',
       date: '30/05/2026',
-      status: '',
+      status: 'Updated !',
       sections: [
         {
           id: '',
@@ -1345,7 +1345,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           content:
           `For those who read as a hobby, when is the last time you remember you did?
           
-            Opopop- let me guess, it's probably either on a <b>weekend</b> or a <b> week day but after 6pm</b>.
+          Opopop- let me guess, it's probably either on a <b>weekend</b> or a <b> week day but after 6pm</b>.
           
           Why then are libraries closed at those times?
           
@@ -1354,22 +1354,15 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
 
           If an educationnal institution is really made for the students, then it should be open when the students are most likely to use it.
-          I know it's not only made for students, but for the community as well, and that includes the teacher and the staff.
+          I know it's not only made for students, but for the community as well, and that includes the teacher and the staff, but that is not valid reason to close it, and bringing up other reasons is actively missing the point.
 
-          If you wanna call yourself an institution that serves the students, the library should be open when the students are most likely to use it/need it.
+          For an institution to serve the students, its library should be open when its students are most likely to use it/need it.
           And that is not during the day when they have classes.
 
           Even worse, some schools close their working areas on the weekends.. Do they expect the students to work from their beds?
           
-          This is sadder when you realize that we sometimes just do because they did (we copy).
-
-          Let's do things for their sake, the educational institution hasn't changed in forever and that says something about how we do things.
-          Collectively, we are slaves of the past, and individually, slaves of the system.
-
-          Free your thinking.
-
-          Leaders of the future are us, the students of now.
-          Only if we agree to be life-long learners.
+          Collectively, we are slaves of the past; the educational institution hasn't changed in forever.
+          And individually, we are slaves of the system.
           `
 
           
@@ -1381,7 +1374,9 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           image: {
             url: '../Images/thinking.jpeg',
             alt: 'thinking',
-            caption: 'Thinking about this problem',
+            caption: 
+            'Leaders of the future are us, the students of now. Only if we actively chose to make the change. \n But how much are we willing to sacrifice for it?',
+
             position: 'full',  // Options: 'left', 'right', 'center', 'full'
           }, 
           content: ``
@@ -1547,7 +1542,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       : {
         title: 'What does it take to be a club president?',
         date: '21/06/2026',
-        status: 'New !!',
+        status: '',
         sections: [
           {
             id: 'intro',
@@ -1706,7 +1701,27 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           
           
           ]
-          },
+    },
+
+    'rise_of_the_illuminati_and_what_it_has to_do_with_morocco': {
+      title: 'Rise of the Illuminati and what it has to do with Morocco',
+      date: '05/07/2026',
+      status: 'Coming Soon',
+      sections: [
+        {
+          id: 'intro',
+          title: 'Introduction',
+          content: 
+          `The thought that something like the illuminaty exists on an international scale is, or atleast can be, judged not so far from reality.
+
+In Morocco, more and more, I\'ve been having experiences of random aquaintances telling me about their findings regarding that, but what\'s interesting is that they do not refer to the global illuminaty network but that there is a smaller one in Morocco, where a handful of people connected or not to the global one are making the poor citizens endure what their heart desires.
+In all honestly, I see this as a lack of awareness. Unfortunately as you will see, the converstaions I will reveal here are between individuals with not much of an academic background.
+It looks like that the emotionnal heaviness of the situation is too much to handle to the point one goes to extraordinary mesures to explain the environement they are in. This is sad to see and I hope no one reaches this mild level of insanity.
+
+      `}]
+        },
+
+
 
 
 
