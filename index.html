@@ -11,6 +11,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="origin">
 
+  <!-- SEO -->
+  <meta name="description" content="The personal website of Mehdi Bahlaoui, styled as a Wikipedia page: biography, essays, original music, and interactive experiments.">
+  <link rel="canonical" href="https://mehdibahlaoui.pro/">
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Mehdi Bahlaoui">
+  <meta property="og:title" content="Mehdi Bahlaoui">
+  <meta property="og:description" content="The personal website of Mehdi Bahlaoui, styled as a Wikipedia page: biography, essays, original music, and interactive experiments.">
+  <meta property="og:url" content="https://mehdibahlaoui.pro/">
+  <meta property="og:image" content="https://mehdibahlaoui.pro/Images/image2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mehdibahlaoui.pro/#person",
+        "name": "Mehdi Bahlaoui",
+        "url": "https://mehdibahlaoui.pro/",
+        "image": "https://mehdibahlaoui.pro/Images/image2.jpg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mehdibahlaoui.pro/#website",
+        "url": "https://mehdibahlaoui.pro/",
+        "name": "Mehdi Bahlaoui",
+        "description": "The personal website of Mehdi Bahlaoui, styled as a Wikipedia page: biography, essays, original music, and interactive experiments.",
+        "publisher": { "@id": "https://mehdibahlaoui.pro/#person" }
+      }
+    ]
+  }
+  </script>
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
@@ -24,7 +65,7 @@
 
   <script src="script.js" defer></script>
 
-  <link rel="prefetch" href="articles/globe_article/globe/704496ede9d7912d.wasm" as="fetch" type="application/wasm">
+  <!-- Globe WASM is prefetched in the background by script.js (see GLOBE WASM BACKGROUND PREFETCH) -->
 
 </head>
 
@@ -371,7 +412,7 @@ Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy
             </div>
             <div class="section-images">
               <div class="image_container">
-                <img class="profile-image" src="Images/childhood.jpg" alt="Young Mehdi">
+                <img class="profile-image" src="Images/childhood.jpg" alt="Young Mehdi" loading="lazy" decoding="async">
                 <div class="text_of_image_container">
                   <p><i>Mehdi and his best friend Kahoua <br> in primary school</i></p>
                 </div>
@@ -430,7 +471,7 @@ Why would he?
             </div>
             <div class="section-images">
               <div class="image_container">
-                <img class="profile-image" src="Images/boss.jpg" alt="Young Mehdi">
+                <img class="profile-image" src="Images/boss.jpg" alt="Young Mehdi" loading="lazy" decoding="async">
                 <div class="text_of_image_container">
                   <p><i>Mehdi, inside class, taking an exam with sunglasses on</i></p>
                   <!-- <p>Mehdi taking his exam in sunglasses because he is too good at this shit</p> -->
@@ -461,7 +502,7 @@ But the turning point came when he met his <a class="links" href="https://en.wik
 
             <div class="section-images" style="margin-top: 15px;">
               <div class="image_container">
-                <img class="profile-image" src="Images/cooking.jpg" alt="Rapper Mehdi">
+                <img class="profile-image" src="Images/cooking.jpg" alt="Rapper Mehdi" loading="lazy" decoding="async">
                 <div class="text_of_image_container">
                   <p><i>Mehdi at the Music and Art Club cooking up his next song</i></p>
                 </div>
@@ -513,7 +554,7 @@ They came raw, fast, and honest. People listened because it felt real, and becau
               <br><br>
               </div class="section-images">
                 <div class="image_container">
-                  <img class="profile-image" src="Images/watch.jpeg" alt="Mehdi's watch">
+                  <img class="profile-image" src="Images/watch.jpeg" alt="Mehdi's watch" loading="lazy" decoding="async">
                   <div class="text_of_image_container">
                     <p><i>Watch always 15 minutes ahead</i></p>
                   </div>
@@ -566,7 +607,7 @@ The articles serve as an extension of his philosophical inquiries, structured th
 
             </div>
             <!-- <div class="section-images">
-              <img src="Images/Ait Archine.jpeg" alt="Mohamed Ait Archine">
+              <img src="Images/Ait Archine.jpeg" alt="Mohamed Ait Archine" loading="lazy" decoding="async">
             </div> -->
           </div>
         </div>
@@ -626,7 +667,7 @@ The articles serve as an extension of his philosophical inquiries, structured th
 
 <!-- ========== SHARED FOOTER START ========== -->
 <!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
-<!-- Last updated: 2026-01-07 -->
+<!-- Last updated: 2026-07-07 -->
 <!-- Variation: Content differences (last edited date, disclaimer text) -->
 
 <footer class="wiki-footer">
@@ -650,7 +691,7 @@ The articles serve as an extension of his philosophical inquiries, structured th
 
       <div class="footer-text">
         <p>
-          This page was last edited on 17 April 2026, at 16:29 (GMT).
+          This page was last edited on 7 July 2026, at 20:38 (GMT+1).
         </p>
         <p>
           This website is a personal project and is not affiliated with or endorsed by Wikipedia or the Wikimedia
@@ -661,10 +702,9 @@ The articles serve as an extension of his philosophical inquiries, structured th
         </p>
         <p>
           All content on this site is original unless stated otherwise.
-          Text is <strong>not</strong> available under the
-          <a href="#">Creative Commons Attribution-ShareAlike License 4.0</a>.
-          By using this site, you do <strong>not</strong> agree to any <a href="#">Terms of Use</a> or
-          <a href="#">Privacy Policy</a>
+          Text is available under the
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license">Creative Commons
+            Attribution-ShareAlike License 2.0</a>; additional terms may apply.
         </p>
       </div>
 

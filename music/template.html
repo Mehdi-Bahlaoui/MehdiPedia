@@ -11,6 +11,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="origin">
 
+  <!-- SEO (title/description are refined per-song by music-player.js) -->
+  <meta name="description" content="A track by Mehdi Bahlaoui with time-synced lyrics and Genius-style annotations.">
+  <link rel="canonical" href="https://mehdibahlaoui.pro/music/template.html">
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="music.song">
+  <meta property="og:site_name" content="Mehdi Bahlaoui">
+  <meta property="og:title" content="Music - Mehdi Bahlaoui">
+  <meta property="og:description" content="A track by Mehdi Bahlaoui with time-synced lyrics and Genius-style annotations.">
+  <meta property="og:url" content="https://mehdibahlaoui.pro/music/template.html">
+  <meta property="og:image" content="https://mehdibahlaoui.pro/Images/image2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Favicon & Touch Icons -->
   <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
@@ -261,8 +279,12 @@
     </div>
 
     <div class="controls-right">
-      <button class="control-btn" id="volumeBtn">&#128266;</button>
-      <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="8">
+      <button class="control-btn" id="volumeBtn" aria-label="Mute">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+      </button>
+      <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="100">
     </div>
 
     <audio id="audioPlayer" preload="metadata"></audio>
@@ -272,7 +294,7 @@
 
 <!-- ========== SHARED FOOTER START ========== -->
 <!-- SYNC: This footer is duplicated in index.html, articles.html, music/music.html, music/template.html, articles/template.html -->
-<!-- Last updated: 2026-01-30 -->
+<!-- Last updated: 2026-07-07 -->
 
 <footer class="wiki-footer">
   <div class="footer-content">
@@ -289,7 +311,12 @@
       </div>
 
       <div class="footer-text">
-        <p>This page was last edited on 30 January 2026, at 12:00 (GMT+1).</p>
+        <p>This page was last edited on 7 July 2026, at 20:38 (GMT+1).</p>
+        <p>
+          Text is available under the
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license">Creative Commons
+            Attribution-ShareAlike License 2.0</a>; additional terms may apply.
+        </p>
         <p>
           This website is a personal project and is not affiliated with or endorsed by Wikipedia or the Wikimedia
           Foundation.

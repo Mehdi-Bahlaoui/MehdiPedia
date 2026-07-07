@@ -209,6 +209,17 @@
   box-shadow: 0 2px 8px var(--shadow-color, rgba(0, 0, 0, 0.1));
 }
 
+/* Annotation attached to the currently playing line - matches active-line yellow */
+.annotation-card.active-annotation {
+  background-color: rgba(255, 255, 0, 0.12);
+  border-left: 4px solid rgba(255, 255, 0, 0.8);
+}
+
+[data-theme="dark"] .annotation-card.active-annotation {
+  background-color: rgba(255, 255, 0, 0.06);
+  border-left-color: rgba(255, 255, 0, 0.6);
+}
+
 .annotation-header {
   display: flex;
   justify-content: space-between;
@@ -418,6 +429,12 @@
 
 .play-btn {
   font-size: 2em;
+}
+
+/* Volume button uses a flat monochrome SVG glyph instead of an emoji */
+#volumeBtn svg {
+  display: block;
+  fill: currentColor;
 }
 
 /* Hidden audio element */

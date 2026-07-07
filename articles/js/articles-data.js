@@ -1304,8 +1304,11 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       },
       content:
       `Well that's the end of the article,
-      Some final words about how I find the people here, and the activities.
-      You can find some intersting and diverse people here, from different backgrounds, there are alot of event and opportunities to meet new people and to learn new perspectives. How do the students here see the world? What do they think about the future? What are their dreams? Where do they intern lol?
+      Some final words about how I find the people here, and the activities:
+
+      You can find some intersting and diverse people, from different backgrounds.
+      There are a lot of events and opportunities to meet new people and to learn new perspectives.
+      A few questions that stay on my mind: How do the students here see the world? What do they think about the future? What are their dreams? Where do they intern lol?
       
       A lot of activities like I said depending on your comfort level.
       Some quiet ones and some more social ones, You can definitely find something that suits you.

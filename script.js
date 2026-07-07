@@ -323,3 +323,41 @@ window.addEventListener('click', function(event) {
     closeMusicPaywall();
   }
 });
+
+// ============================================
+// GLOBE WASM BACKGROUND PREFETCH
+// script.js is loaded by every page, so this warms the browser cache
+// with the globe article's binary from anywhere on the site - if the
+// visitor then opens the globe article, the WASM is already local.
+// ============================================
+window.addEventListener('load', function () {
+  // The globe page fetches these itself immediately - don't race it.
+  if (document.getElementById('globe-container')) return;
+
+  // Respect constrained connections (data saver / 2G).
+  const conn = navigator.connection;
+  if (conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || ''))) return;
+
+  const globeFiles = [
+    { href: '/articles/globe_article/globe/704496ede9d7912d.js', as: 'script' },
+    { href: '/articles/globe_article/globe/704496ede9d7912d.wasm', as: 'fetch' },
+  ];
+
+  let supportsPrefetch = false;
+  try {
+    supportsPrefetch = document.createElement('link').relList.supports('prefetch');
+  } catch (e) { /* very old browser - fall through to fetch */ }
+
+  globeFiles.forEach(function (file) {
+    if (supportsPrefetch) {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = file.href;
+      link.as = file.as;
+      document.head.appendChild(link);
+    } else {
+      // Safari ignores <link rel="prefetch"> - warm the HTTP cache manually.
+      fetch(file.href, { priority: 'low' }).catch(function () {});
+    }
+  });
+});

@@ -7,6 +7,20 @@
 
 let currentSong = null;
 let currentLyricsArray = [];
+let lastActiveLineId = null;
+
+// Monochrome speaker icons (flat MediaWiki-style glyphs, replace the old emoji)
+const VOLUME_ICON_PATHS = {
+  high: 'M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z',
+  low: 'M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z',
+  muted: 'M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z'
+};
+
+function setVolumeIcon(level) {
+  const volumeBtn = document.getElementById('volumeBtn');
+  if (!volumeBtn) return;
+  volumeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="${VOLUME_ICON_PATHS[level]}"/></svg>`;
+}
 
 function loadSong() {
   try {
@@ -58,9 +72,22 @@ function loadSong() {
       t += line.dur || 0;
     });
     currentLyricsArray = song.lyrics || [];
+    lastActiveLineId = null;
 
     // Update page metadata
     document.title = `${song.title} - ${song.artist} - Mehdi Bahlaoui`;
+
+    // Keep meta description and social/share tags in sync with the loaded song
+    const songDesc = `"${song.title}" by ${song.artist} — lyrics with time-synced annotations.`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = songDesc;
+    const setProperty = (prop, value) => {
+      const el = document.querySelector(`meta[property="${prop}"]`);
+      if (el) el.content = value;
+    };
+    setProperty('og:title', `${song.title} - ${song.artist}`);
+    setProperty('og:description', songDesc);
+    setProperty('og:url', `https://mehdibahlaoui.pro/music/template.html${window.location.hash}`);
 
     // Update page header with song info
     const songTitleEl = document.getElementById('songTitle');
@@ -146,10 +173,7 @@ function renderLyrics(song) {
 
       const firstEl = renderedLines[0] && document.getElementById(renderedLines[0].id);
       if (firstEl) {
-        const containerHeight = lyricsContainer.clientHeight;
-        const lineHeight = firstEl.offsetHeight;
-        const targetScroll = firstEl.offsetTop - containerHeight / 2 + lineHeight / 2;
-        lyricsContainer.scrollTo({ top: Math.max(0, targetScroll), behavior: 'instant' });
+        centerLyricLine(firstEl, 'instant');
       }
     });
 
@@ -168,21 +192,7 @@ function renderLyrics(song) {
         audioPlayer.play();
 
         // Also scroll to matching annotation within sidebar (not the page)
-        const lineId = lineEl.id;
-        const matchingAnnotation = document.querySelector(`.annotation-card[data-line-id="${lineId}"]`);
-        const annotationsSidebar = document.getElementById('annotationsSidebar');
-
-        if (matchingAnnotation && annotationsSidebar) {
-          const annotationOffset = matchingAnnotation.offsetTop;
-          const sidebarHeight = annotationsSidebar.clientHeight;
-          const annotationHeight = matchingAnnotation.offsetHeight;
-          const targetScroll = annotationOffset - 20; // 20px padding from top
-
-          annotationsSidebar.scrollTo({
-            top: targetScroll,
-            behavior: 'smooth'
-          });
-        }
+        syncAnnotationToLine(lineEl.id);
       });
     });
     console.log(`✓ Rendered ${song.lyrics.length} lyric lines`);
@@ -238,23 +248,30 @@ function renderAnnotations(song) {
 
         const lineId = card.dataset.lineId;
         const lyricLine = document.getElementById(lineId);
-        const lyricsContainer = document.getElementById('lyricsContainer');
+        if (!lyricLine) return;
 
-        if (lyricLine && lyricsContainer) {
-          // Fixed offset from top of container
-          const SCROLL_TOP_OFFSET = 400;
-          const lineOffsetInContainer = lyricLine.offsetTop;
-          const targetScroll = lineOffsetInContainer - SCROLL_TOP_OFFSET;
-
-          lyricsContainer.scrollTo({
-            top: Math.max(0, targetScroll),
-            behavior: 'smooth'
+        // Seek playback to the line so the user hears it alongside the annotation
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const startTime = parseFloat(lyricLine.dataset.start);
+        if (audioPlayer && !isNaN(startTime)) {
+          audioPlayer.currentTime = startTime;
+          if (playPauseBtn) playPauseBtn.textContent = '⏸';
+          audioPlayer.play().catch(() => {
+            if (playPauseBtn) playPauseBtn.textContent = '▶';
           });
-
-          // Add temporary highlight
-          lyricLine.classList.add('annotation-focused');
-          setTimeout(() => lyricLine.classList.remove('annotation-focused'), 2000);
         }
+
+        // Center the line and mark this annotation as the active one
+        centerLyricLine(lyricLine);
+        document.querySelectorAll('.annotation-card.active-annotation').forEach(c => {
+          c.classList.remove('active-annotation');
+        });
+        card.classList.add('active-annotation');
+
+        // Add temporary highlight
+        lyricLine.classList.add('annotation-focused');
+        setTimeout(() => lyricLine.classList.remove('annotation-focused'), 2000);
       });
     });
     console.log(`✓ Rendered ${Object.keys(song.annotations).length} annotations`);
@@ -333,16 +350,12 @@ function initializeAudioPlayer(song) {
     }
   });
 
-  // init progress bar and volume
+  // init progress bar and volume - always start at 100% on every device
   progressBarFilled.style.width = `0%`;
   audioPlayer.currentTime = 0;
-  const isMobile = window.matchMedia('(max-width: 850px)').matches;
-  if (isMobile) {
-    audioPlayer.volume = 1;
-    volumeSlider.value = 100;
-  } else {
-    audioPlayer.volume = volumeSlider.value / 100;
-  }
+  audioPlayer.volume = 1;
+  volumeSlider.value = 100;
+  setVolumeIcon('high');
 
   // SYNC ENGINE: Listen to playback time updates (~4 times/second)
   audioPlayer.addEventListener('timeupdate', () => {
@@ -434,7 +447,7 @@ function initializeAudioPlayer(song) {
     if (window.matchMedia('(max-width: 850px)').matches) {
       e.target.value = 100;
       audioPlayer.volume = 1;
-      volumeBtn.textContent = '🔊';
+      setVolumeIcon('high');
       return;
     }
     const volume = e.target.value / 100;
@@ -442,24 +455,27 @@ function initializeAudioPlayer(song) {
 
     // Update volume button icon
     if (volume === 0) {
-      volumeBtn.textContent = '🔇';
+      setVolumeIcon('muted');
     } else if (volume < 0.5) {
-      volumeBtn.textContent = '🔉';
+      setVolumeIcon('low');
     } else {
-      volumeBtn.textContent = '🔊';
+      setVolumeIcon('high');
     }
   });
 
-  // Mute/unmute on volume button click
+  // Mute/unmute on volume button click - restore previous level on unmute
+  let volumeBeforeMute = 1;
   volumeBtn.addEventListener('click', () => {
     if (audioPlayer.volume === 0) {
-      audioPlayer.volume = 0.3;
-      volumeSlider.value = 30;
-      volumeBtn.textContent = '🔊';
+      const restored = volumeBeforeMute > 0 ? volumeBeforeMute : 1;
+      audioPlayer.volume = restored;
+      volumeSlider.value = Math.round(restored * 100);
+      setVolumeIcon(restored < 0.5 ? 'low' : 'high');
     } else {
+      volumeBeforeMute = audioPlayer.volume;
       audioPlayer.volume = 0;
       volumeSlider.value = 0;
-      volumeBtn.textContent = '🔇';
+      setVolumeIcon('muted');
     }
   });
 
@@ -499,6 +515,37 @@ function initializeAudioPlayer(song) {
       window.location.hash = songIds[currentIndex + 1];
     }
   });
+}
+
+// Center a lyric line inside the lyrics container.
+// Uses getBoundingClientRect deltas instead of offsetTop: neither container is a
+// positioned ancestor, so offsetTop is measured against the page, not the scroller.
+function centerLyricLine(lineEl, behavior = 'smooth') {
+  const container = document.getElementById('lyricsContainer');
+  if (!container || !lineEl) return;
+  const delta = lineEl.getBoundingClientRect().top - container.getBoundingClientRect().top;
+  const target = container.scrollTop + delta - container.clientHeight / 2 + lineEl.offsetHeight / 2;
+  container.scrollTo({ top: Math.max(0, target), behavior });
+}
+
+// Scroll the annotations sidebar so the card for lineId sits near the top,
+// and highlight it as the active annotation. No-op if the line has no annotation.
+function syncAnnotationToLine(lineId) {
+  const card = document.querySelector(`.annotation-card[data-line-id="${lineId}"]`);
+
+  // Always clear first so a card unfocuses once playback passes its line
+  document.querySelectorAll('.annotation-card.active-annotation').forEach(c => {
+    c.classList.remove('active-annotation');
+  });
+  if (!card) return;
+
+  card.classList.add('active-annotation');
+
+  const sidebar = document.getElementById('annotationsSidebar');
+  if (!sidebar) return;
+  const delta = card.getBoundingClientRect().top - sidebar.getBoundingClientRect().top;
+  const target = sidebar.scrollTop + delta - 20; // 20px padding from top
+  sidebar.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
 }
 
 // SYNC ENGINE: Core logic for highlighting current lyric
@@ -545,23 +592,20 @@ function highlightActiveLine(currentTime) {
   });
 
   // Highlight + center-scroll active line
-  const lineElement = document.getElementById(renderedLines[activeIndex].id);
+  const activeLineId = renderedLines[activeIndex].id;
+  const lineElement = document.getElementById(activeLineId);
   if (lineElement) {
     lineElement.classList.add('active-line');
 
-    const lyricsContainer = document.getElementById('lyricsContainer');
-    if (lyricsContainer) {
-      clearTimeout(lineElement.dataset.scrollTimeout);
-      lineElement.dataset.scrollTimeout = setTimeout(() => {
-        const containerHeight = lyricsContainer.clientHeight;
-        const lineHeight = lineElement.offsetHeight;
-        const targetScroll = lineElement.offsetTop - containerHeight / 2 + lineHeight / 2;
+    clearTimeout(lineElement.dataset.scrollTimeout);
+    lineElement.dataset.scrollTimeout = setTimeout(() => {
+      centerLyricLine(lineElement);
+    }, 50);
 
-        lyricsContainer.scrollTo({
-          top: Math.max(0, targetScroll),
-          behavior: 'smooth'
-        });
-      }, 50);
+    // When focus moves to a new line, bring its annotation along (if it has one)
+    if (activeLineId !== lastActiveLineId) {
+      lastActiveLineId = activeLineId;
+      syncAnnotationToLine(activeLineId);
     }
   }
 }

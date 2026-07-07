@@ -144,7 +144,18 @@ function updatePageMetadata(article) {
     document.head.appendChild(metaDesc);
   }
 
-  metaDesc.content = article.description || article.title;
+  // Article titles/descriptions may contain HTML - strip it for meta tags
+  const plainTitle = article.title.replace(/<[^>]*>/g, '');
+  metaDesc.content = (article.description || plainTitle).replace(/<[^>]*>/g, '');
+
+  // Keep social/share tags in sync with the loaded article
+  const setProperty = (prop, value) => {
+    const el = document.querySelector(`meta[property="${prop}"]`);
+    if (el) el.content = value;
+  };
+  setProperty('og:title', `${plainTitle} - Mehdi Bahlaoui`);
+  setProperty('og:description', metaDesc.content);
+  setProperty('og:url', `https://mehdibahlaoui.pro/articles/template.html${window.location.hash}`);
 }
 
 /* =========================

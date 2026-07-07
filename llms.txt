@@ -1,0 +1,36 @@
+# Mehdi Bahlaoui
+
+> Personal website of Mehdi Bahlaoui, styled as a Wikipedia page. It hosts his biography, a collection of personal essays, original music with synced lyrics and annotations, and interactive experiments such as a 3D globe built with Rust/Bevy compiled to WebAssembly.
+
+The site is a static HTML/CSS/JavaScript project with no build system. Articles and songs are rendered client-side from JavaScript data files, and individual pieces are addressed with URL hash fragments (e.g. `template.html#job`), so fetching a template URL without executing JavaScript returns the empty shell rather than the content. The raw content lives in `articles/js/articles-data.js` and `music/js/music-data.js`.
+
+## Pages
+
+- [Biography](https://mehdibahlaoui.pro/): Wikipedia-style profile — early life, work, interests, and personal lore
+- [Written works](https://mehdibahlaoui.pro/articles/articles.html): index of all essays and articles
+- [Music](https://mehdibahlaoui.pro/music/music.html): track listing with a Genius-style player (synced lyrics + annotations)
+- [Interactive globe](https://mehdibahlaoui.pro/articles/globe_article/globe.html): 3D globe experiment built with Rust and Bevy, running in the browser via WebAssembly
+
+## Articles
+
+- [Should you really do what you love as your job?](https://mehdibahlaoui.pro/articles/template.html#job): 2 Aug 2025
+- [A different way to live life: An NPC approach](https://mehdibahlaoui.pro/articles/template.html#npc): 8 Aug 2025
+- [Why I'm Actually Black](https://mehdibahlaoui.pro/articles/template.html#black): 10 Nov 2025
+- [There is a fine line between lowering your ego and respecting yourself](https://mehdibahlaoui.pro/articles/template.html#ego): 23 Nov 2025
+- [I'm not addicted to coffee, YOU ARE](https://mehdibahlaoui.pro/articles/template.html#coffee): 12 Dec 2025
+- [What relationship is there between your sleeping self and you?](https://mehdibahlaoui.pro/articles/template.html#dream): 19 Dec 2025
+- [People can't listen anymore](https://mehdibahlaoui.pro/articles/template.html#Listening): 5 Jan 2026
+- [A Letter to myself](https://mehdibahlaoui.pro/articles/template.html#Letter_to_my_self): 12 Jan 2026
+- [My eyes are out of focus](https://mehdibahlaoui.pro/articles/template.html#My_eyes_are_out_of_focus): 12 Feb 2026
+- [I uninstalled WhatsApp](https://mehdibahlaoui.pro/articles/template.html#no_wtsp): 21 Feb 2026
+- [UM6P in 2026](https://mehdibahlaoui.pro/articles/template.html#UM6P): 17 May 2026
+
+## Music
+
+- [Welcome to Rap-Battle](https://mehdibahlaoui.pro/music/template.html#welcome-to-rap-battle): original track by Mehdi Bahlaoui with time-synced lyrics and annotations
+
+## Optional
+
+- [UDPCore privacy policy](https://mehdibahlaoui.pro/udpcore_privacy_policy.html): privacy policy for the UDPCore app
+- [Source data — articles](https://mehdibahlaoui.pro/articles/js/articles-data.js): full article text as a JavaScript object
+- [Source data — music](https://mehdibahlaoui.pro/music/js/music-data.js): lyrics, timings, and annotations as a JavaScript object
