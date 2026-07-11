@@ -24,6 +24,7 @@ The site is a static HTML/CSS/JavaScript project with no build system. Articles 
 - [My eyes are out of focus](https://mehdibahlaoui.com/articles/template.html#My_eyes_are_out_of_focus): 12 Feb 2026
 - [I uninstalled WhatsApp](https://mehdibahlaoui.com/articles/template.html#no_wtsp): 21 Feb 2026
 - [UM6P in 2026](https://mehdibahlaoui.com/articles/template.html#UM6P): 17 May 2026
+- [Rise of the Illuminati and what it has to do with Morocco](https://mehdibahlaoui.com/articles/template.html#illuminati): 11 Jul 2026
 
 ## Music
 

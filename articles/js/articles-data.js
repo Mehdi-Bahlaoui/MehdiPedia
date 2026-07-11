@@ -1699,20 +1699,83 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           ]
     },
 
-    'rise_of_the_illuminati_and_what_it_has to_do_with_morocco': {
+    'illuminati': {
       title: 'Rise of the Illuminati and what it has to do with Morocco',
-      date: '05/07/2026',
-      status: 'Coming Soon',
+      date: '11/07/2026',
+      status: '',
       sections: [
         {
           id: 'intro',
           title: 'Introduction',
-          content: 
-          `The thought that something like the illuminaty exists on an international scale is, or atleast can be, judged not so far from reality.
+          content:
+          `The thought that something like the Illuminati exists on an international scale is, or at least can be, judged not so far from reality.
 
-In Morocco, more and more, I\'ve been having experiences of random aquaintances telling me about their findings regarding that, but what\'s interesting is that they do not refer to the global illuminaty network but that there is a smaller one in Morocco, where a handful of people connected or not to the global one are making the poor citizens endure what their heart desires.
-In all honestly, I see this as a lack of awareness. Unfortunately as you will see, the converstaions I will reveal here are between individuals with not much of an academic background.
-It looks like that the emotionnal heaviness of the situation is too much to handle to the point one goes to extraordinary mesures to explain the environement they are in. This is sad to see and I hope no one reaches this mild level of insanity.
+In Morocco, more and more, I've been having experiences of random acquaintances telling me about their findings regarding that, but what's interesting is that they do not refer to the global Illuminati network, but that there is a smaller one in Morocco, where a handful of people, connected or not to the global one, are making the poor citizens endure what their heart desires.
+In all honesty, I see this as a lack of awareness. Unfortunately as you will see, the conversations I will reveal here are between individuals with not much of an academic background.
+It looks like the emotional heaviness of the situation is too much to handle, to the point one goes to extraordinary measures to explain the environment they are in. This is sad to see and I hope no one reaches this mild level of insanity.
+
+      `},
+        {
+          id: 'barber',
+          title: "My local barber is convinced: 4G is what's spreading the corona virus",
+          content:
+          `Back in 2020, right in the midst of the confinement, my barber, who's a heavy facebook consumer, revealed to me while he was cutting my hair that he knew the exact source of the corona virus. Intrigued and skeptical, I very enthusiastically asked him to elaborate, because although we doubt and judge people, we need to remain respectful and supportive.
+
+He said, and I quote, translated from arabic: "It's unfortunate now, because everyone is connected. I can't disconnect from the internet myself, I'm on facebook, and not just me but all the children are connected to it, and that's how they spread the virus, 4g and 5g"
+
+..Imagine yourself in this situation, how would you react?
+
+I tried, and successfully kept my composure (<span class="gif-term"><img class="gif-pop" src="https://media.tenor.com/NTQABwTdUogAAAAM/fake-smile-awkward.gif" alt="" loading="lazy">I do not want to get into a fight</span>). I pretended to somewhat agree and went with the idea to the best of my abilities, fighting my common sense and scientific intuition.
+
+"Who do you think would do such a thing?" I followed up.
+
+He replied: "lmasounia (the illuminati)"
+
+"Who are those people you mean by the lmasounia?"
+
+"People with a lot of money that have a benefit in spreading the virus, very powerful people that surround themselves with their people. Do you know how much the state and (x company [I forgot which company]) is winning from this?"
+
+Here I stopped going with him on this, I just nodded and agreed with his follow-ups, but afterwards I had a mixture of feelings revolving around sadness, anger, surprise and others.
+
+My guess:
+This barber guy unfortunately found himself out of business after the confinement, and had to find an explanation/enemy responsible for his misery. Not finding a logical one, he fell back to supernatural thinking.
+He doesn't have a basic understanding of how wireless communication works, so we can't blame him from that side, but is it really that obscure?
+Or maybe a completely different explanation is that he was just doing a big show.. but I really doubt it, as he seemed invested in his telling.
+The story I present next will further solidify the case that people do not bring such a story as a joke, but from conviction.
+
+      `},
+        {
+          id: 'uber',
+          title: 'My Uber driver is convinced Akhannouch is part of the network',
+          content:
+          `So I took an Uber (Indrive) to go from destination A to B (hopefully the driver is not reading this HHHHH).
+
+He was somewhat surprised that I took an uber from city to city, and asked me if I was rich. I felt this was somewhat funny given the circumstance, but I had to deny the allegations. In fact, I was just forced to transport with me a lot of bags (and a big monitor screen).
+But anyway, getting back to the main topic.
+
+As he brought up money, we started talking about that, and I revealed to him that I dream of getting rich. And he told me that I can very easily get very rich.. if I join the illuminati.
+
+"Here is how people get very rich when they join the network: you get associated with those people, and since they have a lot of control, they can order some actions that can make a big difference. Say you buy and sell coffee machines, they will make sure that \`insert coffee machine manufacturer\` only sells to you. They give you a lot of money so you buy from them and only them, and after that you resell with a big profit. To be able to benefit from their money, you need to effectively be a slave to those people. So it's a trade-off, and it's not for everybody."
+
+Once again here, it seems to me, and god knows best, that one topic of big interest to this driver that was unresolved got eventually explained and resolved emotionally like so.
+
+"Do you believe in the info of Wikipedia? Google who is the illuminati leader in morocco. (does so in front of me while driving) -do you see that? It says Akhannouch, by wikipedia"
+
+The wikipedia thing he showed was indeed a search result, with the question as the google query lol.
+But that doesn't mean it's an answer to this sus question. Unfortunately, google doesn't tell you that your question is dumb.
+
+But yeah anyway. Some people do believe in this shit. And I don't blame them.
+In fact, for all I know, it could be true.
+I just wish that they do not interfere with my life if such an organization exists, or else...
+
+hh I won't do anything
+
+      `},
+        {
+          id: 'outro',
+          title: '',
+          content:
+          `Alright, hopefully this was entertaining to read. What are your thoughts?
 
       `}]
         },
