@@ -87,7 +87,7 @@ function loadSong() {
     };
     setProperty('og:title', `${song.title} - ${song.artist}`);
     setProperty('og:description', songDesc);
-    setProperty('og:url', `https://mehdibahlaoui.pro/music/template.html${window.location.hash}`);
+    setProperty('og:url', `https://mehdibahlaoui.com/music/template.html${window.location.hash}`);
 
     // Update page header with song info
     const songTitleEl = document.getElementById('songTitle');

@@ -155,7 +155,7 @@ function updatePageMetadata(article) {
   };
   setProperty('og:title', `${plainTitle} - Mehdi Bahlaoui`);
   setProperty('og:description', metaDesc.content);
-  setProperty('og:url', `https://mehdibahlaoui.pro/articles/template.html${window.location.hash}`);
+  setProperty('og:url', `https://mehdibahlaoui.com/articles/template.html${window.location.hash}`);
 }
 
 /* =========================
