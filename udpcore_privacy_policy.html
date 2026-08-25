@@ -188,75 +188,75 @@
         <div class="content">
             <div class="section">
                 <h2>1. Privacy Statement</h2>
-                <p>This Privacy Policy documents UDPCore's approach to user privacy.
-                    <br>UDPCore facilitates direct UDP communication with ESP devices, prioritizing minimal latency while maintaining complete user privacy through a zero-external-data architecture.</p>
-            </div>
+                <p>UDPCore is an Android application that sends control commands to
+                    microcontrollers and other hardware you own, either over UDP on your local
+                    Wi-Fi network or over a Bluetooth Classic connection. This policy explains
+                    what the app does and does not do with your information.</p>
 
-            <div class="section">
-                <h2>2. Data Collection Policy</h2>
-                
-
-                <h3>2.1 What We Do Not Collect</h3>
-                <p>UDPCore does <strong>not</strong> collect, store externally, or transmit:</p>
-                <ul>
-                    <li>Personal identification information</li>
-                    <li>Device IP addresses or network configurations to external servers</li>
-                    <li>UDP command contents or sensor data to external services</li>
-                    <li>Usage analytics, telemetry, or behavioral data</li>
-                    <li>Location data or device fingerprints</li>
-                    <li>Any form of tracking or profiling data</li>
-                </ul>
-
-                <h3>2.2 Local Data Handling</h3>
-                <p>UDPCore includes the following local components:</p>
-                <ul>
-                    <li><strong>Settings Page:</strong> Saves user interface preferences locally on device</li>
-                    <li><strong>About Page:</strong> Static informational content explaining UDP concepts</li>
-                    <li><strong>UDP Interface:</strong> Real-time communication bridge - no data logging</li>
-                </ul>
-
-                <div class="definition-box">
-                    <p><strong>Note:</strong> Settings preferences are stored locally using your device's standard storage mechanisms and never transmitted externally.</p>
+                <div class="theorem-box">
+                    <p><strong>UDPCore does not collect, store, transmit, or share any personal data.</strong>
+                        The app has no user accounts, analytics, advertising, crash reporting, or
+                        third-party tracking. The developer operates no server and receives no
+                        information from the app.</p>
                 </div>
             </div>
 
             <div class="section">
-                <h2>3. Internet Permission Usage</h2>
-                <p>UDPCore requires internet permission exclusively for:</p>
+                <h2>2. Information Stored on Your Device</h2>
+                <p>UDPCore saves configuration data only in Android's app-private storage. This includes:</p>
                 <ul>
-                    <li><strong>UDP Transmission:</strong> Sending control commands to ESP devices on your network</li>
-                    <li><strong>UDP Reception:</strong> Receiving responses and data from ESP devices</li>
-                    <li><strong>Network Socket Management:</strong> Managing real-time UDP connections</li>
+                    <li>The target IP address and port you enter</li>
+                    <li>The command strings assigned to controls</li>
+                    <li>The send interval and related transmission preferences</li>
+                    <li>The name and Bluetooth address of a device you select</li>
+                    <li>Your slider configuration and control-surface preference</li>
                 </ul>
-                
                 <div class="definition-box">
-                    <p><strong>Limitation:</strong> Internet permission is used solely for local network UDP communication. No external servers, APIs, or third-party services are contacted.</p>
+                    <p><strong>Local only:</strong> This configuration is not sent to the developer
+                        or any third party. Android backup is disabled for UDPCore, and the data is
+                        deleted when you uninstall the app or clear its storage.</p>
                 </div>
             </div>
 
-        
             <div class="section">
-                <h2>4. Future Development</h2>
-                <p>Planned UDPCore enhancements include:</p>
+                <h2>3. Information the App Transmits</h2>
+                <p>The only data UDPCore sends is the control data you trigger. It goes directly
+                    to the destination you configure: an IP address on your network or a Bluetooth
+                    device you have paired. Nothing is routed through the developer or another
+                    third party.</p>
+
+                <h3>3.1 Permissions and Their Purpose</h3>
                 <ul>
-                    <li>Reception labels for ESP sensor data display</li>
-                    <li>Enhanced UI controls (additional buttons, sliders)</li>
-                    <li>Improved device management interfaces</li>
+                    <li><strong>Internet and network state:</strong> Opens a UDP socket and sends
+                        command packets to the device address you specify.</li>
+                    <li><strong>Bluetooth connect and scan:</strong> Lists paired devices, discovers
+                        nearby devices when you request a scan, and opens the serial connection you choose.</li>
+                    <li><strong>Approximate and precise location on Android 11 and older:</strong>
+                        Older Android versions require location permission for Bluetooth discovery.
+                        UDPCore uses it only to discover Bluetooth devices and never reads, records,
+                        stores, or transmits your location. This permission is not requested on
+                        Android 12 or newer.</li>
                 </ul>
-                
-                <div class="definition-box">
-                    <p><strong>Commitment:</strong> All future features will maintain the zero external data collection architecture. Real-time UDP communication remains the sole network function.</p>
-                </div>
+            </div>
+
+            <div class="section">
+                <h2>4. Third-Party Services</h2>
+                <p>UDPCore uses open-source Flutter libraries for local settings storage,
+                    Bluetooth serial communication, permission handling, and opening the privacy
+                    policy in your browser. These libraries do not collect or transmit user data
+                    on the developer's behalf.</p>
             </div>
 
             <div class="section">
                 <h2>5. Minors' Privacy</h2>
-                <p>UDPCore's zero external data collection model inherently protects users of all ages. No age verification or data collection occurs for any user demographic.</p>
+                <p>UDPCore is a hardware-control utility and is not directed at children. It
+                    collects no data from any user, regardless of age.</p>
             </div>
 
             <div class="section">
                 <h2>6. Policy Updates</h2>
-                <p>Privacy Policy modifications will be communicated through application updates. Continued use indicates acceptance of updated terms. Our zero external data commitment remains unchanged.</p>
+                <p>If this policy changes, the updated version will be posted at this same address
+                    with a revised effective date.</p>
             </div>
 
             <div class="section">
@@ -265,14 +265,13 @@
                     <p><strong>Privacy Inquiries:</strong></p>
                     <p><code>mehdibahlaoui3@gmail.com</code></p>
                     <p><strong>Subject Line:</strong> UDPCore Privacy Policy Question</p>
-                    <p>We address privacy concerns with technical precision and transparency.</p>
                 </div>
             </div>
 
             <div class="footer">
-                <p><strong>Document Version:</strong> 2025.08.06</p>
-                <p><strong>Effective Date:</strong> August 6, 2025</p>
-                <p>Thank you for supporting the UDPCore project.</p>
+                <p><strong>Document Version:</strong> 2026.08.25</p>
+                <p><strong>Effective Date:</strong> August 25, 2026</p>
+                <p>UDPCore is dedicated to the Roboticore Club of ENSAM Rabat, Morocco.</p>
             </div>
         </div>
     </div>
