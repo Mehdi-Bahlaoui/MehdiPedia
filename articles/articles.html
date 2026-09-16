@@ -345,10 +345,15 @@ Of which expressed here, are solely his and do not reflect the views, policies o
         cardTop.appendChild(meta);
         card.appendChild(cardTop);
 
-        // Preview: inline inside h2, flows naturally with title
-        const firstContent = article.sections && article.sections[0] && article.sections[0].content;
+        // Preview: inline inside h2, flows naturally with title.
+        // Skip leading sections without body text (e.g. a voiceover-only section).
+        const previewSection = article.sections && article.sections.find(section => section && section.content);
+        const firstContent = previewSection && previewSection.content;
         if (firstContent) {
-          const stripped = firstContent.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+          // Strip tags first (so no images are fetched), then let the browser decode entities
+          const decoder = document.createElement('div');
+          decoder.innerHTML = firstContent.replace(/<[^>]*>/g, '');
+          const stripped = (decoder.textContent || '').replace(/\s+/g, ' ').trim();
           if (stripped) {
             const preview = document.createElement('span');
             preview.className = 'blog-card-preview';

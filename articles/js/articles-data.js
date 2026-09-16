@@ -1332,7 +1332,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
     'why_close_the_library': {
       title: 'Sorry, the library is closed',
       date: '30/05/2026',
-      status: 'Updated !',
+      status: '',
       sections: [
         {
           id: '',
@@ -1779,6 +1779,170 @@ hh I won't do anything
 
       `}]
         },
+
+
+
+
+    'coffee-2': {
+      title: 'Coffee, cafés, and more coffee..',
+      date: '02/10/2026',
+      status: 'NEW !!',
+      sections: [
+        {
+          audio: {
+            url: '../Images/coffee_2/Take1-cleaned.mp3',
+            title: 'Article voiceover'
+          }
+        },
+        {
+          id: 'intro',
+          title: 'Introduction',
+          
+          content:
+          
+          `"What a great day in America!" &nbsp; &nbsp;&nbsp;&nbsp; This is really how I feel when I drink coffee.
+          
+          I spent a good amount of my summer in Marrakech.
+          
+          The cafés there are the best
+          The culture Is There.
+
+          And I'll say it here because I made up my mind about it -I think.
+          The best gift anyone could bring me is probably some coffee accessory or coffee capsules hh 
+          
+          Anyway, 
+          Where I stay in Marrakech, the is a street full of caffees back to back, and on the other side of the streets, caffees and more caffees along the street, stretching as far as the eye can see.
+          Wow
+
+          At night, all the cafés get full.
+          ANd mind you, there are a lot!
+          
+          I think I finally found my people hhh
+          
+          When 9pm hits, it feels like all the men in the neighbourhood go out.
+          
+          Something I never saw elsewhere is that here, they stay open until 2AM. (Writing this at 12:14AM at a caffee -I wasn't kidding)
+          I'm not exagerating, like service stops at 12AM -of course- it's not a nigth club- but one could stay there until 2AM if they wish.
+
+          And did I mention it's a regular neighbourhood? not a touristy one.
+
+          Life is good.., it feels like.. America.
+
+
+          `        
+        },
+          
+        {
+          id: 'waiters',
+          title: "Waiters and waitresses, anyone will get it",
+          content:
+          `These days, I try to stay consistent on what I'm about to tell you I do before exchanging with a waiter or waitress.
+
+          I stretch my mouth into a smile for a couple of seconds (sometimes I use my hand to further lift my lips from the extremeties), a warmup to prepare my mouth for the bigget smile I can make.
+          
+          You would think this is exercice is weird and just unecessary - and you would be wrong!
+          I challenge you to try to smile very big right now! I can guarantee it will feel heavy.
+          sure you smiled but how big was it? Do you think you can do better? Exactly!
+
+          So I do this warmup, everrytime I talk to a waiter or waitress, also any seller or worker of any kind.
+
+          Why? Because the bigger the smile -the more beautiful and pleasant the feelings you get.
+
+          And I'm not saying this to advertise that I am a nice person, I really do it, often,and happily.
+          because I care, and because I know for a fact it would warm someone's heart, just like it would if the roles were reversed :)
+
+          Waiters and waitresses deal with a lot of bullshit, and sometimes they are not in the best mood, doing this small act of kindness could make their day better -and they'll remember you for it.
+
+          Do not fake the smile, do it with your heart, and most importantly, make it big.
+
+      `},
+
+        {
+          id: 'coffee-book',
+          title: "A nice book to read while drinking coffee",
+          image: {
+            url: '../Images/coffee_book.png',
+            alt: 'coffee_book',
+            caption: '',
+            position: 'right',  // Options: 'left', 'right', 'center', 'full'
+            width: ''       // Optional: custom width
+          },
+
+          content:
+          `
+          I haven't finished this book yet. But I really like it so far.
+
+          To be paired with work so as not to lose the excitement to staring.
+
+          What I found useful is to read until the motivation kicks in and use that to kick start a work block.
+
+          Probably that won'twork if you are busy and need to get things done quickly but very effective if you need inspiration.
+
+          Try before you judge.
+
+
+
+
+
+
+      `},
+            
+        {
+          id: 'breeze_planes',
+          title: "The breeze and the planes",
+          image: {
+            url: '../Images/coffee_2/plane_2.jpg',
+            alt: 'plane',
+            caption: 'From my view at a caffee in Marrakech',
+            position: 'full',  // Options: 'left', 'right', 'center', 'full'
+            width: ''       // Optional: custom width
+          },
+          content:
+          `The breeze in Marrakech is unmatched.
+It’s so tasty you almost feel guilty for not sitting and taking it in.
+
+Apparently the air is healthier than places like Casablanca because of the pollution.
+And also it is hot, which is very warming to my frail body hh
+Combine that with the fact that it is not humid, which is perfect.
+
+If you are lucky enough to be in a place near an airport, you could see planes go over your head at the place where you sit.
+
+That motivates me for two reasons, the goal to one day visit other countries and work abroad, and also the absolutely gorgeous engineering of the human race!
+I love engineering, and the humans behind it.
+
+In such an amazing atmosphere, work gets done flawlessly.
+I can’t complain much.
+     
+
+      `},
+
+
+// challenge for the reader try to find my comment of a caffee in the city of benguerir
+
+        {
+          id: 'outro',
+          title: 'Outro',
+          image: {
+            url: '../Images/coffee_2/ptit_pain.jpg',
+            alt: 'ptit_pain',
+            caption: '',
+            position: 'center',  // Options: 'left', 'right', 'center', 'full'
+            width: '800px'       // Optional: custom width
+          },
+          content:
+          `I wish you the best of caffees in the future dear reader.
+          Maybe you get a ptit-pain as tasty is the one in this image ahah.
+
+          Enjoy!
+
+          <i>- Humanly written by Mehdi Bahlaoui</i>`}]
+        },
+
+
+
+
+        
+
 
 
 

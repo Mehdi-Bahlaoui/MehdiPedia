@@ -322,6 +322,11 @@ function renderArticle(article) {
 
   if (article.sections && Array.isArray(article.sections)) {
     article.sections.forEach(section => {
+      if (section.audio) {
+        contentHTML += `<div class="section-row"><div class="section-text">${renderAudio(section.audio)}</div></div>`;
+        return;
+      }
+
       const mediaHTML = renderMedia(section);
 
       contentHTML += `
@@ -339,7 +344,151 @@ function renderArticle(article) {
   }
 
   contentContainer.innerHTML = contentHTML;
+  initVoiceovers(contentContainer);
   window.scrollTo(0, 0);
+}
+
+/* =========================
+   AUDIO RENDERING (Voiceover player)
+   Vanilla replica of Substack's article voiceover player.
+   Usage in articles-data.js: { audio: { url: '...', title: '...' } }
+========================= */
+
+const VOICEOVER_RATES = [1, 1.25, 1.5, 1.75, 2];
+
+function renderAudio(audioData) {
+  if (!audioData || !audioData.url) return '';
+
+  const title = audioData.title || 'Article voiceover';
+
+  const rateItems = VOICEOVER_RATES.map(rate => `
+    <button type="button" role="menuitemradio" data-rate="${rate}" aria-checked="${rate === 1}">
+      <span>${rate}×</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+    </button>
+  `).join('');
+
+  return `
+    <div class="voiceover">
+      <div class="voiceover-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11.8518 3.31518C12.2459 4.26329 13.551 7.10985 14.4542 8.3467C15.3764 9.60967 12.8285 9.95184 12 10.5"/>
+          <path d="M12 10.5C12 10.5 12.4662 11.2332 12.7627 11.7326C13.0592 12.232 13 12.5 11.5 13C10.7772 13.2409 9.5 13.5 9.5 13.5C10.3447 13.9272 12.2664 14.1393 12.4041 14.3167C12.763 14.779 12.3241 15.4618 11.8617 15.8208C11.3994 16.1797 12.0724 18.7353 10.5 19.5C8.9276 20.2647 5.70772 19.432 3 18"/>
+          <path d="M18.5 6.5L20.3544 4.8526"/>
+          <path d="M18.5 15.5L20.3544 17.2545"/>
+          <path d="M19.5 11.0326L22 11.0326"/>
+        </svg>
+      </div>
+
+      <div class="voiceover-player" role="region" aria-label="Voiceover player" data-state="paused">
+        <button type="button" class="voiceover-play" aria-label="Play">
+          <svg class="voiceover-play-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.04688 18.5527C5.4375 18.5527 5.76953 18.3965 6.16016 18.1719L17.5469 11.5898C18.3574 11.1113 18.6406 10.7988 18.6406 10.2812C18.6406 9.76367 18.3574 9.45117 17.5469 8.98242L6.16016 2.39063C5.76953 2.16602 5.4375 2.01953 5.04688 2.01953C4.32422 2.01953 3.875 2.56641 3.875 3.41602V17.1465C3.875 17.9961 4.32422 18.5527 5.04688 18.5527Z"/></svg>
+          <svg class="voiceover-pause-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.29883 17.9082H7.52539C8.375 17.9082 8.82422 17.459 8.82422 16.5996V3.29883C8.82422 2.41016 8.375 2 7.52539 2H5.29883C4.44922 2 4 2.44922 4 3.29883V16.5996C4 17.459 4.44922 17.9082 5.29883 17.9082ZM12.3984 17.9082H14.6152C15.4746 17.9082 15.9141 17.459 15.9141 16.5996V3.29883C15.9141 2.41016 15.4746 2 14.6152 2H12.3984C11.5391 2 11.0898 2.44922 11.0898 3.29883V16.5996C11.0898 17.459 11.5391 17.9082 12.3984 17.9082Z"/></svg>
+        </button>
+
+        <div class="voiceover-body">
+          <div class="voiceover-title">${title}</div>
+          <div class="voiceover-progress">
+            <span class="voiceover-time">0:00</span>
+            <div class="voiceover-track" style="--progress: 0">
+              <div class="voiceover-bar"><div class="voiceover-fill"></div></div>
+              <div class="voiceover-playhead"></div>
+            </div>
+            <span class="voiceover-time voiceover-remaining">-0:00</span>
+          </div>
+        </div>
+
+        <div class="voiceover-speed">
+          <button type="button" class="voiceover-speed-btn" aria-label="Playback speed" aria-haspopup="menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+          </button>
+          <div class="voiceover-menu" role="menu" hidden>
+            <div class="voiceover-menu-label">Playback speed</div>
+            ${rateItems}
+          </div>
+        </div>
+
+        <audio src="${audioData.url}" preload="metadata"></audio>
+      </div>
+    </div>
+  `.trim();
+}
+
+function setVoiceoverMenu(speed, open) {
+  speed.querySelector('.voiceover-menu').hidden = !open;
+  speed.querySelector('.voiceover-speed-btn').setAttribute('aria-expanded', open);
+}
+
+function initVoiceovers(root) {
+  root.querySelectorAll('.voiceover-player').forEach(player => {
+    const audio = player.querySelector('audio');
+    const playBtn = player.querySelector('.voiceover-play');
+    const track = player.querySelector('.voiceover-track');
+    const [elapsed, remaining] = player.querySelectorAll('.voiceover-time');
+    const speed = player.querySelector('.voiceover-speed');
+
+    const syncState = () => {
+      const playing = !audio.paused;
+      player.dataset.state = playing ? 'playing' : 'paused';
+      playBtn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    };
+
+    const syncTime = () => {
+      const duration = audio.duration || 0;
+      const current = audio.currentTime;
+      track.style.setProperty('--progress', duration ? current / duration : 0);
+      elapsed.textContent = formatTime(current);
+      remaining.textContent = `-${formatTime(duration - current)}`;
+    };
+
+    const seek = (e) => {
+      if (!audio.duration) return;
+      const rect = track.getBoundingClientRect();
+      const ratio = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+      audio.currentTime = ratio * audio.duration;
+      syncTime();
+    };
+
+    playBtn.addEventListener('click', () => (audio.paused ? audio.play() : audio.pause()));
+    ['play', 'pause', 'ended'].forEach(type => audio.addEventListener(type, syncState));
+    ['loadedmetadata', 'timeupdate'].forEach(type => audio.addEventListener(type, syncTime));
+
+    // Pointer events cover mouse + touch; capture keeps the drag alive outside the track
+    track.addEventListener('pointerdown', (e) => {
+      track.setPointerCapture(e.pointerId);
+      seek(e);
+    });
+    track.addEventListener('pointermove', (e) => {
+      if (track.hasPointerCapture(e.pointerId)) seek(e);
+    });
+
+    speed.querySelector('.voiceover-speed-btn').addEventListener('click', () => {
+      setVoiceoverMenu(speed, speed.querySelector('.voiceover-menu').hidden);
+    });
+
+    speed.querySelector('.voiceover-menu').addEventListener('click', (e) => {
+      const item = e.target.closest('[data-rate]');
+      if (!item) return;
+      audio.playbackRate = Number(item.dataset.rate);
+      speed.querySelectorAll('[data-rate]').forEach(el => el.setAttribute('aria-checked', el === item));
+      setVoiceoverMenu(speed, false);
+    });
+  });
+}
+
+// Close any open speed menu when clicking elsewhere (registered once)
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.voiceover-speed').forEach(speed => {
+    if (!speed.contains(e.target)) setVoiceoverMenu(speed, false);
+  });
+});
+
+// Format seconds as M:SS (same helper as music/js/music-player.js)
+function formatTime(seconds) {
+  if (!isFinite(seconds) || seconds < 0) return '0:00';
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
 /* =========================
