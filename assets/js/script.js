@@ -242,7 +242,7 @@ document.addEventListener('click', function (event) {
 // Play Arabic version audio
 function playArabicVersion() {
   // Create audio element and play the Arabic version
-  const audio = new Audio('sfx/dajajatan.mp3');
+  const audio = new Audio('/assets/audio/dajajatan.mp3');
   audio.play().catch(error => {
     console.log('Audio playback failed:', error);
     alert('Sorry, the Arabic version audio could not be played.');
@@ -329,8 +329,12 @@ window.addEventListener('click', function(event) {
 // script.js is loaded by every page, so this warms the browser cache
 // with the globe article's binary from anywhere on the site - if the
 // visitor then opens the globe article, the WASM is already local.
+// Static <link rel="prefetch"> tags in index.html / articles.html cover
+// the main entries even earlier (during parsing); this is the fallback
+// for the remaining pages. Hover/focus on a globe link warms at full
+// priority for visitors showing intent.
 // ============================================
-window.addEventListener('load', function () {
+(function () {
   // The globe page fetches these itself immediately - don't race it.
   if (document.getElementById('globe-container')) return;
 
@@ -339,25 +343,70 @@ window.addEventListener('load', function () {
   if (conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || ''))) return;
 
   const globeFiles = [
-    { href: '/articles/globe_article/globe/704496ede9d7912d.js', as: 'script' },
-    { href: '/articles/globe_article/globe/704496ede9d7912d.wasm', as: 'fetch' },
+    '/articles/globe-vendor/globe_app.js',
+    '/articles/globe-vendor/globe_app.wasm',
   ];
 
-  let supportsPrefetch = false;
-  try {
-    supportsPrefetch = document.createElement('link').relList.supports('prefetch');
-  } catch (e) { /* very old browser - fall through to fetch */ }
-
-  globeFiles.forEach(function (file) {
-    if (supportsPrefetch) {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = file.href;
-      link.as = file.as;
-      document.head.appendChild(link);
-    } else {
-      // Safari ignores <link rel="prefetch"> - warm the HTTP cache manually.
-      fetch(file.href, { priority: 'low' }).catch(function () {});
-    }
+  // High-priority warm on intent (hover / keyboard focus). Same credentials
+  // mode as the globe page's own fetch so the cache entry is reused.
+  let intentWarmed = false;
+  function warmGlobeNow() {
+    if (intentWarmed) return;
+    intentWarmed = true;
+    globeFiles.forEach(function (href) {
+      try {
+        fetch(href, { credentials: 'same-origin', priority: 'high' }).catch(function () {});
+      } catch (e) {
+        fetch(href, { credentials: 'same-origin' }).catch(function () {});
+      }
+    });
+  }
+  document.addEventListener('pointerover', function (e) {
+    if (e.target && e.target.closest && e.target.closest('a[href*="globe.html"]')) warmGlobeNow();
+  }, { passive: true, capture: true });
+  document.addEventListener('focusin', function (e) {
+    if (e.target && e.target.closest && e.target.closest('a[href*="globe.html"]')) warmGlobeNow();
   });
-});
+
+  // Low-priority background prefetch. Runs as soon as this deferred script
+  // executes (DOM parsed) instead of waiting for window.load, which can be
+  // delayed by images and third-party scripts.
+  function backgroundPrefetch() {
+    const files = [
+      { href: globeFiles[0], as: 'script' },
+      { href: globeFiles[1], as: 'fetch' },
+    ];
+
+    let supportsPrefetch = false;
+    try {
+      supportsPrefetch = document.createElement('link').relList.supports('prefetch');
+    } catch (e) { /* very old browser - fall through to fetch */ }
+
+    files.forEach(function (file) {
+      if (supportsPrefetch) {
+        // Skip if a static prefetch tag already covers it.
+        if (document.querySelector('link[rel="prefetch"][href="' + file.href + '"]')) return;
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = file.href;
+        link.as = file.as;
+        link.crossOrigin = 'anonymous';
+        if (file.as === 'fetch') link.type = 'application/wasm';
+        document.head.appendChild(link);
+      } else {
+        // Safari ignores <link rel="prefetch"> - warm the HTTP cache manually.
+        fetch(file.href, { priority: 'low' }).catch(function () {});
+      }
+    });
+  }
+
+  // Stable filenames (see Globe_Rust/deploy_globe.sh): trunk's hashed output
+  // is copied to globe_app.js / globe_app.wasm so this never drifts.
+  // crossorigin matches the module fetch; without it the warmed entries
+  // miss and the browser downloads the files twice.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', backgroundPrefetch);
+  } else {
+    backgroundPrefetch();
+  }
+})();

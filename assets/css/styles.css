@@ -339,7 +339,7 @@ header {
   outline: none;
   font-size: 0.875em;
   /* roughly 14px */
-  background: url('Images/search.svg') no-repeat 8px center;
+  background: url('/assets/icons/search.svg') no-repeat 8px center;
   background-size: 24px 24px;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -649,7 +649,7 @@ body {
 }
 
 .toc-list li.expandable::before {
-  content: url('icons/right.svg');
+  content: url('/assets/icons/right.svg');
   filter: var(--svg-filter);
   position: absolute;
   left: -25px;
@@ -658,7 +658,7 @@ body {
 }
 
 .toc-list li.expanded::before {
-  content: url('icons/down.svg');
+  content: url('/assets/icons/down.svg');
   filter: var(--svg-filter);
 
 }
@@ -1603,7 +1603,7 @@ body {
 .section-toggle {
   width: 26px;
   height: 26px;
-  background-image: url('icons/right.svg');
+  background-image: url('/assets/icons/right.svg');
   filter: var(--svg-filter);
   background-size: contain;
   background-repeat: no-repeat;
@@ -1612,7 +1612,7 @@ body {
 }
 
 .section-toggle.expanded {
-  background-image: url('icons/down.svg');
+  background-image: url('/assets/icons/down.svg');
   filter: var(--svg-filter);
 
 }

@@ -8,9 +8,9 @@ const musicData = {
     artist: 'Mehdi Bahlaoui',
     album: 'Singles',
     releaseDate: '2026',
-    audioUrl: 'assets/1/Welcome to Rap-Battle.mp3',
-    videoUrl: 'assets/1/Welcome to Rap-Battle.mp4',
-    coverArt: '../../Images/boss.jpg',
+    audioUrl: '/assets/audio/welcome-to-rap-battle.mp3',
+    videoUrl: '/assets/video/welcome-to-rap-battle.mp4',
+    coverArt: '/assets/images/boss.jpg',
     duration: 123,
 
     // Lyrics: each line has a dur (duration in seconds)
@@ -197,9 +197,9 @@ const musicData = {
   //   artist: 'Mehdi Bahlaoui',
   //   album: 'Singles',
   //   releaseDate: '2026',
-  //   audioUrl: '../assets/2/This video was brought to you by- RapBattle EnsamR.mp3',
-  //   videoUrl: '../assets/2/This video was brought to you by- RapBattle EnsamR.mp4',
-  //   coverArt: '../images/boss.jpg',
+  //   audioUrl: '/assets/audio/rapbattle-ensamr.mp3',
+  //   videoUrl: '/assets/video/rapbattle-ensamr.mp4',
+  //   coverArt: '/assets/images/boss.jpg',
   //   duration: 0,
   //   lyrics: [],
   //   annotations: {}

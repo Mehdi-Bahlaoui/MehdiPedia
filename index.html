@@ -4,7 +4,7 @@
 <head>
 
   <title>Mehdi Bahlaoui - Wikipedia</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
   <meta property="og:title" content="Mehdi Bahlaoui">
   <meta property="og:description" content="The personal website of Mehdi Bahlaoui, styled as a Wikipedia page: biography, essays, original music, and interactive experiments.">
   <meta property="og:url" content="https://mehdibahlaoui.com/">
-  <meta property="og:image" content="https://mehdibahlaoui.com/Images/image2.jpg">
+  <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured Data -->
@@ -39,7 +39,7 @@
         "@id": "https://mehdibahlaoui.com/#person",
         "name": "Mehdi Bahlaoui",
         "url": "https://mehdibahlaoui.com/",
-        "image": "https://mehdibahlaoui.com/Images/image2.jpg"
+        "image": "https://mehdibahlaoui.com/assets/images/image2.jpg"
       },
       {
         "@type": "WebSite",
@@ -63,9 +63,13 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
     rel="stylesheet">
 
-  <script src="script.js" defer></script>
+  <script src="/assets/js/script.js" defer></script>
 
-  <!-- Globe WASM is prefetched in the background by script.js (see GLOBE WASM BACKGROUND PREFETCH) -->
+  <!-- Globe WASM warm-up: static prefetch discovered during parsing (does not
+       wait for window.load). Same files are hover-warmed + prefetched by
+       script.js; stable filenames keep these links valid across rebuilds. -->
+  <link rel="prefetch" href="/articles/globe-vendor/globe_app.js" as="script" crossorigin="anonymous">
+  <link rel="prefetch" href="/articles/globe-vendor/globe_app.wasm" as="fetch" type="application/wasm" crossorigin="anonymous">
 
 </head>
 
@@ -84,7 +88,7 @@
   
 
 <!-- ========== SHARED HEADER START ========== -->
-<!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This header is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 <!-- Variation: index.html - Logo has no href, simplified left nav, right nav commented out -->
 
@@ -103,7 +107,7 @@
 
 
     <div class="logo-area">
-      <!-- VARIATION: Logo href - index.html has NO href, articles.html has href="index.html", template.html has href="../index.html" -->
+      <!-- VARIATION: Logo href - root index.html has NO href, articles pages have href="../" -->
       <a class="logo-link">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/enwiki-25.svg" alt="Wikipedia"
           width="50" height="50">
@@ -142,7 +146,7 @@
 
     </div>
 
-    <!-- VARIATION: Right nav - index.html has this commented out, articles.html and template.html have it active -->
+    <!-- VARIATION: Right nav - root index has this commented out, articles pages have it active -->
     <!-- <nav class="right-nav">
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -163,7 +167,7 @@
 <!-- <div class="cnotice" id="WikiArabia2026_banner" dir="ltr" role="region" aria-label="Site notice">
   <a
     class="cnotice-full-banner-click links"
-    href="https://mehdibahlaoui.com/articles/template.html#banned"
+    href="https://mehdibahlaoui.com/articles/article.html#banned"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -239,8 +243,8 @@
 
         <div class="top-header-secondary-left">
           <p class="underline"><u>Biography</u></p>
-          <p class="blue-text"><a href="articles/articles.html">Written-Works</a></p>
-          <p class="blue-text"><a href="music/music.html" style="text-decoration: none; color: inherit;">Music</a></p>
+          <p class="blue-text"><a href="articles/">Written-Works</a></p>
+          <p class="blue-text"><a href="music/" style="text-decoration: none; color: inherit;">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -249,7 +253,7 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="/assets/icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
 
@@ -287,13 +291,7 @@ His work will focus on system design enabling decentralized and personalized <a 
 During his PFA intership, he gained hands-on experience at <a class="links" href="https://www.tame-test.com/en/">Tame-Test</a>, where he contributed to real-world testing and validation processes within the industry.
 Before that, he had an opportunity to work on documentation processes and learn about medium voltage industrial drives at <a class="links" href="https://en.wikipedia.org/wiki/OCP_Group">OCP Group</a>.
 
-<!-- Mehdi is known for his deeply <a class="links"
-href="https://en.wikipedia.org/wiki/Kinesthetic_learning">kinestetic learning
-style</a>, favoring <a class="links" href="https://en.wikipedia.org/wiki/Experiential_learning">physical
-experimentation</a> over <a class="links" href="https://en.wikipedia.org/wiki/Passive_learning">passive
-instruction</a>,
-often sitting at the back of classrooms to absorb and challenge ideas on his own way.
-<br><br> --> In 2023, He became President of <a class="links" href="https://www.instagram.com/clubroboticore/">RobotiCore</a>, ENSAM Rabat’s flagship robotics club. zUnder his leadership, the club reestablished the <a class="links" href="https://ensam.um5.ac.ma/index.php/node/328">African Robotics Competition (CAR)</a>, by organizing its fourth edition.
+In 2023, He became President of <a class="links" href="https://www.instagram.com/clubroboticore/">RobotiCore</a>, ENSAM Rabat’s flagship robotics club. zUnder his leadership, the club reestablished the <a class="links" href="https://ensam.um5.ac.ma/index.php/node/328">African Robotics Competition (CAR)</a>, by organizing its fourth edition.
 
 Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy">philosophy</a> leans toward <a class="links" href="https://en.wikipedia.org/wiki/First_principles">first-principles thinking</a>, <a class="links" href="https://en.wikipedia.org/wiki/Extreme_ownership">radical ownership</a>, and <a class="links" href="https://en.wikipedia.org/wiki/Momentum">momentum</a>-driven <a class="links" href="https://en.wikipedia.org/wiki/Execution_(computing)">execution</a>.
 </p>
@@ -312,7 +310,7 @@ Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy
           <div class="image_container">
             <p class="image_caption_top_1">Mehdi Bahlaoui</p>
             <p class="image_caption_top_2">Engineer</p>
-            <img class="profile-image" src="Images/image2.jpg" alt="Mehdi Bahlaoui">
+            <img class="profile-image" src="/assets/images/image2.jpg" alt="Mehdi Bahlaoui">
             <p style="display: flex;justify-content: center; margin-bottom: 10px;"><i>Mehdi in 2022</i></p>
             
             <div class="personal-details-block">
@@ -348,7 +346,7 @@ Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy
                 <div>
                   <p style="margin-top: 10px;"><b>Signature</b></p>
                 </div>
-                <img src="Images/signature.png" alt="Mehdi's signature"
+                <img src="/assets/images/signature.png" alt="Mehdi's signature"
                   style="width: 100px; height: auto;filter: var(--svg-filter);">
               </div> -->
 
@@ -379,7 +377,7 @@ Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy
                   
                 </div>
                 <audio controls style="display: flex; justify-content: center; width: 280px; height: 40px; margin-top: 10px;">
-                  <source src="Images/Wikipedia.m4a" type="audio/mpeg">
+                  <source src="/assets/audio/wikipedia.m4a" type="audio/mpeg">
                   Your browser does not support the audio element.
                 </audio>
               </div>
@@ -411,7 +409,7 @@ Mehdi's personal <a class="links" href="https://en.wikipedia.org/wiki/Philosophy
             </div>
             <div class="section-images">
               <div class="image_container">
-                <img class="profile-image" src="Images/childhood.jpg" alt="Young Mehdi">
+                <img class="profile-image" src="/assets/images/childhood.jpg" alt="Young Mehdi">
                 <div class="text_of_image_container">
                   <p><i>Mehdi and his best friend Kahoua <br> in primary school</i></p>
                 </div>
@@ -470,7 +468,7 @@ Why would he?
             </div>
             <div class="section-images">
               <div class="image_container">
-                <img class="profile-image" src="Images/boss.jpg" alt="Young Mehdi">
+                <img class="profile-image" src="/assets/images/boss.jpg" alt="Young Mehdi">
                 <div class="text_of_image_container">
                   <p><i>Mehdi, inside class, taking an exam with sunglasses on</i></p>
                   <!-- <p>Mehdi taking his exam in sunglasses because he is too good at this shit</p> -->
@@ -501,7 +499,7 @@ But the turning point came when he met his <a class="links" href="https://en.wik
 
             <div class="section-images" style="margin-top: 15px;">
               <div class="image_container">
-                <img class="profile-image" src="Images/cooking.jpg" alt="Rapper Mehdi">
+                <img class="profile-image" src="/assets/images/cooking.jpg" alt="Rapper Mehdi">
                 <div class="text_of_image_container">
                   <p><i>Mehdi at the Music and Art Club cooking up his next song</i></p>
                 </div>
@@ -553,7 +551,7 @@ They came raw, fast, and honest. People listened because it felt real, and becau
               <br><br>
               </div class="section-images">
                 <div class="image_container">
-                  <img class="profile-image" src="Images/watch.jpeg" alt="Mehdi's watch">
+                  <img class="profile-image" src="/assets/images/watch.jpeg" alt="Mehdi's watch">
                   <div class="text_of_image_container">
                     <p><i>Watch always 15 minutes ahead</i></p>
                   </div>
@@ -598,7 +596,7 @@ And through his continuous game, one question perpetually stays in his mind, whi
               
 
               <p>
-His observations and reflections are documented in his <a class="links" href="articles/articles.html">written works</a>, where he explores ideas about passion, identity, discipline, and the patterns that shape human behavior.
+His observations and reflections are documented in his <a class="links" href="articles/">written works</a>, where he explores ideas about passion, identity, discipline, and the patterns that shape human behavior.
 The articles serve as an extension of his philosophical inquiries, structured thoughts on questions that don't have easy answers.
 </p>
 
@@ -606,7 +604,7 @@ The articles serve as an extension of his philosophical inquiries, structured th
 
             </div>
             <!-- <div class="section-images">
-              <img src="Images/Ait Archine.jpeg" alt="Mohamed Ait Archine">
+              <img src="/assets/images/ait-archine.jpeg" alt="Mohamed Ait Archine">
             </div> -->
           </div>
         </div>
@@ -665,7 +663,7 @@ The articles serve as an extension of his philosophical inquiries, structured th
 </body>
 
 <!-- ========== SHARED FOOTER START ========== -->
-<!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This footer is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 <!-- Variation: Content differences (last edited date, disclaimer text) -->
 

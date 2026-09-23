@@ -26,7 +26,7 @@ function loadSong() {
   try {
     console.log('🎵 loadSong() called');
 
-    // Get song ID from URL hash (music.html#song-id)
+    // Get song ID from URL hash (track.html#song-id)
     let songId = window.location.hash.substring(1);
     console.log('Song ID from hash:', songId);
 
@@ -39,7 +39,7 @@ function loadSong() {
     // Redirect to music.html if no song specified
     if (!songId) {
       console.log('No song ID - redirecting to track listing');
-      window.location.href = 'music.html';
+      window.location.href = './';
       return;
     }
 
@@ -87,7 +87,7 @@ function loadSong() {
     };
     setProperty('og:title', `${song.title} - ${song.artist}`);
     setProperty('og:description', songDesc);
-    setProperty('og:url', `https://mehdibahlaoui.com/music/template.html${window.location.hash}`);
+    setProperty('og:url', `https://mehdibahlaoui.com/music/track.html${window.location.hash}`);
 
     // Update page header with song info
     const songTitleEl = document.getElementById('songTitle');
@@ -289,7 +289,7 @@ function getLineText(lineId, song) {
 function updateAlbumArt(song) {
   const albumArtImg = document.getElementById('controlAlbumArt');
   if (albumArtImg) {
-    albumArtImg.src = song.coverArt || 'Images/boss.jpg';
+    albumArtImg.src = song.coverArt || '/assets/images/boss.jpg';
     albumArtImg.alt = `${song.title} album art`;
   } else {
     console.warn('controlAlbumArt element not found in DOM');

@@ -3,8 +3,8 @@
 
 <head>
   <title>Mehdi Bahlaoui - Music - Wikipedia</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="css/music.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/music.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
   <!-- SEO (title/description are refined per-song by music-player.js) -->
   <meta name="description" content="A track by Mehdi Bahlaoui with time-synced lyrics and Genius-style annotations.">
-  <link rel="canonical" href="https://mehdibahlaoui.com/music/template.html">
+  <link rel="canonical" href="https://mehdibahlaoui.com/music/track.html">
 
   <!-- Theme -->
   <meta name="color-scheme" content="light dark">
@@ -25,8 +25,8 @@
   <meta property="og:site_name" content="Mehdi Bahlaoui">
   <meta property="og:title" content="Music - Mehdi Bahlaoui">
   <meta property="og:description" content="A track by Mehdi Bahlaoui with time-synced lyrics and Genius-style annotations.">
-  <meta property="og:url" content="https://mehdibahlaoui.com/music/template.html">
-  <meta property="og:image" content="https://mehdibahlaoui.com/Images/image2.jpg">
+  <meta property="og:url" content="https://mehdibahlaoui.com/music/track.html">
+  <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon & Touch Icons -->
@@ -34,16 +34,16 @@
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
   <!-- Load music data and player -->
-  <script src="js/music-data.js"></script>
-  <script src="../script.js" defer></script>
-  <script src="js/music-player.js" defer></script>
+  <script src="/assets/js/music-data.js"></script>
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/music-player.js" defer></script>
 
 </head>
 
 <!-- ========== SHARED HEADER START ========== -->
-<!-- SYNC: This header is duplicated in index.html, articles.html, music/music.html, music/template.html, articles/template.html -->
+<!-- SYNC: This header is duplicated in index.html, articles/index.html, music/index.html, music/track.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
-<!-- Variation: music/template.html - Logo links to index.html, full left nav with overlay, active right nav -->
+<!-- Variation: music/track.html - Logo links to index.html, full left nav with overlay, active right nav -->
 
 <header id="top">
   <div class="left-header">
@@ -53,19 +53,19 @@
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
-      <!-- VARIATION: template.html includes overlay and links container -->
+      <!-- VARIATION: article.html includes overlay and links container -->
       <label id="overlay-left" for="sidebar-active-left"></label>
 
       <div class="links-container-left">
         <a class="home-link" href="/">Home</a>
-        <a href="/articles/articles.html">Written Works</a>
-        <a href="/music/music.html">Music</a>
-        <a href="/articles/globe_article/globe.html">Globe</a>
+        <a href="/articles/">Written Works</a>
+        <a href="/music/">Music</a>
+        <a href="/articles/globe.html">Globe</a>
       </div>
     </nav>
 
     <div class="logo-area">
-      <!-- VARIATION: Logo href for template.html -->
+      <!-- VARIATION: Logo href for article.html -->
       <a class="logo-link" href="/">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/enwiki-25.svg" alt="Wikipedia"
           width="50" height="50">
@@ -100,7 +100,7 @@
       <a href="">Log in</a>
     </div>
 
-    <!-- VARIATION: Right nav - template.html has it active with empty links container -->
+    <!-- VARIATION: Right nav - article.html has it active with empty links container -->
     <nav>
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -134,13 +134,13 @@
     <!-- <div class="sidebar">
       <div class="toc">
         <div class="toc-title">
-          <a href="music.html" style="text-decoration: none; color: inherit;">Music</a>
+          <a href="./" style="text-decoration: none; color: inherit;">Music</a>
           <span class="toc-controls">
             <button class="toc-toggle" onclick="toggleToc(this)">hide</button>
           </span>
         </div>
         <ul class="toc-list" id="tocList">
-          <li><a href="music.html">&#8592; Back to Tracks</a></li>
+          <li><a href="./">&#8592; Back to Tracks</a></li>
           <li><a href="#top">(Top)</a></li> -->
           <!-- Lyrics sections will be populated by JS if needed -->
         <!-- </ul>
@@ -167,8 +167,8 @@
       <div class="top-header-secondary">
         <div class="top-header-secondary-left">
           <p class="blue-text"><a href="/" style="text-decoration: none; color: inherit;">Biography</a></p>
-          <p class="blue-text"><a href="../articles/articles.html" style="text-decoration: none; color: inherit;">Written-Works</a></p>
-          <p class="blue-text"><a href="music.html" style="text-decoration: none; color: inherit;">Music</a></p>
+          <p class="blue-text"><a href="../articles/" style="text-decoration: none; color: inherit;">Written-Works</a></p>
+          <p class="blue-text"><a href="./" style="text-decoration: none; color: inherit;">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -177,7 +177,7 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="../icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="/assets/icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
       </div>
@@ -292,7 +292,7 @@
 </body>
 
 <!-- ========== SHARED FOOTER START ========== -->
-<!-- SYNC: This footer is duplicated in index.html, articles.html, music/music.html, music/template.html, articles/template.html -->
+<!-- SYNC: This footer is duplicated in index.html, articles/index.html, music/index.html, music/track.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 
 <footer class="wiki-footer">

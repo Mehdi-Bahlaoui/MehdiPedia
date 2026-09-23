@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dot Globe</title>
 
-    <!-- trunk build directives -->
-    <link data-trunk rel="rust" data-wasm-opt="4" />
-    <link data-trunk rel="copy-dir" href="assets" />
+    <!-- trunk build directives (no assets: land dots are baked into the binary) -->
+    <link data-trunk rel="rust" data-wasm-opt="z" />
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');

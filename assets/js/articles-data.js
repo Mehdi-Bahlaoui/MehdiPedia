@@ -878,7 +878,7 @@ love~
 'globe': {
   title: "It's not a globe, It's Web-Assembly",
   date: '10/03/2026',
-  redirect: 'globe_article/globe.html'
+  redirect: 'globe.html'
 },
 
 
@@ -1217,7 +1217,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       id: 'The Campus & Nature',
       title: 'Campus & Nature',
       image: {
-        url: '../Images/um6p/p.jpg',
+        url: '/assets/images/um6p/p.jpg',
         alt: 'butterfly',
         caption: 'Orange butterfly on purple sea lavenders',
         position: 'right',  // Options: 'left', 'right', 'center', 'full'
@@ -1240,14 +1240,14 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       id: 'The Night',
       title: 'The Night',
       images: [{
-        url: '../Images/um6p/n1.jpg',
+        url: '/assets/images/um6p/n1.jpg',
         alt: 'Me',
         caption: 'The main concourse connecting the two `Pergolas` of the campus. Right and left are the different departements',
         position: 'center',  
         width: '800px'       
       },
       // {
-      //   url: '../Images/um6p/n2.jpg',
+      //   url: '/assets/images/um6p/n2.jpg',
       //   alt: '',
       //   caption: '',
       //   position: 'center',  
@@ -1271,7 +1271,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       id: 'Coffee & Gifts',
       title: 'Coffee & Gifts',
       image: {
-        url: '../Images/um6p/gift.jpg',
+        url: '/assets/images/um6p/gift.jpg',
         alt: 'Me',
         caption: '',
         position: 'center',  // Options: 'left', 'right', 'center', 'full'
@@ -1296,7 +1296,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       id: 'People & Activities',
       title: 'People & Activities',
       image: {
-        url: '../Images/um6p/me.jpg',
+        url: '/assets/images/um6p/me.jpg',
         alt: 'Me',
         caption: 'sitting near the butterflies and taking in the sun',
         position: 'right',  // Options: 'left', 'right', 'center', 'full'
@@ -1368,7 +1368,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           id: '',
           title: '',
           image: {
-            url: '../Images/thinking.jpeg',
+            url: '/assets/images/thinking.jpeg',
             alt: 'thinking',
             caption: 
             'Leaders of the future are us, the students of now. Only if we actively chose to make the change. \n But how much are we willing to sacrifice for it?',
@@ -1545,7 +1545,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             title: 'Introduction',
           
           image: {
-            url: '../../Images/roboticore/bach.jpg',
+            url: '/assets/images/roboticore/bach.jpg',
             alt: '',
             caption: 'The Robotics Club at ENSAM Rabat, the place where I spent a lot of my time and for which I\'m very grateful.',
             position: 'center',  // Options: 'left', 'right', 'center', 'full'
@@ -1564,7 +1564,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             id: 'good',
             title: 'The Good',
             image: {
-              url: '../../Images/roboticore/atelier.jpg',
+              url: '/assets/images/roboticore/atelier.jpg',
               alt: '',
               caption: '2:54 AM. No one is around (except from Prof. Oubrek), surrounded by machines and tools, enjoying the endless possibility of what I can create this evening',
               position: 'right',  // Options: 'left', 'right', 'center', 'full'
@@ -1602,7 +1602,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             id: 'bad',
             title: 'The Bad',
             image: {
-              url: '../../Images/roboticore/old-place.jpg',
+              url: '/assets/images/roboticore/old-place.jpg',
               alt: '',
               caption: 'Kicked out of our dedicated space to a temporary one, forced to move all our stuff with short notice, no one is available to help, this is when you, as president, step up and do the work without complaining because this time if you don\'t do it, no one will',
               position: 'center',  // Options: 'left', 'right', 'center', 'full'
@@ -1790,7 +1790,7 @@ hh I won't do anything
       sections: [
         {
           audio: {
-            url: '../Images/coffee_2/Take1-cleaned.mp3',
+            url: '/assets/audio/take1-cleaned.mp3',
             title: 'Article voiceover'
           }
         },
@@ -1861,7 +1861,7 @@ hh I won't do anything
           id: 'coffee-book',
           title: "A nice book to read while drinking coffee",
           image: {
-            url: '../Images/coffee_book.png',
+            url: '/assets/images/coffee-book.png',
             alt: 'coffee_book',
             caption: '',
             position: 'right',  // Options: 'left', 'right', 'center', 'full'
@@ -1891,7 +1891,7 @@ hh I won't do anything
           id: 'breeze_planes',
           title: "The breeze and the planes",
           image: {
-            url: '../Images/coffee_2/plane_2.jpg',
+            url: '/assets/images/coffee/plane-2.jpg',
             alt: 'plane',
             caption: 'From my view at a caffee in Marrakech',
             position: 'full',  // Options: 'left', 'right', 'center', 'full'
@@ -1923,7 +1923,7 @@ I can’t complain much.
           id: 'outro',
           title: 'Outro',
           image: {
-            url: '../Images/coffee_2/ptit_pain.jpg',
+            url: '/assets/images/coffee/ptit-pain.jpg',
             alt: 'ptit_pain',
             caption: '',
             position: 'center',  // Options: 'left', 'right', 'center', 'full'

@@ -3,8 +3,8 @@
 
 <head>
   <title>Mehdi Bahlaoui - Articles - Wikipedia</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="articles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/articles.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
   <!-- SEO -->
   <meta name="description" content="Essays and written works by Mehdi Bahlaoui — personal reflections on work, ego, sleep, attention, and life in general.">
-  <link rel="canonical" href="https://mehdibahlaoui.com/articles/articles.html">
+  <link rel="canonical" href="https://mehdibahlaoui.com/articles/">
 
   <!-- Theme -->
   <meta name="color-scheme" content="light dark">
@@ -25,8 +25,8 @@
   <meta property="og:site_name" content="Mehdi Bahlaoui">
   <meta property="og:title" content="Written works - Mehdi Bahlaoui">
   <meta property="og:description" content="Essays and written works by Mehdi Bahlaoui — personal reflections on work, ego, sleep, attention, and life in general.">
-  <meta property="og:url" content="https://mehdibahlaoui.com/articles/articles.html">
-  <meta property="og:image" content="https://mehdibahlaoui.com/Images/image2.jpg">
+  <meta property="og:url" content="https://mehdibahlaoui.com/articles/">
+  <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon & Touch Icons -->
@@ -34,8 +34,14 @@
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
   <!-- Load articles data -->
-  <script src="js/articles-data.js"></script>
-  <script src="../script.js" defer></script>
+  <script src="/assets/js/articles-data.js"></script>
+  <script src="/assets/js/script.js" defer></script>
+
+  <!-- Globe WASM warm-up: static prefetch discovered during parsing (does not
+       wait for window.load). Same files are hover-warmed + prefetched by
+       script.js; stable filenames keep these links valid across rebuilds. -->
+  <link rel="prefetch" href="/articles/globe-vendor/globe_app.js" as="script" crossorigin="anonymous">
+  <link rel="prefetch" href="/articles/globe-vendor/globe_app.wasm" as="fetch" type="application/wasm" crossorigin="anonymous">
 
 </head>
 
@@ -43,9 +49,9 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE2ZE29PZG"></script>
 
 <!-- ========== SHARED HEADER START ========== -->
-<!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This header is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
-<!-- Variation: articles/articles.html - Logo links to ../, full left nav with overlay, active right nav -->
+<!-- Variation: articles/index.html - Logo links to ../, full left nav with overlay, active right nav -->
 
 <header id="top">
   <div class="left-header">
@@ -55,19 +61,19 @@
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
-      <!-- VARIATION: articles.html and template.html include overlay and links container; index.html omits these -->
+      <!-- VARIATION: articles/index.html and article.html include overlay and links container; index.html omits these -->
       <label id="overlay-left" for="sidebar-active-left"></label>
 
       <div class="links-container-left">
         <a class="home-link" href="/">Home</a>
-        <a href="/articles/articles.html">Written Works</a>
-        <a href="/music/music.html">Music</a>
-        <a href="/articles/globe_article/globe.html">Globe</a>
+        <a href="/articles/">Written Works</a>
+        <a href="/music/">Music</a>
+        <a href="/articles/globe.html">Globe</a>
       </div>
     </nav>
 
     <div class="logo-area">
-      <!-- VARIATION: Logo href - index.html has NO href, articles/articles.html has href="../", template.html has href="../" -->
+      <!-- VARIATION: Logo href - index.html has NO href, articles/index.html has href="../", article.html has href="../" -->
       <a class="logo-link" href="../">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/enwiki-25.svg" alt="Wikipedia"
           width="50" height="50">
@@ -102,7 +108,7 @@
       <a href="">Log in</a>
     </div>
 
-    <!-- VARIATION: Right nav - index.html has this commented out, articles.html and template.html have it active -->
+    <!-- VARIATION: Right nav - root index has this commented out, articles pages have it active -->
     <nav>
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -170,7 +176,7 @@
         <div class="top-header-secondary-left">
           <p class="blue-text"><a href="../" style="text-decoration: none; color: inherit;">Biography</a></p>
           <p class="underline"><u>Written-Works</u></p>
-          <p class="blue-text"><a href="../music/music.html" style="text-decoration: none; color: inherit;">Music</a></p>
+          <p class="blue-text"><a href="../music/" style="text-decoration: none; color: inherit;">Music</a></p>
         </div>
 
         <div class="top-header-secondary-right">
@@ -179,7 +185,7 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="../icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="/assets/icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
       </div>
@@ -312,7 +318,7 @@ Of which expressed here, are solely his and do not reflect the views, policies o
           h2.appendChild(document.createTextNode(cleanTitle));
         } else {
           const link = document.createElement('a');
-          link.href = `template.html#${articleId}`;
+          link.href = `article.html#${articleId}`;
           link.textContent = cleanTitle;
           h2.appendChild(link);
         }
@@ -365,7 +371,7 @@ Of which expressed here, are solely his and do not reflect the views, policies o
 
         if (!isComingSoon) {
           card.addEventListener('click', () => {
-            window.location.href = `template.html#${articleId}`;
+            window.location.href = `article.html#${articleId}`;
           });
         }
 
@@ -389,7 +395,7 @@ Of which expressed here, are solely his and do not reflect the views, policies o
 </body>
 
 <!-- ========== SHARED FOOTER START ========== -->
-<!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This footer is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 <!-- Variation: Content differences (last edited date, disclaimer text) -->
 

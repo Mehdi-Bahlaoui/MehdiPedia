@@ -3,8 +3,8 @@
 
 <head>
   <title>Mehdi Bahlaoui - Music - Wikipedia</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="css/music.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/music.css" />
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
   <!-- SEO -->
   <meta name="description" content="Music by Mehdi Bahlaoui — original tracks with time-synced lyrics and Genius-style annotations.">
-  <link rel="canonical" href="https://mehdibahlaoui.com/music/music.html">
+  <link rel="canonical" href="https://mehdibahlaoui.com/music/">
 
   <!-- Theme -->
   <meta name="color-scheme" content="light dark">
@@ -25,8 +25,8 @@
   <meta property="og:site_name" content="Mehdi Bahlaoui">
   <meta property="og:title" content="Music - Mehdi Bahlaoui">
   <meta property="og:description" content="Music by Mehdi Bahlaoui — original tracks with time-synced lyrics and Genius-style annotations.">
-  <meta property="og:url" content="https://mehdibahlaoui.com/music/music.html">
-  <meta property="og:image" content="https://mehdibahlaoui.com/Images/image2.jpg">
+  <meta property="og:url" content="https://mehdibahlaoui.com/music/">
+  <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon & Touch Icons -->
@@ -34,15 +34,15 @@
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
   <!-- Load music data for track listing -->
-  <script src="js/music-data.js"></script>
-  <script src="../script.js" defer></script>
+  <script src="/assets/js/music-data.js"></script>
+  <script src="/assets/js/script.js" defer></script>
 
 </head>
 
 <!-- ========== SHARED HEADER START ========== -->
-<!-- SYNC: This header is duplicated in index.html, articles.html, music/music.html, articles/template.html -->
+<!-- SYNC: This header is duplicated in index.html, articles/index.html, music/index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
-<!-- Variation: music.html - Logo links to index.html, full left nav with overlay, active right nav -->
+<!-- Variation: music/index.html - Logo links to index.html, full left nav with overlay, active right nav -->
 
 <header id="top">
   <div class="left-header">
@@ -57,14 +57,14 @@
 
       <div class="links-container-left">
         <a class="home-link" href="/">Home</a>
-        <a href="/articles/articles.html">Written Works</a>
-        <a href="/music/music.html">Music</a>
-        <a href="/articles/globe_article/globe.html">Globe</a>
+        <a href="/articles/">Written Works</a>
+        <a href="/music/">Music</a>
+        <a href="/articles/globe.html">Globe</a>
       </div>
     </nav>
 
     <div class="logo-area">
-      <!-- VARIATION: Logo href for music.html -->
+      <!-- VARIATION: Logo href for music/index.html -->
       <a class="logo-link" href="/">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/enwiki-25.svg" alt="Wikipedia"
           width="50" height="50">
@@ -99,7 +99,7 @@
       <a href="">Log in</a>
     </div>
 
-    <!-- VARIATION: Right nav - music.html has it active with empty links container -->
+    <!-- VARIATION: Right nav - music/index.html has it active with empty links container -->
     <nav>
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -164,7 +164,7 @@
       <div class="top-header-secondary">
         <div class="top-header-secondary-left">
           <p class="blue-text"><a href="/" style="text-decoration: none; color: inherit;">Biography</a></p>
-          <p class="blue-text"><a href="../articles/articles.html" style="text-decoration: none; color: inherit;">Written-Works</a></p>
+          <p class="blue-text"><a href="../articles/" style="text-decoration: none; color: inherit;">Written-Works</a></p>
           <p class="underline"><u>Music</u></p>
         </div>
 
@@ -174,7 +174,7 @@
           <p class="blue-text">View history</p>
           <div class="tools">
             <p>Tools</p>
-            <img src="../icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="/assets/icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div>
       </div>
@@ -258,7 +258,7 @@
 </body>
 
 <!-- ========== SHARED FOOTER START ========== -->
-<!-- SYNC: This footer is duplicated in index.html, articles.html, music/music.html, articles/template.html -->
+<!-- SYNC: This footer is duplicated in index.html, articles/index.html, music/index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 
 <footer class="wiki-footer">
@@ -304,7 +304,7 @@
     let html = '';
     for (const [id, song] of Object.entries(musicData)) {
       html += `
-        <a href="template.html#${id}" class="track-card">
+        <a href="track.html#${id}" class="track-card">
           <div class="track-info">
             <h3 class="track-title">${song.title}</h3>
             <p class="track-artist">${song.artist}</p>

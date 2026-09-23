@@ -2,36 +2,38 @@
 
 > Personal website of Mehdi Bahlaoui, styled as a Wikipedia page. It hosts his biography, a collection of personal essays, original music with synced lyrics and annotations, and interactive experiments such as a 3D globe built with Rust/Bevy compiled to WebAssembly.
 
-The site is a static HTML/CSS/JavaScript project with no build system. Articles and songs are rendered client-side from JavaScript data files, and individual pieces are addressed with URL hash fragments (e.g. `template.html#job`), so fetching a template URL without executing JavaScript returns the empty shell rather than the content. The raw content lives in `articles/js/articles-data.js` and `music/js/music-data.js`.
+The site is a static HTML/CSS/JavaScript project with no build system. Articles and songs are rendered client-side from JavaScript data files, and individual pieces are addressed with URL hash fragments (e.g. `article.html#job`), so fetching a template URL without executing JavaScript returns the empty shell rather than the content. The raw content lives in `assets/js/articles-data.js` and `assets/js/music-data.js`.
 
 ## Pages
 
 - [Biography](https://mehdibahlaoui.com/): Wikipedia-style profile — early life, work, interests, and personal lore
-- [Written works](https://mehdibahlaoui.com/articles/articles.html): index of all essays and articles
-- [Music](https://mehdibahlaoui.com/music/music.html): track listing with a Genius-style player (synced lyrics + annotations)
-- [Interactive globe](https://mehdibahlaoui.com/articles/globe_article/globe.html): 3D globe experiment built with Rust and Bevy, running in the browser via WebAssembly
+- [Written works](https://mehdibahlaoui.com/articles/): index of all essays and articles
+- [Music](https://mehdibahlaoui.com/music/): track listing with a Genius-style player (synced lyrics + annotations)
+- [Interactive globe](https://mehdibahlaoui.com/articles/globe.html): 3D globe experiment built with Rust and Bevy, running in the browser via WebAssembly
 
 ## Articles
 
-- [Should you really do what you love as your job?](https://mehdibahlaoui.com/articles/template.html#job): 2 Aug 2025
-- [A different way to live life: An NPC approach](https://mehdibahlaoui.com/articles/template.html#npc): 8 Aug 2025
-- [Why I'm Actually Black](https://mehdibahlaoui.com/articles/template.html#black): 10 Nov 2025
-- [There is a fine line between lowering your ego and respecting yourself](https://mehdibahlaoui.com/articles/template.html#ego): 23 Nov 2025
-- [I'm not addicted to coffee, YOU ARE](https://mehdibahlaoui.com/articles/template.html#coffee): 12 Dec 2025
-- [What relationship is there between your sleeping self and you?](https://mehdibahlaoui.com/articles/template.html#dream): 19 Dec 2025
-- [People can't listen anymore](https://mehdibahlaoui.com/articles/template.html#Listening): 5 Jan 2026
-- [A Letter to myself](https://mehdibahlaoui.com/articles/template.html#Letter_to_my_self): 12 Jan 2026
-- [My eyes are out of focus](https://mehdibahlaoui.com/articles/template.html#My_eyes_are_out_of_focus): 12 Feb 2026
-- [I uninstalled WhatsApp](https://mehdibahlaoui.com/articles/template.html#no_wtsp): 21 Feb 2026
-- [UM6P in 2026](https://mehdibahlaoui.com/articles/template.html#UM6P): 17 May 2026
-- [Rise of the Illuminati and what it has to do with Morocco](https://mehdibahlaoui.com/articles/template.html#illuminati): 11 Jul 2026
+- [Should you really do what you love as your job?](https://mehdibahlaoui.com/articles/article.html#job): 2 Aug 2025
+- [A different way to live life: An NPC approach](https://mehdibahlaoui.com/articles/article.html#npc): 8 Aug 2025
+- [Why I'm Actually Black](https://mehdibahlaoui.com/articles/article.html#black): 10 Nov 2025
+- [There is a fine line between lowering your ego and respecting yourself](https://mehdibahlaoui.com/articles/article.html#ego): 23 Nov 2025
+- [I'm not addicted to coffee, YOU ARE](https://mehdibahlaoui.com/articles/article.html#coffee): 12 Dec 2025
+- [What relationship is there between your sleeping self and you?](https://mehdibahlaoui.com/articles/article.html#dream): 19 Dec 2025
+- [People can't listen anymore](https://mehdibahlaoui.com/articles/article.html#Listening): 5 Jan 2026
+- [A Letter to myself](https://mehdibahlaoui.com/articles/article.html#Letter_to_my_self): 12 Jan 2026
+- [My eyes are out of focus](https://mehdibahlaoui.com/articles/article.html#My_eyes_are_out_of_focus): 12 Feb 2026
+- [I uninstalled WhatsApp](https://mehdibahlaoui.com/articles/article.html#no_wtsp): 21 Feb 2026
+- [UM6P in 2026](https://mehdibahlaoui.com/articles/article.html#UM6P): 17 May 2026
+- [Rise of the Illuminati and what it has to do with Morocco](https://mehdibahlaoui.com/articles/article.html#illuminati): 11 Jul 2026
+
+- [test-baby](https://mehdibahlaoui.com/articles/article.html#test-baby): 23 Sep 2026
 
 ## Music
 
-- [Welcome to Rap-Battle](https://mehdibahlaoui.com/music/template.html#welcome-to-rap-battle): original track by Mehdi Bahlaoui with time-synced lyrics and annotations
+- [Welcome to Rap-Battle](https://mehdibahlaoui.com/music/track.html#welcome-to-rap-battle): original track by Mehdi Bahlaoui with time-synced lyrics and annotations
 
 ## Optional
 
 - [UDPCore privacy policy](https://mehdibahlaoui.com/udpcore_privacy_policy.html): privacy policy for the UDPCore app
-- [Source data — articles](https://mehdibahlaoui.com/articles/js/articles-data.js): full article text as a JavaScript object
-- [Source data — music](https://mehdibahlaoui.com/music/js/music-data.js): lyrics, timings, and annotations as a JavaScript object
+- [Source data — articles](https://mehdibahlaoui.com/assets/js/articles-data.js): full article text as a JavaScript object
+- [Source data — music](https://mehdibahlaoui.com/assets/js/music-data.js): lyrics, timings, and annotations as a JavaScript object

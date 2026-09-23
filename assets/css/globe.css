@@ -51,6 +51,35 @@ body > canvas {
   outline: none;
 }
 
+/* Loading skeleton: same footprint as the globe, hidden once Bevy's canvas
+   is moved in (#globe-container.globe-live). Globe visuals unaffected. */
+.globe-skeleton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.globe-skeleton::before {
+  content: "";
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16,42,67,0.10) 0%, rgba(16,42,67,0.03) 70%, transparent 71%);
+}
+.globe-spinner {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(16,42,67,0.15);
+  border-top-color: #3b82f6;
+  animation: globe-spin 0.9s linear infinite;
+}
+@keyframes globe-spin { to { transform: rotate(360deg); } }
+#globe-container.globe-live .globe-skeleton { display: none; }
+
 /* Desktop: slide-in animation */
 @media (min-width: 851px) {
   .globe-text {

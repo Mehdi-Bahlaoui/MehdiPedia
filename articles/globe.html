@@ -3,8 +3,8 @@
 
 <head>
   <title>Interactive Globe - Mehdi Bahlaoui</title>
-  <link rel="stylesheet" href="../../styles.css" />
-  <script src="../../script.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script src="/assets/js/script.js" defer></script>
 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
   <!-- SEO -->
   <meta name="description" content="An interactive 3D globe built with Rust and Bevy, compiled to WebAssembly — spin the Earth right in your browser.">
-  <link rel="canonical" href="https://mehdibahlaoui.com/articles/globe_article/globe.html">
+  <link rel="canonical" href="https://mehdibahlaoui.com/articles/globe.html">
 
   <!-- Theme -->
   <meta name="color-scheme" content="light dark">
@@ -25,8 +25,8 @@
   <meta property="og:site_name" content="Mehdi Bahlaoui">
   <meta property="og:title" content="Interactive Globe - Mehdi Bahlaoui">
   <meta property="og:description" content="An interactive 3D globe built with Rust and Bevy, compiled to WebAssembly — spin the Earth right in your browser.">
-  <meta property="og:url" content="https://mehdibahlaoui.com/articles/globe_article/globe.html">
-  <meta property="og:image" content="https://mehdibahlaoui.com/Images/image2.jpg">
+  <meta property="og:url" content="https://mehdibahlaoui.com/articles/globe.html">
+  <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon & Touch Icons -->
@@ -34,7 +34,15 @@
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <link rel="stylesheet" href="globe.css">
+  <link rel="stylesheet" href="/assets/css/globe.css">
+
+  <!-- Globe WASM: high-priority preloads so the loader + binary start
+       downloading with the document, not after the module at the body end.
+       crossorigin must match the module fetch or the cache key differs and
+       the browser downloads the files twice. -->
+  <link rel="modulepreload" href="/assets/js/globe.js" crossorigin>
+  <link rel="modulepreload" href="./globe-vendor/globe_app.js" crossorigin>
+  <link rel="preload" href="./globe-vendor/globe_app.wasm" as="fetch" type="application/wasm" crossorigin>
 
 </head>
 
@@ -49,9 +57,9 @@
 </script>
 
 <!-- ========== SHARED HEADER START ========== -->
-<!-- SYNC: This header is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This header is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
-<!-- Variation: globe_article - Logo links to ../../ (two levels up), paths adjusted -->
+<!-- Variation: globe.html - 1 level deep, logo links to ../ -->
 
 <header id="top">
   <div class="left-header">
@@ -61,19 +69,19 @@
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
-      <!-- VARIATION: articles.html and template.html include overlay and links container; index.html omits these -->
+      <!-- VARIATION: articles/index.html and article.html include overlay and links container; index.html omits these -->
       <label id="overlay-left" for="sidebar-active-left"></label>
 
       <div class="links-container-left">
         <a class="home-link" href="/">Home</a>
-        <a href="/articles/articles.html">Written Works</a>
-        <a href="/music/music.html">Music</a>
-        <a href="/articles/globe_article/globe.html">Globe</a>
+        <a href="/articles/">Written Works</a>
+        <a href="/music/">Music</a>
+        <a href="/articles/globe.html">Globe</a>
       </div>
     </nav>
 
     <div class="logo-area">
-      <a class="logo-link" href="../../">
+      <a class="logo-link" href="../">
         <img class="wikipedia-logo" src="https://en.wikipedia.org/static/images/icons/enwiki-25.svg" alt="Wikipedia"
           width="50" height="50">
         <span class="logo-text">
@@ -107,7 +115,7 @@
       <a href="">Log in</a>
     </div>
 
-    <!-- VARIATION: Right nav - index.html has this commented out, articles.html and template.html have it active -->
+    <!-- VARIATION: Right nav - root index has this commented out, articles pages have it active -->
     <nav>
       <label for="sidebar-active-right" class="open-sidebar-button-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
@@ -149,10 +157,10 @@
 
       <div class="top-header-secondary">
         <div class="top-header-secondary-left">
-          <p class="blue-text"><a href="../../" style="text-decoration: none; color: inherit;">Biography</a></p>
-          <p class="underline"><a href="../articles.html" style="text-decoration: none; color: inherit;">Written-Works</a>
+          <p class="blue-text"><a href="../" style="text-decoration: none; color: inherit;">Biography</a></p>
+          <p class="underline"><a href="./" style="text-decoration: none; color: inherit;">Written-Works</a>
           </p>
-          <p class="blue-text"><a href="../../music/music.html" style="text-decoration: none; color: inherit;">Music</a>
+          <p class="blue-text"><a href="../music/" style="text-decoration: none; color: inherit;">Music</a>
           </p>
         </div>
 
@@ -162,7 +170,7 @@
           <p class="blue-text">View history</p> -->
           <div class="tools">
             <p>Tools</p>
-            <img src="../../icons/down.svg" alt="Icon" width="24" height="24">
+            <img src="/assets/icons/down.svg" alt="Icon" width="24" height="24">
           </div>
         </div> 
       </div>
@@ -194,11 +202,11 @@ Peace
 </p>
         </div>
 
-        <div id="globe-container"></div>
+        <div id="globe-container"><div class="globe-skeleton" aria-hidden="true"><div class="globe-spinner"></div></div></div>
 
       </div>
 
-      <script type="module" src="globe.js"></script>
+      <script type="module" src="/assets/js/globe.js"></script>
 
 
 
@@ -244,7 +252,7 @@ Peace
 </body>
 
 <!-- ========== SHARED FOOTER START ========== -->
-<!-- SYNC: This footer is duplicated in index.html, articles.html, articles/template.html -->
+<!-- SYNC: This footer is duplicated in index.html, index.html, articles/article.html -->
 <!-- Last updated: 2026-07-07 -->
 <!-- Variation: Content differences (last edited date, disclaimer text) -->
 

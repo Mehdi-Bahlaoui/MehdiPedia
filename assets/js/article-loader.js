@@ -155,7 +155,7 @@ function updatePageMetadata(article) {
   };
   setProperty('og:title', `${plainTitle} - Mehdi Bahlaoui`);
   setProperty('og:description', metaDesc.content);
-  setProperty('og:url', `https://mehdibahlaoui.com/articles/template.html${window.location.hash}`);
+  setProperty('og:url', `https://mehdibahlaoui.com/articles/article.html${window.location.hash}`);
 }
 
 /* =========================
@@ -483,7 +483,7 @@ document.addEventListener('click', (e) => {
   });
 });
 
-// Format seconds as M:SS (same helper as music/js/music-player.js)
+// Format seconds as M:SS (same helper as assets/js/music-player.js)
 function formatTime(seconds) {
   if (!isFinite(seconds) || seconds < 0) return '0:00';
   const mins = Math.floor(seconds / 60);
@@ -668,7 +668,7 @@ function showError(message) {
       <div class="section-text">
         <p class="section_title">Error</p>
         <p>${message}</p>
-        <p><a href="../articles/articles.html">View all articles</a></p>
+        <p><a href="/articles/">View all articles</a></p>
       </div>
     </div>
   `;
