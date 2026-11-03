@@ -1,8 +1,3 @@
-/* Hide the canvas while Bevy appends it to <body>, before we move it */
-body > canvas {
-  display: none !important;
-}
-
 .globe-layout {
   position: relative;
   width: 100%;
@@ -51,8 +46,8 @@ body > canvas {
   outline: none;
 }
 
-/* Loading skeleton: same footprint as the globe, hidden once Bevy's canvas
-   is moved in (#globe-container.globe-live). Globe visuals unaffected. */
+/* Loading skeleton: same footprint as the globe, hidden on the wasm's
+   first frame (#globe-container.globe-live). */
 .globe-skeleton {
   position: absolute;
   inset: 0;

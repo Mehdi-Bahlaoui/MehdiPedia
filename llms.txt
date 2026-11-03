@@ -1,8 +1,8 @@
 # Mehdi Bahlaoui
 
-> Personal website of Mehdi Bahlaoui, styled as a Wikipedia page. It hosts his biography, a collection of personal essays, original music with synced lyrics and annotations, interactive experiments such as a 3D globe built with Rust/Bevy compiled to WebAssembly, and a satirical political-party page for MAP.
+> Personal website of Mehdi Bahlaoui, styled as a Wikipedia page. It hosts his biography, a collection of personal essays, original music with synced lyrics and annotations, interactive experiments such as a 3D globe built with Rust/WebGL2 compiled to WebAssembly, and a satirical political-party page for MAP.
 
-The site is a static HTML/CSS/JavaScript project with no build system. Articles and songs are rendered client-side from JavaScript data files, and individual pieces are addressed with URL hash fragments (e.g. `article.html#job`), so fetching a template URL without executing JavaScript returns the empty shell rather than the content. The raw content lives in `assets/js/articles-data.js` and `assets/js/music-data.js`.
+The site is a static HTML/CSS/JavaScript project (the interactive globe alone has a Rust/Trunk build in `articles/globe_article/impl/`). Articles and songs are rendered client-side from JavaScript data files, and individual pieces are addressed with URL hash fragments (e.g. `article.html#job`), so fetching a template URL without executing JavaScript returns the empty shell rather than the content. The raw content lives in `assets/js/articles-data.js` and `assets/js/music-data.js`.
 
 ## Pages
 
@@ -10,7 +10,7 @@ The site is a static HTML/CSS/JavaScript project with no build system. Articles 
 - [MAP — Mehdi's Association for Political Reform](https://mehdibahlaoui.com/map.html): satirical Wikipedia-style page for Mehdi's fictional political party, its accidental founding, and its one-sided succession claim to PAM
 - [Written works](https://mehdibahlaoui.com/articles/): index of all essays and articles
 - [Music](https://mehdibahlaoui.com/music/): track listing with a Genius-style player (synced lyrics + annotations)
-- [Interactive globe](https://mehdibahlaoui.com/articles/globe.html): 3D globe experiment built with Rust and Bevy, running in the browser via WebAssembly
+- [Interactive globe](https://mehdibahlaoui.com/articles/globe.html): 3D globe experiment built with Rust and WebGL2, running in the browser via WebAssembly
 
 ## Articles
 

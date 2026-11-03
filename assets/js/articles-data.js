@@ -878,6 +878,7 @@ love~
 'globe': {
   title: "It's not a globe, It's Web-Assembly",
   date: '10/03/2026',
+  status: 'IMPROVED !!',
   redirect: 'globe.html'
 },
 

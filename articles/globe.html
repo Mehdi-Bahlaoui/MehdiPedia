@@ -12,7 +12,7 @@
   <meta name="referrer" content="origin">
 
   <!-- SEO -->
-  <meta name="description" content="An interactive 3D globe built with Rust and Bevy, compiled to WebAssembly — spin the Earth right in your browser.">
+  <meta name="description" content="An interactive 3D globe built with Rust and WebGL2, compiled to WebAssembly — spin the Earth right in your browser.">
   <link rel="canonical" href="https://mehdibahlaoui.com/articles/globe.html">
 
   <!-- Theme -->
@@ -24,7 +24,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mehdi Bahlaoui">
   <meta property="og:title" content="Interactive Globe - Mehdi Bahlaoui">
-  <meta property="og:description" content="An interactive 3D globe built with Rust and Bevy, compiled to WebAssembly — spin the Earth right in your browser.">
+  <meta property="og:description" content="An interactive 3D globe built with Rust and WebGL2, compiled to WebAssembly — spin the Earth right in your browser.">
   <meta property="og:url" content="https://mehdibahlaoui.com/articles/globe.html">
   <meta property="og:image" content="https://mehdibahlaoui.com/assets/images/image2.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -33,16 +33,13 @@
   <link rel="icon" href="https://en.wikipedia.org/static/favicon/wikipedia.ico">
   <link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <link rel="stylesheet" href="/assets/css/globe.css">
 
-  <!-- Globe WASM: high-priority preloads so the loader + binary start
-       downloading with the document, not after the module at the body end.
-       crossorigin must match the module fetch or the cache key differs and
-       the browser downloads the files twice. -->
-  <link rel="modulepreload" href="/assets/js/globe.js" crossorigin>
-  <link rel="modulepreload" href="./globe-vendor/globe_app.js" crossorigin>
-  <link rel="preload" href="./globe-vendor/globe_app.wasm" as="fetch" type="application/wasm" crossorigin>
+  <!-- Globe WASM: the inline loader at the end of the body uses these exact
+       URLs. `?v=` is bumped by articles/globe_article/impl/deploy.sh and
+       busts GitHub Pages' 10-minute cache when the wasm changes. -->
+  <link rel="modulepreload" href="./globe-vendor/globe_app.js?v=2" crossorigin>
+  <link rel="preload" href="./globe-vendor/globe_app.wasm?v=2" as="fetch" type="application/wasm" crossorigin>
 
 </head>
 
@@ -183,9 +180,9 @@
         <div class="globe-text">
           <p class="globe-title"><b>Interactive Globe</b></p>
           <p class="globe-description">
-Cool Globe isn't it? It was made using Bevy, a Rust game engine,
-and compiled to WebAssembly with all the optimizations possible
-to be able to run in the browser.
+Cool Globe isn't it? It was made using Rust and WebGL2,
+compiled to WebAssembly with no game engine in the middle.
+It starts much faster than the old version.
 
 
 You can click and drag to rotate the globe. Seriously, try it!
@@ -206,7 +203,14 @@ Peace
 
       </div>
 
-      <script type="module" src="/assets/js/globe.js"></script>
+      <script type="module">
+        // Inline so the globe starts with one less request. The preloads in
+        // <head> already fetched both files; `?v=` is kept in sync with them.
+        import init from '/articles/globe-vendor/globe_app.js?v=2';
+
+        init({ module_or_path: '/articles/globe-vendor/globe_app.wasm?v=2' })
+          .catch((error) => console.error('[globe] failed to start', error));
+      </script>
 
 
 
