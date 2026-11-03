@@ -1,0 +1,389 @@
+/* MAP party page
+   Wikipedia-style article chrome for Mehdi's Association for Political Reform.
+   Base typography, layout, theme controls, and sidebar behavior live in styles.css. */
+
+.map-article {
+  --map-border: #a2a9b1;
+  --map-infobox-bg: var(--blue-very-light);
+}
+
+[data-theme="dark"] .map-article {
+  --map-border: #54595d;
+}
+
+/* ---------- Title and article header ---------- */
+
+.map-title {
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: calc(var(--text-size-name) * 1.1);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-color);
+  margin: 0 0 4px 0;
+}
+
+.map-title-abbr {
+  color: var(--dark-grey);
+  font-size: 0.62em;
+  white-space: nowrap;
+}
+
+.map-title-emblem {
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  vertical-align: -5px;
+}
+
+.map-subtitle {
+  color: var(--dark-grey);
+  font-size: 0.95em;
+  margin: 0 0 12px 0;
+}
+
+.map-hatnote {
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 18px 1.6em;
+}
+
+.map-hatnote a {
+  color: var(--links-color);
+  text-decoration: none;
+}
+
+.map-hatnote a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Article body ---------- */
+
+.map-article .section-text {
+  font-size: var(--text-size-section);
+  line-height: 1.6;
+}
+
+/* The shared .section-text rule preserves source line breaks. This page is
+   written as normal HTML, so let the browser collapse them. */
+.map-article .section-text p {
+  white-space: normal;
+  margin: 0 0 0.9em 0;
+}
+
+.map-article .section-text p:last-child {
+  margin-bottom: 0;
+}
+
+.map-lead {
+  margin-bottom: 10px;
+}
+
+/* The lead and Etymology stack in one column beside the infobox, so the
+   article never leaves a tall gap when either column is shorter. */
+.map-intro-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.map-intro-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.map-intro-grid > .party-infobox {
+  flex: 0 0 300px;
+  margin: 0 0 20px 0;
+}
+
+.map-article ul {
+  margin: 0.6em 0 1em 1.6em;
+  padding: 0;
+}
+
+.map-article li {
+  margin: 0.35em 0;
+}
+
+.map-article .section-content {
+  padding-top: 4px;
+}
+
+/* ---------- Infobox ---------- */
+
+.party-infobox {
+  width: 300px;
+  margin: 20px 0 30px 0;
+  border: 1px solid var(--map-border);
+  background: var(--map-infobox-bg);
+  box-sizing: border-box;
+  font-size: 0.86em;
+  line-height: 1.45;
+  color: var(--text-color);
+}
+
+.party-infobox-header {
+  padding: 14px 10px 10px 10px;
+  border-bottom: 1px solid var(--map-border);
+  background: var(--blue-light);
+  text-align: center;
+}
+
+.party-infobox-emblem {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 8px auto;
+}
+
+.party-infobox-name {
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: 1.14em;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.party-infobox-abbr {
+  margin-top: 3px;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.party-infobox table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.party-infobox th,
+.party-infobox td {
+  padding: 5px 8px;
+  border-top: 1px solid var(--map-border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.party-infobox tbody tr:first-child th,
+.party-infobox tbody tr:first-child td {
+  border-top: none;
+}
+
+.party-infobox th {
+  width: 36%;
+  font-weight: 700;
+}
+
+.party-infobox .party-infobox-section {
+  padding: 4px 8px;
+  background: var(--blue-light);
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.party-infobox a {
+  color: var(--links-color);
+  text-decoration: none;
+}
+
+.party-infobox a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Quotes ---------- */
+
+.map-quote {
+  margin: 1em 0;
+  padding: 9px 14px;
+  border-left: 3px solid var(--links-color);
+  background: var(--blue-very-light);
+  font-style: italic;
+}
+
+.map-quote p {
+  margin: 0;
+}
+
+.map-article .section-text .map-quote p {
+  margin: 0;
+}
+
+.map-quote cite {
+  display: block;
+  margin-top: 5px;
+  color: var(--dark-grey);
+  font-size: 0.9em;
+  font-style: normal;
+}
+
+.map-quote-caption {
+  margin: -0.55em 0 1em 0 !important;
+  color: var(--dark-grey);
+  font-size: 0.9em;
+}
+
+/* ---------- Tables ---------- */
+
+.map-table-wrap {
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+.map-results {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-background);
+  font-size: 0.92em;
+  line-height: 1.45;
+}
+
+.map-results caption {
+  padding-bottom: 6px;
+  color: var(--text-color);
+  font-weight: 700;
+  text-align: left;
+}
+
+.map-results th,
+.map-results td {
+  padding: 6px 8px;
+  border: 1px solid var(--map-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.map-results thead th {
+  background: var(--blue-light);
+  font-weight: 700;
+}
+
+.map-results tbody tr:nth-child(even) {
+  background: var(--hover-background);
+}
+
+.map-results tbody tr:last-child td {
+  font-style: italic;
+}
+
+/* ---------- Lists and references ---------- */
+
+.map-see-also {
+  column-count: 2;
+  column-gap: 2em;
+}
+
+.map-see-also li {
+  break-inside: avoid;
+}
+
+.map-references {
+  margin: 0.6em 0 1em 0;
+  padding-left: 1.7em;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.map-references li {
+  margin: 0 0 0.5em 0;
+}
+
+/* ---------- Footer note ---------- */
+
+.map-parody-note {
+  margin: 32px 0 10px 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  color: var(--dark-grey);
+  font-size: 0.88em;
+  line-height: 1.55;
+}
+
+.map-parody-note strong {
+  color: var(--text-color);
+}
+
+.map-last-edited {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.95em;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 850px) {
+  .map-title {
+    font-size: var(--text-size-name);
+  }
+
+  .map-title-emblem {
+    width: 25px;
+    height: 25px;
+    margin-left: 4px;
+    vertical-align: -3px;
+  }
+
+  .map-hatnote {
+    margin-left: 0;
+  }
+
+  .map-intro-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .map-intro-main {
+    display: contents;
+  }
+
+  .map-intro-lead {
+    order: 1;
+    width: 100%;
+  }
+
+  .map-intro-grid > .party-infobox {
+    order: 2;
+    width: 100%;
+    max-width: 325px;
+    margin: 10px auto 20px auto;
+  }
+
+  .map-intro-etymology {
+    order: 3;
+    width: 100%;
+  }
+
+  .map-article .section-row {
+    max-width: 100%;
+  }
+
+  .map-article .section-text {
+    padding: 0;
+  }
+
+  .party-infobox {
+    width: 100%;
+    max-width: 325px;
+    margin: 10px auto;
+  }
+
+  .party-infobox th {
+    width: 40%;
+  }
+
+  .map-results {
+    font-size: 0.83em;
+  }
+
+  .map-results th,
+  .map-results td {
+    padding: 4px 6px;
+  }
+
+  .map-see-also {
+    column-count: 1;
+  }
+}

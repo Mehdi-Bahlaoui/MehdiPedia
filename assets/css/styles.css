@@ -1084,6 +1084,13 @@ body {
   text-decoration: none;
 }
 
+.party-emblem {
+  width: 14px;
+  height: 14px;
+  margin-left: 3px;
+  vertical-align: -2px;
+}
+
 .section_title {
   font-family: 'Linux Libertine', Georgia, Times, serif;
   font-size: var(--text-size-section-title);

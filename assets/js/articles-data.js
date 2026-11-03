@@ -69,7 +69,7 @@ const articlesData = {
 
         
         Anyway, so I listened, and his Idea was the following: "The best way to live life is to let go. Live your life with less worry, do not stress much, live like an NPC"
-        (The point of this writing will be to discuss this exact idea, and try an evaluate it from different perspectives.
+        (The point of this writing will be to discuss this exact idea, and try and evaluate it from different perspectives.
         To word it differently, the question we are trying to answer is the following: Should you give life (as we live it in society) 70% of your being or something high like 90-95%? Basically, should you go all in or not so much?)
 
         
@@ -97,7 +97,7 @@ const articlesData = {
         1. Deen (Islamic perspective):
         In Islam, you’re not called to give every ounce of yourself to the dunya. The Quran and hadith remind us the dunya is temporary, a bridge, not the destination.
         The Prophet himself balanced: he worked, he led, he fought, he strategized, but he also prayed, reflected, and detached.
-        More over, in Islam there is a concept of rizq (sustenance) which is crucial in this debate: God says in the Quran that provision is written, though it requires lawful effort.
+        Moreover, in Islam there is a concept of rizq (sustenance) which is crucial in this debate: God says in the Quran that provision is written, though it requires lawful effort.
         What you grind for with 90–95% intensity won’t necessarily yield more than the 70% effort guy that’s disciplined and consistent, because outcomes ultimately lie with Allah.
         Islam urges excellence (ihsan) in action, but paired with tawakkul (trust).
         That means: give strong effort, but don’t worship effort itself.
@@ -162,9 +162,9 @@ My experiences have shaped my understanding of what it means to be black in toda
 
 
             but seriously, let me tell you something 
-            As i was growing older, I started to notice some patterns.
-            First from this: One day, as you might now, I decided to grow out my hair, I wanted to look like Dicaprio (yes), but also because I was seeing some
-            of my freinds balding so it felt like I had to grow my hair because it could be the last time I could, so I did.
+            As I was growing older, I started to notice some patterns.
+            First from this: One day, as you might know, I decided to grow out my hair, I wanted to look like Dicaprio (yes), but also because I was seeing some
+            of my friends balding so it felt like I had to grow my hair because it could be the last time I could, so I did.
             Months went by, and my hair grew longer and longer, until one day, I looked in the mirror and said maan this hair only keeps going up, what is happening?
             It turned out my hair was growing in an afro style, and I was like okay this is new, I never expected this.
             I looked like MJ, I never wanted to look like him, MJ was not my inspiration, but here I was.. hehe
@@ -173,7 +173,7 @@ My experiences have shaped my understanding of what it means to be black in toda
 
             Then something else happened, I started to notice that I really like afro music, (I am really not making this up),
             I love those beats, the energy, the vibes, I felt connected to it, I started listening to more and more afro music,
-            It gave me hapiness I did not get from other types of music.. and then I began to understand something; That every person have tastes that they might not
+            It gave me happiness I did not get from other types of music.. and then I began to understand something; That every person have tastes that they might not
             be responsible for (I'm not saying afro music is bad, you get the point), what I'm saying is that I never chose to like afro music, it just happened.
             
 
@@ -245,9 +245,9 @@ My experiences have shaped my understanding of what it means to be black in toda
           The answer is in this: "To do, not be"
 
           Put it simply: You have a higher chance succeeding by doing, compared to be becoming.
-          Simpler, realer, more tangible, mesurable.
+          Simpler, realer, more tangible, measurable.
           
-          And you come to understand that the later one "becoming" can only come from the prior one..
+          And you come to understand that the latter one "becoming" can only come from the prior one..
 
           It is indeed in being that we become!
           
@@ -255,13 +255,13 @@ My experiences have shaped my understanding of what it means to be black in toda
 
           This is not to say that the problem with me was action, no, not that
           But rather this was a tricky equation for me to solve, it is only by solving for y do we get x, and mathematical brain could not get that.
-          ANd I bet you and I wouldn't either except by looking at knowledge from old wise people whom shared their wisdom.
+          And I bet you and I wouldn't either except by looking at knowledge from old wise people whom shared their wisdom.
           
-          It is only by doing great things that we become great, and making being great a goal will simply block us from doing great things.. WHy? EGOO!! hhh kikhle3 yak
+          It is only by doing great things that we become great, and making being great a goal will simply block us from doing great things.. Why? EGOO!! hhh kikhle3 yak
 
           But yeah that's the problem, because that way you'll be fueling your ego, and that is like digging your grave. 
 
-          It's honestly deeper than what I just wrote but that's the just of it, I hope it resonates with you.
+          It's honestly deeper than what I just wrote but that's the gist of it, I hope it resonates with you.
 
 
         `
@@ -282,12 +282,12 @@ My experiences have shaped my understanding of what it means to be black in toda
           But let me tell me about a crazy feeling tied to drinking black coffee
 
 
-          Sometimes a well prepared cup of coffe brings me great amount of joy
+          Sometimes a well prepared cup of coffee brings me great amount of joy
           and by the way, I drink coffee only for the taste aspect of it
 
 
           My mom used to always prepare it for me and my brother before going to school
-          I used to always drink it, nowa days i still do, and I think that this routine is what made it not affect me much when I grew up
+          I used to always drink it, nowadays I still do, and I think that this routine is what made it not affect me much when I grew up
           I am able to drink it before bed, i kid you not sometimes it makes me sleepy haha
           maybe that's what chronic tiredness is, but I don't think so hh
           I think I'm just built different
@@ -315,7 +315,7 @@ My experiences have shaped my understanding of what it means to be black in toda
 
           YES YOU,
 
-          Goodb ye
+          Good bye
 
 
         `
@@ -332,12 +332,12 @@ My experiences have shaped my understanding of what it means to be black in toda
         title: 'Introduction',
         content: 
           `Yesterday I had a dream,
-          I was doing my own thing yk (I don't remeber frankly) but then, inside the dream I saw a button, a UI button to be exact,
+          I was doing my own thing yk (I don't remember frankly) but then, inside the dream I saw a button, a UI button to be exact,
           in the middle of this button were written the words "Wake Up Gracefully",
           so I clicked on it, and then I woke up.
 
 
-          and I hate it to break it to you guys, but I actually woke up gracefully, no sudden movements, no stress, nothing.
+          and I hate to break it to you guys, but I actually woke up gracefully, no sudden movements, no stress, nothing.
 
           In fact I felt great.. like dropped from the ceiling into a couch of feathers
 
@@ -368,7 +368,7 @@ My experiences have shaped my understanding of what it means to be black in toda
 
           It's sad because it means they don't have a person to share their thoughts with.
           Surely, I must have been like that someday
-          But I geniuinely think that I'm not that talkative, and this helps besides the fact that It's ugly to keep interrupting people all the time.
+          But I genuinely think that I'm not that talkative, and this helps besides the fact that It's ugly to keep interrupting people all the time.
 
 
           Please listen more, even leave a bit of silence sometimes,
@@ -450,20 +450,20 @@ My experiences have shaped my understanding of what it means to be black in toda
         id: 'introduction',
         title: '',
         content: 
-`This is the first time this happened to me, my eyes are loosing focus,
+`This is the first time this happened to me, my eyes are losing focus,
 I got so inspired that I've been stuck like this for about 30 minutes
-You know the feeling of stopping for a second, looking into the horizon while your vision looses focus as you process what you had in mind 
+You know the feeling of stopping for a second, looking into the horizon while your vision loses focus as you process what you had in mind 
 -that feeling
 
 
 I still feel it as I write this, my vision is in and out of blurriness but I can manage
 
 
-WOW, just wow. I love life. more than life, I love the fact that the possibilities are endless and that you have the opportunity to chose your path.
-WHat started this is <a class="links" href="https://www.youtube.com/watch?v=BLl3xREFEsY">this</a> Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.
+WOW, just wow. I love life. more than life, I love the fact that the possibilities are endless and that you have the opportunity to choose your path.
+What started this is <a class="links" href="https://www.youtube.com/watch?v=BLl3xREFEsY">this</a> Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.
 
 
-I resonate with it a lot, because just recently I did something that previous me would of felt immensly grateful for, immensely proud, past me would tear up.. maybe
+I resonate with it a lot, because just recently I did something that previous me would have felt immensely grateful for, immensely proud, past me would tear up.. maybe
 Because of how beautiful this version of myself just is.
 I am growing fast, faster than the time where I was stuck in school
 
@@ -557,7 +557,7 @@ love~
       id: 'introduction',
       title: '',
       content:  
-      `This is the best the best gift I could give myself on my upcoming birthday, and probably will be my best acheivement, aswell as the best decision of my file if acheived.
+      `This is the best gift I could give myself on my upcoming birthday, and probably will be my best achievement, as well as the best decision of my life if achieved.
       Because it will provide me with precious time to work on myself, and to do the things I want to do, and to do them in the best way possible.
 
       I hope I'm not over-romanticizing this-
@@ -571,7 +571,7 @@ love~
       - Document everyday here
 
 
-      I won't stop this challenge until I acheive 30 consecutive days of waking up at 5am, no matter what, and I will document every day here, so that I can look back at it and see how I evolved, and also to share my experience with you guys, maybe it will inspire you to do the same or something similar :)
+      I won't stop this challenge until I achieve 30 consecutive days of waking up at 5am, no matter what, and I will document every day here, so that I can look back at it and see how I evolved, and also to share my experience with you guys, maybe it will inspire you to do the same or something similar :)
 
       `
     },
@@ -580,9 +580,9 @@ love~
       title: 'Day 1 - 28/02',
       content: 
       
-      `I slept for 2 hours today, horay.
+      `I slept for 2 hours today, hooray.
 
-      As I woke up it felt great, but I believe i did not hit deep sleep because I still have short term memory from what happened before I went to sleep hh.
+      As I woke up it felt great, but I believe I did not hit deep sleep because I still have short term memory from what happened before I went to sleep hh.
 
 
       Falling back to sleep was soo sweet but folding would mean cancelling this whole challenge so I woke up determined, ate an energy bar, half an apple and made coffee.
@@ -597,8 +597,8 @@ love~
       title: 'Day 2 - 01/03',
       content: 
       
-      `Yesterday, I struggled a lot, so much, i almost fell asleep about 6 times, and kept fighting with myself to stay awake because a nap would disturbed my cycle I thought..
-      Before maghrib at around 4:30pm my brain shut down, and I was received some unfortunate news that forced me to do some work a t night, I slept defeated but still at around 10pm
+      `Yesterday, I struggled a lot, so much, i almost fell asleep about 6 times, and kept fighting with myself to stay awake because a nap would disturb my cycle I thought..
+      Before maghrib at around 4:30pm my brain shut down, and I received some unfortunate news that forced me to do some work at night, I slept defeated but still at around 10pm
       I woke at 5am, I was so tired I could not get out of bed, I just laid there for 2 hours more.. I had to
 
       I just lost the challenge on the second day, but I will not give up, I will try again tomorrow, and the day after that, and the day after that.. until I succeed
@@ -610,16 +610,16 @@ love~
       title: 'Day 3 - 02/03',
       content:
       
-      `so I slept well from yesterday, but you know what happend just as I wanted to sleep at 10pm? I got a call from an old friend that I just had to answer, and I had to meet with him, it has bigger than this (and maybe that's a problem), I ended up meeeting with him and I satyed up until around 12PM, did some minor work until about 2AM, and then I went to sleep.
+      `so I slept well from yesterday, but you know what happened just as I wanted to sleep at 10pm? I got a call from an old friend that I just had to answer, and I had to meet with him, it was bigger than this (and maybe that's a problem), I ended up meeting with him and I stayed up until around 12AM, did some minor work until about 2AM, and then I went to sleep.
 
-      To be completely honest, I am not sure the 10pm rule is really working, specially becuase of dinner being fixed at 9pm by the cafeteria.. it wouldn be wise also to not eat dinner.
+      To be completely honest, I am not sure the 10pm rule is really working, specially because of dinner being fixed at 9pm by the cafeteria.. it wouldn't be wise also to not eat dinner.
       So this might not work but I am not giving up.
 
-      So today I decided to stay up until 5am, ended up 6am. i do not recommend it, you kinda get pissed of at the birds for making noise, it's like they rage-bating you hahah
+      So today I decided to stay up until 5am, ended up 6am. I do not recommend it, you kinda get pissed off at the birds for making noise, it's like they rage-baiting you hahah
       eugh, this is hard.
       
       
-      I think the best think I can do is to first have a fixed schedule. then and only then see if I can do the 5am one.. I don't know
+      I think the best thing I can do is to first have a fixed schedule. then and only then see if I can do the 5am one.. I don't know
       `
     },
       {
@@ -631,7 +631,7 @@ love~
 
       so I kinda think that this is not what I want to experience.. anymore
 
-      I might consider not eating dinner, maybe storing the food in the fidge, or OR cooking at home......
+      I might consider not eating dinner, maybe storing the food in the fridge, or OR cooking at home......
     
       `
     },
@@ -647,7 +647,7 @@ love~
       
       I started this challenge with the intention of what? Having more time to work on myself, and to do the things I want to do, and to do them in the best way possible.
 
-      I beleive I can acheive that, but for now, not with waking up at 5am..-I will try once again, when ramadan ends, to make it at 5am
+      I believe I can achieve that, but for now, not with waking up at 5am..-I will try once again, when ramadan ends, to make it at 5am
 
       
       The thing is, I just realized today that my internship tasks are expandable, this means i could be working on them for 10 hours and I would still find things to learn and tasks to do better
@@ -655,7 +655,7 @@ love~
 
       
       So I chose today inchaAllah god willingly to block the time from my waking point until about Asr (~4PM) for my personal projects, Work until sleep
-      ... I will try this see how it goes inchaAllah
+      ... I will try this and see how it goes inchaAllah
 
       `
     },
@@ -666,14 +666,14 @@ love~
       
       `So I did not write anything for these days because of various reasons, but mainly because I had to lock-in for my internship meeting
       I tried to find a solution and actually tried several things:
-      I tried dividing the day, personnal projects from waking up until 4pm (asr prayer), further will be for work but the day starts losing, yiu feel like you already lost when you wake up late
+      I tried dividing the day, personal projects from waking up until 4pm (asr prayer), further will be for work but the day starts losing, you feel like you already lost when you wake up late
       The previous idea to cook is also not doable, takes too much energy and time, plus I would have to do a back-and-forth to Marjan..nah
-      In a seperate note, as an effort to help me stay on the right track, I deleted all social media apps from my phone also the browser, the algorithm has gotten too strong haha
-      I also blocked youtube and others on my laptop, and right now I only give myself spotify podcasts and a book to read for entertainement.
+      In a separate note, as an effort to help me stay on the right track, I deleted all social media apps from my phone also the browser, the algorithm has gotten too strong haha
+      I also blocked youtube and others on my laptop, and right now I only give myself spotify podcasts and a book to read for entertainment.
       Some ask me why I'm torturing myself like this, but I think it's the opposite, I do this for me, not for a particular reason or to prove something, or to get to a standard, I really kinda feel like no social media is what I want to feel (at least for now, hopefully always)
 
 
-      But yeah anyway, about the main project, I found the solution, it's to simply to sleep at 10pm right after dinner, it gives me about 7 hours of sleep, I dunno why I complicated it haha
+      But yeah anyway, about the main project, I found the solution, it's to simply sleep at 10pm right after dinner, it gives me about 7 hours of sleep, I dunno why I complicated it haha
 
 
       `
@@ -711,10 +711,10 @@ love~
       title: 'Day 12 - 11/03',
       content:
       `And you win Again!
-      Woke up todya tired ngl, I could explain it for two reasons maybe, first I got woken up by a call around 12:45 ughh what the hell brother? haha
+      Woke up today tired ngl, I could explain it for two reasons maybe, first I got woken up by a call around 12:45 ughh what the hell brother? haha
       I guess I am never forgetting not to put my phone in <a class="links" href="https://en.wikipedia.org/wiki/Do_not_disturb">DnD</a> mode again
-      Second i slept with ligth clothes and the weather is getting colder, I should have put a second pair of pants, and some socks HHH
-      But yeah other than the fact it was hard sleeping early for today and waking up, it's going pretty good and I better start working before my intership meeting at 11AM
+      Second i slept with light clothes and the weather is getting colder, I should have put a second pair of pants, and some socks HHH
+      But yeah other than the fact it was hard sleeping early for today and waking up, it's going pretty good and I better start working before my internship meeting at 11AM
       Byyy
       `
     },
@@ -723,10 +723,10 @@ love~
       title: 'Day 13 - 12/03',
       content:
       `And you win some more!..
-      How great is that! I believe that's a personal best haha I hope i maintain it.
+      How great is that! I believe that's a personal best haha I hope I maintain it.
       I tried my best to carry on and I almost felt like it started being my identity which I like,
       but no one should try to keep with their identity do they?
-      But I failed te sleep for today for different reasons, but mainly because I was invited to an iftar party
+      But I failed to sleep for today for different reasons, but mainly because I was invited to an iftar party
       which threw me off both mentally and stomachly (I ate a lot and couldn't wind down to sleep)... long story short,
       it wasn't great, tho my day in the morning was very productive I must say
 
@@ -746,12 +746,12 @@ love~
       title: 'Day 15 - 14/03',
       content:
       `But you bounce back, and win again!
-      Reminds me of great passage of the book Ego is the enemey by Ryan Holiday, and I'm paraphrasing, but it goes
-      something like: just because you acheived something doesn't mean you can do it again with the same level of
+      Reminds me of great passage of the book Ego is the enemy by Ryan Holiday, and I'm paraphrasing, but it goes
+      something like: just because you achieved something doesn't mean you can do it again with the same level of
       success
 
-      We need to remeber what go us here, and the kind of dedication and we work we put in.
-      It's now half way through the challenge, I hope, i really do that I take it from here and maintain it until the end, if done, then I consider it a success... (to be continued)
+      We need to remember what got us here, and the kind of dedication and we work we put in.
+      It's now half way through the challenge, I hope, I really do that I take it from here and maintain it until the end, if done, then I consider it a success... (to be continued)
       `
     },
     {
@@ -759,23 +759,23 @@ love~
       title: 'Day 16 - 15/03',
       content:
       `For some reason I didn't feel like staying awake, so I didn't and went back to bed after waking up at 5AM
-      NOt sure how rationnal or irrationaal this was, i just felt like it, but anyway I pray I bounce back tomorrow, although I just went on a quick visit to see my mom    
+      Not sure how rational or irrational this was, I just felt like it, but anyway I pray I bounce back tomorrow, although I just went on a quick visit to see my mom    
       `
     },
       {
       id: 'Day 17 & 18',
       title: 'Day 17 & 18 - 17/03',
       content:
-      `It is impossible to push yourself when the setting is not adequate, although I tried my best, I just gave in for those todays, because it was going to be a struggle and have negatives outweighing positives not to spend time with family and be bitter about no being able to go to bed earlier.
-      It was going to be both stupid and impossible, so I chose to be rationnal.
+      `It is impossible to push yourself when the setting is not adequate, although I tried my best, I just gave in for those days, because it was going to be a struggle and have negatives outweighing positives not to spend time with family and be bitter about not being able to go to bed earlier.
+      It was going to be both stupid and impossible, so I chose to be rational.
       `},
       {
       id: 'Day 18 & 19',
       title: 'Day 18 & 19 - 19/03',
       content:
-      `Returning back, and trying to go back to the routine, I found it very hard and actually failed twice, the might before this one and this one. but like the book Ego is the enemy says, when you fail, are you going to make it worse or are you deal with it?
-      I choose to deal with it with th best that I had, but subhana'Allah it's not the same waking at 9AM than waking at 5AM, it's like a different world.
-      Although I failed I have a good feeling about tomorrow for some reason, I just know I 'm going to kill it
+      `Returning back, and trying to go back to the routine, I found it very hard and actually failed twice, the night before this one and this one. but like the book Ego is the enemy says, when you fail, are you going to make it worse or are you going to deal with it?
+      I choose to deal with it with the best that I had, but subhana'Allah it's not the same waking at 9AM than waking at 5AM, it's like a different world.
+      Although I failed I have a good feeling about tomorrow for some reason, I just know I'm going to kill it
       LETSSSGOOOOOOOOOOOOOOOOO   
       `},
       {
@@ -783,35 +783,35 @@ love~
       title: 'Day 19 - 20/03',
       content:
       `What did I tell you!
-      I woke up at 5AM, so far I am having a blast (okay not some much but I enjoy it)
+      I woke up at 5AM, so far I am having a blast (okay not so much but I enjoy it)
       Yesterday as I was falling asleep I set some new rules for myself.
 
-      Today Is first day of EID so no more excuse about anything, I just have to do it, and I will do it GOD willingly
-      <b>THe ultimate Rules:</b>
+      Today is the first day of Eid so no more excuse about anything, I just have to do it, and I will do it GOD willingly
+      <b>The ultimate Rules:</b>
        1) Dinner at ~8PM
        2) No Laptop use permitted after dinner
-       3) Wake-ip at 5AM <u>sharp</u>
+       3) Wake-up at 5AM <u>sharp</u>
 
        Every rule here addresses a specific problem I faced in these past days,
        First one is to make sure I have enough time to sleep, second one is to make sure I don't get too excited by my laptop (there is so much to do on the internet)
-       and it is worth mentionning while laptop use is not, I still allow myself to use my phone tho it cannot access social media, or a web browser even, but I can use it to listen to music, podcasts, and read books. (just finished Ego is the enemy btww!)
+       and it is worth mentioning while laptop use is not, I still allow myself to use my phone tho it cannot access social media, or a web browser even, but I can use it to listen to music, podcasts, and read books. (just finished Ego is the enemy btww!)
        
-       The final and third one, to wake up at 5AM sharp, is because SUbhanallah it's not the same as to wake up even at 5:30AM, you feel behind still, and you feel like you lost the day already, this is a psychological thing, but it is real, and I want to be in the best mental state possible to start my day.
+       The final and third one, to wake up at 5AM sharp, is because Subhanallah it's not the same as to wake up even at 5:30AM, you feel behind still, and you feel like you lost the day already, this is a psychological thing, but it is real, and I want to be in the best mental state possible to start my day.
 
       `},
       {
       id: 'break',
       title: 'Day 20 -> Day 42: 04/04',
       content:
-      `So I took a break unwillingly, I had to do go travel almost every week, between family-place, Rabat flat, and internship.
+      `So I took a break unwillingly, I had to go travel almost every week, between family-place, Rabat flat, and internship.
        I had to prepare, work, meet some people, do some chores. ALL things that did not leave room for something as strict as waking up at 5AM
 
        But I am 100% in fault, and I think I know exactly why.
 
-       For a challenge like this, or any meaningful undeavour, especially when trying to make it stick for the first time, one needs to dedicate a lot more effort.
+       For a challenge like this, or any meaningful endeavour, especially when trying to make it stick for the first time, one needs to dedicate a lot more effort.
        This is obvious, and that's why I do not bring myself down because of it.
 
-       This being said, I believe I now found that startegy that's going to fit:
+       This being said, I believe I now found that strategy that's going to fit:
        - Dinner at 7pm-7:30pm
        - (Immediately after) Brush teeth + Maghrib prayer
        - Sleep as soon as I enter Room (~8pm-8:30pm)
@@ -821,7 +821,7 @@ love~
         1) Bring Tooth-brush along w/me when going for dinner
         2) Pray Maghrib outside 
 
-        This will leave me with no excuse to not to sleep, as soon as I get to my Room.
+        This will leave me with no excuse to not sleep, as soon as I get to my Room.
         Lah iwefe9 incha'Allah !
       
       
@@ -832,7 +832,7 @@ love~
       title: '05/04',
       content:
       `Long story short, I woke up at 5AM, but I could not get myself going, I went back to bed at around 6:30AM
-      For several reasons, not worth mentionning (like left the window open and the cold woke me up + moskitos (I kid you not) + food still not digested)
+      For several reasons, not worth mentioning (like left the window open and the cold woke me up + mosquitoes (I kid you not) + food still not digested)
       I am not counting this, better luck next time
       `
       },
@@ -842,7 +842,7 @@ love~
       content:
       `Today started a bit hard but I woke up at 5am. Here we go again, great morning I feel very energized alhamdolilah
       I swear it's a special energy you get when you get up before sunrise.
-      I am trying something new, I will try 6AM for sometime. I beleive this will give much much more energy and kick start my day just rigth
+      I am trying something new, I will try 6AM for sometime. I believe this will give much much more energy and kick start my day just right
 
       Let's gooooooooooooooooooooooooooooooo
       
@@ -901,14 +901,14 @@ love~
       title: '',
       content: 
       
-`I just realized this about my self, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
+`I just realized this about myself, and thank god I did, because it explains a lot of things about me, procrastination, and my work ethic.
 
-I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Altough I like it when I do solve problems!) but when shit gets real, I start questionning everything. YOu could maybe give me the same task but one asks for a clear working prototype, something easily mesurable, moving, real. and that would motivate me immensly.
+I don't like to solve problems just to do, just to have a go at it, or to challenge myself (Although I like it when I do solve problems!) but when shit gets real, I start questioning everything. You could maybe give me the same task but one asks for a clear working prototype, something easily measurable, moving, real. and that would motivate me immensely.
 I believe this shows in my passion for Robotics, if it has moving parts I love, If I can control it, I love it more.
 
 But besides Robotics, it's not just movement but the actual perceived usefulness of the task/project at hand.
 
-Basically speaking it needs to do something to serve a purpose. SO basically I'll only study the algorithm if i'm going to use it, and I'm only going to implement it it's actually going to be used :)
+Basically speaking it needs to do something to serve a purpose. So basically I'll only study the algorithm if I'm going to use it, and I'm only going to implement it if it's actually going to be used :)
       `
     }
   ]
@@ -972,37 +972,37 @@ All the best!!
 For him it's a rite of passage, kinda like in a video game; you have to fail to finally get it.
 He sees it as a necessary step to success, that you need to fail a lot to succeed,
 He brings up that in Nasa in particular, they have a saying that goes "Fail early, fail often, fail forward",
-and I thought to myself, hey we had it hard a school because once you fail, there isn't much room for correction.
+and I thought to myself, hey we had it hard at school because once you fail, there isn't much room for correction.
 
 In fact, if you fail your Baccalaureate, you failed, that's it
 I used to think there was no second chance, that If I failed, and that society, including family, wouldn't deal
 with it well (They wouldn't)
 Most studious students catch themselves before this could ever happen,
-but what if i took you 1 or 2 year to understand that you're making wrong decisions
-Because that could happen, and, I beilve if there was no ego or emotions tied to all of this, this would be fine,
+but what if it took you 1 or 2 years to understand that you're making wrong decisions
+Because that could happen, and, I believe if there was no ego or emotions tied to all of this, this would be fine,
 and that, looking forward perhaps a decade in the future, you would find yourself maybe far ahead than your peers
 You just had to fail more (for your baccalaureate) to get it at that stage,
 past that stage perhaps you had to fail less than your peers
 
 you get it?
 
-Failure is must, it is a necessary step to success, and it is a rite of passage, it is a part of the process,
-we should perhaps not mesure success by the number of failures, but rather by the quality of the failures, 
-meaning that you failed in something that truly sacred you (and you didn't give up)... 
+Failure is a must, it is a necessary step to success, and it is a rite of passage, it is a part of the process,
+we should perhaps not measure success by the number of failures, but rather by the quality of the failures, 
+meaning that you failed in something that truly scared you (and you didn't give up)... 
 because that shows courage, or that you understand what I'm writing here -that success is eventually inevitable
 
 Because, maybe it's just luck, and/or <i>a9dar</i> for when will you finally understand what you were doing wrong
 
 I resonate with this idea a lot.
 
-And what you can take for it you, the reader, is that what sepeartes you from the success you want,
+And what you can take from it you, the reader, is that what separates you from the success you want,
 and parallelly others,
 
 is <b> how scary are your dreams ?</b>
 
 because now, <i> I hope</i>,
 
-you understand and aggree that success is inevitable, incha-Allah. :)
+you understand and agree that success is inevitable, incha-Allah. :)
 
 
 <b> Update: 22/03/2026 </b>
@@ -1038,21 +1038,21 @@ I had been catching myself sometimes just watching something really not interest
 Why would I do that if it would cause myself to get stimulated to the point I can no longer do work properly?
 
 And the algorithm just keeps on getting stronger and stronger, If they don't catch you with clickbait they'll catch you with explicit content,
-that you might think is fine and normal but that stimulates far to much for my liking.
+that you might think is fine and normal but that stimulates far too much for my liking.
 As corny as it sounds again, it's like a drug, and I don't want to be addicted to it.
 
 And what's worse is that you don't even gain from it,
-atleast cocaine gives you some sort of hapiness
-with social media you just get some laughs out, but you lose more that you gain, infact whenever you switch back and forth from work and social media, you take from your finite pool of willpower.
+at least cocaine gives you some sort of happiness
+with social media you just get some laughs out, but you lose more than you gain, in fact whenever you switch back and forth from work and social media, you take from your finite pool of willpower.
 
 So I had to quit.
-The problem I had faced previously that prevent this is the amount of educational content on there.
+The problem I had faced previously that prevented this is the amount of educational content on there.
 The solution for that is to just download the video if you really have to. But honestly, I argue that better content is almost always out there in text format.
 
-Now about linkedin, well it is slowly becoming the new Youtube, the content is getting worse and worse, and the algortihm is getting stronger aswell.
+Now about linkedin, well it is slowly becoming the new Youtube, the content is getting worse and worse, and the algorithm is getting stronger as well.
 I don't blame the companies, they need to keep me and you in their platform to make money.
 
-You have tiktok brain and it's probably hurting you ability to chase your dreams.
+You have tiktok brain and it's probably hurting your ability to chase your dreams.
 
 If that doesn't motivate you to quit, then I don't know what will.
     `}
@@ -1063,7 +1063,7 @@ If that doesn't motivate you to quit, then I don't know what will.
 
 'dissapointed': {
   id: 'dissapointed',
-  title: 'I\'m dissapointed in Spotify',
+  title: 'I\'m disappointed in Spotify',
   date: '22/04/2026',
   status: '',
   sections: [
@@ -1074,10 +1074,10 @@ If that doesn't motivate you to quit, then I don't know what will.
     `I am trying to get away from social media as much as possible as you might have guessed by now.
     More aggressively from the shorts/reels and tiktok-like videos.
 
-    Couple of days ago, to my dismay, I find out (though I had seen it before but haven't payed attention) that Spotify had their own short-form content, that sometimes gets recommended to you.
+    Couple of days ago, to my dismay, I find out (though I had seen it before but haven't paid attention) that Spotify had their own short-form content, that sometimes gets recommended to you.
     
-    I, for my curious nature, clicked on one of those videos, and I was surprised to find out that they allowed "clips re-uploads": content originally uploaded in other platforms, reuploaded to their.
-    There numerous Youtube re-uploads from channels claiming the content to be podcasts...
+    I, for my curious nature, clicked on one of those videos, and I was surprised to find out that they allowed "clips re-uploads": content originally uploaded in other platforms, reuploaded to there.
+    There are numerous Youtube re-uploads from channels claiming the content to be podcasts...
     
     Let me tell you, that I was not ready for this.
     My phone had only Wikipedia and Spotify among a short list of Apps.
@@ -1085,11 +1085,11 @@ If that doesn't motivate you to quit, then I don't know what will.
     
     After two days of falling into pleasure, I decided to take action.
 
-    I'm official on Deezer now hh.
+    I'm officially on Deezer now hh.
     Much better, less noise, less bullshit.
     Just music as it should be.
     Haven't checked if they also have podcasts but I am sure there are no shorts.
-    and If they decide to add them, I will switch agian.
+    and If they decide to add them, I will switch again.
 
     Disappointed in Spotify but you can't blame them.
 
@@ -1114,7 +1114,7 @@ If that doesn't motivate you to quit, then I don't know what will.
     `
     No one has the answer you are looking for.
 
-    We tend to want to look everywhere on the internet, for the our problems,
+    We tend to want to look everywhere on the internet, for our problems,
     "hey google how to wake up at 5AM?"
     "hey google how to be productive?"
     "hey google how to be happy?"
@@ -1122,15 +1122,15 @@ If that doesn't motivate you to quit, then I don't know what will.
 
     Even chatgpt, actually chatgpt more than google nowadays
 
-    I claim no one has the answer to these anymore (I believe perhaps in the early days of the internet, you probably could've found some gems because there wasn't as much information, and people were not motivated by gain at the early days, just geniunly good people looking to help)
+    I claim no one has the answer to these anymore (I believe perhaps in the early days of the internet, you probably could've found some gems because there wasn't as much information, and people were not motivated by gain at the early days, just genuinely good people looking to help)
     
     Now? Too much information! and Too much information kills information :(
 
-    At this point, it looks like you can fix problems by yourself, by elimination process, faster than watching 1 miliion videos or reading countless articles.
+    At this point, it looks like you can fix problems by yourself, by elimination process, faster than watching 1 million videos or reading countless articles.
 
-    I've tried numurous times to learn something or find the answer to such questions, and today I come to the conclusion that quality has drowned in quantity.
+    I've tried numerous times to learn something or find the answer to such questions, and today I come to the conclusion that quality has drowned in quantity.
     
-    SO reading OG books has never been more important, books published before making a book was motivated by having a bestseller. the real OG books are the one to look for, and to acquire in paper format.
+    So reading OG books has never been more important, books published before making a book was motivated by having a bestseller. the real OG books are the ones to look for, and to acquire in paper format.
     Because tiktok is a sexy temptation when using a phone
     
     All the best brother!!
@@ -1180,7 +1180,7 @@ If that doesn't motivate you to quit, then I don't know what will.
     
     That being said, let YOU start with yourself, first.
     
-    Thankfully, some people will beleive in you before you do yourself <3 (and to those we will be immensely grateful),
+    Thankfully, some people will believe in you before you do yourself <3 (and to those we will be immensely grateful),
     but <b>most will not</b>, most will only trust you to the extent YOU do.
 
     So do your job :)
@@ -1206,8 +1206,8 @@ I just want to share some of my thoughts about this place. This is mostly a posi
 
 For those who don't know, UM6P stands for "Université Mohammed VI Polytechnique", it is a university not just in Morocco, but with campuses in France, Canada and also the US.
 
-For my PFE, I had the chance to intern here at the benguerir Campus, the first ever campus of the university.
-More specically, I am doing my internship at the "College of Computing" which is the computer science department of the university.
+For my PFE, I had the chance to intern here at the Benguerir Campus, the first ever campus of the university.
+More specifically, I am doing my internship at the "College of Computing" which is the computer science department of the university.
 And I am working at the intersection of AI, Networking, and Embedded Systems, which is very exciting to say the least ;)
 
 `
@@ -1230,7 +1230,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       Your first similar sight-seeing has a special effect on you; if you already like it here you start to think this is heaven - you quickly get used to it hh, though it's still pretty cool!
       
       A somewhat funny realization: It looks like there is as much cleaning staff as there are students.
-      When you think of it, it starts to make sense. As an unefficient algorithm would associate one cleaning person to every individual to be able to cover the whole of the potentially dirtied path of that 1 person.
+      When you think of it, it starts to make sense. As an inefficient algorithm would associate one cleaning person to every individual to be able to cover the whole of the potentially dirtied path of that 1 person.
       Though I am sure there isn't a 1-1 mapping, that would be insane and unrealistic and funny.
       Though just to show you, to be able to maintain the beauty of the place, and to be able to enjoy it, you need to have a lot of cleaning staff, and they do a great job at that.
       
@@ -1242,7 +1242,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       images: [{
         url: '/assets/images/um6p/n1.jpg',
         alt: 'Me',
-        caption: 'The main concourse connecting the two `Pergolas` of the campus. Right and left are the different departements',
+        caption: 'The main concourse connecting the two `Pergolas` of the campus. Right and left are the different departments',
         position: 'center',  
         width: '800px'       
       },
@@ -1257,12 +1257,12 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
       content:
       `The night is mesmerizing,
-      In my first days here, I used to go to stay up until 1-2AM to enjoy calm and undistracted work at night.
+      In my first days here, I used to stay up until 1-2AM to enjoy calm and undistracted work at night.
       I didn't know it at the time, but I used to use a monitor that was not meant to be used by anyone other than the owner.
       I loved it because it was massive lol.
       I did not get told by the owner nor the students/phds there. It was some guy who probably and understandably is his job; to make sure the place is not populated by students/interns/phDs not supposed to be here.
       I enjoyed it until that day.
-      Now I have an even bigger mionitor, just for myslef. Thanks to the previous one that showed how useful it can be when working with code. (You see how I made this positive?)
+      Now I have an even bigger monitor, just for myself. Thanks to the previous one that showed how useful it can be when working with code. (You see how I made this positive?)
       
       `
 
@@ -1278,13 +1278,13 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
         width: '800px'       // Optional: custom width
       },
       content:
-      `I go to a coffee shop here that is preety classy, and the coffee is pretty good.
+      `I go to a coffee shop here that is pretty classy, and the coffee is pretty good.
       One time as you see, they offered me a free sweet alongside my daily espresso, how nice!
-      The place is at the heart of the School of Hospitality and Business Mangement, called SHBM for short.
+      The place is at the heart of the School of Hospitality and Business Management, called SHBM for short.
       
-      They practice what they teach at that coffee shop, infact the waiters are most of time students of the school! and they do a great job.
+      They practice what they teach at that coffee shop, in fact the waiters are most of time students of the school! and they do a great job.
 
-      To set the atmossphere for you, they play jazz music, and everyone there wears a suit.
+      To set the atmosphere for you, they play jazz music, and everyone there wears a suit.
       As funny as it sounds yes hahaha
       Though people look pretty good in suits so it is not that bad hh.
 
@@ -1306,7 +1306,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       `Well that's the end of the article,
       Some final words about how I find the people here, and the activities:
 
-      You can find some intersting and diverse people, from different backgrounds.
+      You can find some interesting and diverse people, from different backgrounds.
       There are a lot of events and opportunities to meet new people and to learn new perspectives.
       A few questions that stay on my mind: How do the students here see the world? What do they think about the future? What are their dreams? Where do they intern lol?
       
@@ -1315,7 +1315,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       
       Also the library!!!
       
-      I'm ashamed to say I haven't been to the library properly yet, but it look like I will melt upon seeing all the self-help and personal development books there.
+      I'm ashamed to say I haven't been to the library properly yet, but it looks like I will melt upon seeing all the self-help and personal development books there.
       `
     }
 
@@ -1349,7 +1349,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           Why are they closed when people are most likely to read?
 
 
-          If an educationnal institution is really made for the students, then it should be open when the students are most likely to use it.
+          If an educational institution is really made for the students, then it should be open when the students are most likely to use it.
           I know it's not only made for students, but for the community as well, and that includes the teacher and the staff, but that is not valid reason to close it, and bringing up other reasons is actively missing the point.
 
           For an institution to serve the students, its library should be open when its students are most likely to use it/need it.
@@ -1371,7 +1371,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             url: '/assets/images/thinking.jpeg',
             alt: 'thinking',
             caption: 
-            'Leaders of the future are us, the students of now. Only if we actively chose to make the change. \n But how much are we willing to sacrifice for it?',
+            'Leaders of the future are us, the students of now. Only if we actively choose to make the change. \n But how much are we willing to sacrifice for it?',
 
             position: 'full',  // Options: 'left', 'right', 'center', 'full'
           }, 
@@ -1393,7 +1393,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
                 id: 'intro',
                 title: 'Introduction',
                 content: 
-                `Young and passionate people like you think of enterpreunership as a way to make it big | make a lot of money | protect their freedom.
+                `Young and passionate people like you think of entrepreneurship as a way to make it big | make a lot of money | protect their freedom.
 
                 <b>Nice!</b>
                 
@@ -1417,7 +1417,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
               title: '<b>You\'re young and have nothing to lose, Big companies do.</b>',
               content: 
 
-              `  Would you resonate with the goal to piss of big companies?
+              `  Would you resonate with the goal to piss off big companies?
 
                   To be a menace to them. hhh menlekher atkoun mrid haha.
 
@@ -1429,7 +1429,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
                   
                   Though you have nothing to lose so you are ruthless, bold,
                   They have to do something about you if they do not want to lose their market share.
-                  You are a threat to them, but you're just foing it for fun!
+                  You are a threat to them, but you're just doing it for fun!
 
                   Morally, this stands because you'll simply create a better product.
                   It's combining pettiness and impact hh. 
@@ -1440,10 +1440,10 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
                   Perhaps a sense of importance is what will motivate you and me the most? What do you think? 
                   
-                  You'll be that CEO that talks shit for fun, and that is extreamly exciting to me.
+                  You'll be that CEO that talks shit for fun, and that is extremely exciting to me.
 
 
-                  And since you have nothing to lose, you can take risks, and infact you'll have I claim.
+                  And since you have nothing to lose, you can take risks, and in fact you'll have I claim.
                   The risks should not threaten your current situation/position though.
                   The risks I am talking about is with your time, image, and maybe money.
                   (This is why this is mainly for the young)
@@ -1462,7 +1462,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
                 id: 'conclusion',
                 title: '<b>Conclusion</b>',
                 content: 
-                `Basically your goal is to piss of any big company, if they take it serious, go out there and make a better product just for fun.
+                `Basically your goal is to piss off any big company, if they take it serious, go out there and make a better product just for fun.
                   Fuck around and find out ahahah
                   
                   When shit gets serious you can always sell your company, and repeat the process.`
@@ -1509,7 +1509,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
 
       `
-      I propose the following startegy:
+      I propose the following strategy:
       
       <span class="font-philo" style="font-size: 22px" <b>Fake it 'till you feel it.</b> </span>
 
@@ -1520,7 +1520,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
       For this, I suggest to already consider yourself happy and ready to tackle the day.
       Some say action comes before motivation, I don't know if that's true but it works.
-      So let's pretend to have it all figured out, after all, the goal is not to have it all figured out, but to have it lived it out.
+      So let's pretend to have it all figured out, after all, the goal is not to have it all figured out, but to have lived it out.
 
       `},
       {
@@ -1590,7 +1590,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
             Some do it for fame but that is not worth it.
             
-            And some do it to leave a legacy, to be responsible for something and be remembered for acheiving it.
+            And some do it to leave a legacy, to be responsible for something and be remembered for achieving it.
 
             Whatever your reason is, cherish it, but not too much, as your obligation is to the club, not to yourself, and you should be able to sacrifice your own wants and desires for the sake of the club, and that is what makes a good president.
 
@@ -1610,7 +1610,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             },  
             content: 
             `
-            Apart from the fact that most of the resposibilty is on you, you realize first, that as president, you suddenly have no time to indulge deep in the technical stuff, you have to be more of a manager, and that is probably not what you signed up for.
+            Apart from the fact that most of the responsibility is on you, you realize first, that as president, you suddenly have no time to indulge deep in the technical stuff, you have to be more of a manager, and that is probably not what you signed up for.
 
             Administratively, you have to deal and pay thought to a lot of people.
             This, by itself, is not bad. But very quickly takes a bad turn when inevitably you realize, that some people are very unpleasant, inconsiderate and mean.
@@ -1626,18 +1626,18 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             You will have to deal with a lot of bureaucracy, and bureaucracy kills creativity.
             
             Your student association will not be your friend neither.
-            You thought they were there to help you.. you are right, but they might (and will) loose themselves also.
+            You thought they were there to help you.. you are right, but they might (and will) lose themselves also.
             and they'll end up against you.
-            After all, they say, you are a part us, not the way around, so we need to control you.
+            After all, they say, you are a part of us, not the other way around, so we need to control you.
             Not to say, if you shine too much, they won't like it..
 
             And, you won't always be the good guy neither.
             Stress and pressure will make you do things you don't want to do, and that is also part of the game.
             You will misbehave, you're not perfect. You need to regularly take time to reflect on your actions.
-            You will find yourself in lose-lose situations, and you will dissapoint some people maybe even yourself sometimes.
+            You will find yourself in lose-lose situations, and you will disappoint some people maybe even yourself sometimes.
             You might unintentionally hurt some people, and that is also a part of the game.
                         
-            Not everyone is mature enough to deal with healthy competiton.
+            Not everyone is mature enough to deal with healthy competition.
             Some people will fight it with harsh words, some will literally fight you lol.
             
             It's a whole new world of social interactions, and you need to be ready for it!
@@ -1648,7 +1648,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
             id: 'ugly',
             title: 'The Ugly',
             content: 
-            `The ugliest trait is to be a control freak, with your interraction with other club leaders/presidents, you will see that, and probably be repulsed by it.
+            `The ugliest trait is to be a control freak, with your interaction with other club leaders/presidents, you will see that, and probably be repulsed by it.
 
             In your negotiations, you will deal with people that do not look at the big picture, and that only care about their own interests, and that is also very ugly.
 
@@ -1677,11 +1677,11 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
             You will begin to understand that everything is a transaction and that most people are driven by their own interests.
 
-            You will understand that you need to be strong and courageous because you will most definetly face bullies and haters.
+            You will understand that you need to be strong and courageous because you will most definitely face bullies and haters.
 
             You need to not let this affect your grades at school, after all if you get expelled, you won't be able to do anything for the club, and you won't be able to do anything for yourself either.
 
-            You need to control your ego, every interraction is filled with ego. Next time that you are in an important interraction, try to monitor how you feel.
+            You need to control your ego, every interaction is filled with ego. Next time that you are in an important interaction, try to monitor how you feel.
             You will be surprised by how your emotions are all over the place, and how they affect your decisions in real time.
 
             Always have the club's best interest in mind, because you are its president: it's your job.
@@ -1689,7 +1689,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
             You have on your shoulder a club's legacy, you need to protect it and that is your number one goal.
 
-            Finally, live by the truth, and only do what is right -not easy, for an easy way out is a cowards' move.
+            Finally, live by the truth, and only do what is right -not easy, for an easy way out is a coward's move.
 
             `},
 
@@ -1786,7 +1786,7 @@ hh I won't do anything
     'coffee-2': {
       title: 'Coffee, cafés, and more coffee..',
       date: '02/10/2026',
-      status: 'NEW !!',
+      status: '',
       sections: [
         {
           audio: {
@@ -1811,18 +1811,18 @@ hh I won't do anything
           The best gift anyone could bring me is probably some coffee accessory or coffee capsules hh 
           
           Anyway, 
-          Where I stay in Marrakech, the is a street full of caffees back to back, and on the other side of the streets, caffees and more caffees along the street, stretching as far as the eye can see.
+          Where I stay in Marrakech, there is a street full of caffees back to back, and on the other side of the streets, caffees and more caffees along the street, stretching as far as the eye can see.
           Wow
 
           At night, all the cafés get full.
-          ANd mind you, there are a lot!
+          And mind you, there are a lot!
           
           I think I finally found my people hhh
           
           When 9pm hits, it feels like all the men in the neighbourhood go out.
           
           Something I never saw elsewhere is that here, they stay open until 2AM. (Writing this at 12:14AM at a caffee -I wasn't kidding)
-          I'm not exagerating, like service stops at 12AM -of course- it's not a nigth club- but one could stay there until 2AM if they wish.
+          I'm not exaggerating, like service stops at 12AM -of course- it's not a night club- but one could stay there until 2AM if they wish.
 
           And did I mention it's a regular neighbourhood? not a touristy one.
 
@@ -1838,17 +1838,17 @@ hh I won't do anything
           content:
           `These days, I try to stay consistent on what I'm about to tell you I do before exchanging with a waiter or waitress.
 
-          I stretch my mouth into a smile for a couple of seconds (sometimes I use my hand to further lift my lips from the extremeties), a warmup to prepare my mouth for the bigget smile I can make.
+          I stretch my mouth into a smile for a couple of seconds (sometimes I use my hand to further lift my lips from the extremities), a warmup to prepare my mouth for the biggest smile I can make.
           
-          You would think this is exercice is weird and just unecessary - and you would be wrong!
+          You would think this exercise is weird and just unnecessary - and you would be wrong!
           I challenge you to try to smile very big right now! I can guarantee it will feel heavy.
           sure you smiled but how big was it? Do you think you can do better? Exactly!
 
-          So I do this warmup, everrytime I talk to a waiter or waitress, also any seller or worker of any kind.
+          So I do this warmup, every time I talk to a waiter or waitress, also any seller or worker of any kind.
 
           Why? Because the bigger the smile -the more beautiful and pleasant the feelings you get.
 
-          And I'm not saying this to advertise that I am a nice person, I really do it, often,and happily.
+          And I'm not saying this to advertise that I am a nice person, I really do it, often, and happily.
           because I care, and because I know for a fact it would warm someone's heart, just like it would if the roles were reversed :)
 
           Waiters and waitresses deal with a lot of bullshit, and sometimes they are not in the best mood, doing this small act of kindness could make their day better -and they'll remember you for it.
@@ -1876,7 +1876,7 @@ hh I won't do anything
 
           What I found useful is to read until the motivation kicks in and use that to kick start a work block.
 
-          Probably that won'twork if you are busy and need to get things done quickly but very effective if you need inspiration.
+          Probably that won't work if you are busy and need to get things done quickly but very effective if you need inspiration.
 
           Try before you judge.
 
@@ -1917,7 +1917,7 @@ I can’t complain much.
       `},
 
 
-// challenge for the reader try to find my comment of a caffee in the city of benguerir
+// If you're reading this, try to find a caffe in benguerir in googlemaps where I left a review, post a comment here with proof and you'll get a reward hh.
 
         {
           id: 'outro',
@@ -1931,7 +1931,7 @@ I can’t complain much.
           },
           content:
           `I wish you the best of caffees in the future dear reader.
-          Maybe you get a ptit-pain as tasty is the one in this image ahah.
+          Maybe you get a ptit-pain as tasty as the one in this image :).
 
           Enjoy!
 
@@ -1956,4 +1956,76 @@ I can’t complain much.
 
 
 
+  'Meeting_myself_again': {
+    title: "Meeting myself again",
+    date: '3/11/2026',
+    status: 'NEW !!',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content:
+          `I would love to meet my younger self.
+          I would enjoy it from both sides;
+          me as young meeting my older self, and the other way around.
+          In every quantum case, both Mehdis will absolutely love it.
+
+          `
+      },
+      {
+        id: 'the_younger_self',
+        title: 'The Younger Self',
+        content:
+          `The younger one would see a role model.
+          A bit taller and a bit calmer, what more could you ask for?
+          Someone who, in life, leveled up a bit, and is much more 'Mehdi'-esque.. idk(this the best I could do to put it into words).
+
+          One of the best spoken things one could get from a role model is a joke, a lighthearted funny comment.
+          I feel, this is the most masculine transfer of self.
+          Not that women can't make jokes.
+          Project it in the masculine space, a joke demonstrates humility and elegance; the way it was worded and spoken.
+          Do you get it?
+          Joking with a gentleman, to me, is the most elegant way of getting to know them, that is, if it is done in a manly way.
+          Because a joke is a delicate manoeuvre, and a precise one.
+          A good conversationalist knows..
+
+          Joking with someone is vulnerable. It's inviting them to your world indirectly; your way of thinking.
+          If the other person doesn't appreciate your joke, this implies they do not appreciate your way of thinking, and that is vulnerable.
+
+          When a man takes that risk, and formulates his joke not just in a funny way but an elegant one, adding an element of how he presents his ideas.
+          This gives you a hint at the quality of the ideas a man has. and the quality of how he thinks about them.
+          (It's not enough to have great ideas, It is a must to know they are great)
+          It's a rich interaction as you can see.
+
+          I love to do that with my friends, and I would definitely enjoy it with myself; younger-self.
+          Great bonus: I am 100% sure he will love it too; he is me.
+
+          `
+      },
+      {
+        id: 'the_older_self',
+        title: 'The Older Self',
+        content:
+          `Now from the perspective of the older me.
+          Older me would nurture that kid and soothe him on whatever he is going through.
+          He doesn't know it, but he's great. (I swear I'm not narcissistic)
+          I would take inspiration from his great strength as it is being manifested right now in his daily life.
+          To see such a demonstration of strength is strength inducing.
+          Surround yourself with weak people and you'll get weaker, it's just common sense.
+
+          `
+      },
+      {
+        id: 'conclusion',
+        title: 'Conclusion',
+        content:
+          `I would love to meet my younger-self, great guy, the truest of his self. Mehdi..
+          Going through some stuff but he's strong about it, love him for that.
+          Great guy.
+
+          <i>Humanly written</i>
+          `
+      }
+    ]
+  },
 };
