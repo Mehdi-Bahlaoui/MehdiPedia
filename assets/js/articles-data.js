@@ -2021,8 +2021,8 @@ I can’t complain much.
       }
     ]
   },
-  'And_what_is_a_man_if_not_for_building?': {
-    title: "And what is a man if not for building?",
+  'For_what_is_a_man_if_not_for_building?': {
+    title: "For what is a man if not for building?",
     date: '7/11/2026',
     status: 'COMING SOON',
     sections: [
