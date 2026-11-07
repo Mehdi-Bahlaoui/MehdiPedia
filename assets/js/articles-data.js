@@ -2021,8 +2021,8 @@ I can’t complain much.
       }
     ]
   },
-  'And_what_is_a_man_if_not_for_Work?': {
-    title: "And what is a man if not for work?",
+  'And_what_is_a_man_if_not_for_building?': {
+    title: "And what is a man if not for building?",
     date: '7/11/2026',
     status: 'COMING SOON',
     sections: [
@@ -2030,7 +2030,8 @@ I can’t complain much.
         id: 'introduction',
         title: 'Introduction',
         content: 
-          `Write your article here.
+          `"The most important message I can deliver is a message of work: to work again, to work always... The essence of life is work."
+- Abdoulaye Wade, former president of Senegal
 
           `,
       }
