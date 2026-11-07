@@ -31,6 +31,8 @@ The site is a static HTML/CSS/JavaScript project (the interactive globe alone ha
 
 - [Meeting myself again](https://mehdibahlaoui.com/articles/article.html#Meeting_myself_again): 3 Nov 2026
 
+- [And what is a man if not for Work?](https://mehdibahlaoui.com/articles/article.html#And_what_is_a_man_if_not_for_Work?): 7 Nov 2026
+
 ## Music
 
 - [Welcome to Rap-Battle](https://mehdibahlaoui.com/music/track.html#welcome-to-rap-battle): original track by Mehdi Bahlaoui with time-synced lyrics and annotations

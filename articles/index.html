@@ -345,7 +345,7 @@ Of which expressed here, are solely his and do not reflect the views, policies o
         cardTop.appendChild(meta);
         card.appendChild(cardTop);
 
-        // Preview: inline inside h2, flows naturally with title.
+        // Preview: own row below the title/meta line.
         // Skip leading sections without body text (e.g. a voiceover-only section).
         const previewSection = article.sections && article.sections.find(section => section && section.content);
         const firstContent = previewSection && previewSection.content;
@@ -355,11 +355,10 @@ Of which expressed here, are solely his and do not reflect the views, policies o
           decoder.innerHTML = firstContent.replace(/<[^>]*>/g, '');
           const stripped = (decoder.textContent || '').replace(/\s+/g, ' ').trim();
           if (stripped) {
-            const preview = document.createElement('span');
+            const preview = document.createElement('div');
             preview.className = 'blog-card-preview';
             preview.textContent = stripped.length > 120 ? stripped.slice(0, 120) + '…' : stripped;
-            h2.appendChild(document.createElement('br'));
-            h2.appendChild(preview);
+            card.appendChild(preview);
           }
         }
 

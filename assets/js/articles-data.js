@@ -549,7 +549,7 @@ love~
 
 
 '5AM': {
-  title: 'My 5am Journey - a 30 day challenge',
+  title: 'My failed 5am Journey - a 30 day challenge',
   date: '28/02/2026',
   status: '',
   sections: [
@@ -878,17 +878,9 @@ love~
 'globe': {
   title: "It's not a globe, It's Web-Assembly",
   date: '10/03/2026',
-  status: 'IMPROVED !!',
+  status: 'UPDATED',
   redirect: 'globe.html'
 },
-
-
-
-
-
-
-
-
 
 
 
@@ -1521,7 +1513,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
 
       For this, I suggest to already consider yourself happy and ready to tackle the day.
       Some say action comes before motivation, I don't know if that's true but it works.
-      So let's pretend to have it all figured out, after all, the goal is not to have it all figured out, but to have lived it out.
+      So let's pretend to have it all figured out, after all, the goal is not to have it all figured out, but to have it lived out.
 
       `},
       {
@@ -2026,6 +2018,21 @@ I can’t complain much.
 
           <i>Humanly written</i>
           `
+      }
+    ]
+  },
+  'And_what_is_a_man_if_not_for_Work?': {
+    title: "And what is a man if not for work?",
+    date: '7/11/2026',
+    status: 'COMING SOON',
+    sections: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: 
+          `Write your article here.
+
+          `,
       }
     ]
   },
