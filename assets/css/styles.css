@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.font-philo * {
+  font-family: inherit;
+}
+
 
 html {
   background-color: var(--background-color);
@@ -107,9 +111,6 @@ html {
   --text-size-name: 2.5em;
   --text-size-section-title: 1.8em;
 }
-
-
-
 
 
 
@@ -1409,12 +1410,10 @@ body {
 .blog-card h2 {
   margin: 0;
   font-size: 1.2rem;
-  font-family: 'Linux Libertine', Georgia, Times, serif;
   font-weight: normal;
 }
 
 .blog-card a {
-  font-family: inherit;
   text-decoration: none;
   color: var(--text-color);
 }

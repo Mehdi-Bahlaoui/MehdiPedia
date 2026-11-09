@@ -15,11 +15,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600"
 
 [[package]]
-name = "globe-web"
+name = "confetti"
 version = "0.1.0"
 dependencies = [
+ "mini3d",
  "wasm-bindgen",
- "web-sys",
+]
+
+[[package]]
+name = "globe"
+version = "0.1.0"
+dependencies = [
+ "mini3d",
+ "wasm-bindgen",
 ]
 
 [[package]]
@@ -30,6 +38,14 @@ checksum = "8c942ebf8e95485ca0d52d97da7c5a2c387d0e7f0ba4c35e93bfcaee045955b3"
 dependencies = [
  "once_cell",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "mini3d"
+version = "0.1.0"
+dependencies = [
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]

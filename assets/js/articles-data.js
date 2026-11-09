@@ -879,7 +879,7 @@ love~
   title: "It's not a globe, It's Web-Assembly",
   date: '10/03/2026',
   status: 'UPDATED',
-  redirect: 'globe.html'
+  redirect: '/articles/globe/'
 },
 
 
@@ -1504,7 +1504,7 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
       `
       I propose the following strategy:
       
-      <span class="font-philo" style="font-size: 22px" <b>Fake it 'till you feel it.</b> </span>
+      <span class="font-philo" style="font-size: 22px"><b>Fake it 'till you feel it.</b></span>
 
       I think there is no way around this problem than to fake it.
       You can't and shouldn't try to reason it through, you'll just burn yourself out.
@@ -2030,10 +2030,10 @@ I can’t complain much.
         id: 'introduction',
         title: 'Introduction',
         content: 
-          `"The most important message I can deliver is a message of work: to work again, to work always... The essence of life is work."
-- Abdoulaye Wade, former president of Senegal
-
-          `,
+          `<span class="font-philo" style="flex-direction: column; gap: 0.5em;">
+  <span>"The most important message I can deliver is a message of work: to work again, to work always... The essence of life is work."</span>
+  <span>— Abdoulaye Wade, former president of Senegal.</span>
+</span>`,
       }
     ]
   },

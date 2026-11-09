@@ -1,6 +1,7 @@
-use std::ops::{Add, Mul, Sub};
+use std::ops::{Add, AddAssign, Mul, MulAssign, Neg, Sub, SubAssign};
 
-#[derive(Clone, Copy, Debug, Default)]
+#[repr(C)]
+#[derive(Clone, Copy, Debug, Default, PartialEq)]
 pub struct Vec3 {
     pub x: f32,
     pub y: f32,
@@ -8,19 +9,21 @@ pub struct Vec3 {
 }
 
 impl Vec3 {
-    pub const ZERO: Self = Self {
-        x: 0.0,
-        y: 0.0,
-        z: 0.0,
-    };
-    pub const Y: Self = Self {
-        x: 0.0,
-        y: 1.0,
-        z: 0.0,
-    };
+    pub const ZERO: Self = Self::new(0.0, 0.0, 0.0);
+    pub const X: Self = Self::new(1.0, 0.0, 0.0);
+    pub const Y: Self = Self::new(0.0, 1.0, 0.0);
+    pub const Z: Self = Self::new(0.0, 0.0, 1.0);
 
     pub const fn new(x: f32, y: f32, z: f32) -> Self {
         Self { x, y, z }
+    }
+
+    pub const fn from_array(a: [f32; 3]) -> Self {
+        Self::new(a[0], a[1], a[2])
+    }
+
+    pub const fn to_array(self) -> [f32; 3] {
+        [self.x, self.y, self.z]
     }
 
     pub fn dot(self, other: Self) -> f32 {
@@ -47,6 +50,10 @@ impl Vec3 {
             self
         }
     }
+
+    pub fn lerp(self, other: Self, t: f32) -> Self {
+        self + (other - self) * t
+    }
 }
 
 impl Add for Vec3 {
@@ -54,6 +61,14 @@ impl Add for Vec3 {
 
     fn add(self, other: Self) -> Self {
         Self::new(self.x + other.x, self.y + other.y, self.z + other.z)
+    }
+}
+
+impl AddAssign for Vec3 {
+    fn add_assign(&mut self, other: Self) {
+        self.x += other.x;
+        self.y += other.y;
+        self.z += other.z;
     }
 }
 
@@ -65,6 +80,14 @@ impl Sub for Vec3 {
     }
 }
 
+impl SubAssign for Vec3 {
+    fn sub_assign(&mut self, other: Self) {
+        self.x -= other.x;
+        self.y -= other.y;
+        self.z -= other.z;
+    }
+}
+
 impl Mul<f32> for Vec3 {
     type Output = Self;
 
@@ -73,49 +96,105 @@ impl Mul<f32> for Vec3 {
     }
 }
 
-/// Lat/lon in degrees -> unit sphere. Matches the Bevy version's axis
-/// convention: lon = 0 is +Z, lon = 90 is +X, lat = 0 is the equator.
-pub fn lat_lon_to_3d(lat_deg: f32, lon_deg: f32, radius: f32) -> Vec3 {
-    let lat = lat_deg.to_radians();
-    let lon = lon_deg.to_radians();
-    Vec3::new(
-        radius * lat.cos() * lon.sin(),
-        radius * lat.sin(),
-        radius * lat.cos() * lon.cos(),
-    )
-}
-
-fn slerp(a: Vec3, b: Vec3, t: f32) -> Vec3 {
-    let dot = a.dot(b).clamp(-1.0, 1.0);
-    let theta = dot.acos();
-    if theta.abs() < 1e-6 {
-        return a;
+impl MulAssign<f32> for Vec3 {
+    fn mul_assign(&mut self, scalar: f32) {
+        self.x *= scalar;
+        self.y *= scalar;
+        self.z *= scalar;
     }
-    let sin_theta = theta.sin();
-    let wa = ((1.0 - t) * theta).sin() / sin_theta;
-    let wb = (t * theta).sin() / sin_theta;
-    a * wa + b * wb
 }
 
-/// Great-circle path with a parabolic height bump, same shape as the
-/// reference implementation (`4 * height * t * (1 - t)`).
-pub fn great_circle_arc(from: Vec3, to: Vec3, segments: usize, height: f32) -> Vec<Vec3> {
-    let a = from.normalize();
-    let b = to.normalize();
-    let mut points = Vec::with_capacity(segments + 1);
+impl Neg for Vec3 {
+    type Output = Self;
 
-    for i in 0..=segments {
-        let t = i as f32 / segments as f32;
-        let p = slerp(a, b, t);
-        let h = 4.0 * height * t * (1.0 - t);
-        points.push(p * (1.0 + h));
+    fn neg(self) -> Self {
+        Self::new(-self.x, -self.y, -self.z)
+    }
+}
+
+/// Unit quaternion `(x, y, z, w)` for 3D rotations.
+#[repr(C)]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Quat {
+    pub x: f32,
+    pub y: f32,
+    pub z: f32,
+    pub w: f32,
+}
+
+impl Default for Quat {
+    fn default() -> Self {
+        Self::IDENTITY
+    }
+}
+
+impl Quat {
+    pub const IDENTITY: Self = Self::new(0.0, 0.0, 0.0, 1.0);
+
+    pub const fn new(x: f32, y: f32, z: f32, w: f32) -> Self {
+        Self { x, y, z, w }
     }
 
-    points
+    pub const fn to_array(self) -> [f32; 4] {
+        [self.x, self.y, self.z, self.w]
+    }
+
+    pub fn from_axis_angle(axis: Vec3, angle_rad: f32) -> Self {
+        let axis = axis.normalize();
+        let half = angle_rad * 0.5;
+        let (s, c) = half.sin_cos();
+        Self::new(axis.x * s, axis.y * s, axis.z * s, c)
+    }
+
+    /// Builds a rotation from an angular-velocity vector whose length is the angle in radians.
+    pub fn from_scaled_axis(scaled_axis: Vec3) -> Self {
+        let angle = scaled_axis.length();
+        if angle > 1e-8 {
+            Self::from_axis_angle(scaled_axis * (1.0 / angle), angle)
+        } else {
+            Self::IDENTITY
+        }
+    }
+
+    pub fn normalize(self) -> Self {
+        let len = (self.x * self.x + self.y * self.y + self.z * self.z + self.w * self.w).sqrt();
+        if len > 1e-8 {
+            let inv = 1.0 / len;
+            Self::new(self.x * inv, self.y * inv, self.z * inv, self.w * inv)
+        } else {
+            Self::IDENTITY
+        }
+    }
+
+    pub fn rotate_vec3(self, v: Vec3) -> Vec3 {
+        let qv = Vec3::new(self.x, self.y, self.z);
+        let t = qv.cross(v) * 2.0;
+        v + t * self.w + qv.cross(t)
+    }
 }
 
-/// Column-major 4x4 matrix, ready to upload to WebGL with transpose=false.
+impl Mul for Quat {
+    type Output = Self;
+
+    fn mul(self, rhs: Self) -> Self {
+        Self::new(
+            self.w * rhs.x + self.x * rhs.w + self.y * rhs.z - self.z * rhs.y,
+            self.w * rhs.y - self.x * rhs.z + self.y * rhs.w + self.z * rhs.x,
+            self.w * rhs.z + self.x * rhs.y - self.y * rhs.x + self.z * rhs.w,
+            self.w * rhs.w - self.x * rhs.x - self.y * rhs.y - self.z * rhs.z,
+        )
+    }
+}
+
+/// Column-major 4x4 matrix, ready to upload to WebGL with `transpose = false`.
 pub type Mat4 = [f32; 16];
+
+pub const MAT4_IDENTITY: Mat4 = [
+    1.0, 0.0, 0.0, 0.0, // col 0
+    0.0, 1.0, 0.0, 0.0, // col 1
+    0.0, 0.0, 1.0, 0.0, // col 2
+    0.0, 0.0, 0.0, 1.0, // col 3
+];
 
 pub fn perspective(fov_y: f32, aspect: f32, near: f32, far: f32) -> Mat4 {
     let f = 1.0 / (fov_y * 0.5).tan();

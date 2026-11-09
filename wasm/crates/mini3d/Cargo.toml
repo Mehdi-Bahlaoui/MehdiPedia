@@ -1,0 +1,13 @@
+[package]
+name = "mini3d"
+version = "0.1.0"
+edition = "2021"
+description = "Tiny Rust + WebGL2 3D renderer for WebAssembly animations"
+license = "MIT OR Apache-2.0"
+
+[package.metadata.docs.rs]
+targets = ["wasm32-unknown-unknown"]
+
+[dependencies]
+wasm-bindgen.workspace = true
+web-sys.workspace = true
