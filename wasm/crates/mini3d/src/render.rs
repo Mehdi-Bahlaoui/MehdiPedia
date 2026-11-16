@@ -209,6 +209,7 @@ precision mediump float;
 
 uniform vec3 u_light;
 uniform float u_ambient;
+uniform float u_emissive;
 uniform float u_corner_radius;
 
 in vec2 v_uv;
@@ -230,8 +231,8 @@ void main() {
 
     float diff = abs(dot(n, normalize(u_light)));
     float shade = u_ambient + (1.0 - u_ambient) * diff;
-    float glint = pow(diff, 12.0) * 0.18;
-    vec3 color = v_color * shade + vec3(glint);
+    float glint = pow(diff, 10.0) * 0.24;
+    vec3 color = v_color * (shade + u_emissive) + vec3(glint);
     out_color = vec4(color, 1.0);
 }
 "#;
@@ -323,6 +324,7 @@ struct QuadProgram {
     u_view: WebGlUniformLocation,
     u_light: WebGlUniformLocation,
     u_ambient: WebGlUniformLocation,
+    u_emissive: WebGlUniformLocation,
     u_corner_radius: WebGlUniformLocation,
 }
 
@@ -334,6 +336,7 @@ impl QuadProgram {
             u_view: uniform(gl, &program, "u_view")?,
             u_light: uniform(gl, &program, "u_light")?,
             u_ambient: uniform(gl, &program, "u_ambient")?,
+            u_emissive: uniform(gl, &program, "u_emissive")?,
             u_corner_radius: uniform(gl, &program, "u_corner_radius")?,
             program,
         })
@@ -754,6 +757,7 @@ impl Renderer {
         gl.uniform_matrix4fv_with_f32_array(Some(&prog.u_view), false, &frame.view);
         gl.uniform3fv_with_f32_array(Some(&prog.u_light), &mat.light);
         gl.uniform1f(Some(&prog.u_ambient), mat.ambient);
+        gl.uniform1f(Some(&prog.u_emissive), mat.emissive);
         gl.uniform1f(Some(&prog.u_corner_radius), mat.corner_radius);
 
         gl.bind_vertex_array(Some(&quads.vao));

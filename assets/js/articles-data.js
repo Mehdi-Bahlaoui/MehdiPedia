@@ -367,7 +367,7 @@ My experiences have shaped my understanding of what it means to be black in toda
 
 
           It's sad because it means they don't have a person to share their thoughts with.
-          Surely, I must have been like that someday
+          Surely, I must have been like that too
           But I genuinely think that I'm not that talkative, and this helps besides the fact that It's ugly to keep interrupting people all the time.
 
 
@@ -442,58 +442,6 @@ My experiences have shaped my understanding of what it means to be black in toda
     ]
   },
 
-  'My_eyes_are_out_of_focus': {
-    title: "My eyes are out of focus",
-    date: '12/02/2026',
-    sections: [
-      {
-        id: 'introduction',
-        title: '',
-        content: 
-`This is the first time this happened to me, my eyes are losing focus,
-I got so inspired that I've been stuck like this for about 30 minutes
-You know the feeling of stopping for a second, looking into the horizon while your vision loses focus as you process what you had in mind 
--that feeling
-
-
-I still feel it as I write this, my vision is in and out of blurriness but I can manage
-
-
-WOW, just wow. I love life. more than life, I love the fact that the possibilities are endless and that you have the opportunity to choose your path.
-What started this is <a class="links" href="https://www.youtube.com/watch?v=BLl3xREFEsY">this</a> Youtube Video, a simple video that sent goosebumps down my whole body not just spine, a couple of times.
-
-
-I resonate with it a lot, because just recently I did something that previous me would have felt immensely grateful for, immensely proud, past me would tear up.. maybe
-Because of how beautiful this version of myself just is.
-I am growing fast, faster than the time where I was stuck in school
-
-
-it's almost like I've ascended but let's not get too philosophical
-
-`
-
-      },
-      {
-        id: 'Conclusion',
-        title: '',
-        content: 
-`I just want to say, that I've grown a lot in just this small period, before starting my internship even alhamdolilah
-
-
--and to you the reader, and please trust me on this, that pretty much nothing is impossible and that things get better and it's up to you to believe first and work towards it second
-
-
-You will face criticism, directly and indirectly, but that just tells you that you're doing something right
-people will cast their anxieties on you, that's all it is
-(yes my eyes are still out of focus) 
-
-
-love~
-    
-    `
-      }
-    ]
-  },
 
 
 
@@ -501,49 +449,48 @@ love~
 
 
 
+//   'no_wtsp': {
+//     title: 'I uninstalled WhatsApp',
+//     date: '21/02/2026',
+//     sections: [
+//       {
+//         id: 'introduction',
+//         title: '',
+//         content: 
 
-  'no_wtsp': {
-    title: 'I uninstalled WhatsApp',
-    date: '21/02/2026',
-    sections: [
-      {
-        id: 'introduction',
-        title: '',
-        content: 
-
-      `Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
+//       `Here in Morocco, WhatsApp is the most used messaging app, and it's the main way people communicate with each other
       
-      I wanted to uninstall it for the longest time
-      and now is the perfect opportunity;
-      I just started my internship; everyone uses Teams which I prefer
-      and second just after finishing my university courses, so no urgent message to worry about
+//       I wanted to uninstall it for the longest time
+//       and now is the perfect opportunity;
+//       I just started my internship; everyone uses Teams which I prefer
+//       and second just after finishing my university courses, so no urgent message to worry about
 
-      Now I don't have to deal with all the bullshit stories people do for attention, it got me fed up
+//       Now I don't have to deal with all the bullshit stories people do for attention, it got me fed up
       
-      I removed it also because I keep checking it for dopamine hits and I don't want that anymore,
-      I want to be in control of my dopamine, not the other way around
+//       I removed it also because I keep checking it for dopamine hits and I don't want that anymore,
+//       I want to be in control of my dopamine, not the other way around
 
-      I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp;
-      you have to reply to people .. some people get mad when you don't..
+//       I also don't want to be the slave of other people's dopamine, which is what happens when you have whatsapp;
+//       you have to reply to people .. some people get mad when you don't..
 
-      Other than that, I really don't have time to chat to people, I will just dial normally like the alpha male I am hh,
-      but no seriously, I'm that busy, not busy by choice but by principle..
-      I have better things to do
+//       Other than that, I really don't have time to chat to people, I will just dial normally like the alpha male I am hh,
+//       but no seriously, I'm that busy, not busy by choice but by principle..
+//       I have better things to do
       
-      If you happen to read this while it's still going, and you'd like to reach out please call,
-      I will enjoy it and respect it more than a message,
-      Or if you don't want to call, just send an email, I will reply to it as soon as I can :)      
-`
-      },
-      {
-        id: 'conclusion',
-        title: '',
-        content: `
-      Moral of the story: Set your own rules, for once
-      `
-      }
-    ]
-  },
+//       If you happen to read this while it's still going, and you'd like to reach out please call,
+//       I will enjoy it and respect it more than a message,
+//       Or if you don't want to call, just send an email, I will reply to it as soon as I can :)      
+// `
+//       },
+//       {
+//         id: 'conclusion',
+//         title: '',
+//         content: `
+//       Moral of the story: Set your own rules, for once
+//       `
+//       }
+//     ]
+//   },
 
 
 
@@ -1013,85 +960,85 @@ The above is a <i>tafsir</i> of the verse 140 in Surah Ali 'Imran:
 },
 
 
-'banned': {
-  id: 'banned',
-  title: 'I just banned Youtube and LinkedIn',
-  date: '11/04/2026',
-  status: '',
-  sections: [
-    {
-      id: '',
-      title: '',  
-  content:
-    `"You have tiktok brain" -Pewdiepie
+// 'banned': {
+//   id: 'banned',
+//   title: 'I just banned Youtube and LinkedIn',
+//   date: '11/04/2026',
+//   status: '',
+//   sections: [
+//     {
+//       id: '',
+//       title: '',  
+//   content:
+//     `"You have tiktok brain" -Pewdiepie
 
-  The videos on Youtube have become so bad it's not even funny.
-The algorithm is so strong that it can make you watch videos that you don't even like (I'm being serious)
-I had been catching myself sometimes just watching something really not interesting.
-Why would I do that if it would cause myself to get stimulated to the point I can no longer do work properly?
+//   The videos on Youtube have become so bad it's not even funny.
+// The algorithm is so strong that it can make you watch videos that you don't even like (I'm being serious)
+// I had been catching myself sometimes just watching something really not interesting.
+// Why would I do that if it would cause myself to get stimulated to the point I can no longer do work properly?
 
-And the algorithm just keeps on getting stronger and stronger, If they don't catch you with clickbait they'll catch you with explicit content,
-that you might think is fine and normal but that stimulates far too much for my liking.
-As corny as it sounds again, it's like a drug, and I don't want to be addicted to it.
+// And the algorithm just keeps on getting stronger and stronger, If they don't catch you with clickbait they'll catch you with explicit content,
+// that you might think is fine and normal but that stimulates far too much for my liking.
+// As corny as it sounds again, it's like a drug, and I don't want to be addicted to it.
 
-And what's worse is that you don't even gain from it,
-at least cocaine gives you some sort of happiness
-with social media you just get some laughs out, but you lose more than you gain, in fact whenever you switch back and forth from work and social media, you take from your finite pool of willpower.
+// And what's worse is that you don't even gain from it,
+// at least cocaine gives you some sort of happiness
+// with social media you just get some laughs out, but you lose more than you gain, in fact whenever you switch back and forth from work and social media, you take from your finite pool of willpower.
 
-So I had to quit.
-The problem I had faced previously that prevented this is the amount of educational content on there.
-The solution for that is to just download the video if you really have to. But honestly, I argue that better content is almost always out there in text format.
+// So I had to quit.
+// The problem I had faced previously that prevented this is the amount of educational content on there.
+// The solution for that is to just download the video if you really have to. But honestly, I argue that better content is almost always out there in text format.
 
-Now about linkedin, well it is slowly becoming the new Youtube, the content is getting worse and worse, and the algorithm is getting stronger as well.
-I don't blame the companies, they need to keep me and you in their platform to make money.
+// Now about linkedin, well it is slowly becoming the new Youtube, the content is getting worse and worse, and the algorithm is getting stronger as well.
+// I don't blame the companies, they need to keep me and you in their platform to make money.
 
-You have tiktok brain and it's probably hurting your ability to chase your dreams.
+// You have tiktok brain and it's probably hurting your ability to chase your dreams.
 
-If that doesn't motivate you to quit, then I don't know what will.
-    `}
+// If that doesn't motivate you to quit, then I don't know what will.
+//     `}
 
-  ]
-},
+//   ]
+// },
 
 
-'dissapointed': {
-  id: 'dissapointed',
-  title: 'I\'m disappointed in Spotify',
-  date: '22/04/2026',
-  status: '',
-  sections: [
-    {
-      id: '',
-      title: '',  
-  content:
-    `I am trying to get away from social media as much as possible as you might have guessed by now.
-    More aggressively from the shorts/reels and tiktok-like videos.
+// 'dissapointed': {
+//   id: 'dissapointed',
+//   title: 'I\'m disappointed in Spotify',
+//   date: '22/04/2026',
+//   status: '',
+//   sections: [
+//     {
+//       id: '',
+//       title: '',  
+//   content:
+//     `I am trying to get away from social media as much as possible as you might have guessed by now.
+//     More aggressively from the shorts/reels and tiktok-like videos.
 
-    Couple of days ago, to my dismay, I find out (though I had seen it before but haven't paid attention) that Spotify had their own short-form content, that sometimes gets recommended to you.
+//     Couple of days ago, to my dismay, I find out (though I had seen it before but haven't paid attention) that Spotify had their own short-form content, that sometimes gets recommended to you.
     
-    I, for my curious nature, clicked on one of those videos, and I was surprised to find out that they allowed "clips re-uploads": content originally uploaded in other platforms, reuploaded to there.
-    There are numerous Youtube re-uploads from channels claiming the content to be podcasts...
+//     I, for my curious nature, clicked on one of those videos, and I was surprised to find out that they allowed "clips re-uploads": content originally uploaded in other platforms, reuploaded to there.
+//     There are numerous Youtube re-uploads from channels claiming the content to be podcasts...
     
-    Let me tell you, that I was not ready for this.
-    My phone had only Wikipedia and Spotify among a short list of Apps.
-    But now that the greedy and dopamine seeking version of myself knew about this, It was like a drug addict finding out about a new drug and I got hooked again on the algorithm, the devilish algorithm, scratch that, the Devil himself.
+//     Let me tell you, that I was not ready for this.
+//     My phone had only Wikipedia and Spotify among a short list of Apps.
+//     But now that the greedy and dopamine seeking version of myself knew about this, It was like a drug addict finding out about a new drug and I got hooked again on the algorithm, the devilish algorithm, scratch that, the Devil himself.
     
-    After two days of falling into pleasure, I decided to take action.
+//     After two days of falling into pleasure, I decided to take action.
 
-    I'm officially on Deezer now hh.
-    Much better, less noise, less bullshit.
-    Just music as it should be.
-    Haven't checked if they also have podcasts but I am sure there are no shorts.
-    and If they decide to add them, I will switch again.
+//     I'm officially on Deezer now hh.
+//     Much better, less noise, less bullshit.
+//     Just music as it should be.
+//     Haven't checked if they also have podcasts but I am sure there are no shorts.
+//     and If they decide to add them, I will switch again.
 
-    Disappointed in Spotify but you can't blame them.
+//     Disappointed in Spotify but you can't blame them.
 
-    you can't blame them.. I guess
+//     you can't blame them.. I guess
     
-    `}
+//     `}
 
-  ]
-},
+//   ]
+// },
 
 
 'no_one_has_the_answer': {
@@ -1332,9 +1279,9 @@ And I am working at the intersection of AI, Networking, and Embedded Systems, wh
           title: '',
 
           content:
-          `For those who read as a hobby, when is the last time you remember you did?
+          `When was the last time you remember you read, as a hobby?
           
-          Opopop- let me guess, it's probably either on a <b>weekend</b> or a <b> week day but after 6pm</b>.
+          Let me guess, it's probably either on a <b>weekend</b> or a <b> week day but after 6pm</b>.
           
           Why then are libraries closed at those times?
           
@@ -2037,4 +1984,7 @@ I can’t complain much.
       }
     ]
   },
+
+
+
 };

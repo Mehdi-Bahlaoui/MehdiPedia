@@ -8,11 +8,16 @@ use mini3d::scene::Scene;
 use wasm_bindgen::prelude::*;
 
 const PARTICLE_COUNT: usize = 1200;
-const GRAVITY: f32 = 1.35;
-const DRAG: f32 = 0.85;
-const FLUTTER_AMP: f32 = 1.6;
-const FLUTTER_FREQ: f32 = 5.5;
-const FLOOR_Y: f32 = -2.2;
+const FLOOR_Y: f32 = -4.0;
+const DEFAULT_SPREAD_X: f32 = 2.4;
+const REFERENCE_SPREAD_X: f32 = 3.44;
+const CAMERA_RADIUS: f32 = 5.4;
+const CAMERA_FOV_Y: f32 = 50.0;
+const GRAVITY: f32 = 1.0;
+const BURST_SPEED_MIN: f32 = 3.5;
+const BURST_SPEED_MAX: f32 = 6.5;
+const BURST_LATERAL: f32 = 0.55;
+const BURST_Z_SPREAD: f32 = 1.2;
 
 const PALETTE: [[f32; 3]; 6] = [
     [0.98, 0.32, 0.38], // coral red
@@ -51,8 +56,10 @@ struct Particle {
     spin: Vec3,
     scale: [f32; 2],
     color: [f32; 3],
+    drag: f32,
     phase: f32,
     age: f32,
+    active: bool,
 }
 
 pub struct Confetti {
@@ -60,6 +67,9 @@ pub struct Confetti {
     particles: Vec<Particle>,
     instances: Vec<QuadInstance>,
     rng: Rng,
+    done: bool,
+    cleared: bool,
+    first_frame: bool,
 }
 
 impl Confetti {
@@ -69,13 +79,17 @@ impl Confetti {
         let mut instances = Vec::with_capacity(PARTICLE_COUNT);
 
         for _ in 0..PARTICLE_COUNT {
-            let mut p = Self::spawn_particle(&mut rng, true);
-            p.age = rng.range(0.0, 4.0);
-            instances.push(Self::to_instance(&p));
-            particles.push(p);
+            let particle = Self::spawn(&mut rng, DEFAULT_SPREAD_X);
+            instances.push(Self::to_instance(&particle));
+            particles.push(particle);
         }
 
-        let mut quads = InstancedQuads::new(gl, PARTICLE_COUNT, QuadMaterial::default())?;
+        let material = QuadMaterial {
+            ambient: 0.72,
+            emissive: 0.14,
+            ..QuadMaterial::default()
+        };
+        let mut quads = InstancedQuads::new(gl, PARTICLE_COUNT, material)?;
         quads.update(gl, &instances);
 
         Ok(Self {
@@ -83,15 +97,30 @@ impl Confetti {
             particles,
             instances,
             rng,
+            done: false,
+            cleared: false,
+            first_frame: true,
         })
     }
 
-    fn spawn_particle(rng: &mut Rng, initial_spread: bool) -> Particle {
-        let y = if initial_spread {
-            rng.range(FLOOR_Y, 2.4)
-        } else {
-            rng.range(1.9, 2.6)
-        };
+    fn spawn(rng: &mut Rng, spread_x: f32) -> Particle {
+        let speed = rng.range(BURST_SPEED_MIN, BURST_SPEED_MAX);
+        let lateral = rng.range(-1.0, 1.0);
+        let fan = (spread_x / REFERENCE_SPREAD_X).clamp(0.45, 1.05);
+
+        // The launcher sits just below the bottom centre of the viewport.
+        let position = Vec3::new(
+            rng.range(-0.35, 0.35),
+            rng.range(3.0, 3.4),
+            rng.range(-0.6, 0.6),
+        );
+
+        // A upward burst with a wide lateral fan and a little depth spread.
+        let velocity = Vec3::new(
+            lateral * speed * BURST_LATERAL * fan,
+            speed,
+            rng.range(-BURST_Z_SPREAD, BURST_Z_SPREAD),
+        );
 
         let axis = Vec3::new(
             rng.range(-1.0, 1.0),
@@ -101,28 +130,28 @@ impl Confetti {
         let rotation = Quat::from_axis_angle(axis, rng.range(0.0, std::f32::consts::TAU));
 
         let spin = Vec3::new(
-            rng.range(-6.0, 6.0),
-            rng.range(-6.0, 6.0),
-            rng.range(-6.0, 6.0),
+            rng.range(-5.0, 5.0),
+            rng.range(-5.0, 5.0),
+            rng.range(-5.0, 5.0),
         );
 
-        let w = rng.range(0.032, 0.058);
-        let h = w * rng.range(1.3, 2.2);
+        // Twice the old base size; perspective then stretches the near pieces
+        // up to roughly four times the old size.
+        let width = rng.range(0.068, 0.120);
+        let height = width * rng.range(1.3, 2.2);
         let color = PALETTE[(rng.next_u32() as usize) % PALETTE.len()];
 
         Particle {
-            position: Vec3::new(rng.range(-2.2, 2.2), y, rng.range(-1.6, 1.6)),
-            velocity: Vec3::new(
-                rng.range(-0.35, 0.35),
-                rng.range(-0.9, -0.25),
-                rng.range(-0.35, 0.35),
-            ),
+            position,
+            velocity,
             rotation,
             spin,
-            scale: [w, h],
+            scale: [width, height],
             color,
+            drag: rng.range(0.12, 0.30),
             phase: rng.range(0.0, std::f32::consts::TAU),
             age: 0.0,
+            active: true,
         }
     }
 
@@ -138,42 +167,80 @@ impl Confetti {
 
 impl Scene for Confetti {
     fn update(&mut self, gl: &Gl, frame: &Frame) {
+        if self.done {
+            return;
+        }
+
+        if self.first_frame {
+            let view_half_width = CAMERA_RADIUS * (CAMERA_FOV_Y.to_radians() * 0.5).tan();
+            let spread_x = (view_half_width * frame.aspect() * 0.95).clamp(1.2, 8.0);
+            let density = (frame.aspect() / 1.44).clamp(0.28, 1.0);
+            let active_count = (PARTICLE_COUNT as f32 * density) as usize;
+
+            for (i, p) in self.particles.iter_mut().enumerate() {
+                *p = Self::spawn(&mut self.rng, spread_x);
+                p.active = i < active_count;
+            }
+
+            self.first_frame = false;
+        }
+
+        self.instances.clear();
         let dt = frame.dt;
-        for (i, p) in self.particles.iter_mut().enumerate() {
+
+        for p in &mut self.particles {
+            if !p.active {
+                continue;
+            }
+
             p.age += dt;
             p.velocity.y -= GRAVITY * dt;
-            p.velocity *= (1.0 - DRAG * dt).max(0.0);
+            p.velocity *= (1.0 - p.drag * dt).max(0.0);
 
-            let flutter = (p.phase + p.age * FLUTTER_FREQ).sin() * FLUTTER_AMP;
-            let sway = (p.phase * 1.7 + p.age * (FLUTTER_FREQ * 0.7)).cos() * (FLUTTER_AMP * 0.6);
-            p.velocity.x += flutter * dt;
-            p.velocity.z += sway * dt;
+            // A little paper flutter on top of the ballistic arc.
+            p.velocity.x += (p.phase + p.age * 4.0).sin() * 1.2 * dt;
+            p.velocity.z += (p.phase * 1.7 + p.age * 3.0).cos() * 0.9 * dt;
 
             p.position += p.velocity * dt;
             p.rotation = (Quat::from_scaled_axis(p.spin * dt) * p.rotation).normalize();
 
             if p.position.y < FLOOR_Y {
-                *p = Self::spawn_particle(&mut self.rng, false);
+                p.active = false;
+                continue;
             }
 
-            self.instances[i] = Self::to_instance(p);
+            self.instances.push(Self::to_instance(p));
         }
 
         self.quads.update(gl, &self.instances);
+
+        if self.instances.is_empty() {
+            self.done = true;
+        }
     }
 
     fn render(&mut self, renderer: &mut Renderer, frame: &Frame) {
+        if self.done {
+            if !self.cleared {
+                renderer.clear();
+                self.cleared = true;
+            }
+            return;
+        }
+
         renderer.clear().quads(&self.quads, frame);
     }
 }
 
 #[wasm_bindgen(start)]
 pub fn start() {
-    App::new("confetti-container", "Interactive 3D confetti animation")
+    App::new("confetti-container", "Confetti launcher animation")
         .orbit(OrbitConfig {
-            pitch: 10.0_f32.to_radians(),
-            radius: 3.4,
-            auto_rotate: 0.08,
+            pitch: 6.0_f32.to_radians(),
+            radius: CAMERA_RADIUS,
+            fov_y: CAMERA_FOV_Y.to_radians(),
+            auto_rotate: 0.0,
+            interactive: false,
             ..OrbitConfig::default()
         })
         .run(Confetti::new);

@@ -28,9 +28,9 @@ wasm/
     │       ├── main.rs         # ~25 lines: App + OrbitConfig + Lifecycle
     │       ├── globe.rs        # ~125 lines: Globe scene + materials
     │       └── land_data.rs    # 9,251 baked land positions
-    └── confetti/               # 3D tumbling confetti source (InstancedQuads + Quat)
+    └── confetti/               # Falling confetti source (InstancedQuads + Quat)
         └── src/
-            └── main.rs         # ~155 lines: 1,200 instanced 3D paper quads
+            └── main.rs         # ~245 lines: finite 1,200-piece launcher burst, 3D depth
 ```
 
 Site output:
@@ -44,7 +44,8 @@ articles/
 │       ├── globe_app.js
 │       └── globe_app.wasm
 └── confetti/
-    ├── index.html              # /articles/confetti/ (throw-away preview)
+    ├── index.html              # /articles/confetti/ ("The confetti is amazing")
+    ├── confetti.css
     └── wasm/
         ├── confetti_app.js
         └── confetti_app.wasm
@@ -55,7 +56,7 @@ articles/
 | Scene | Raw WASM | Gzipped WASM | Gzipped JS | Notes |
 |---|---:|---:|---:|---|
 | `globe` | ~157 KB | **~121 KB** | ~5 KB | Includes 111 KB of baked land coordinates |
-| `confetti` | ~45 KB | **~20 KB** | ~5 KB | 1,200 instanced 3D quads in 1 draw call |
+| `confetti` | ~42 KB | **~20 KB** | ~5 KB | Finite 1,200-piece launcher burst in 1 draw call; 3D depth, vivid/emissive paper, density scales down on narrow screens |
 
 Each scene is its own binary crate. With `lto = true` and per-primitive shader
 ownership, unused engine primitives are stripped from each `.wasm`.

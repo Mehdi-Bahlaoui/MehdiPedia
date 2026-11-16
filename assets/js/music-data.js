@@ -4,13 +4,13 @@
 const musicData = {
   'welcome-to-rap-battle': {
     id: 'welcome-to-rap-battle',
-    title: 'Welcome to Rap-Battle',
+    title: 'Survivors',
     artist: 'Mehdi Bahlaoui',
     album: 'Singles',
-    releaseDate: '2026',
+    releaseDate: '2025',
     audioUrl: '/assets/audio/welcome-to-rap-battle.mp3',
     videoUrl: '/assets/video/welcome-to-rap-battle.mp4',
-    coverArt: '/assets/images/boss.jpg',
+    // No coverArt on purpose: leave the listener room to imagine.
     duration: 123,
 
     // Lyrics: each line has a dur (duration in seconds)
@@ -191,17 +191,18 @@ const musicData = {
     }
   },
 
-  // 'rapbattle-ensamr': {
-  //   id: 'rapbattle-ensamr',
-  //   title: 'This video was brought to you by- RapBattle EnsamR',
-  //   artist: 'Mehdi Bahlaoui',
-  //   album: 'Singles',
-  //   releaseDate: '2026',
-  //   audioUrl: '/assets/audio/rapbattle-ensamr.mp3',
-  //   videoUrl: '/assets/video/rapbattle-ensamr.mp4',
-  //   coverArt: '/assets/images/boss.jpg',
-  //   duration: 0,
-  //   lyrics: [],
-  //   annotations: {}
-  // }
+  'rapbattle-ensamr': {
+    id: 'rapbattle-ensamr',
+    title: 'Vice président GDE',
+    artist: 'Mehdi Bahlaoui',
+    album: 'Singles',
+    releaseDate: '2025',
+    audioUrl: '/assets/audio/rapbattle-ensamr.mp3',
+    videoUrl: '/assets/video/rapbattle-ensamr.mp4',
+    // No coverArt on purpose: leave the listener room to imagine.
+    duration: 142,
+    // No lyrics yet. The player shows a placeholder instead.
+    lyrics: [],
+    annotations: {}
+  }
 };

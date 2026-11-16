@@ -65,6 +65,13 @@ function loadSong() {
     // Store current song globally (for sync engine)
     currentSong = song;
 
+    // Tracks without lyrics don't need the annotations column - give the
+    // player the full width instead of showing an empty sidebar.
+    const playerContainer = document.querySelector('.music-player-container');
+    if (playerContainer) {
+      playerContainer.classList.toggle('no-lyrics', !song.lyrics || song.lyrics.length === 0);
+    }
+
     // Compute startTime for each lyric from cumulative dur values
     let t = 0;
     (song.lyrics || []).forEach(line => {
@@ -288,11 +295,20 @@ function getLineText(lineId, song) {
 
 function updateAlbumArt(song) {
   const albumArtImg = document.getElementById('controlAlbumArt');
-  if (albumArtImg) {
-    albumArtImg.src = song.coverArt || '/assets/images/boss.jpg';
-    albumArtImg.alt = `${song.title} album art`;
-  } else {
+  if (!albumArtImg) {
     console.warn('controlAlbumArt element not found in DOM');
+    return;
+  }
+
+  if (song.coverArt) {
+    albumArtImg.src = song.coverArt;
+    albumArtImg.alt = `${song.title} album art`;
+    albumArtImg.style.display = '';
+  } else {
+    // No cover art on purpose: leave the listener room to imagine.
+    albumArtImg.removeAttribute('src');
+    albumArtImg.alt = '';
+    albumArtImg.style.display = 'none';
   }
 }
 

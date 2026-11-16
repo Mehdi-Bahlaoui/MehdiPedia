@@ -71,6 +71,8 @@ pub struct QuadMaterial {
     pub light: [f32; 3],
     /// Minimum ambient brightness (`0.0..=1.0`).
     pub ambient: f32,
+    /// Self-illumination added on top of the lit color (`0.0` = none, higher = brighter/glowier).
+    pub emissive: f32,
     pub double_sided: bool,
     pub blend: BlendMode,
     pub depth_write: bool,
@@ -82,6 +84,7 @@ impl Default for QuadMaterial {
             corner_radius: 0.12,
             light: [-0.45, 0.75, 0.50],
             ambient: 0.58,
+            emissive: 0.0,
             double_sided: true,
             blend: BlendMode::Opaque,
             depth_write: true,

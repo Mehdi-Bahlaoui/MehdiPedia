@@ -3,6 +3,22 @@
    Uses Wikipedia Theme Colors & Layout
    ============================================ */
 
+/* Sticky footer: on short pages the footer sits at the bottom of the
+   viewport instead of floating in the middle of the page. */
+body {
+  min-height: calc(100vh + 40px); /* offset the body's -40px top margin */
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1 0 auto;
+}
+
+.wiki-footer {
+  flex-shrink: 0;
+}
+
 /* Music Player Main Container */
 .music-player-container {
   display: grid;
@@ -29,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 14px 18px;
   margin: 20px 50px 0px 0px;
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
@@ -53,12 +69,6 @@
   margin: 0 0 5px 0;
   font-size: 1.1em;
   color: var(--links-color);
-}
-
-.track-artist {
-  margin: 0 0 3px 0;
-  color: var(--text-color);
-  font-size: 0.95em;
 }
 
 .track-album {
@@ -169,6 +179,20 @@
   color: var(--dark-grey);
   padding: 40px;
   font-style: italic;
+}
+
+/* Tracks without lyrics: no annotations column, center the placeholder
+   across the full width of the player. */
+.music-player-container.no-lyrics .lyrics-container {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 5px;
+}
+
+.music-player-container.no-lyrics .annotations-sidebar {
+  display: none;
 }
 
 /* ============================================
